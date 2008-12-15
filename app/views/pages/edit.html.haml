@@ -1,0 +1,29 @@
+%h1 Editing page
+
+- form_for(@page) do |f| 
+  = f.error_messages
+
+  %p
+    = f.label :title 
+    %br
+    = f.text_field :title
+  %p
+    = f.label :content
+    %br
+    = f.text_area :content
+  %p
+    = f.label :keywords
+    %br
+    = f.text_field :keywords
+  %p
+    = f.label :description 
+    %br
+    = f.text_area :description 
+  %p
+    = f.label :summary
+    %br 
+    = f.text_field :summary
+  %p
+    = f.submit "Update"
+= link_to 'Show', @page
+= link_to 'Back', home_path
