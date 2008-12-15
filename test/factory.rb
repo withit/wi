@@ -5,4 +5,5 @@ end
 
 Factory.define :page do |p|
   p.title "Title"
+  p.permalink 'perma'
 end
