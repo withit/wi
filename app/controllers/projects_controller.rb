@@ -11,7 +11,7 @@ class ProjectsController < ApplicationController
   
   def create
     @project = Project.create!(params[:project])
-    flash[:notice] = "Project was successfully created"
+    flash[:notice] = t('flash.project.create')
     redirect_to projects_path
   end
   
@@ -22,12 +22,14 @@ class ProjectsController < ApplicationController
   def update
     @project = Project.find(params[:id])
     @project.update_attributes!(params[:project])
+    flash[:notice] = t('flash.project.update')
     redirect_to projects_path
   end
   
   def destroy
     @project = Project.find(params[:id])
     @project.destroy
+    flash[:notice] = t('flash.project.delete')
     redirect_to projects_path
   end
   

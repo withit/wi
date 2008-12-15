@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
   def authorize
     unless admin?
       redirect_to home_path 
-      flash[:notice] = 'Not Authorised'
+      flash[:notice] = t('flash.not_authorised')
     end
   end
 end

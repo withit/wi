@@ -2,4 +2,11 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  flash:
+    project:
+      create: Project was successfully created
+      update: Project was successfully updated
+      delete: Project was successfully deleted
+    not_authorised: Not Authorised
+    invalid_password: Invalid Password
+      

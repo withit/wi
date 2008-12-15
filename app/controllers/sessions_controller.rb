@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       redirect_to home_path
     else
       render :action => 'new'
-      flash[:notice] = 'Invalid Password'
+      flash[:notice] = t('flash.invalid_password')
     end
   end
   

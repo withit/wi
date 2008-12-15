@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   map.home '/', :controller => 'home', :action => 'index'
   map.resource :session, :only => [:create, :destroy]
   map.login 'login', :controller => 'sessions', :action => 'new'
+  map.portfolio '/portfolio', :controller => 'projects', :action => 'index'
   map.resources :projects
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'

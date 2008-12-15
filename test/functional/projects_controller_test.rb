@@ -97,11 +97,12 @@ class ProjectsControllerTest < ActionController::TestCase
         should_respond_with :redirect
         should_assign_to "project", :equal => '@project'
         should_redirect_to 'projects_path'
+        should_set_the_flash_to 'Project was successfully updated'
       end
     
       context "on DELETE to destroy" do
         setup{delete :destroy, :id => @project.to_param}
-      
+        should_set_the_flash_to 'Project was successfully deleted'
         should_respond_with :redirect
         should_assign_to "project", :equal => '@project'
         should_redirect_to 'projects_path'
@@ -109,4 +110,6 @@ class ProjectsControllerTest < ActionController::TestCase
       end
     end
   end
+  
+  should_route :get, '/portfolio', :action => 'index'
 end
