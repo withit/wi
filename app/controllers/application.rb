@@ -12,4 +12,16 @@ class ApplicationController < ActionController::Base
   # Uncomment this to filter the contents of submitted sensitive data parameters
   # from your application log (in this case, all fields with names like "password"). 
   # filter_parameter_logging :password
+  protected 
+  
+  def admin?
+    session[:admin]
+  end
+  
+  def authorize
+    unless admin?
+      redirect_to home_path 
+      flash[:notice] = 'Not Authorised'
+    end
+  end
 end

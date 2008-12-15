@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_filter :authorize, :except => [:show, :index]
+  
   def index
     @projects = Project.all
   end
