@@ -3,15 +3,15 @@
 one:
   name: MyString
   description: MyText
-  image_file_name: MyString
-  image_content_type: MyString
-  image_file_size: 1
-  image_updated_at: 2008-12-15 13:25:44
+  picture_file_name: MyString
+  picture_content_type: MyString
+  picture_file_size: 1
+  picture_updated_at: 2008-12-15 13:25:44
 
 two:
   name: MyString
   description: MyText
-  image_file_name: MyString
-  image_content_type: MyString
-  image_file_size: 1
-  image_updated_at: 2008-12-15 13:25:44
+  picture_file_name: MyString
+  picture_content_type: MyString
+  picture_file_size: 1
+  picture_updated_at: 2008-12-15 13:25:44
