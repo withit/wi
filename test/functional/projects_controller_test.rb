@@ -26,6 +26,14 @@ class ProjectsControllerTest < ActionController::TestCase
   context "with a project" do
     setup{@project = Factory(:project)}
   
+    context "on GET to show" do
+      setup{get :show, :id => @project.to_param}
+      
+      should_respond_with :success
+      should_render_template :show
+      should_assign_to "project", :equal => '@project'
+    end
+    
     context "on GET to edit" do
       setup{get :edit, :id => @project.to_param}
       
