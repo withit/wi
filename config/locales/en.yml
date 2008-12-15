@@ -9,4 +9,20 @@ en:
       delete: Project was successfully deleted
     not_authorised: Not Authorised
     invalid_password: Invalid Password
+  login:
+    heading: Login
+    password: Password
+    submit: Login
+  project:
+    heading: Portfolio
+    name: Name
+    description: Description
+    logo: Logo
+    picture: Picture
+    edit:
+      heading: Edit this project
+      submit: Save changes
+    new: 
+      submit: Create this project
+      heading: Create a new project
       

@@ -1,17 +1,18 @@
+%h1= t('project.new.heading')
 - form_for @project, :html => {:multipart => true} do |f|
   %p
-    Name:
+    = t('project.name')
     = f.text_field :name
   %p
-    Description:
+    = t('project.description')
     = f.text_area :description
   %p
-    Image:
+    = t('project.picture')
     = f.file_field :picture
   %p
-    Logo
+    = t('project.logo')
     = f.file_field :logo
   %p
-    = submit_tag 'Create'
+    = submit_tag t('project.new.submit')
   
   

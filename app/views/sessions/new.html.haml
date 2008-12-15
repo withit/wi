@@ -1,6 +1,6 @@
-%h1 Login
+%h1= t('login.heading')
 - form_tag session_path do 
   %p
-    Password:
+    = t('login.password')
     = password_field_tag :password
-    = submit_tag 'login'
+    = submit_tag t('login.submit')
