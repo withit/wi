@@ -1,0 +1,6 @@
+%h1 Login
+- form_tag session_path do 
+  %p
+    Password:
+    = password_field_tag :password
+    = submit_tag 'login'
