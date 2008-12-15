@@ -15,6 +15,7 @@ en:
     submit: Login
   project:
     heading: Portfolio
+    link: View Portfolio
     name: Name
     description: Description
     logo: Logo

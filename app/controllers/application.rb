@@ -18,6 +18,8 @@ class ApplicationController < ActionController::Base
     session[:admin]
   end
   
+  helper_method :admin?
+  
   def authorize
     unless admin?
       redirect_to home_path 

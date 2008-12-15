@@ -4,6 +4,7 @@
     = stylesheet_link_tag 'application'
     = javascript_include_tag :defaults, 'lowpro', :cache => true
   %body
+    = link_to 'Logout', session_path, :method => :delete if admin?
     #flash= flash[:notice]
     = yield
     = tracker_code APP_CONFIG["tracker"] if ENV["RAILS_ENV"] == 'production'
