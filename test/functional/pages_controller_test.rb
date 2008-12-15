@@ -5,7 +5,7 @@ class PagesControllerTest < ActionController::TestCase
     setup{@page = Factory(:page)}
     
     context "on GET to show" do
-      setup{get :show, :id => @page.id}
+      setup{get :show, :id => @page.permalink}
   
       should_respond_with :success
       should_render_template :show
@@ -16,16 +16,19 @@ class PagesControllerTest < ActionController::TestCase
   context "when authorised" do
     setup{@request.session[:admin] = true}
     
-    context "on GET to new" do
-      setup{get :new}
-    
+    context "on GET to edit" do
+      setup{get :edit, :id => 'services'}
+  
       should_respond_with :success
-      should_render_template :new
+      should_render_template :edit
       should_assign_to :page, :class => Page
+      should "have permalink of services" do
+        assert_equal assigns(:page).permalink, 'services'
+      end
     end
     
-    context "on POST to create" do
-      setup{post :create, :page => Factory.attributes_for(:page)}
+    context "on PUT to update" do
+      setup{put :update, :id => 'services', :page => Factory.attributes_for(:page)}
   
       should_respond_with :redirect
       should_redirect_to '@page'
@@ -53,4 +56,7 @@ class PagesControllerTest < ActionController::TestCase
       end
     end
   end
+  
+  should_route :get, '/services', :controller => 'pages', :action => 'show', :id => 'services'
+  should_route :get, '/about', :controller => 'pages', :action => 'show', :id => 'about'
 end
