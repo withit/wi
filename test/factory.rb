@@ -7,3 +7,9 @@ Factory.define :page do |p|
   p.title "Title"
   p.permalink 'perma'
 end
+
+Factory.define :enquiry do |e|
+  e.email 'han.solo@example.com'
+  e.name 'Han Solo'
+  e.message 'She is fast enough for you old man'
+end

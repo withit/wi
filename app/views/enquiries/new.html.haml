@@ -1,0 +1,9 @@
+%h1 Contact US
+- form_for @enquiry, :url => enquiry_path do |f|
+  Name
+  = f.text_field :name
+  Email
+  = f.text_field :email
+  Message 
+  = f.text_area :message
+  = f.submit
