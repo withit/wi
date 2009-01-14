@@ -13,3 +13,8 @@ Factory.define :enquiry do |e|
   e.name 'Han Solo'
   e.message 'She is fast enough for you old man'
 end
+
+Factory.define(:news) do |n|
+  n.title 'We win!!'
+  n.content 'After winnig, WI had cake  '
+end
