@@ -1,1 +1,1 @@
-set :vhost,  "set your staging vhost name here"
+set :vhost,  "staging.wi.com.au"

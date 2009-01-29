@@ -3,11 +3,10 @@ set :default_stage, 'staging'
 require 'capistrano/ext/multistage'
 
 set :application, "wi"
-set :vhost, "staging.wi.com.au"
 set :user, 'withit'
-set :svn_path, 'set your svn path here'
+set :svn_path, 'wi'
 set :use_sudo, false
-
+set :vhost,  "staging.wi.com.au"
 role :app, "203.145.48.37"
 role :web, "203.145.48.37"
 role :db,  "203.145.48.37", :primary => true
@@ -35,5 +34,7 @@ end
 task :after_update_code, :roles => :app do
   desc "symlink current to rails folder"
   run "rm -f /var/www/vhosts/#{vhost}/httpdocs/rails"
-  run "ln -s /var/www/vhosts/#{vhost}/httpdocs/apps/#{application}/current /var/www/vhosts/#{vhost}/httpdocs/rails"
+  run "rm -f /var/www/vhosts/#{vhost}/httpdocs/public"
+  run "ln -s /var/www/vhosts/#{vhost}/httpdocs/apps/#{application}/current/public /var/www/vhosts/#{vhost}/httpdocs/rails"
+  run "ln -s /var/www/vhosts/#{vhost}/httpdocs/apps/#{application}/current/public /var/www/vhosts/#{vhost}/httpdocs/public"
 end
