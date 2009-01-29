@@ -8,7 +8,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :news, :singular => 'news_item'
   map.services 'services', :controller => 'pages', :action => 'show', :id => 'services'
   map.about 'about', :controller => 'pages', :action => 'show', :id => 'about'
-  map.home '/', :controller => 'pages', :action => 'show', :id => 'home'
+  map.home '/', :controller => 'home', :action => 'index'
+  map.connect '/index.html', :controller => 'home', :action => 'index'
   map.resources :pages
   
   map.contact_us '/contact-us', :controller => 'enquiries', :action => 'new'
