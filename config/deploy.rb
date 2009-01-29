@@ -2,9 +2,9 @@ set :stages, %w(staging prodution)
 set :default_stage, 'staging'
 require 'capistrano/ext/multistage'
 
-set :application, "set your application name here"
-set :vhost, "set your vhost name here"
-set :user, 'set your user name here'
+set :application, "wi"
+set :vhost, "staging.wi.com.au"
+set :user, 'withit'
 set :svn_path, 'set your svn path here'
 set :use_sudo, false
 

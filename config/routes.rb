@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   # The priority is based upon order of creation: first created -> highest priority.
-  map.home '/', :controller => 'home', :action => 'index'
+  #map.home '/', :controller => 'home', :action => 'index'
   map.resource :session, :only => [:create, :destroy]
   map.login 'login', :controller => 'sessions', :action => 'new'
   map.portfolio '/portfolio', :controller => 'projects', :action => 'index'
@@ -8,6 +8,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :news, :singular => 'news_item'
   map.services 'services', :controller => 'pages', :action => 'show', :id => 'services'
   map.about 'about', :controller => 'pages', :action => 'show', :id => 'about'
+  map.home '/', :controller => 'pages', :action => 'show', :id => 'home'
   map.resources :pages
   
   map.contact_us '/contact-us', :controller => 'enquiries', :action => 'new'
