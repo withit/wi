@@ -10,7 +10,7 @@ xml.rss("version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/") do
       xml.item do
         xml.pubDate news.created_at.to_date
         xml.title h(news.title)
-        xml.description h(news.content)
+        xml.description textilize(news.content)
       end
     end
   end
