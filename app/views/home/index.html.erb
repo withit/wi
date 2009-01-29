@@ -87,7 +87,7 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
            		<% News.all(:limit => 2).each do |news| %>
             	<li><strong><%= news.title %></strong><br />
 					    <%= truncate_preserving_words(strip_tags(textilize(news.content)),120) %>
-				      <a href="news.html">more >></a></li><br />
+				      <a href="news#news_<%= news.id%>">more >></a></li><br />
 				      <% end %>
       			</ul>            </td>
           </tr>

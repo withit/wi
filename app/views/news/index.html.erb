@@ -49,12 +49,12 @@
             <td width="7px" valign="top"><img src="images/line.jpg" alt="line" width="7" height="364" />&nbsp;</td>
             <td valign="top" class="subtext_container"><table width="100%" border="0" cellspacing="0" cellpadding="0">
               <% @news.each do |news| %>
-              <tr>
+              <% content_tag_for :tr, news do %>
                 <td colspan="2">
                 <h1><%= news.title %></h1><br />
                   <%= textilize(news.content )%>
                 </td>
-              </tr>
+              <% end %>
               <% end %>
             </table></td>
             <td width="7px" valign="top"><img src="images/line.jpg" alt="line" width="7" height="364" />&nbsp;</td>
