@@ -12,7 +12,15 @@ ActionController::Routing::Routes.draw do |map|
   map.connect '/index.html', :controller => 'home', :action => 'index'
   map.resources :pages
   map.connect '/contact_us.html', :controller => 'enquiries', :action => 'new'
+  map.connect '/portfolio_1.html', :controller => 'projects', :action => 'portfolio_1'
+  map.connect '/portfolio_2.html', :controller => 'projects', :action => 'portfolio_2'
+  map.connect '/contact_us.html', :controller => 'enquiries', :action => 'new'
   map.contact_us '/contact-us', :controller => 'enquiries', :action => 'new'
+  map.connect '/company.html', :controller => 'pages', :action => 'company'
+  map.connect '/process.html', :controller => 'pages', :action => 'process'
+  map.connect '/services.html', :controller => 'pages', :action => 'services'
+  map.connect '/who_we_help.html', :controller => 'pages', :action => 'who_we_help'
+  map.connect '/why_choose_us.html', :controller => 'pages', :action => 'why_choose_us'
   map.resource :enquiry, :only => [:create, :show]
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
