@@ -11,7 +11,7 @@ ActionController::Routing::Routes.draw do |map|
   map.home '/', :controller => 'home', :action => 'index'
   map.connect '/index.html', :controller => 'home', :action => 'index'
   map.resources :pages
-  
+  map.connect '/contact_us.html', :controller => 'enquiries', :action => 'new'
   map.contact_us '/contact-us', :controller => 'enquiries', :action => 'new'
   map.resource :enquiry, :only => [:create, :show]
   # Sample of regular route:

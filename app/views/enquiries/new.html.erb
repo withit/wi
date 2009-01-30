@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>With Imagination</title>
+<link href="css/wi.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="background"><% form_for @enquiry, :url => enquiry_path do |f| %>
+<div style="width:1005px; position:relative; margin:auto"> 
+<table width="1005" border="0" align="center" cellpadding="0" cellspacing="0" style="position:absolute; overflow:hidden">
+  <tr>
+   <td class="top_banner"><div style="width:420px; position:relative; margin:auto; height:100%">
+      
+      <table width="420" border="0" cellspacing="0" cellpadding="0" style="position:absolute; left: 281px; top: 107px; overflow:hidden; clear:both;">
+        <tr>
+          <td class="top_menu"><a href="index.html"><img src="images/tab/home.gif" alt="home" border="0"/></a></td>
+          <td class="top_menu"><a href="company.html"><img src="images/tab/company.gif" alt="company" border="0" /></a></td>
+          <td class="top_menu"><a href="services.html"><img src="images/tab/services.gif" alt="services" border="0" /></a></td>
+          <td class="top_menu"><a href="portfolio_1.html"><img src="images/tab/projects.gif" alt="projects" width="79" height="26" border="0" /></a></td>
+          <td class="top_menu"><img src="images/tab/contact_visited.gif" alt="contact us" border="0" /></td>
+        </tr>
+      </table>
+    </div> </td>
+  </tr>
+  <tr>
+    <td class="sub_container"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="images/contact/banner.jpg" alt="contact us" width="978" height="99" /></td>
+      </tr>
+      <tr>
+        <td class="breadcrumb"><a href="#">home</a> &gt; contact us</td>
+      </tr>
+      <tr>
+        <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="lhs_menu" valign="top">
+
+            <table width="150" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="list"><img src="images/menu/li.jpg" width="6" height="8" /></td>
+    <td class="menu"><strong>CONTACT US</strong></td>
+  </tr>
+ </table>
+
+            </td>
+            <td width="7px" valign="top"><img src="images/line.jpg" alt="line" width="7" height="364" />&nbsp;</td>
+            <td valign="top" class="subtext_container"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                <td><h1>Contact Us</h1>
+                </td>
+                <tr>
+                <td><h2><p>Find out how With Imagination can cost effectively help your business online by building stronger relationships with your customers, 
+                benefit from greater efficiencies and ultimately increase your profitability.</p>
+                <p>If you are interested in talking to us then we would love to hear from you. 
+                The best person to get in touch with is our Marketing Director <strong>Derek Nash</strong></p>
+                <p>
+                <strong>Phone</strong><br />
+                +61 2 9299 9229</p>
+                <P><strong>Fax:</strong><br />
+                  +61 2 9490 4770</P>
+                <p><strong>Email:</strong><br />
+                  <a href="mailto:info@wi.com.au" target="_blank">info@wi.com.au</a></p>
+                <p><strong>Address:</strong><br />
+                  Level 1, 44 Miller St<br />
+                North Sydney NSW 2060<br />
+                Australia</p>
+ 
+                </h2></td>
+              </tr>
+              <tr>
+              <td style="padding-top:20px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="3"><img src="images/contact/contact_heading.jpg" alt="request a services quote" width="422" height="33" /><%= f.error_messages %></td>
+    </tr>
+  <tr>
+    <td width="27%" class="contact_table"><h2><strong>Title</strong></h2></td>
+    <td width="73%" colspan="2" class="contact_table">
+      <label>
+        <%= f.select :title, %w(Mr Mrs Ms Miss) %>
+        </label>
+  </td>
+  </tr>
+  <tr>
+    <td class="contact_table"><h2><strong>First Name*</strong></h2></td>
+    <td colspan="2" class="contact_table">
+      <label>
+        <%= f.text_field :first_name, :size => nil %>
+        </label>
+      </td>
+  </tr>
+  <tr>
+    <td class="contact_table"><h2><strong>Last Name*</strong></h2></td>
+    <td colspan="2" class="contact_table">
+      <label>
+        <%= f.text_field :last_name, :size => nil %>
+        </label>
+      </td>
+  </tr>
+  <tr>
+    <td class="contact_table"><h2><strong>Email*</strong></h2></td>
+    <td colspan="2" class="contact_table">
+      <label>
+        <%= f.text_field :email, :size => nil %>
+        </label>
+    </td>
+  </tr>
+  <tr>
+    <td class="contact_table"><h2><strong>Confirm Email*</strong></h2></td>
+    <td colspan="2" class="contact_table">
+      <label>
+        <%= f.text_field :email_confirmation, :size => nil %>
+        </label>
+      </td>
+  </tr>
+  <tr>
+    <td class="contact_table"><h2><strong>Phone Number</strong></h2></td>
+    <td colspan="2" class="contact_table">
+      <label>
+        <%= f.text_field :phone, :size => nil %>
+        </label>
+       </td>
+  </tr>
+  <tr>
+    <td class="contact_table"><h2><strong>Company</strong></h2></td>
+    <td colspan="2" class="contact_table">
+      <label>
+        <%= f.text_field :company, :size => nil %>
+        </label>
+      </td>
+  </tr>
+  <tr>
+    <td class="contact_table"><h2><strong>Position</strong></h2></td>
+    <td colspan="2" class="contact_table">
+      <label>
+        <%= f.text_field :position, :size => nil %>
+        </label>
+       </td>
+  </tr>
+  <tr>
+    <td class="contact_table"><h2><strong>Comments</strong></h2></td>
+    <td colspan="2" class="contact_table">
+      <label>
+        <%= f.text_area :message, :cols => 45, :rows => 5%>
+        </label>
+      </td>
+  </tr>
+  <tr>
+    <td class="contact_table" align="right">&nbsp;</td>
+    <td class="contact_table"><input name="up to date" type="checkbox" value="" checked /></td>
+    <td class="contact_table"><h2>I’d also like to be kept up-to-date with information</h2></td>
+  </tr>
+  <tr>
+    <td class="contact_table">&nbsp;</td>
+    <td colspan="2" class="contact_table"><input type='image' src="images/contact/submit.jpg" alt="submit" border="0" />    </td>
+  </tr>
+</table>
+
+              </td>
+              </tr>
+            </table></td>
+            <td width="7px" valign="top"><img src="images/line.jpg" alt="line" width="7" height="364" />&nbsp;</td>
+            <td class="rhs_menu" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="RHS_heading"><img src="images/inspiration.jpg" width="81" height="19" /></td>
+              </tr>
+              <tr>
+                <td class="RHS_heading"><img src="images/projects.jpg" alt="projects" width="126" height="125" /></td>
+              </tr>
+              <tr>
+                <td class="RHS_heading"><a href="portfolio_1.html"><img src="images/contact/portfolio.jpg" alt="portfolio" width="72" height="23" border="0" /></a></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td align="right"><a href="#"><img src="images/google_logo.jpg" alt="google" width="78" height="76" border="0" /></a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td valign="top"><img src="images/bottom.jpg" /></td>
+  </tr>
+  <tr>
+    <td class="footer_container" style="padding-top:5px"><table width="1005" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="footer" valign="middle" height="89px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="clients"><img src="images/footer/our_clients.jpg" alt="our clients" width="84" height="20" /></td>
+    <td><a href="#"><img src="images/footer/quantas_logo.jpg" alt="quantas" width="61" height="63" border="0" /></a></td>
+    <td><a href="#"><img src="images/footer/sydney_cancer.jpg" alt="sydney cancer" width="69" height="63" border="0" /></a></td>
+    <td><a href="#"><img src="images/footer/well_at_work.jpg" alt="well at work" width="77" height="38" border="0" /></a></td>
+    <td><a href="#"><img src="images/footer/opus.jpg" alt="opus" width="70" height="62" border="0" /></a></td>
+    <td><a href="#"><img src="images/footer/revlon_logo.jpg" alt="revlon" width="68" height="20" border="0" /></a></td>
+    <td><a href="#"><img src="images/footer/optus.jpg" alt="optus" width="62" height="63" border="0" /></a></td>
+    <td><a href="#"><img src="images/footer/cta_logo.jpg" alt="cta" width="42" height="64" border="0" /></a></td>
+    <td><a href="#"><img src="images/footer/almay_logo.jpg" alt="almay" border="0" /></a></td>
+  </tr>
+</table>
+</td>
+      </tr>
+    <tr>
+        <td align="right" valign="top" bgcolor="#CFD0D0" class="reflection">® Copyright 2009  |
+        <a class="reflection" href="contact_us.html">Contact Us</a>  |<a class="reflection" href="company.html">Company</a>  |  <a class="reflection" href="portfolio_1.html">Projects</a> </td>
+      </tr>
+    </table></td>
+  </tr>
+</table><% end %>
+ </body>
+</html>

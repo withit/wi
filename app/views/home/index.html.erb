@@ -126,6 +126,8 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
           </tr>
           <tr>
             <td class="content_contact" align="left" valign="top">
+              <% form_for @enquiry || Enquiry.new(:name => 'name', :email => 'email address', :phone => 'phone', :express => true), :url => enquiry_path do |f| %>
+              <%= f.error_messages %>
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td>
@@ -134,18 +136,18 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
 			Fax: + 61 2 9460 4770<br /></td>
   </tr>
   <tr>
-    <td class="field_container"> <input name="name" type="text" class="field" value="name" size="11" maxlength="100" /></td>
+    <td class="field_container"> <%= f.hidden_field :express %><%= f.text_field :name, :class => 'field', :size => 11, :maxlength => 100 %></td>
   </tr>
   <tr>
-    <td class="field_container"> <input name="email address" type="text" class="field" value="email address" size="11" maxlength="100"  /></td>
+    <td class="field_container"> <%= f.text_field :email, :class => 'field', :size => 11, :maxlength => 100 %></td>
   </tr>
   <tr>
-    <td class="field_container"><input name="phone" type="text" class="field" value="phone" size="11" maxlength="100"  /></td>
+    <td class="field_container"><%= f.text_field :phone, :class => 'field', :size => 11, :maxlength => 100 %></td>
   </tr>
   <tr>
-    <td class="field_container"><a href="#"><img src="images/submit.jpg" alt="submit" width="58" height="23" border="0" /></a></td>
+    <td class="field_container"><input type='image' src="images/submit.jpg" alt="submit" width="58" height="23" border="0" /></a></td>
   </tr>
-</table>            </td>
+</table>   <% end %>         </td>
           </tr>
           <tr>
             <td bgcolor="#E0E0E0" align="right"><img src="images/boxes/bottom_right.jpg" /></td>

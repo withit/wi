@@ -4,10 +4,18 @@ class EnquiriesController < ApplicationController
   end
   
   def create
-    @enquiry = Enquiry.create!(params[:enquiry])
+    @enquiry = Enquiry.new(params[:enquiry])
+    @enquiry.save!
     redirect_to enquiry_path
     session[:enquiry_id] = @enquiry.id
     Notifier.deliver_enquiry @enquiry
+    Notifier.deliver_confirmation @enquiry
+  rescue ActiveRecord::RecordInvalid
+    if @enquiry.express
+      render :file => 'home/index'
+    else
+      render :action => 'new'
+    end
   end
   
   def show
