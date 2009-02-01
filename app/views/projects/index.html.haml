@@ -1,9 +1,0 @@
-%h1= t('project.heading')
-= link_to 'New', new_project_path if admin?
-- @projects.each do |p|
-  %div
-    = link_to p.name, p
-    = p.description
-    = p.picture
-    = p.logo
-    = link_to 'Edit', edit_project_path(p) if admin?

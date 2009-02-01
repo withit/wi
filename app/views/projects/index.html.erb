@@ -1,0 +1,72 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><img src="images/portfolio/banner.jpg" alt="portfolio" width="978" height="99" /></td>
+    </tr>
+    <tr>
+      <td class="breadcrumb"><a href="#">home</a> &gt; projects</td>
+    </tr>
+    <tr>
+      <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="lhs_menu" valign="top">
+          <table width="150" border="0" cellspacing="0" cellpadding="0">
+<tr>
+  <td class="list"><img src="images/menu/li.jpg" width="6" height="8" /></td>
+  <td class="menu"><strong>PORTFOLIO</strong></td>
+</tr>
+    <tr>
+  <td class="list"><img src="images/menu/li.jpg" width="6" height="8" /></td>
+  <td class="menu"><a class="menu" href="who_we_help.html">Who We Helped online</a></td>
+</tr>
+      <tr>
+  <td class="list"><img src="images/menu/li.jpg" width="6" height="8" /></td>
+  <td class="menu"><a class="menu" href="process.html">How We Work</a></td>
+</tr>
+</table>
+
+          </td>
+          <td width="7px" valign="top"><img src="images/line.jpg" alt="line" width="7" height="500" />&nbsp;</td>
+          <td valign="top" class="subtext_container"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+              <td colspan="2">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+<% @projects.each do |project| %>
+<tr>
+  <td class="thumbnail"><%= image_tag project.picture.url, :alt => project.name %></td>
+  <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="logo_container"><%= image_tag project.logo.url, :alt => project.name %></td>
+    </tr>
+    <tr>
+      <td><h2><%= project.description %></h2></td>
+    </tr>
+  </table></td>
+</tr>
+<% end %>
+
+</table>
+
+              </td>
+            </tr>
+            <tr><td><div class='page_info'>PAGE <%= h(params[:page] || '1')%> of <%= @projects.total_pages %></div><%= will_paginate(@projects )%></td></tr>
+            
+          </table></td>
+          <td width="7px" valign="top"><img src="images/line.jpg" alt="line" width="7" height="500" />&nbsp;</td>
+          <td class="rhs_menu" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="RHS_heading"><img src="images/inspiration.jpg" width="81" height="19" /></td>
+            </tr>
+            <tr>
+              <td class="RHS_heading"><img src="images/projects.jpg" alt="projects" width="126" height="125" /></td>
+            </tr>
+            <tr>
+              <td class="RHS_heading"><a href="contact_us.html"><img src="images/contact_button.jpg" alt="contact us" width="80" height="23" border="0" /></a></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td align="right"><a href="#"><img src="images/google_logo.jpg" alt="google" width="78" height="76" border="0" /></a></td>
+    </tr>
+  </table>
