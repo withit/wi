@@ -183,6 +183,11 @@ padding:3px;
 	padding: 14px;
 }
 
+body.home .sub_container
+{
+  padding: 0px;
+}
+
 .breadcrumb {
 	background-color: #FFFFFF;
 	padding: 5px;

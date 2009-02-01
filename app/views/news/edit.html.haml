@@ -1,9 +1,7 @@
-%tr
-  %td
-    %h1 Edit some news
-    - form_for @news, :url => news_item_path(@news) do |f|
-      Title
-      = f.text_field :title
-      Content
-      = f.text_area :content
-      = f.submit
+%h1 Edit some news
+- form_for @news, :url => news_item_path(@news) do |f|
+  Title
+  = f.text_field :title
+  Content
+  = f.text_area :content
+  = f.submit
