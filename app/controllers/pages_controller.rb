@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :authorize, :except => [:show]
+  before_filter :authorize, :only => [:edit, :update]
 
   def show
     @page = Page.find_by_permalink(params[:id])

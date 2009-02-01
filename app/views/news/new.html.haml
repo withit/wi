@@ -1,7 +1,9 @@
-%h1 Create some news
-- form_for @news do |f|
-  Title
-  = f.text_field :title
-  Content
-  = f.text_area :content
-  = f.submit
+%tr
+  %td
+    %h1 Create some news
+    - form_for @news do |f|
+      Title
+      = f.text_field :title
+      Content
+      = f.text_area :content
+      = f.submit
