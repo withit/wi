@@ -39,7 +39,7 @@
                     <% if controller_name == 'projects' %>
                       <img src="/images/tab/projects_visited.gif" alt="projects" border="0" />
                     <% else %>
-                      <a href="/portfolio_1.html"><img src="/images/tab/projects.gif" alt="projects" border="0" width="79" height="26" /></a>
+                      <a href="<%= projects_path %>"><img src="/images/tab/projects.gif" alt="projects" border="0" width="79" height="26" /></a>
                     <% end %>
                   </td>
                   <td class="top_menu">
@@ -85,7 +85,7 @@
             </tr>
             <tr>
               <td align="right" valign="top" bgcolor="#CFD0D0" class="reflection">® Copyright 2009  |
-                <a class="reflection" href="/contact_us.html">Contact Us</a>  |<a class="reflection" href="/company.html">Company</a>  |  <a class="reflection" href="/portfolio_1.html">Projects</a> </td>
+                <a class="reflection" href="/contact_us.html">Contact Us</a>  |<a class="reflection" href="/company.html">Company</a>  |  <a class="reflection" href="<%= projects_path %>">Projects</a> </td>
             </tr>
           </table>
         </td>
@@ -93,4 +93,3 @@
     </table>
   </div>
  </body>
-</html>
