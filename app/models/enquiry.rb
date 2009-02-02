@@ -12,4 +12,5 @@ class Enquiry < ActiveRecord::Base
   validates_confirmation_of :email
   validates_presence_of :first_name, :last_name, :email, :unless => :express
   validates_presence_of :name, :email, :phone, :if => :express
+  validates_format_of :email, :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i
 end
