@@ -433,3 +433,30 @@ body.home .fieldWithErrors
   color: #CC0000;
   padding-left: 1em;
 }
+
+u{
+	font-family: Arial, Helvetica, sans-serif;
+  color:#595959;
+  line-height:15px;
+	padding:10px;
+	font-size:11px;
+	display: block;
+}
+
+ul
+{
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+h2
+{
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  line-height:15px;
+}
+
+.subtext_container h2,  .subtext_container p
+{
+  color:#595959;
+}
