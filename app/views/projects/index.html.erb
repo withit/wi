@@ -32,7 +32,7 @@
               <table width="100%" border="0" cellspacing="0" cellpadding="0">
 <% @projects.each do |project| %>
 <tr>
-  <td class="thumbnail"><%= image_tag project.picture.url, :alt => project.name %></td>
+  <td class="thumbnail"><%= link_to_if admin?, image_tag(project.picture.url, :alt => project.name), [:edit, project] %></td>
   <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td class="logo_container"><%= image_tag project.logo.url, :alt => project.name %></td>

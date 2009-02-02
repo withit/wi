@@ -394,3 +394,8 @@ div.page_info, div.pagination a,div.pagination .current
   padding-left: 4px;
   padding-right: 4px;
 }
+
+.thumbnail a img
+{
+  border: none;
+}
