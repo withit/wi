@@ -43,8 +43,11 @@
                 </h2></td>
               </tr>
               <tr>
-              <td style="padding-top:20px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <td style="padding-top:20px">
+                <%= f.error_messages :header_message => 'Your enquiry could not be submitted'%>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
+    
     <td width="27%" class="contact_table"><h2><strong>Title</strong></h2></td>
     <td width="73%" colspan="2" class="contact_table">
       <label>

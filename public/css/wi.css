@@ -399,3 +399,37 @@ div.page_info, div.pagination a,div.pagination .current
 {
   border: none;
 }
+
+.errorExplanation h2, .errorExplanation p,  .errorExplanation ul li, span.errorExplanation
+{
+  color: #CC0000;
+}
+
+.errorExplanation h2
+{
+  font-size: 14px;
+}
+
+.errorExplanation ul li
+{
+  list-style-type: square;
+  list-style-image: none;
+}
+
+body.home .errorExplanation h2
+{
+  font-size: 11px;
+  padding: 0px;
+}
+
+body.home .fieldWithErrors
+{
+  float: left;
+}
+
+.formError
+{
+  float: left;
+  color: #CC0000;
+  padding-left: 1em;
+}

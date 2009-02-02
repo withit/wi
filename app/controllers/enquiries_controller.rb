@@ -12,7 +12,8 @@ class EnquiriesController < ApplicationController
     Notifier.deliver_confirmation @enquiry
   rescue ActiveRecord::RecordInvalid
     if @enquiry.express
-      render :file => 'home/index'
+      @body_class = 'home'
+      render :file => 'home/index', :layout => true
     else
       render :action => 'new'
     end
