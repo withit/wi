@@ -66,7 +66,8 @@ a:hover {
 .text_container {
 	text-decoration: none;
 	background-color: #FFFFFF;
-	width: 500px;
+	width: 5
+	00px;
 	padding-top:20px
 }
 
@@ -101,16 +102,18 @@ h1 {
 	padding-left:10px;
 	padding-top:10px;
 	float:left;
+	
 }
 
 
 h2 {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 11px;
-	color: #8e8e8e;
+	color: #595959;
 	line-height: 12px;
 	font-weight: normal;
 	padding:10px;
+	line-height:15px;
 }
 
 /* Boxes */
@@ -312,6 +315,10 @@ li {
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:11px;
 	color:#595959;
+}
+
+ul {
+color:#595959;
 }
 
 p {
