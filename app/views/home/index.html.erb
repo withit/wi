@@ -52,9 +52,10 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
         <td align="left" valign="top"><table width="320" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td class="latest_news"><img src="images/boxes/latest_news.jpg" alt="latest news" width="94" height="13" /></td>
+            <td bgcolor="#E1E1E1" align="right" style="padding-right:10px"><a href="news.rss"><img src="images/rss.jpg" width="87" height="26" border="0" /></a></td>
           </tr>
           <tr>
-            <td class="content_box" valign="top">
+            <td class="content_box" valign="top" colspan="2">
            		<ul>
            		<% News.all(:limit => 2).each do |news| %>
             	<li><strong><%= news.title %></strong><br />
@@ -64,7 +65,7 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
       			</ul>            </td>
           </tr>
           <tr>
-            <td bgcolor="#E0E0E0" align="left"><img src="images/boxes/bottom_left.jpg" width="8" height="9" /></td>
+            <td bgcolor="#E0E0E0" align="left" colspan="2"><img src="images/boxes/bottom_left.jpg" width="8" height="9" /></td>
           </tr>
         </table></td>
         <td align="center" valign="top"><table width="320" border="0" cellspacing="0" cellpadding="0">
@@ -101,23 +102,22 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
           <tr>
             <td class="content_contact" align="left" valign="top">
               <% form_for @enquiry || Enquiry.new(:name => 'name', :email => 'email address', :phone => 'phone', :express => true), :url => enquiry_path do |f| %>
+              <%= f.error_messages %>
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td>
             Email:<a href="#"> info@wi.com.au</a><br />
 			Phone: + 61 2 9929 9229<br />
-			Fax: + 61 2 9460 4770<br />
-			
-			<%= '<span class="errorExplanation">Your enquiry could not be submitted</span>' unless f.object.errors.empty? %></td>
+			Fax: + 61 2 9460 4770<br /></td>
   </tr>
   <tr>
-    <td class="field_container"> <%= f.hidden_field :express %><%= f.text_field :name, :class => 'field', :size => 11, :maxlength => 100 %><%= error_message_on f.object, :name%></td>
+    <td class="field_container"> <%= f.hidden_field :express %><%= f.text_field :name, :class => 'field', :size => 11, :maxlength => 100 %></td>
   </tr>
   <tr>
-    <td class="field_container"> <%= f.text_field :email, :class => 'field', :size => 11, :maxlength => 100 %><%= error_message_on f.object, :email %></td>
+    <td class="field_container"> <%= f.text_field :email, :class => 'field', :size => 11, :maxlength => 100 %></td>
   </tr>
   <tr>
-    <td class="field_container"><%= f.text_field :phone, :class => 'field', :size => 11, :maxlength => 100 %><%= error_message_on f.object, :phone %></td>
+    <td class="field_container"><%= f.text_field :phone, :class => 'field', :size => 11, :maxlength => 100 %></td>
   </tr>
   <tr>
     <td class="field_container"><input type='image' src="images/submit.jpg" alt="submit" width="58" height="23" border="0" /></a></td>
