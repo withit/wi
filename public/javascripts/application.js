@@ -5,46 +5,24 @@ var current_marker;
 function next_slide()
 {
   current_slide.fade();
-  if(current_slide.next())
-  {
-    current_slide.next().appear();
-    current_slide = current_slide.next();
-  }
-  else
-  {
-     current_slide = $('slide_show').down();
-     current_slide.appear();
-  }
+  current_slide = current_slide.next() || $('slide_show').down()
+  current_slide.appear();
   
   current_marker.morph({backgroundColor: '#E1E1E1'});
-  if(current_marker.next('div'))
-  {
-    current_marker = current_marker.next('div');
-  }
-  else
-  {
-    current_marker = $('markers').down();
-  }
+  current_marker = current_marker.next('div') || $('markers').down();
   current_marker.morph({backgroundColor: '#2D9DD8'});
 }
+
+
 document.observe("dom:loaded", function() {
-  // initially hide all containers for tab content
-  $$('div#services div').each(function(e){e.setStyle('height',e.getHeight());});
   $$('div#services div').invoke('hide');
-  
   $$('div#slide_show img').invoke('hide');
   
-  if($('slide_show'))
+  if($('slide_show') && $('markers'))
   {
-    current_slide = $('slide_show').down();
-    current_slide.show();
+    current_slide = $('slide_show').down().show();
+    current_marker = $('markers').down().setStyle({backgroundColor: '#2D9DD8'});
     new PeriodicalExecuter(next_slide, 3);
-  }
-  
-  if($('markers'))
-  {
-    current_marker = $('markers').down();
-    current_marker.setStyle({backgroundColor: '#2D9DD8'});
   }
 });
 
