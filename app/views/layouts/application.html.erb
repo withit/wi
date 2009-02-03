@@ -73,13 +73,13 @@
                     <td class="clients">
                       <img src="/images/footer/our_clients.jpg" alt="our clients" width="84" height="20" />
                     </td>
-                    <td><a href="#"><img src="/images/footer/quantas_logo.jpg" alt="quantas" width="61" height="63" border="0" /></a></td>
-                    <td><a href="#"><img src="/images/footer/sydney_cancer.jpg" alt="sydney cancer" width="69" height="63" border="0" /></a></td>
-                    <td><a href="#"><img src="/images/footer/well_at_work.jpg" alt="well at work" width="77" height="38" border="0" /></a></td>
-                    <td><a href="#"><img src="/images/footer/opus.jpg" alt="opus" width="70" height="62" border="0" /></a></td>
-                    <td><a href="#"><img src="/images/footer/revlon_logo.jpg" alt="revlon" width="68" height="20" border="0" /></a></td>
-                    <td><a href="#"><img src="/images/footer/optus.jpg" alt="optus" width="62" height="63" border="0" /></a></td>
-                    <td><a href="#"><img src="/images/footer/almay_logo.jpg" alt="almay" border="0" /></a></td>
+                    <% Project.find(:all, :conditions => {:in_footer => true}).each do |p| %>
+                      <td>
+                        <a href="#">
+                          <%= image_tag p.logo.url, :alt => p.name, :border => 0%>
+                        </a>
+                      </td>
+                  <% end %>
                   </tr>
                 </table>
               </td>

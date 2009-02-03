@@ -13,6 +13,12 @@
     = t('project.logo')
     = f.file_field :logo
   %p
+    Slide 
+    = f.file_field :slide
+  %P
+    Include in footer
+    = f.check_box :in_footer
+  %p
     = submit_tag t('project.new.submit')
     or
     = link_to 'Cancel', projects_path
