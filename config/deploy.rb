@@ -39,7 +39,7 @@ task :after_update_code, :roles => :app do
   run "ln -s /var/www/vhosts/#{vhost}/httpdocs/apps/#{application}/current/public /var/www/vhosts/#{vhost}/httpdocs/public"
 
   %w(logos pictures slides).each do |dir|
-    run "rm -f #{release_path}/#{dir}"
-    run "ln -s #{release_path}/#{dir} #{shared_path}/system/#{dir}"
+    run "rm -fr #{release_path}/public/#{dir}"
+    run "ln -s #{shared_path}/system/#{dir} #{release_path}/public/#{dir}"
   end
 end
