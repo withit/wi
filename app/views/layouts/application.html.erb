@@ -13,6 +13,13 @@
   <body class="background <%= controller_name %> <%= @body_class %>">
     <div style="width:1005px; position:relative; margin:auto">
       <table width="1005" border="0" align="center" cellpadding="0" cellspacing="0" style="overflow:hidden; clear:both; left: 1px;">
+        <% if admin? %>
+          <tr class='admin_toolbar'>
+            <td>
+              <%= link_to 'Dashboard', dashboard_path %> | <%= link_to 'Log out', session_path, :method => :delete %>
+            </td>
+          </tr>
+        <% end %>
         <tr>
           <td class="top_banner">
             <div style="width:420px; position:relative; margin:auto; height:100%">

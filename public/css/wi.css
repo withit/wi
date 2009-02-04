@@ -545,3 +545,11 @@ body.dashboard h1,body.dashboard h2
 {
   float: none;
 }
+
+.admin_toolbar
+{
+  text-align: right;
+  color:#2D9DD8;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:11px;
+}
