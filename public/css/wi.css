@@ -407,7 +407,7 @@ div.page_info, div.pagination a,div.pagination .current
   border: none;
 }
 
-.errorExplanation h2, .errorExplanation p,  .errorExplanation ul li, span.errorExplanation
+.subtext_container .errorExplanation h2,.subtext_container .errorExplanation p,.subtext_container  .errorExplanation ul li,.subtext_container span.errorExplanation
 {
   color: #CC0000;
 }
