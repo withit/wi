@@ -1,3 +1,4 @@
+= content_tag(:div,flash[:notice], :class => 'not_authorised') if flash[:notice]
 %h1= t('login.heading')
 - form_tag session_path do 
   %p
