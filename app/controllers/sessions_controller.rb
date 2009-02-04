@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
     if params[:password] == 'twisties'
       session[:admin] = true
-      redirect_to home_path
+      redirect_to dashboard_path
     else
       render :action => 'new'
       flash[:notice] = t('flash.invalid_password')
