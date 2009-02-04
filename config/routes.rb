@@ -20,6 +20,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect '/who_we_help.html', :controller => 'pages', :action => 'who_we_help'
   map.connect '/why_choose_us.html', :controller => 'pages', :action => 'why_choose_us'
   map.resource :enquiry, :only => [:create, :show]
+  map.dashboard '/dashboard', :controller => 'dashboard'
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
   # Keep in mind you can assign values other than :controller and :action
