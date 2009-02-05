@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
   
   def create
-    if params[:password] == 'twisties'
+    if params[:password] == 'imagination'
       session[:admin] = true
       redirect_to dashboard_path
     else
