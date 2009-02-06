@@ -78,4 +78,4 @@ Rails::Initializer.run do |config|
 end
 
 APP_CONFIG = YAML.load_file("#{RAILS_ROOT}/config/config.yml")
-require 'RedCloth'
+#require 'RedCloth'
