@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090203005025) do
+ActiveRecord::Schema.define(:version => 20090220050634) do
 
   create_table "enquiries", :force => true do |t|
     t.string   "name"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(:version => 20090203005025) do
     t.string   "slide_file_name"
     t.string   "slide_content_type"
     t.integer  "slide_file_size"
+    t.integer  "position"
   end
 
 end

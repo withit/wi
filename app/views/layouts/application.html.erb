@@ -84,7 +84,7 @@
                     <td class="clients">
                       <img src="/images/footer/our_clients.jpg" alt="our clients" width="84" height="20" />
                     </td>
-                    <% Project.find(:all, :conditions => {:in_footer => true}).each do |p| %>
+                    <% Project.find(:all, :conditions => {:in_footer => true}, :order => 'position').each do |p| %>
                       <td>
                         <a href="#">
                           <%= image_tag p.logo.url, :alt => p.name, :border => 0%>

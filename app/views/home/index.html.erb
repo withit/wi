@@ -6,7 +6,7 @@
       <tr>
         <td class="hero">
           <div id='markers'>
-          <% Project.find(:all, :conditions => 'slide_file_name is not null').each do |p| %>
+          <% Project.find(:all, :conditions => 'slide_file_name is not null', :order => 'position').each do |p| %>
               <div>&nbsp;</div>
           <% end %>         
           <span>Recent Projects</span></div>

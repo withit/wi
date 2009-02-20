@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_filter :authorize, :except => [:show, :index]
   
   def index
-    @projects = Project.paginate(:page => params[:page], :per_page => 4)
+    @projects = Project.paginate(:page => params[:page], :per_page => 4, :order => 'position')
   end
   
   def new
