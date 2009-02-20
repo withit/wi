@@ -11,7 +11,7 @@
           <% end %>         
           <span>Recent Projects</span></div>
           <div id='slide_show'>
-          <% Project.find(:all, :conditions => 'slide_file_name is not null').each do |p| %>
+          <% Project.find(:all, :conditions => 'slide_file_name is not null',  :order => 'position').each do |p| %>
             <%= image_tag p.slide.url %>
           <% end %>
         </div>
