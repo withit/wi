@@ -553,3 +553,8 @@ body.dashboard h1,body.dashboard h2
   font-family:Arial,Helvetica,sans-serif;
   font-size:11px;
 }
+
+u strong a
+{
+  color: #2D9DD8;
+}
