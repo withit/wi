@@ -86,9 +86,7 @@
                     </td>
                     <% Project.find(:all, :conditions => {:in_footer => true}, :order => 'position').each do |p| %>
                       <td>
-                        <a href="#">
                           <%= image_tag p.logo.url, :alt => p.name, :border => 0%>
-                        </a>
                       </td>
                   <% end %>
                   </tr>
