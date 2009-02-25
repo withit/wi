@@ -26,7 +26,7 @@
               <% @news.each do |news| %>
               <% content_tag_for :tr, news do %>
                 <td colspan="2">
-                <h1><%= news.title %></h1><br />
+                <h1><%= link_to_if admin?, news.title,edit_news_item_path(news) %></h1><br />
                   <%= simple_format(news.content )%>
                 </td>
               <% end %>
