@@ -1,12 +1,12 @@
-set :stages, %w(staging prodution)
+set :stages, %w(staging production)
 set :default_stage, 'staging'
 require 'capistrano/ext/multistage'
 
 set :application, "wi"
-set :user, 'withit'
+#set :user, 'withit_prod'
 set :svn_path, 'wi'
 set :use_sudo, false
-set :vhost,  "staging.wi.com.au"
+set :vhost,  "wi.com.au"
 role :app, "203.145.48.37"
 role :web, "203.145.48.37"
 role :db,  "203.145.48.37", :primary => true
