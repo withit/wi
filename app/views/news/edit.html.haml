@@ -1,4 +1,5 @@
 %h1 Edit some news
+= button_to "Delete", news_item_path(@news), :method => :delete, :style=> 'float:right'
 - form_for @news, :url => news_item_path(@news) do |f|
   = f.label :title
   = f.text_field :title
