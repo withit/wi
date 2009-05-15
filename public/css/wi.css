@@ -151,7 +151,7 @@ padding-bottom:10px;
 background-image:url(../images/boxes/bg.jpg);
 background-repeat:no-repeat;
 background-color:#e1e1e1;
-height:220px;
+height:210px;
 }
 
 .content_contact {
@@ -161,7 +161,7 @@ padding-left:25px;
 padding-bottom:10px;
 background-image:url(../images/boxes/bg.jpg);
 background-repeat:no-repeat;
-height:220px;
+height:210px;
 color:#595959;
 font-family:Arial, Helvetica, sans-serif;
 font-size:11px;
@@ -174,7 +174,7 @@ padding-top:8px;
 
 
 .field {
-color:#595959;
+color:#888888;
 font-family:Arial, Helvetica, sans-serif;
 font-size:11px;
 padding:3px;
@@ -311,7 +311,7 @@ a.reflection:hover {
 /* List */
 li {
 	list-style-position: outside;
-	list-style-image: url(../images/boxes/li.jpg);
+	list-style-image: url(../images/boxes/li.gif);
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:11px;
 	color:#595959;
@@ -562,4 +562,9 @@ u strong a
 u
 {
   text-decoration:none;
+  
+}.text_li {
+	padding-top: 8px;
+	padding-right: 8px;
+	padding-left: 40px;
 }
