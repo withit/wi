@@ -584,8 +584,13 @@ u
   text-transform: lowercase;
 }
 
-.menu.current
+.side_menu
 {
   font-weight: bold;
   text-transform: uppercase;
+}
+.side_menu a
+{
+  font-weight: normal;
+  text-transform: none;
 }

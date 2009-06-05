@@ -22,13 +22,16 @@ class PagesController < ApplicationController
   
   def company
     @page = Page.find_by_permalink('company')
+    render :action => 'show'
   end
   
   def why_choose_us
     @page = Page.find_by_permalink('why_choose_us')
+    render :action => 'show'
   end
   
   def services
     @page = Page.find_by_permalink('services')
+    render :action => 'show'
   end
 end
