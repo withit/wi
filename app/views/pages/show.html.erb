@@ -1,53 +1,55 @@
 <% @page_title = nil %>
 <% content_for :head do %>
-  
 <% end %>
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class='<% @page.root.permalink %>'>
-     <tr>
-       <td>
-        <h1><%= @page.title%></h1>
-      </td>
-     </tr>
-     <tr>
-       <td class="breadcrumb"><a href="/">home</a>
-         <% @page.ancestors.reverse.each do |ancestor| %>
-          &gt; <%= link_to ancestor.title, ancestor %>
+  <tr>
+    <td>
+      <h1><%= @page.title%></h1>
+    </td>
+  </tr>
+  <tr>
+    <td class="breadcrumb"><a href="/">home</a>
+      <% @page.ancestors.reverse.each do |ancestor| %>
+        &gt; <%= link_to ancestor.title, ancestor %>
+      <% end %>
+      &gt; <%= @page.title %>
+    </td>
+  </tr>
+  <tr>
+  <td valign="top">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="lhs_menu" valign="top">
+          <table width="150" border="0" cellspacing="0" cellpadding="0" class='side_menu'>
+            <% ([@page.root] + @page.root.children).each do |page| %>
+              <tr>
+                <td class="list"><img src="/images/menu/li.jpg" width="6" height="8" /></td>
+                <td class="menu"><%= link_to_if page != @page, page.title, page %>
+              </td>
+            </tr>
           <% end %>
-          &gt; <%= @page.title %>
-        </td>
-     </tr>
-     <tr>
-       <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-         <tr>
-           <td class="lhs_menu" valign="top">
-           <table width="150" border="0" cellspacing="0" cellpadding="0" class='side_menu'>
-             <% ([@page.root] + @page.root.children).each do |page| %>
-               <tr>
-                 <td class="list"><img src="/images/menu/li.jpg" width="6" height="8" /></td>
-                 <td class="menu"><%= link_to_if page != @page, page.title, page %>
-               </td>
-               </tr>
-             <% end %>
+        </table>
+      </td>
+      <td width="7px"><img src="/images/line.jpg" alt="line" width="7" height="364" />&nbsp;</td>
+      <td valign="top" class="subtext_container">
+        <div id='page_content'><%= @page.content %></div>
+      </td>
+      <td width="7px"><img src="/images/line.jpg" alt="line" width="7" height="364" />&nbsp;</td>
+      <td class="rhs_menu" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="RHS_heading"><img src="/images/inspiration.jpg" width="81" height="19" /></td>
+        </tr>
+        <tr>
+          <td class="RHS_heading"><img src="/images/projects.jpg" alt="projects" width="126" height="125" /></td>
+        </tr>
+        <tr>
+          <td class="RHS_heading"><a href="contact_us.html"><img src="/images/contact_button.jpg" alt="contact us" width="80" height="23" border="0" /></a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
-
-           </td>
-           <td width="7px"><img src="/images/line.jpg" alt="line" width="7" height="364" />&nbsp;</td>
-           <td valign="top" class="subtext_container">
-              <div id='page_content'><%= @page.content %></div>
-           </td>
-           <td width="7px"><img src="/images/line.jpg" alt="line" width="7" height="364" />&nbsp;</td>
-           <td class="rhs_menu" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-             <tr>
-               <td class="RHS_heading"><img src="/images/inspiration.jpg" width="81" height="19" /></td>
-             </tr>
-             <tr>
-               <td class="RHS_heading"><img src="/images/projects.jpg" alt="projects" width="126" height="125" /></td>
-             </tr>
-             <tr>
-               <td class="RHS_heading"><a href="contact_us.html"><img src="/images/contact_button.jpg" alt="contact us" width="80" height="23" border="0" /></a></td>
-             </tr>
-           </table></td>
-         </tr>
-       </table></td>
-     </tr>
-   </table>
+</td>
+</tr>
+</table>
