@@ -34,4 +34,9 @@ class PagesController < ApplicationController
     @page = Page.find_by_permalink('services')
     render :action => 'show'
   end
+  
+  def processes
+    @page = Page.find_by_permalink('process')
+    render :action => 'show'
+  end
 end

@@ -1,5 +1,7 @@
 Page.seed(:permalink) do |p|
   p.permalink = 'home'
+  p.title = 'Home'
+  p.is_wrapper = true
   p.content = <<-EOF
   <h1>Welcome to With Imagination</h1>
   <p>So how is With Imagination different you may ask?</p>
@@ -126,5 +128,30 @@ Are you thinking of running a promotion and/or competition online, at With Imagi
    From promotional concepts to implementation and fulfillment we can help you every step of the way.</div></div>
 <h2>Do you require any of our services? Then why not <strong><a href="contact_us.html">contact us</a></strong> today!
     </h2>
+  EOF
+end
+
+project_page = Page.seed(:permalink) do |p|
+  p.title = "Projects"
+  p.is_wrapper = true
+  p.permalink = 'projects'
+end
+
+project_page = Page.seed(:permalink) do |p|
+  p.title = "Contact Us"
+  p.is_wrapper = true
+  p.permalink = 'contact_us'
+end
+
+Page.seed(:permalink) do |p|
+  p.parent = project_page
+  p.title = "How We Work"
+  p.permalink = 'process'
+  p.content = <<-EOF
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+         <tr>
+         <td align="center"><img src="/images/portfolio/process/how-we-work.jpg" alt="how we work" /></td>
+       </tr>
+     </table>
   EOF
 end

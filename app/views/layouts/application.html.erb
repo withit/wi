@@ -22,6 +22,11 @@
             <div style="width:420px; position:relative; margin:auto; height:100%">
               <table width="420" border="0" cellspacing="0" cellpadding="0" style="position:absolute; left: 281px; top: 107px; overflow:hidden; clear:both;">
                 <tr>
+                    <% Page.roots.each do |page| %>
+                      <td class="top_menu">
+                        <%= link_to page.title, unwrapped_page_path(page)%>
+                      </td>
+                    <% end %>
                   <td class="top_menu">
                     <% if controller_name == 'home' %>
                       <img src="/images/tab/home_visited.gif" alt="home" border="0"/>
