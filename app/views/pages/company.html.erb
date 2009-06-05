@@ -7,41 +7,32 @@
        <td><img src="images/company/banner.jpg" width="978" height="99" alt="banner" /></td>
      </tr>
      <tr>
-       <td class="breadcrumb"><a href="#">home</a> &gt; company</td>
+       <td class="breadcrumb"><a href="#">home</a>
+         <% @page.ancestors.reverse.each do |ancestor| %>
+          &gt; <%= ancestor.title %>
+          <% end %>
+          &gt; <%= @page.title %>
+        </td>
      </tr>
      <tr>
        <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
          <tr>
            <td class="lhs_menu" valign="top">
            <table width="150" border="0" cellspacing="0" cellpadding="0">
- <tr>
-   <td class="list"><img src="images/menu/li.jpg" width="6" height="8" /></td>
-   <td class="menu"><strong>COMPANY</strong></td>
- </tr>
-    <tr>
-   <td class="list"><img src="images/menu/li.jpg" width="6" height="8" /></td>
-   <td class="menu"><a class="menu" href="why_choose_us.html">Why Choose Us?</a></td>
- </tr>
+             <% ([@page.root] + @page.root.children).each do |page| %>
+               <tr>
+                 <td class="list"><img src="images/menu/li.jpg" width="6" height="8" /></td>
+                 <td class="menu <%= "current" if page == @page %>"><%= link_to page.title, page %>
+               </td>
+               </tr>
+             <% end %>
 </table>
 
            </td>
            <td width="7px"><img src="images/line.jpg" alt="line" width="7" height="364" />&nbsp;</td>
-           <td valign="top" class="subtext_container"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-             <tr>
-               <td><h2>With Imagination was incorporated in 1993 with a vision to provide technology based business solutions. 
-               We offer a range of online solutions including<strong> <a href="services.html#design">website design</a></strong> & <strong><a href="services.html#development">website development</a>,<a href="services.html#ecommerce">e-commerce solutions</a></strong> and <strong><a href="services.html#advertising">online marketing services</a></strong>.
-               <br /><br />
-               Our focus is simple, to provide are range of cost effective internet consultancy products and services that add value to our clients business.
-               </h2></td>
-             </tr>
-             <tr>
-               <td colspan="2"><h2>Through <a href="services.html"><strong>our services</strong></a> With Imagination has helped many successful small & medium sized companies to fully understand the commercial 
-               opportunities of the internet along with maximizing their online investment. <br />
-               <br /> 
-               Do you have a project in mind? Then why not <a href="contact_us.html">c<strong>ontact us</strong></a> today!      
-               </h2></td>
-             </tr>
-           </table></td>
+           <td valign="top" class="subtext_container">
+              <div id='page_content'><%= @page.content %></div>
+           </td>
            <td width="7px"><img src="images/line.jpg" alt="line" width="7" height="364" />&nbsp;</td>
            <td class="rhs_menu" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
              <tr>

@@ -19,4 +19,16 @@ class PagesController < ApplicationController
       render :action => "edit"
     end
   end
+  
+  def company
+    @page = Page.find_by_permalink('company')
+  end
+  
+  def why_choose_us
+    @page = Page.find_by_permalink('why_choose_us')
+  end
+  
+  def services
+    @page = Page.find_by_permalink('services')
+  end
 end

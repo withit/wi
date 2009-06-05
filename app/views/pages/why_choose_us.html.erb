@@ -7,7 +7,11 @@
        <td><img src="images/company/why-choose-us.jpg" alt="why choose us" width="978" height="99" /></td>
      </tr>
      <tr>
-       <td class="breadcrumb"><a href="#">home</a> &gt; why choose us</td>
+       <td class="breadcrumb"><a href="#">home</a>
+       <% @page.ancestors.reverse.each do |ancestor| %>
+        &gt; <%= link_to ancestor.title, ancestor %>
+        <% end %>
+        &gt; <%= @page.title %></td>
      </tr>
      <tr>
        <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -15,34 +19,20 @@
            <td class="lhs_menu" valign="top">
            <table width="150" border="0" cellspacing="0" cellpadding="0">
 
-    <tr>
-   <td class="list"><img src="images/menu/li.jpg" width="6" height="8" /></td>
-   <td class="menu"><a class="menu" href="company.html">Company</a></td>
- </tr>
- <tr>
-   <td class="list"><img src="images/menu/li.jpg" width="6" height="8" /></td>
-   <td class="menu"><strong>WHY CHOOSE US</strong></td>
- </tr>
-
+    <% ([@page.root] + @page.root.children).each do |page| %>
+      <tr>
+        <td class="list"><img src="images/menu/li.jpg" width="6" height="8" /></td>
+        <td class="menu <%= "current" if page == @page %>"><%= link_to page.title, page %>
+      </td>
+      </tr>
+    <% end %>
 </table>
 
            </td>
            <td width="7px"><img src="images/line.jpg" alt="line" width="7" height="364" />&nbsp;</td>
            <td valign="top" class="subtext_container"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                <tr>
-               <td><h2>
-			   	  <strong>We are passionate about helping businesses to grow online by:</strong><br><br>
-			   	  <ul>
-			   	  <li style="list-style-type:square">Delivering a quality product at a realistic price</li><br><br>
-			   	  <li style="list-style-type:square">Offering high levels of customer service</li><br><br>
-			   	  <li style="list-style-type:square">Using tested procedures to deliver projects on time</li><br><br>
-			   	  <li style="list-style-type:square">Knowledgeable and experienced in the design & development of websites</li><br><br>
-			   	  <li style="list-style-type:square">Providing additional online marketing services to maximize your investment</li><br><br>
-			   	  <li style="list-style-type:square">Being a trusted partner to small & medium enterprises and corporations</li><br><br>
-			   	  <li style="list-style-type:square">Always flexible and easy to do business with</li>
-			   	  </ul>
-
-               </h2></td>
+               <td><%= @page.content %></td>
              </tr>
            </table></td>
            <td width="7px"><img src="images/line.jpg" alt="line" width="7" height="364" />&nbsp;</td>

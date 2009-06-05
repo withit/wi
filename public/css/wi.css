@@ -568,3 +568,24 @@ u
 	padding-right: 8px;
 	padding-left: 40px;
 }
+
+#page_content p
+{
+  color: #595959;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  padding: 10px;
+  line-height: 15px;
+}
+
+.breadcrumb
+{
+  text-transform: lowercase;
+}
+
+.menu.current
+{
+  font-weight: bold;
+  text-transform: uppercase;
+}
