@@ -149,7 +149,7 @@ project_page = Page.seed(:permalink) do |p|
   p.permalink = 'projects'
 end
 
-project_page = Page.seed(:permalink) do |p|
+Page.seed(:permalink) do |p|
   p.title = "Contact Us"
   p.is_wrapper = true
   p.tab = seed_image 'contact_us.gif'

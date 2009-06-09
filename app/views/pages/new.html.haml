@@ -1,4 +1,4 @@
-%h1 Editing page
+%h1 New Page
 
 - form_for(@page, :html => {:multipart => true}) do |f| 
   = f.error_messages
@@ -39,6 +39,5 @@
     = f.label :parent_id
     = f.collection_select :parent_id, Page.roots - [@page], :id, :title
   %p
-    = f.submit "Update"
-= link_to 'Show', unwrapped_page_path(@page)
-= link_to 'Back', pages_path
+    = f.submit "Create"
+= link_to 'Back',pages_path

@@ -43,4 +43,8 @@ class PagesController < ApplicationController
   def index
     @root_pages = Page.roots
   end
+  
+  def new
+    @page = Page.new
+  end
 end
