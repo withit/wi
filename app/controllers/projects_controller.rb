@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_filter :authorize, :except => [:show, :index]
-  
+  before_filter :load_page
   def index
     @projects = Project.paginate(:page => params[:page], :per_page => 4, :order => 'position')
   end
@@ -35,5 +35,11 @@ class ProjectsController < ApplicationController
   
   def show
     @project = Project.find(params[:id])
+  end
+  
+  protected
+  
+  def load_page
+    @page = Page.find_by_permalink 'projects'
   end
 end

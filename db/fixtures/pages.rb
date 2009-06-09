@@ -1,7 +1,13 @@
+def seed_image filename
+  File.new("#{RAILS_ROOT}/db/fixtures/images/#{filename}")
+end
+
 Page.seed(:permalink) do |p|
   p.permalink = 'home'
   p.title = 'Home'
   p.is_wrapper = true
+  p.tab = seed_image 'home.gif'
+  p.hover_tab = seed_image 'home_visited.gif'
   p.content = <<-EOF
   <h1>Welcome to With Imagination</h1>
   <p>So how is With Imagination different you may ask?</p>
@@ -21,6 +27,8 @@ end
 company_page = Page.seed(:permalink) do |p|
   p.permalink = 'company'
   p.title = 'Company'
+  p.tab = seed_image 'company.gif'
+  p.hover_tab = seed_image 'company_visited.gif'
   p.content = <<-EOF
   <table width="100%" border="0" cellspacing="0" cellpadding="0">
      <tr>
@@ -68,6 +76,8 @@ end
 Page.seed(:permalink) do |p|
   p.permalink = 'services'
   p.title = 'Services'
+  p.tab = seed_image('services.gif')
+  p.hover_tab = seed_image('services_visited.gif')
   p.content = <<-EOF
   <h2>Our services are delivered by passionate and highly skilled creative, technical and account management staff that help to plan,
     manage and implement your project successfully.<br />
@@ -134,12 +144,16 @@ end
 project_page = Page.seed(:permalink) do |p|
   p.title = "Projects"
   p.is_wrapper = true
+  p.tab = seed_image 'projects.gif'
+  p.hover_tab = seed_image 'projects_visited.gif'
   p.permalink = 'projects'
 end
 
 project_page = Page.seed(:permalink) do |p|
   p.title = "Contact Us"
   p.is_wrapper = true
+  p.tab = seed_image 'contact_us.gif'
+  p.hover_tab = seed_image 'contact_visited.gif'
   p.permalink = 'contact_us'
 end
 

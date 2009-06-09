@@ -1,6 +1,6 @@
 %h1 Editing page
 
-- form_for(@page) do |f| 
+- form_for(@page, :html => {:multipart => true}) do |f| 
   = f.error_messages
 
   %p
@@ -23,6 +23,18 @@
     = f.label :summary
     %br 
     = f.text_field :summary
+  %p
+    = f.label :tab
+    = f.file_field :tab
+  %p
+    = f.label :hover_tab
+    = f.file_field :hover_tab
+  %p
+    = f.label :banner
+    = f.file_field :banner
+  %p
+    = f.label :menu_heading
+    = f.file_field :menu_heading
   %p
     = f.submit "Update"
 = link_to 'Show', @page

@@ -1,4 +1,6 @@
 class EnquiriesController < ApplicationController
+  before_filter :load_page
+  
   def new
     @enquiry = Enquiry.new
   end
@@ -24,5 +26,11 @@ class EnquiriesController < ApplicationController
     session[:enquiry_id] = nil
   rescue
     redirect_to contact_us_path
+  end
+  
+  protected
+  
+  def load_page 
+    @page = Page.find_by_permalink("contact_us")
   end
 end

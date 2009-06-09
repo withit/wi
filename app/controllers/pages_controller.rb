@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :authorize, :only => [:edit, :update]
+  before_filter :authorize, :only => [:edit, :update, :index]
 
   def show
     @page = Page.find_by_permalink(params[:id])
@@ -38,5 +38,9 @@ class PagesController < ApplicationController
   def processes
     @page = Page.find_by_permalink('process')
     render :action => 'show'
+  end
+  
+  def index
+    @root_pages = Page.roots
   end
 end

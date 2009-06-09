@@ -24,44 +24,9 @@
                 <tr>
                     <% Page.roots.each do |page| %>
                       <td class="top_menu">
-                        <%= link_to page.title, unwrapped_page_path(page)%>
+                        <%= link_to(image_tag(((@page && @page.root) == page) ? page.hover_tab.url : page.tab.url , :alt =>  page.title), unwrapped_page_path(page)) %>
                       </td>
                     <% end %>
-                  <td class="top_menu">
-                    <% if controller_name == 'home' %>
-                      <img src="/images/tab/home_visited.gif" alt="home" border="0"/>
-                        <% else %>
-                      <a href="/index.html"><img src="/images/tab/home.gif" alt="home" border="0"/></a>
-                    <% end %>
-                  </td>
-                  <td class="top_menu">
-                    <% if action_name == 'company' || (@page && @page.root.permalink == 'company')  %>
-                      <img src="/images/tab/company_visited.gif" alt="home" border="0"/>
-                    <% else %>
-                      <a href="/company.html"><img src="/images/tab/company.gif" alt="company" border="0" /></a>
-                    <% end %>
-                  </td>
-                  <td class="top_menu">
-                    <% if action_name == 'services' || (@page && @page.root.permalink == 'services') %>
-                      <img src="/images/tab/services_visited.gif" alt="services" border="0" />
-                    <% else %>
-                      <a href="/services.html"><img src="/images/tab/services.gif" alt="services" border="0" /></a>
-                    <% end %>
-                  </td>
-                  <td class="top_menu">
-                    <% if controller_name == 'projects' %>
-                      <img src="/images/tab/projects_visited.gif" alt="projects" border="0" />
-                    <% else %>
-                      <a href="<%= projects_path %>"><img src="/images/tab/projects.gif" alt="projects" border="0" width="79" height="26" /></a>
-                    <% end %>
-                  </td>
-                  <td class="top_menu">
-                    <% if controller_name == 'enquiries' && action_name == 'new' %>
-                      <img src="/images/tab/contact_visited.gif" alt="contact us" border="0" />
-                    <% else %>
-                      <a href="/contact_us.html"><img src="/images/tab/contact.gif" alt="contact us" border="0" /></a>
-                    <% end %>
-                  </td>
                 </tr>
               </table>
             </div>

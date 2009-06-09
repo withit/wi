@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090605041442) do
+ActiveRecord::Schema.define(:version => 20090609002222) do
 
   create_table "enquiries", :force => true do |t|
     t.string   "name"
@@ -43,6 +43,19 @@ ActiveRecord::Schema.define(:version => 20090605041442) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "parent_id"
+    t.boolean  "is_wrapper"
+    t.string   "tab_file_name"
+    t.string   "tab_content_type"
+    t.integer  "tab_file_size"
+    t.string   "hover_tab_file_name"
+    t.string   "hover_tab_content_type"
+    t.integer  "hover_tab_file_size"
+    t.string   "banner_file_name"
+    t.string   "banner_content_type"
+    t.integer  "banner_file_size"
+    t.string   "menu_heading_file_name"
+    t.string   "menu_heading_content_type"
+    t.integer  "menu_heading_file_size"
   end
 
   create_table "projects", :force => true do |t|

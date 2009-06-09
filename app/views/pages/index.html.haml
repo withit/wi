@@ -1,0 +1,11 @@
+%h1 Pages
+%ul
+  - @root_pages.each do |page|
+    %li
+      = link_to page.title, unwrapped_page_path(page)
+      = link_to '(edit)', [:edit, page]
+      %ul
+        - page.children.each do |page|
+          %li
+            = link_to page.title, unwrapped_page_path(page)
+            = link_to '(edit)', [:edit, page]
