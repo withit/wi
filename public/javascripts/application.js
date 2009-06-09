@@ -15,7 +15,6 @@ function next_slide()
 
 
 document.observe("dom:loaded", function() {
-  $$('div#services div').invoke('hide');
   $$('div#slide_show img').invoke('hide');
   
   if($('slide_show') && $('markers'))
@@ -25,22 +24,3 @@ document.observe("dom:loaded", function() {
     new PeriodicalExecuter(next_slide, 3);
   }
 });
-
-Event.addBehavior({
-  'div#services a:mouseover' : function() {
-    Effect.BlindDown(this.up('u').next('div'),{ delay: 0.2, duration: 0.7, queue: {scope: this.identify(), position: 'end', limit: 1}});
-  },
-  'div#services a:mouseout' : function() {
-    var q = Effect.Queues.get(this.identify());
-    var c = false;
-    q.each(function(e){
-      if(e.currentFrame == 0)
-        {e.cancel();c = true;}
-    });
-    if(!c)
-    {
-      Effect.BlindUp(this.up('u').next('div'),{ duration: 0.7, queue: {scope: this.identify(), position: 'end'}});
-    }
-  }
-});
-
