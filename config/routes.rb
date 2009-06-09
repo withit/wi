@@ -5,6 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.login 'login', :controller => 'sessions', :action => 'new'
   map.portfolio '/portfolio', :controller => 'projects', :action => 'index'
   map.resources :projects
+  map.projects '/websites', :controller => 'projects'
   map.resources :news, :singular => 'news_item'
   map.services 'services', :controller => 'pages', :action => 'show', :id => 'services'
   map.about 'about', :controller => 'pages', :action => 'show', :id => 'about'

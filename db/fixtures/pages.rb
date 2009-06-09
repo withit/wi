@@ -54,22 +54,16 @@ Page.seed(:permalink) do |p|
   p.title ='Why Choose Us'
   p.parent = company_page
   p.content = <<-EOF
-  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-     <tr>
-       <td><h2>With Imagination was incorporated in 1993 with a vision to provide technology based business solutions. 
-       We offer a range of online solutions including<strong> <a href="services.html#design">website design</a></strong> & <strong><a href="services.html#development">website development</a>,<a href="services.html#ecommerce">e-commerce solutions</a></strong> and <strong><a href="services.html#advertising">online marketing services</a></strong>.
-       <br /><br />
-       Our focus is simple, to provide are range of cost effective internet consultancy products and services that add value to our clients business.
-       </h2></td>
-     </tr>
-     <tr>
-       <td colspan="2"><h2>Through <a href="services.html"><strong>our services</strong></a> With Imagination has helped many successful small & medium sized companies to fully understand the commercial 
-       opportunities of the internet along with maximizing their online investment. <br />
-       <br /> 
-       Do you have a project in mind? Then why not <a href="contact_us.html">c<strong>ontact us</strong></a> today!      
-       </h2></td>
-     </tr>
-   </table>
+  <p><strong>We are passionate about helping businesses to grow online by:</strong><br><br></p>
+  <ul>
+  <li style="list-style-type:square">Delivering a quality product at a realistic price</li><br><br>
+  <li style="list-style-type:square">Offering high levels of customer service</li><br><br>
+  <li style="list-style-type:square">Using tested procedures to deliver projects on time</li><br><br>
+  <li style="list-style-type:square">Knowledgeable and experienced in the design & development of websites</li><br><br>
+  <li style="list-style-type:square">Providing additional online marketing services to maximize your investment</li><br><br>
+  <li style="list-style-type:square">Being a trusted partner to small & medium enterprises and corporations</li><br><br>
+  <li style="list-style-type:square">Always flexible and easy to do business with</li>
+  </ul>
   EOF
 end
 
@@ -143,7 +137,7 @@ end
 
 project_page = Page.seed(:permalink) do |p|
   p.title = "Projects"
-  p.is_wrapper = true
+  p.is_wrapper = false
   p.tab = seed_image 'projects.gif'
   p.hover_tab = seed_image 'projects_visited.gif'
   p.permalink = 'projects'
@@ -158,7 +152,7 @@ Page.seed(:permalink) do |p|
 end
 
 Page.seed(:permalink) do |p|
-  p.parent = project_page
+  p.parent = company_page
   p.title = "How We Work"
   p.permalink = 'process'
   p.content = <<-EOF
@@ -168,4 +162,34 @@ Page.seed(:permalink) do |p|
        </tr>
      </table>
   EOF
+end
+
+Page.seed(:permalink) do |p|
+  p.title = "Who We Helped"
+  p.parent = company_page
+  # p.is_wrapper = true
+  p.tab = seed_image 'projects.gif'
+  p.hover_tab = seed_image 'projects_visited.gif'
+  p.permalink = 'who_we_helped'
+end
+
+Page.seed(:permalink) do |p|
+  p.title = "Websites"
+  p.parent = project_page
+  p.is_wrapper = true
+  p.permalink = 'websites'
+end
+
+Page.seed(:permalink) do |p|
+  p.title = "Banners"
+  p.parent = project_page
+  # p.is_wrapper = true
+  p.permalink = 'banners'
+end
+
+Page.seed(:permalink) do |p|
+  p.title = "Newsletters"
+  p.parent = project_page
+  # p.is_wrapper = true
+  p.permalink = 'newsletters'
 end

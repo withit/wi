@@ -20,14 +20,14 @@
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td class="lhs_menu" valign="top">
-            <table width="150" border="0" cellspacing="0" cellpadding="0" class='side_menu'>
-              <% ([@page.root] + @page.root.children).each do |page| %>
-                <tr>
-                  <td class="list"><img src="/images/menu/li.jpg" width="6" height="8" /></td>
-                  <td class="menu"><%= link_to_if page != @page, page.title, unwrapped_page_path(page) %></td>
-                </tr>
-              <% end %>
-            </table>
+            <div class='side_menu'>
+              <%= image_tag @page.root.menu_heading.url%>
+              <ul>
+                <% ([@page.root] + @page.root.children).each do |page| %>
+                  <li><%= link_to_if page != @page, page.title, unwrapped_page_path(page) %></li>
+                <% end %>
+              </ul>
+            </div>
           </td>
           <td width="7px"><img src="/images/line.jpg" alt="line" width="7" height="364" />&nbsp;</td>
           <td valign="top" class="subtext_container">
@@ -35,19 +35,18 @@
           </td>
           <td width="7px"><img src="/images/line.jpg" alt="line" width="7" height="364" />&nbsp;</td>
           <td class="rhs_menu" valign="top">
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td class="RHS_heading"><img src="/images/inspiration.jpg" width="81" height="19" /></td>
-              </tr>
-              <tr>
-                <td class="RHS_heading"><img src="/images/projects.jpg" alt="projects" width="126" height="125" /></td>
-              </tr>
-              <tr>
-                <td class="RHS_heading">
-                  <a href="contact_us.html"><img src="/images/contact_button.jpg" alt="contact us" width="80" height="23" border="0" /></a>
-                </td>
-              </tr>
-            </table>
+            <div class='contact_infomation'>
+              <h3>Contact Us</h3>
+              <p>Email: <%= mail_to 'info@wi.com.au','info@wi.com.au', :encode => "javascript"%></p>
+              <p>Phone: + 61 2 9929 9229</p>
+              <p>Fax: + 61 2 9460 4770</p>
+            </div>
+            <div class='twitter'>
+              <%= link_to 'Follow', '#TODO' %>
+            </div>
+            <div class='subscribe'>
+              <%= link_to 'Subscribe Latest News', '#TODO' %>
+            </div>
           </td>
         </tr>
       </table>
