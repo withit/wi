@@ -22,6 +22,14 @@
     %label Include in footer
     = f.check_box :in_footer  
   %p
+    %label Current
+    (will be listed on the websites page)
+    = f.check_box :current
+  %p
+    %label Has been helped
+    (will be included on the who we helped page)
+    = f.check_box :helped
+  %p
     = submit_tag t('project.edit.submit')
     or
     = link_to 'Cancel', projects_path

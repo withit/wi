@@ -17,7 +17,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect '/company.html', :controller => 'pages', :action => 'company'
   map.connect '/process.html', :controller => 'pages', :action => 'processes'
   map.connect '/services.html', :controller => 'pages', :action => 'services'
-  map.connect '/who_we_help.html', :controller => 'pages', :action => 'who_we_help'
+  map.connect '/who_we_helped', :controller => 'projects', :action => 'helped'
   map.connect '/why_choose_us.html', :controller => 'pages', :action => 'why_choose_us'
   map.resource :enquiry, :only => [:create, :show]
   map.dashboard '/dashboard', :controller => 'dashboard'

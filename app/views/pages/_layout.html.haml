@@ -1,0 +1,44 @@
+- @page_title = nil 
+- content_for :head do 
+  &nbsp;
+  
+%table{:width => "100%", :border => "0",  :cellspacing => "0", :cellpadding => "0",  :class => @page.root.permalink}
+  %tr
+    %td
+      %hi= @page.title
+  %tr
+    %td.breadcrumb
+      = link_to 'home', '/'
+      - @page.ancestors.reverse.each do |ancestor| 
+        &gt;
+        = link_to ancestor.title, unwrapped_page_path(ancestor)
+      &gt; 
+      = @page.title
+  %tr
+    %td{ :valign => "top"}
+      %table{:width => "100%",:border => "0", :cellspacing => "0",  :cellpadding => "0"}
+        %tr
+          %td.lhs_menu{:valign => 'top'}
+            .side_menu
+              = image_tag @page.root.menu_heading.url
+              %ul
+                - ([@page.root] + @page.root.children).each do |page| 
+                  %li= link_to_if page != @page, page.title, unwrapped_page_path(page)
+          %td{:width => "7px"}
+            = image_tag "line.jpg", :alt => "line",  :width => "7",  :height => "364"
+            &nbsp;
+          %td.subtext_container{:valign => "top"}
+            #page_content= yield 
+          %td{:width => "7px"}
+            = image_tag "line.jpg",  :alt => "line", :width => "7",  :height => "364"
+            &nbsp;
+          %td.rhs_menu{:valign => "top"}
+            #contact_infomation
+              %h3 Contact Us
+              %p
+                Email: 
+                = mail_to 'info@wi.com.au','info@wi.com.au', :encode => "javascript"
+              %p Phone: + 61 2 9929 9229
+              %p Fax: + 61 2 9460 4770
+            .twitter= link_to 'Follow', '#TODO'
+            .subscribe= link_to 'Subscribe Latest News', '#TODO'

@@ -13,4 +13,6 @@ class Project < ActiveRecord::Base
   def sort_order
     position
   end
+  
+  named_scope :who_we_helped, :conditions => {:helped => true}
 end

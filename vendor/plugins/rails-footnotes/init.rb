@@ -6,7 +6,7 @@
 #
 #  * backtracer.rb: Append links to tour favorite editor in backtrace pages.
 #
-if (ENV['RAILS_ENV'] == 'development')
+if (ENV['RAILS_ENV'] == '2development')
   dir = File.dirname(__FILE__)
   require File.join(dir,'lib','footnotes')
   require File.join(dir,'lib','loader')
