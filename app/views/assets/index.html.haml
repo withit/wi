@@ -1,0 +1,5 @@
+= link_to 'Upload a new asset', new_asset_path
+%ul
+  -@assets.each do |asset|
+    %li= h(asset)
+  
