@@ -8,18 +8,23 @@
       %table
         %tr
           %td.hero
-            #markers
-              - Project.find(:all, :conditions => 'slide_file_name is not null', :order => 'position').each do |p| 
-                %div &nbsp;
-            %span Recent Projects
-            #slide_show
-              - Project.find(:all, :conditions => 'slide_file_name is not null',  :order => 'position').each_with_index do |p, i| 
-                = image_tag p.slide.url, :style => i == 0 ? nil : 'display: none;'
+            #previous
+              = link_to "Previous Project", '#'
+            #slide_show_container
+              #markers
+                - Project.find(:all, :conditions => 'slide_file_name is not null', :order => 'position').each do |p| 
+                  %div &nbsp;
+                %span Recent Projects
+              #slide_show
+                - Project.find(:all, :conditions => 'slide_file_name is not null',  :order => 'position').each_with_index do |p, i| 
+                  = image_tag p.slide.url, :style => i == 0 ? nil : 'display: none;'
+            #next
+              = link_to 'Next Project',"#"
           %td.line
             = image_tag "line.jpg",  :alt => "line",  :width => "7",  :height => "320"
           %td.text_container{:valign => "top"}
             #share= share_link
-            #page_content
+            #page_content.home_page
               = RedCloth.new(@page.content.to_s).to_html
   %tr
     %td.boxes_container{:valign => "top"}
@@ -76,4 +81,4 @@
                 %p
                   = f.text_field :phone, :class => 'field', :size => 11, :maxlength => 100
                   = error_message_on f.object, :phone
-                %p= image_submit_tag "submit.jpg", :alt => "submit", :height => "23", :border => "0" 
+                %p= image_submit_tag "submit.jpg"

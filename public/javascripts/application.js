@@ -2,15 +2,33 @@
 // This file is automatically included by javascript_include_tag :defaults
 var current_slide;
 var current_marker;
+var in_transaction = false;
 function next_slide()
 {
-  current_slide.fade();
-  current_slide = current_slide.next() || $('slide_show').down()
-  current_slide.appear();
+  if(Effect.Queues.get('slide').size()==0)
+  {  
+    current_slide.fade({queue: {position: 'end', scope: 'slide'}});
+    current_slide = current_slide.next() || $('slide_show').down();
+    current_slide.appear();
   
-  current_marker.morph({backgroundColor: '#E1E1E1'});
-  current_marker = current_marker.next('div') || $('markers').down();
-  current_marker.morph({backgroundColor: '#2D9DD8'});
+    current_marker.morph({backgroundColor: '#E1E1E1'});
+    current_marker = current_marker.next('div') || $('markers').down();
+    current_marker.morph({backgroundColor: '#2D9DD8'});
+  }
+}
+
+function prev_slide()
+{
+  if(Effect.Queues.get('slide').size()==0)
+  {  
+    current_slide.fade({queue: {position: 'end', scope: 'slide'}});
+    current_slide = current_slide.previous() || $('slide_show').immediateDescendants().last();
+    current_slide.appear();
+  
+    current_marker.morph({backgroundColor: '#E1E1E1'});
+    current_marker = current_marker.previous('div') || $('markers').getElementsBySelector('div').last();
+    current_marker.morph({backgroundColor: '#2D9DD8'});
+  }
 }
 
 
@@ -32,5 +50,11 @@ document.observe("dom:loaded", function() {
 Event.addBehavior({
   '.assets li:click' : function(e){
     $('page_content').value += (" !" + e.element().down('.full_path').innerHTML + "! ");
+  },
+  'body.home .hero #next:click' : function(e){
+    next_slide();
+  },
+  'body.home .hero #previous:click' : function(e){
+    prev_slide();
   }
 })

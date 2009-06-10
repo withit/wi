@@ -389,11 +389,10 @@ u {
     left: 0px; }
 
 #markers {
-  color: #2D9DD8;
+  color: #0A61AE;
   text-transform: uppercase;
-  font-size: 9px;
+  font-size: 12px;
   font-family: Arial,Helvetica,sans-serif;
-  padding-top: 30px;
   padding-left: 10px; }
   #markers span {
     margin-left: 10px; }
@@ -520,7 +519,7 @@ body.home #express_contact_us {
   body.home #services a,
   body.home #news a,
   body.home #express_contact_us a {
-    background-color: rgb(225, 225, 225); }
+    background-color: transparent; }
 body.home #services h3 {
   background-image: url(../images/boxes/services.jpg); }
 body.home #news h3 {
@@ -538,3 +537,40 @@ body.home #express_contact_us input[type=image] {
 
 #share {
   float: right; }
+
+#next, #previous, #slide_show_container {
+  float: left; }
+
+#next, #previous {
+  width: 23px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-indent: -9999px;
+  height: 350px; }
+  #next a,   #previous a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    outline: none; }
+
+#next {
+  background-image: url(../images/right_arrow.jpg); }
+
+#previous {
+  background-image: url(../images/left_arrow.jpg); }
+
+body.home .hero {
+  width: auto; }
+
+body.home .home_page a {
+  font-weight: bold; }
+body.home .home_page h1 {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 18px; }
+
+body {
+  background-image: url(../images/background.jpg); }
+
+body.home .text_container, body.home .content {
+  padding-top: 1px; }

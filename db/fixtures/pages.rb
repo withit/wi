@@ -9,19 +9,16 @@ Page.seed(:permalink) do |p|
   p.tab = seed_image 'home.jpg'
   p.hover_tab = seed_image 'home_hover.jpg'
   p.content = <<-EOF
-  <h1>Welcome to With Imagination</h1>
-  <p>So how is With Imagination different you may ask?</p>
-  <p>
-			With Imagination is a highly regarded company with over 16 years experience in providing a complete range of online business solutions.  
-      We specialize in <strong><a href="services.html#design">website design</a></strong> and<strong> <a href="services.html#development">website development</a>, <a href="services.html#ecommerce">e-commerce solutions</a></strong> and <strong><a href="services.html#advertising">online marketing services</a></strong>. <br />
-  </p>
-  <p>
-    Our website design and website development experience ranges from simple brochure based websites to more advanced e-commerce solutions. 
-    Check out <strong><a href="<%= projects_path %> ">our projects</a></strong>. In addition, to designing and developing effective websites we also provide a full range of supporting online 
-    marketing services including <strong><a href="services.html#seo">search engine optimisation</a></strong> to ensure you achieve a maximum return on your investment. <br />
-  </p>
-  <p>Would you like to know more about us? Then why not contact us today!</p>
-  EOF
+h1. Welcome to With Imagination
+
+So how is With Imagination different you may ask?
+
+With Imagination is a highly regarded company with over 16 years experience in providing a complete range of online business solutions.  We specialize in "website design":services.html#design and "website development":services.html#development, "e-commerce solutions":services.html#ecommerce and "online marketing services":services.html#advertising". 
+
+Our website design and website development experience ranges from simple brochure based websites to more advanced e-commerce solutions. Check out "our projects":/projects. In addition, to designing and developing effective websites we also provide a full range of supporting online marketing services including "search engine optimisation":services.html#seo to ensure you achieve a maximum return on your investment. 
+
+Would you like to know more about us? Then why not contact us today!
+EOF
 end
 
 company_page = Page.seed(:permalink) do |p|
