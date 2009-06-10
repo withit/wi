@@ -480,3 +480,57 @@ form.new_page #preview {
 form.edit_page .assets .full_path,
 form.new_page .assets .full_path {
   display: none; }
+
+body.home #services,
+body.home #news,
+body.home #express_contact_us {
+  margin-top: 0;
+  height: 100%;
+  margin-right: 15px;
+  background-color: rgb(225, 225, 225);
+  text-align: left;
+  background-image: url(../images/boxes/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 30px; }
+  body.home #services li,
+  body.home #news li,
+  body.home #express_contact_us li {
+    margin-bottom: 15px; }
+  body.home #services h3,
+  body.home #news h3,
+  body.home #express_contact_us h3 {
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-position: 15px 10px;
+    margin-top: 0; }
+  body.home #services h4, body.home #services p,
+  body.home #news h4, body.home #news p,
+  body.home #express_contact_us h4, body.home #express_contact_us p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px; }
+  body.home #services h4,
+  body.home #news h4,
+  body.home #express_contact_us h4 {
+    color: #1F34B1;
+    font-weight: bold; }
+  body.home #services a,
+  body.home #news a,
+  body.home #express_contact_us a {
+    background-color: rgb(225, 225, 225); }
+body.home #services h3 {
+  background-image: url(../images/boxes/services.jpg); }
+body.home #news h3 {
+  background-image: url(../images/boxes/latest_news.jpg); }
+body.home #express_contact_us h3 {
+  background-image: url(../images/boxes/contact_us.jpg);
+  margin-bottom: 25px; }
+body.home #express_contact_us p {
+  margin-bottom: 5px;
+  margin-left: 25px; }
+body.home #express_contact_us input[type=text] {
+  width: 180px; }
+body.home #express_contact_us input[type=image] {
+  margin-left: 132px; }

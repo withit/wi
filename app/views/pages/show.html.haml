@@ -1,2 +1,2 @@
 - render :layout => 'layout' do 
-  = @page.content 
+  = RedCloth.new(@page.content.to_s).to_html

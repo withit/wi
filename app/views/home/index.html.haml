@@ -1,9 +1,90 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.erb
-%p= link_to t('project.link'), portfolio_path
-%p
-  = link_to 'Services', services_path
-  = link_to 'Edit', edit_page_path('services') if admin?
-%p
-  = link_to 'About', about_path
-  = link_to 'Edit', edit_page_path('about') if admin?
+- @page_title = nil 
+- content_for :head do 
+  = auto_discovery_link_tag(:rss, "/news.rss") 
+
+%table{:width => "1005",  :border => "0",  :cellspacing => "0",  :cellpadding => "0"}
+  %tr
+    %td.subcontainer
+      %table
+        %tr
+          %td.hero
+            #markers
+              - Project.find(:all, :conditions => 'slide_file_name is not null', :order => 'position').each do |p| 
+                %div &nbsp;
+            %span Recent Projects
+            #slide_show
+              - Project.find(:all, :conditions => 'slide_file_name is not null',  :order => 'position').each_with_index do |p, i| 
+                = image_tag p.slide.url, :style => i == 0 ? nil : 'display: none;'
+          %td.line
+            = image_tag "line.jpg",  :alt => "line",  :width => "7",  :height => "320"
+          %td.text_container{:valign => "top"}
+            #page_content
+              = RedCloth.new(@page.content.to_s).to_html
+          %td.share_container{:valign => "top"}
+            %table{:width => "100%",  :border => "0",  :cellspacing => "0",  :cellpadding => "0"}
+              %tr
+                %td{:align => "right"}
+
+                  <!-- AddThis Button BEGIN -->
+                  <script type="text/javascript">var addthis_pub="withimagination";</script>
+
+                  <a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="http://s7.addthis.com/static/btn/lg-share-en.gif" width="125" height="16" border="0" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/152/addthis_widget.js"></script>
+                  <!-- AddThis Button END -->
+  %tr
+    %td.boxes_container{:valign => "top"}
+      %table{:width => "100%",:border => "0",  :align => "center", :cellpadding => "0", :cellspacing => "0"}
+        %tr
+          %td{:align => "left",  :valign => "top", :width => '33%'}
+            #news
+              %h3 Latest news
+              %ul
+                - News.all(:limit => 2).each do |news|
+                  %li
+                    %h4= news.title 
+                    %p= truncate_preserving_words(strip_tags(news.content),120)
+                    %p= link_to "more &gt;&gt;", "/news#news_#{news.id}"
+          %td{:align => "center", :valign => "top", :width => '33%'}
+            #services
+              %h3 Services
+              %ul
+                %li
+                  %h4 Web Design and Development
+                  %p 
+                    Our mission is always to provide cost-effective, creative, quality solutions that target your goals ...
+                    on-time and within  budget.
+                  %p= link_to "more &gt;&gt;","/services.html#design"
+                %li
+                  %h4 e-Commerce Solutions
+                  %p 
+                    Thinking of building an online store? We can offer a complete range of e-commerce solutions.
+                  %p= link_to "more &gt;&gt;","/services.html#e-commerce"
+                %li
+                  %h4 Online Marketing
+                  %p 
+                    Looking to run an online advertising campaign? We have designed many different forms of online media such as buttons, 
+                    banners and skyscrapers.
+                  %p= link_to "more &gt;&gt;","/services.html#online_marketing"
+          %td{:align => "right", :valign => "top", :width => '33%'}
+            %table{:width => "320", :border => "0", :cellspacing => "0", :cellpadding => "0"}
+              %tr
+                %td{:align => "left"}
+                  #express_contact_us
+                    %h3 Contact us
+                    - form_for @enquiry || Enquiry.new(:name => 'name', :email => 'email address', :phone => 'phone', :express => true), :url => enquiry_path do |f|
+                      %p
+                        Email:
+                        = mail_to "info@wi.com.au","info@wi.com.au", :encode => :javascript
+                      %p Phone: + 61 2 9929 9229
+                      %p Fax: + 61 2 9460 4770
+                      = '<span class="errorExplanation">Your enquiry could not be submitted</span>' unless f.object.errors.empty? 
+                      = f.hidden_field :express 
+                      %p
+                        = f.text_field :name, :class => 'field', :size => 11, :maxlength => 100 
+                        = error_message_on f.object, :name
+                      %p
+                        = f.text_field :email, :class => 'field', :size => 11, :maxlength => 100 
+                        = error_message_on f.object, :email
+                      %p
+                        = f.text_field :phone, :class => 'field', :size => 11, :maxlength => 100
+                        = error_message_on f.object, :phone
+                      %p= image_submit_tag "submit.jpg", :alt => "submit", :height => "23", :border => "0" 
