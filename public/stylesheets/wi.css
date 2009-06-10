@@ -485,7 +485,7 @@ body.home #services,
 body.home #news,
 body.home #express_contact_us {
   margin-top: 0;
-  height: 100%;
+  height: 256px;
   margin-right: 15px;
   background-color: rgb(225, 225, 225);
   text-align: left;
@@ -502,7 +502,8 @@ body.home #express_contact_us {
     text-indent: -9999px;
     background-repeat: no-repeat;
     background-position: 15px 10px;
-    margin-top: 0; }
+    margin-top: 0;
+    height: 23px; }
   body.home #services h4, body.home #services p,
   body.home #news h4, body.home #news p,
   body.home #express_contact_us h4, body.home #express_contact_us p {
@@ -534,3 +535,6 @@ body.home #express_contact_us input[type=text] {
   width: 180px; }
 body.home #express_contact_us input[type=image] {
   margin-left: 132px; }
+
+#share {
+  float: right; }
