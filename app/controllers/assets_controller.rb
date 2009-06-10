@@ -2,14 +2,15 @@ class AssetsController < ApplicationController
   before_filter :authorize
   
   def new
+    @asset = Asset.new
   end
   
   def index
-    @assets = Dir.glob("#{RAILS_ROOT}/public/assets/*")
+    @assets = Asset.all
   end
   
   def create
-    FileUtils.mv(params[:uploaded_data].to_tempfile.path, "#{RAILS_ROOT}/public/assets/#{params[:uploaded_data].original_filename}")
+    @asset = Asset.create(params[:asset])
     redirect_to :action => 'index'
   end
 end

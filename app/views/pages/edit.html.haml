@@ -7,10 +7,19 @@
     = f.label :title 
     %br
     = f.text_field :title
+  #preview 
+    = RedCloth.new(f.object.content.to_s).to_html
   %p
     = f.label :content
     %br
     = f.text_area :content
+  .assets
+    %h2 Assets
+    %ul
+      - @assets.each do |asset|
+        %li
+          = asset.attachment_file_name
+          .full_path= asset.attachment.url
   %p
     = f.label :keywords
     %br

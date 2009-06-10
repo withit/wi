@@ -23,4 +23,14 @@ document.observe("dom:loaded", function() {
     current_marker = $('markers').down().setStyle({backgroundColor: '#2D9DD8'});
     new PeriodicalExecuter(next_slide, 3);
   }
+  
+  new Form.Element.Observer($('page_content'), 3, function(e){
+     new Ajax.Request('/previews.js', {method: 'post', parameters: {content: e.getValue()}});
+  })
 });
+
+Event.addBehavior({
+  '.assets li:click' : function(e){
+    $('page_content').value += (" !" + e.element().down('.full_path').innerHTML + "! ");
+  }
+})

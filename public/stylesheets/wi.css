@@ -469,3 +469,14 @@ u {
     line-height: 80px; }
   .footer .reflection {
     text-align: right; }
+
+form.edit_page #preview,
+form.new_page #preview {
+  border: 1px dashed #999999;
+  width: 500px;
+  background-color: #EEEEEE;
+  padding: 1em;
+  float: right; }
+form.edit_page .assets .full_path,
+form.new_page .assets .full_path {
+  display: none; }
