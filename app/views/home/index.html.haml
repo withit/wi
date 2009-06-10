@@ -17,7 +17,7 @@
     = link_to 'Next Project',"#"
 .line{:style => 'float: left;'}
   = image_tag "line.jpg",  :alt => "line",  :width => "7",  :height => "320"
-.text_container{:valign => "top", :style => 'float: left;'}
+.text_container{:style => 'float: left;'}
   #share= share_link
   #page_content.home_page
     = RedCloth.new(@page.content.to_s).to_html
