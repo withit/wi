@@ -459,7 +459,9 @@ u {
   padding: 10px; }
 
 .footer {
-  width: auto; }
+  width: 1005px;
+  margin: auto;
+  position: relative; }
   .footer .clients {
     height: 80px;
     padding-bottom: 0px;
@@ -485,7 +487,6 @@ body.home #news,
 body.home #express_contact_us {
   margin-top: 0;
   height: 256px;
-  margin-right: 15px;
   background-color: rgb(225, 225, 225);
   text-align: left;
   background-image: url(../images/boxes/bg.jpg);
@@ -520,20 +521,26 @@ body.home #express_contact_us {
   body.home #news a,
   body.home #express_contact_us a {
     background-color: transparent; }
-body.home #services h3 {
-  background-image: url(../images/boxes/services.jpg); }
+body.home #services {
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 264px; }
+  body.home #services h3 {
+    background-image: url(../images/boxes/services.jpg); }
 body.home #news h3 {
   background-image: url(../images/boxes/latest_news.jpg); }
-body.home #express_contact_us h3 {
-  background-image: url(../images/boxes/contact_us.jpg);
-  margin-bottom: 25px; }
-body.home #express_contact_us p {
-  margin-bottom: 5px;
-  margin-left: 25px; }
-body.home #express_contact_us input[type=text] {
-  width: 180px; }
-body.home #express_contact_us input[type=image] {
-  margin-left: 132px; }
+body.home #express_contact_us {
+  margin-right: 0px; }
+  body.home #express_contact_us h3 {
+    background-image: url(../images/boxes/contact_us.jpg);
+    margin-bottom: 25px; }
+  body.home #express_contact_us p {
+    margin-bottom: 5px;
+    margin-left: 25px; }
+  body.home #express_contact_us input[type=text] {
+    width: 180px; }
+  body.home #express_contact_us input[type=image] {
+    margin-left: 132px; }
 
 #share {
   float: right; }
@@ -569,8 +576,10 @@ body.home .home_page h1 {
   font-weight: normal;
   font-size: 18px; }
 
-body {
-  background-image: url(../images/background.jpg); }
+body, body.background {
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-color: #E7ECEF; }
 
 body.home .text_container, body.home .content {
   padding-top: 1px; }
@@ -581,3 +590,27 @@ body.home a.twitter {
   height: 56px;
   background-image: url(../images/twitter.jpg);
   text-indent: -9999px; }
+
+#services_outer, #news_outer, #express_contact_us_outer {
+  float: left;
+  width: 32%;
+  margin: 0px;
+  padding: 0px; }
+
+#services_outer {
+  width: 36%; }
+
+#news_outer {
+  clear: both;
+  background-image: url(../images/boxes/bottom_left.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  padding-bottom: 8px;
+  background-color: rgb(225, 225, 225); }
+
+#express_contact_us_outer {
+  background-image: url(../images/boxes/bottom_right.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  padding-bottom: 8px;
+  background-color: rgb(225, 225, 225); }

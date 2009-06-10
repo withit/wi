@@ -559,7 +559,9 @@ u
   :padding 10px
   
 .footer
-  :width auto
+  :width 1005px
+  :margin auto
+  :position relative
   .clients
     :height 80px
     :padding-bottom 0px
@@ -568,7 +570,6 @@ u
     :line-height 80px
   .reflection
     :text-align right
-    
 form.edit_page,
 form.new_page
   #preview
@@ -586,7 +587,6 @@ body.home
   #express_contact_us
     :margin-top 0
     :height 256px
-    :margin-right 15px
     :background-color rgb(225, 225, 225)
     :text-align left
     :background
@@ -613,11 +613,16 @@ body.home
       :font-weight bold
     a 
       :background-color transparent
-  #services h3
-    :background-image url(../images/boxes/services.jpg)
+  #services 
+    :margin-left 10px
+    :margin-right 10px
+    :height 264px
+    h3
+      :background-image url(../images/boxes/services.jpg)
   #news h3
     :background-image url(../images/boxes/latest_news.jpg)
   #express_contact_us 
+    :margin-right 0px
     h3
       :background-image url(../images/boxes/contact_us.jpg)
       :margin-bottom 25px
@@ -659,8 +664,10 @@ body.home .home_page
     :text-transform uppercase
     :font-weight normal
     :font-size 18px
-body
+body, body.background
   :background-image url(../images/background.jpg)
+  :background-repeat no-repeat
+  :background-color #E7ECEF
 body.home 
   .text_container, .content 
     :padding-top 1px
@@ -671,5 +678,23 @@ body.home
     :height 56px
     :background-image url(../images/twitter.jpg)
     :text-indent -9999px
-   
- 
+#services_outer, #news_outer, #express_contact_us_outer
+  :float left
+  :width 32%
+  :margin 0px
+  :padding 0px
+#services_outer
+  :width 36%
+#news_outer
+  :clear both
+  :background-image url(../images/boxes/bottom_left.jpg)
+  :background-repeat no-repeat
+  :background-position bottom left
+  :padding-bottom 8px
+  :background-color rgb(225, 225, 225)
+#express_contact_us_outer
+  :background-image url(../images/boxes/bottom_right.jpg)
+  :background-repeat no-repeat
+  :background-position bottom right
+  :padding-bottom 8px
+  :background-color rgb(225, 225, 225)
