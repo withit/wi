@@ -574,3 +574,10 @@ body {
 
 body.home .text_container, body.home .content {
   padding-top: 1px; }
+body.home a.twitter {
+  display: block;
+  float: right;
+  width: 133px;
+  height: 56px;
+  background-image: url(../images/twitter.jpg);
+  text-indent: -9999px; }
