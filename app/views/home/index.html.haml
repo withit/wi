@@ -21,7 +21,7 @@
   #share= share_link
   #page_content.home_page
     = RedCloth.new(@page.content.to_s).to_html
-=link_to 'Follow on twitter', 'thhp://www.twitter.com',:class => "twitter"
+=link_to 'Follow on twitter', 'http://www.twitter.com',:class => "twitter"
 #news_outer
   #news
     = image_tag 'rss_icon.jpg', :style => 'float: right; margin-right: 10px; margin-top: 10px;'
