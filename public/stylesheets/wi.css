@@ -94,7 +94,7 @@ body.home #next, body.home #previous {
   background-position: center center;
   text-indent: -9999px;
   height: 350px; }
-  body.home #next a,   body.home #previous a {
+  body.home #next a, body.home #previous a {
     display: block;
     height: 100%;
     width: 100%;
@@ -488,6 +488,8 @@ u {
   font-weight: normal;
   padding: 10px;
   line-height: 15px; }
+  #page_content p a {
+    font-weight: bold; }
 
 .side_menu {
   font-weight: bold;
