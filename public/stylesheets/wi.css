@@ -1,33 +1,155 @@
 @charset "utf-8";
-a:link {
-  font-family: Arial, Helvetica, sans-serif;
+body.home #services,
+body.home #news,
+body.home #express_contact_us {
+  margin-top: 0;
+  height: 256px;
+  background-color: rgb(225, 225, 225);
+  text-align: left;
+  background-image: url(../images/boxes/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 30px; }
+  body.home #services li,
+  body.home #news li,
+  body.home #express_contact_us li {
+    margin-bottom: 15px; }
+  body.home #services h3,
+  body.home #news h3,
+  body.home #express_contact_us h3 {
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-position: 15px 10px;
+    margin-top: 0;
+    height: 23px; }
+  body.home #services h4, body.home #services p,
+  body.home #news h4, body.home #news p,
+  body.home #express_contact_us h4, body.home #express_contact_us p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px; }
+  body.home #services h4,
+  body.home #news h4,
+  body.home #express_contact_us h4 {
+    color: #1F34B1;
+    font-weight: bold; }
+  body.home #services a,
+  body.home #news a,
+  body.home #express_contact_us a {
+    background-color: transparent; }
+body.home #services {
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 264px; }
+  body.home #services h3 {
+    background-image: url(../images/boxes/services.jpg); }
+body.home #news h3 {
+  background-image: url(../images/boxes/latest_news.jpg); }
+body.home #express_contact_us {
+  margin-right: 0px; }
+  body.home #express_contact_us h3 {
+    background-image: url(../images/boxes/contact_us.jpg);
+    margin-bottom: 25px; }
+  body.home #express_contact_us p {
+    margin-bottom: 5px;
+    margin-left: 25px; }
+  body.home #express_contact_us input[type=text] {
+    width: 180px; }
+  body.home #express_contact_us input[type=image] {
+    margin-left: 132px; }
+body.home .errorExplanation h2 {
   font-size: 11px;
-  color: #2d9dd8;
-  text-decoration: none; }
-a:visited {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  color: #2d9dd8;
-  text-decoration: none; }
-a:hover {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  color: #0b61ae;
-  text-decoration: underline; }
-a.menu {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  color: #a6a6a6; }
-.reflection a {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  color: #333333;
-  text-decoration: none; }
-  .reflection a:hover {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
-    color: #333333;
+  padding: 0px; }
+body.home .fieldWithErrors {
+  float: left; }
+body.home #slide_show {
+  position: relative;
+  height: 300px;
+  width: 400px;
+  clear: left;
+  padding-bottom: 30px; }
+  body.home #slide_show img {
+    position: absolute;
+    top: 0px;
+    left: 0px; }
+body.home #markers {
+  color: #0A61AE;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-left: 10px; }
+  body.home #markers span {
+    margin-left: 10px; }
+  body.home #markers div {
+    margin: 1px;
+    float: left;
+    height: 10px;
+    width: 10px;
+    background-color: #E1E1E1; }
+body.home #next, body.home #previous, body.home #slide_show_container {
+  float: left; }
+body.home #next, body.home #previous {
+  width: 23px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-indent: -9999px;
+  height: 350px; }
+  body.home #next a,   body.home #previous a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    outline: none; }
+body.home #next {
+  background-image: url(../images/right_arrow.jpg); }
+body.home #previous {
+  background-image: url(../images/left_arrow.jpg); }
+body.home .text_container, body.home .content {
+  padding-top: 1px; }
+body.home a.twitter {
+  display: block;
+  float: right;
+  width: 133px;
+  height: 56px;
+  background-image: url(../images/twitter.jpg);
+  text-indent: -9999px; }
+body.home #services_outer, body.home #news_outer, body.home #express_contact_us_outer {
+  float: left;
+  width: 32%;
+  margin: 0px;
+  padding: 0px; }
+body.home #services_outer {
+  width: 36%; }
+body.home #news_outer, body.home #express_contact_us_outer {
+  background-repeat: no-repeat;
+  padding-bottom: 8px;
+  background-color: rgb(225, 225, 225); }
+body.home #news_outer {
+  clear: both;
+  background-image: url(../images/boxes/bottom_left.jpg);
+  background-position: bottom left; }
+body.home #express_contact_us_outer {
+  background-image: url(../images/boxes/bottom_right.jpg);
+  background-position: bottom right; }
+
+* {
+  font-family: Arial, Helvetica, sans-serif; }
+
+a {
+  font-size: 11px; }
+  a:link, a:visited {
+    color: #2d9dd8;
+    text-decoration: none; }
+  a:hover {
+    color: #0b61ae;
     text-decoration: underline; }
+  a.menu {
+    color: #a6a6a6; }
+  .reflection a {
+    color: #333333;
+    text-decoration: none; }
+    .reflection a:hover {
+      color: #333333;
+      text-decoration: underline; }
 
 .background {
   background-color: #cfd0d0; }
@@ -80,7 +202,6 @@ a.menu {
     border: none; }
 
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   color: #0a61ae;
   text-decoration: none;
@@ -89,7 +210,6 @@ h1 {
   float: left; }
 
 h2 {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   color: #595959;
   line-height: 12px;
@@ -134,7 +254,6 @@ h2 {
   background-repeat: no-repeat;
   height: 210px;
   color: #595959;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   background-color: #e1e1e1; }
 
@@ -143,7 +262,6 @@ h2 {
 
 .field {
   color: #888888;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   padding: 3px; }
 
@@ -151,17 +269,9 @@ h2 {
   background-color: #FFFFFF;
   padding: 14px; }
 
-body.home .sub_container {
-  padding: 0px; }
-body.home .errorExplanation h2 {
-  font-size: 11px;
-  padding: 0px; }
-body.home .fieldWithErrors {
-  float: left; }
 body.news form label {
   display: block;
   clear: both;
-  font-family: Arial, Helvetica, sans-serif;
   color: #8e8e8e;
   line-height: 12px;
   font-weight: normal;
@@ -178,7 +288,6 @@ body.news form textarea#news_content {
 body.projects form label {
   display: block;
   clear: both;
-  font-family: Arial, Helvetica, sans-serif;
   color: #8e8e8e;
   line-height: 12px;
   font-weight: normal;
@@ -203,7 +312,6 @@ body.dashboard h1, body.dashboard h2 {
 .breadcrumb {
   background-color: #FFFFFF;
   padding: 5px;
-  font: Arial, Helvetica, sans-serif;
   font-size: 11px;
   color: #8e8e8e;
   text-transform: lowercase; }
@@ -218,13 +326,11 @@ body.dashboard h1, body.dashboard h2 {
     color: #595959; }
 
 .contact_table {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   text-decoration: none;
   padding-left: 5px; }
 
 .lhs_menu {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   color: #2e9dd8;
   text-decoration: none;
@@ -234,20 +340,17 @@ body.dashboard h1, body.dashboard h2 {
   width: 217px; }
 
 .list {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   color: #2e9dd8;
   padding-left: 20px;
   padding-top: 15px; }
 
 .menu {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   color: #2e9dd8;
   padding-top: 15px; }
 
 .rhs_menu {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   color: #2e9dd8;
   text-decoration: none;
@@ -279,13 +382,11 @@ body.dashboard h1, body.dashboard h2 {
   height: 60px;
   padding: 10px;
   color: #333333;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 11px; }
 
 li {
   list-style-position: outside;
   list-style-image: url(../images/boxes/li.gif);
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   color: #595959; }
 
@@ -296,7 +397,6 @@ ul {
 
 p {
   color: #8E8E8E;
-  font-family: Arial,Helvetica,sans-serif;
   font-size: 11px;
   font-weight: normal;
   line-height: 12px;
@@ -314,7 +414,6 @@ div.pagination {
     padding: 3px;
     color: #595959;
     font-size: 11px;
-    font-family: Arial,Helvetica,sans-serif;
     padding-left: 4px;
     padding-right: 4px; }
   div.pagination .current {
@@ -323,14 +422,12 @@ div.pagination {
     color: #595959;
     background-color: rgb(200,200,200);
     font-size: 11px;
-    font-family: Arial,Helvetica,sans-serif;
     padding-left: 4px;
     padding-right: 4px; }
 div.page_info {
   display: inline;
   border: 1px #d1d1d1 solid;
   font-size: 11.5px;
-  font-family: Arial,Helvetica,sans-serif;
   padding: 3px;
   color: #595959;
   padding-left: 4px;
@@ -340,7 +437,6 @@ div#services a {
 div#services div {
   color: #595959;
   background-color: #FFFFFF;
-  font-family: Arial,Helvetica,sans-serif;
   font-size: 11px;
   padding: 0px;
   margin: 0px;
@@ -367,7 +463,6 @@ span.errorExplanation {
   padding-left: 1em; }
 
 u {
-  font-family: Arial, Helvetica, sans-serif;
   color: #595959;
   line-height: 15px;
   padding: 10px;
@@ -377,36 +472,9 @@ u {
   u strong a {
     color: #2D9DD8; }
 
-#slide_show {
-  position: relative;
-  height: 300px;
-  width: 400px;
-  clear: left;
-  padding-bottom: 30px; }
-  #slide_show img {
-    position: absolute;
-    top: 0px;
-    left: 0px; }
-
-#markers {
-  color: #0A61AE;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-family: Arial,Helvetica,sans-serif;
-  padding-left: 10px; }
-  #markers span {
-    margin-left: 10px; }
-  #markers div {
-    margin: 1px;
-    float: left;
-    height: 10px;
-    width: 10px;
-    background-color: #E1E1E1; }
-
 .admin_toolbar {
   text-align: right;
   color: #2D9DD8;
-  font-family: Arial,Helvetica,sans-serif;
   font-size: 11px; }
 
 .text_li {
@@ -416,7 +484,6 @@ u {
 
 #page_content p {
   color: #595959;
-  font-family: Arial,Helvetica,sans-serif;
   font-size: 11px;
   font-weight: normal;
   padding: 10px;
@@ -482,89 +549,8 @@ form.edit_page .assets .full_path,
 form.new_page .assets .full_path {
   display: none; }
 
-body.home #services,
-body.home #news,
-body.home #express_contact_us {
-  margin-top: 0;
-  height: 256px;
-  background-color: rgb(225, 225, 225);
-  text-align: left;
-  background-image: url(../images/boxes/bg.jpg);
-  background-repeat: no-repeat;
-  background-position: 0 30px; }
-  body.home #services li,
-  body.home #news li,
-  body.home #express_contact_us li {
-    margin-bottom: 15px; }
-  body.home #services h3,
-  body.home #news h3,
-  body.home #express_contact_us h3 {
-    text-indent: -9999px;
-    background-repeat: no-repeat;
-    background-position: 15px 10px;
-    margin-top: 0;
-    height: 23px; }
-  body.home #services h4, body.home #services p,
-  body.home #news h4, body.home #news p,
-  body.home #express_contact_us h4, body.home #express_contact_us p {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px; }
-  body.home #services h4,
-  body.home #news h4,
-  body.home #express_contact_us h4 {
-    color: #1F34B1;
-    font-weight: bold; }
-  body.home #services a,
-  body.home #news a,
-  body.home #express_contact_us a {
-    background-color: transparent; }
-body.home #services {
-  margin-left: 10px;
-  margin-right: 10px;
-  height: 264px; }
-  body.home #services h3 {
-    background-image: url(../images/boxes/services.jpg); }
-body.home #news h3 {
-  background-image: url(../images/boxes/latest_news.jpg); }
-body.home #express_contact_us {
-  margin-right: 0px; }
-  body.home #express_contact_us h3 {
-    background-image: url(../images/boxes/contact_us.jpg);
-    margin-bottom: 25px; }
-  body.home #express_contact_us p {
-    margin-bottom: 5px;
-    margin-left: 25px; }
-  body.home #express_contact_us input[type=text] {
-    width: 180px; }
-  body.home #express_contact_us input[type=image] {
-    margin-left: 132px; }
-
 #share {
   float: right; }
-
-#next, #previous, #slide_show_container {
-  float: left; }
-
-#next, #previous {
-  width: 23px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  text-indent: -9999px;
-  height: 350px; }
-  #next a,   #previous a {
-    display: block;
-    height: 100%;
-    width: 100%;
-    outline: none; }
-
-#next {
-  background-image: url(../images/right_arrow.jpg); }
-
-#previous {
-  background-image: url(../images/left_arrow.jpg); }
 
 body.home .hero {
   width: auto; }
@@ -580,40 +566,6 @@ body, body.background {
   background-image: url(../images/background.jpg);
   background-repeat: no-repeat;
   background-color: #E7ECEF; }
-
-body.home .text_container, body.home .content {
-  padding-top: 1px; }
-body.home a.twitter {
-  display: block;
-  float: right;
-  width: 133px;
-  height: 56px;
-  background-image: url(../images/twitter.jpg);
-  text-indent: -9999px; }
-
-#services_outer, #news_outer, #express_contact_us_outer {
-  float: left;
-  width: 32%;
-  margin: 0px;
-  padding: 0px; }
-
-#services_outer {
-  width: 36%; }
-
-#news_outer {
-  clear: both;
-  background-image: url(../images/boxes/bottom_left.jpg);
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  padding-bottom: 8px;
-  background-color: rgb(225, 225, 225); }
-
-#express_contact_us_outer {
-  background-image: url(../images/boxes/bottom_right.jpg);
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  padding-bottom: 8px;
-  background-color: rgb(225, 225, 225); }
 
 .left,
 .right,
@@ -646,8 +598,26 @@ body.home a.twitter {
       background-image: url(../images/twitter.jpg);
       background-repeat: no-repeat;
       background-position: top right;
-      text-indent: -9999px;
-      float: right; }
+      text-indent: -9999px; }
+    .right .side_menu .subscribe a {
+      display: block;
+      width: 100%;
+      height: 56px;
+      background-image: url(../images/subscribe.jpg);
+      background-repeat: no-repeat;
+      background-position: top right;
+      text-indent: -9999px; }
+    .right .side_menu #contact_information p {
+      color: rgb(89, 89, 89);
+      text-transform: none; }
+    .right .side_menu div {
+      border-bottom: 1px dashed #CCCCCC;
+      padding: 5px;
+      padding-left: 0px;
+      margin: 5px; }
+      .right .side_menu div p {
+        margin-left: 0;
+        padding-left: 0; }
 
 .left {
   background-image: url(../images/line.jpg);

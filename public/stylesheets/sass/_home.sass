@@ -1,0 +1,137 @@
+!home_box_height = 264px
+!home_box_radius = 8px
+!home_box_background = rgb(225, 225, 225)
+body.home 
+  #services,
+  #news,
+  #express_contact_us
+    :margin-top 0
+    :height= !home_box_height - !home_box_radius 
+    :background-color= !home_box_background
+    :text-align left
+    :background
+      :image url(../images/boxes/bg.jpg)
+      :repeat no-repeat
+      :position 0 30px
+    li
+      :margin-bottom 15px
+    h3
+      :text-indent -9999px
+      :background
+        :repeat no-repeat
+        :position 15px 10px
+      :margin-top 0
+      :height 23px
+    h4, p
+      :margin-top 0px
+      :margin-bottom 0px
+      :padding-top 0px
+      :padding-bottom 0px
+      :padding-left 0px
+    h4
+      :color #1F34B1
+      :font-weight bold
+    a 
+      :background-color transparent
+  #services 
+    :margin-left 10px
+    :margin-right 10px
+    :height= !home_box_height
+    h3
+      :background-image url(../images/boxes/services.jpg)
+  #news h3
+    :background-image url(../images/boxes/latest_news.jpg)
+  #express_contact_us 
+    :margin-right 0px
+    h3
+      :background-image url(../images/boxes/contact_us.jpg)
+      :margin-bottom 25px
+    p
+      :margin-bottom 5px
+      :margin-left 25px
+    input[type=text]
+      :width 180px
+    input[type=image]
+      :margin-left 132px
+
+  .errorExplanation h2
+    :font-size 11px
+    :padding 0px
+
+  .fieldWithErrors
+    :float left
+    
+  #slide_show
+    :position relative
+    :height 300px
+    :width 400px
+    :clear left
+    :padding-bottom 30px
+
+    img
+      :position absolute
+      :top 0px
+      :left 0px
+
+  #markers
+    :color #0A61AE
+    :text-transform uppercase
+    :font-size 12px
+    :padding-left 10px
+
+    span
+      :margin-left 10px
+
+    div
+      :margin 1px
+      :float left
+      :height 10px
+      :width 10px
+      :background-color #E1E1E1
+      
+  #next, #previous, #slide_show_container
+    :float left
+  #next, #previous
+    :width 23px
+    :background-repeat no-repeat
+    :background-position center center
+    :text-indent -9999px
+    :height 350px
+    a
+      :display block
+      :height 100%
+      :width 100%
+      :outline none
+  #next
+    :background-image url(../images/right_arrow.jpg)
+  #previous
+    :background-image url(../images/left_arrow.jpg)
+  
+  .text_container, .content 
+    :padding-top 1px
+  a.twitter
+    :display block
+    :float right
+    :width 133px
+    :height 56px
+    :background-image url(../images/twitter.jpg)
+    :text-indent -9999px
+    
+  #services_outer, #news_outer, #express_contact_us_outer
+    :float left
+    :width 32%
+    :margin 0px
+    :padding 0px
+  #services_outer
+    :width 36%
+  #news_outer, #express_contact_us_outer
+    :background-repeat no-repeat
+    :padding-bottom= !home_box_radius
+    :background-color= !home_box_background
+  #news_outer
+    :clear both
+    :background-image url(../images/boxes/bottom_left.jpg)
+    :background-position bottom left
+  #express_contact_us_outer
+    :background-image url(../images/boxes/bottom_right.jpg)
+    :background-position bottom right
