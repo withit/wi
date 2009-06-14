@@ -152,6 +152,14 @@ body.projects #projects {
   body.projects #projects .project {
     width: 240px; }
 
+form.new_enquiry div {
+  clear: both; }
+form.new_enquiry label {
+  display: block;
+  float: left;
+  width: 150px;
+  clear: right; }
+
 * {
   font-family: Arial, Helvetica, sans-serif; }
 
