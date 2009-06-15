@@ -396,22 +396,38 @@ body.dashboard h1, body.dashboard h2 {
   height: 142px; }
 
 .footer {
-  background-color: #cfd0d0;
-  background-image: url(../images/footer_bg.jpg);
+  background-color: transparent;
   width: 991px;
-  background-repeat: no-repeat; }
+  background-repeat: repeat-y;
+  background-position: bottom left; }
+
+.main_footer {
+  background-color: #A3C3CE;
+  position: relative;
+  top: 50px;
+  margin-left: 0;
+  margin-right: 0; }
 
 .clients {
   padding: 10px;
-  width: 100px; }
+  width: 100px;
+  background-color: transparent;
+  background-image: url(../images/footer_bg.gif);
+  width: 991px;
+  background-repeat: repeat-y;
+  background-position: bottom left;
+  position: relative;
+  top: -50px; }
 
 .reflection {
-  background-image: url(../images/footer/reflection.jpg);
+  background-image: url(../images/reflection.jpg);
   background-repeat: no-repeat;
   height: 60px;
   padding: 10px;
   color: #333333;
-  font-size: 11px; }
+  font-size: 11px;
+  position: relative;
+  top: -50px; }
 
 li {
   list-style-position: outside;
@@ -551,17 +567,18 @@ u {
 
 .content {
   background-color: #FFFFFF;
-  background-image: url(../images/bottom.jpg);
+  background-image: none;
   background-position: bottom left;
   background-repeat: no-repeat;
-  padding: 10px; }
+  padding: 10px;
+  padding-bottom: 0; }
 
 .footer {
   width: 1005px;
   margin: auto;
   position: relative; }
   .footer .clients {
-    height: 80px;
+    height: 90px;
     padding-bottom: 0px;
     margin-bottom: 0px;
     width: auto;
@@ -596,7 +613,11 @@ body.home .home_page h1 {
 body, body.background {
   background-image: url(../images/background.jpg);
   background-repeat: no-repeat;
-  background-color: #E7ECEF; }
+  background-color: #E7ECEF;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0; }
 
 .left,
 .right,
