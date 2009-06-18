@@ -1,8 +1,32 @@
 form.new_enquiry
+  :margin-top 2em
   div
-    :clear both
+    :overflow auto
+    :padding 0.2em
+    :padding-left 0
   label
     :display block
     :float left
-    :width 150px
+    :width 130px
     :clear right
+    :color #555
+    :font-size 90%
+    :line-height 200%
+    :vertical-align middle
+  input[type=text], textarea
+    :border 1px solid #999
+    :font-size 100%
+    :width 150px
+    :padding 2px
+    :-webkit-border-radius 5px
+    :-webkit-box-shadow 0 0 2px #999 
+    &:focus
+      :border 1px solid rgb(11, 97, 174)
+      :-webkit-box-shadow 0 0 2px rgb(11, 97, 174)      
+      :outline 0px
+  textarea
+    :width 280px
+  input[type=image]
+    :margin-left 130px
+    
+    

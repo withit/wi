@@ -152,13 +152,36 @@ body.projects #projects {
   body.projects #projects .project {
     width: 240px; }
 
-form.new_enquiry div {
-  clear: both; }
-form.new_enquiry label {
-  display: block;
-  float: left;
-  width: 150px;
-  clear: right; }
+form.new_enquiry {
+  margin-top: 2em; }
+  form.new_enquiry div {
+    overflow: auto;
+    padding: 0.2em;
+    padding-left: 0; }
+  form.new_enquiry label {
+    display: block;
+    float: left;
+    width: 130px;
+    clear: right;
+    color: #555;
+    font-size: 90%;
+    line-height: 200%;
+    vertical-align: middle; }
+  form.new_enquiry input[type=text], form.new_enquiry textarea {
+    border: 1px solid #999;
+    font-size: 100%;
+    width: 150px;
+    padding: 2px;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: 0 0 2px #999; }
+    form.new_enquiry input[type=text]:focus, form.new_enquiry textarea:focus {
+      border: 1px solid rgb(11, 97, 174);
+      -webkit-box-shadow: 0 0 2px rgb(11, 97, 174);
+      outline: 0px; }
+  form.new_enquiry textarea {
+    width: 280px; }
+  form.new_enquiry input[type=image] {
+    margin-left: 130px; }
 
 #page_content .service {
   float: left;
