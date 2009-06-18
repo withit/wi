@@ -160,6 +160,22 @@ form.new_enquiry label {
   width: 150px;
   clear: right; }
 
+#page_content .service {
+  float: left;
+  clear: none;
+  width: 400px; }
+  #page_content .service h3 {
+    text-transform: uppercase;
+    font-weight: normal;
+    color: green;
+    font-size: 100%;
+    margin-bottom: 0; }
+  #page_content .service p {
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 0;
+    padding-top: 0; }
+
 * {
   font-family: Arial, Helvetica, sans-serif; }
 

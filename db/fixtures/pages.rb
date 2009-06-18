@@ -2,6 +2,14 @@ def seed_image filename
   File.new("#{RAILS_ROOT}/db/fixtures/images/#{filename}")
 end
 
+def asset_seed_url filename
+  puts filename
+  Asset.seed(:attachment_file_name) do |a|
+    a.attachment_file_name = filename
+    a.attachment = seed_image("assets/#{filename}")
+  end.attachment.url
+end
+
 Page.seed(:permalink) do |p|
   p.permalink = 'home'
   p.title = 'Home'
@@ -73,41 +81,94 @@ Every service we offer represents a truly cost effective way of building your bu
 
 *Our services include:* 
 
-h3. <a name="design">Website design</a>
+!<#{asset_seed_url('web_design.jpg')}!
+
+<div class="service">
+h3. <a name="design"></a>Website design
 
 With Imagination has a highly experienced team of web designers that specialize in web site design. Our team of professional website designers understands what works and will provide you with the best website design options for your business.
 
-h3. <a name="development">Website development</a>
+</div>
+
+!<#{asset_seed_url('web_development.jpg')}!
+
+<div class="service">
+
+h3. <a name="development"></a>Website development
 
 At With Imagination, we make it our job to listen, research, and to understand the requirements unique to your business. Our mission is always to provide cost-effective, creative, quality solutions that target your goals ... on-time and within budget. If you’re current website isn’t working for you then we’d also like to hear from you.
-  
-h3. <a name="e-commerce">E-commerce solutions</a>
+
+</div>
+
+!<#{asset_seed_url('ecommerce.jpg')}!
+
+<div class="service">
+
+h3. <a name="e-commerce"></a>E-commerce solutions
 
 Is building an online store the right thing for your business? At With Imagination we offer a complete range of *e-commerce solutions*. This includes online shopping systems to a wide variety of revenue processing facilities including funds clearance plus supporting services for our customers’ businesses.
 
-h3. <a name="hosting">Website hosting</a>
+</div>
+
+!<#{asset_seed_url('web_hosting.jpg')}!
+
+<div class="service">
+
+h3. <a name="hosting"></a>Website hosting
 
 Does your website need secure hosting? With Imagination can provide secure website hosting options to suit your technical and financial resources.
 
-h3. <a name="strategy">Web strategy</a>
+</div>
+
+!<#{asset_seed_url('ecommerce.jpg')}!
+
+<div class="service">
+
+h3. <a name="strategy"></a>Web strategy
 
 With Imagination can help you to develop a suitable web strategy in line with your business objectives. We believe this to be a critical component of any successful business. In order to achieve your maximum ROI, we strongly recommend that a basic website strategy should be in place prior to any projects being actioned.
 
-h3. <a name="seo">Search engine marketing</a>
+</div>
+
+!<#{asset_seed_url('sem.jpg')}!
+
+<div class="service">
+
+h3. <a name="seo"></a>Search engine marketing
 
 Search Engine marketing is crucial for the success of online business. With Imagination fully understands the technical requirements and marketing benefits in effectively using search engine marketing as part of your online strategy. With Imagination will therefore help you to outline a search engine marketing plan that will bring best results on implementation and will gain you maximum ROI.
 
-h3. <a name="email">Email marketing campaigns</a>
+</div>
+
+!<#{asset_seed_url('email_marketing.jpg')}!
+
+<div class="service">
+
+h3. <a name="email"></a>Email marketing campaigns
 
 Implementing permission based email campaigns is the most cost effective way of developing a consistent way of communicating directly with your customers. Email campaigns can be used for a wide variety of communication needs and if targeted correctly will provide your company with almost immediate positive results.
 
-h3. <a name="advertising">Online advertising media</a>
+</div>
+
+!<#{asset_seed_url('online_adv.jpg')}!
+
+<div class="service">
+
+h3. <a name="advertising"></a>Online advertising media
 
 Looking to run an online advertising campaign? Over the years With Imagination has designed many different forms of online advertising media such as buttons, banners and skyscrapers. Running a targeted online advertising campaign can be a very cost effective way of communicating your message to potential customers. With Imagination is also happy to work with your external agencies such as online media planners to ensure the most appropriate and targeted creative is used in conjunction with your campaign objectives.
 
-h3. <a name="promotions">Promotions and competitions</a>
+</div>
+
+!<#{asset_seed_url('promotions.jpg')}!
+
+<div class="service">
+
+h3. <a name="promotions"></a>Promotions and competitions
 
 Are you thinking of running a promotion and/or competition online, at With Imagination we can help you? From promotional concepts to implementation and fulfillment we can help you every step of the way.
+
+</div>
 
 Do you require any of our services? Then why not "contact us":/contact_us.html today!
 
