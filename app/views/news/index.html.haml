@@ -1,0 +1,47 @@
+= @page_title = nil 
+- content_for :head do 
+  = auto_discovery_link_tag(:rss, "/news.rss")
+
+%table{:width => "100%",:border => "0", :cellspacing => "0", :cellpadding => "0"}
+  %tr
+    %td
+      = image_tag 'news/latest_news.jpg', :alt => 'latest_news', :width => 978, :height => 99
+  %tr
+    %td.breadcrumb
+      = link_to 'home', '/'
+      &gt; news
+  %tr
+    %td{:valign => "top"}
+      %table{:width => "100%", :border => "0", :cellspacing => "0", :cellpadding => "0"}
+        %tr
+          %td.lhs_menu{:valign => "top"}
+            %table{:width => "150",:border => "0", :cellspacing => "0", :cellpadding => "0"}
+              %tr
+                %td.list
+                  = image_tag "menu/li.jpg", :width => "6", :height =>"8", :alt => '' 
+                %td.menu
+                  %strong Latest News
+          %td{:width => "7px", :valign => "top"}
+            = image_tag "line.jpg",  :alt => "line", :width => "7", :height => "364" 
+            &nbsp;
+          %td.subtext_container{:valign =>"top"}
+            %table{:width => "100%", :border => "0", :cellspacing => "0", :cellpadding => "0"}
+              - @news.each do |news|
+                - content_tag_for(:tr, news) do
+                  %td{:colspan => "2"}
+                    %h1= link_to_if admin?, news.title,edit_news_item_path(news)
+                    %br
+                    = simple_format(news.content )
+          %td{:width => "7px", :valign => "top"}
+            = image_tag "line.jpg", :alt => "line",:width => "7", :height => "364"
+            &nbsp;
+          %td.rhs_menu{:valign => "top"}
+            %table{:width => "100%", :border => "0", :cellspacing =>"0", :cellpadding => "0"}
+              %tr
+                %td.RHS_heading= image_tag "inspiration.jpg",:width => "81", :height => "19"
+              %tr
+                %td.RHS_heading= image_tag "projects.jpg", :alt => "projects", :width => "126",:height => "125"
+              %tr
+                %td.RHS_heading= link_to image_tag('contact_button.jpg', :width => "80", :height => "23",  :border => "0"), '/contact_us.html'
+
+
