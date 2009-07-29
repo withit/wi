@@ -4,6 +4,13 @@ form.new_enquiry
     :overflow auto
     :padding 0.2em
     :padding-left 0
+    &.fieldWithErrors
+      :display inline
+      input[type=text], textarea
+        :-webkit-box-shadow 0 0 2px rgb(255, 97, 84)   
+        :border 1px solid rgb(255, 97, 84)  
+      label
+        :color rgb(255, 97, 84) 
   label
     :display block
     :float left
