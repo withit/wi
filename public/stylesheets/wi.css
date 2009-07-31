@@ -161,7 +161,6 @@ form.new_enquiry {
     form.new_enquiry div.fieldWithErrors {
       display: inline; }
       form.new_enquiry div.fieldWithErrors input[type=text], form.new_enquiry div.fieldWithErrors textarea {
-        -webkit-box-shadow: 0 0 2px rgb(255, 97, 84);
         border: 1px solid rgb(255, 97, 84); }
       form.new_enquiry div.fieldWithErrors label {
         color: rgb(255, 97, 84); }
@@ -178,17 +177,18 @@ form.new_enquiry {
     border: 1px solid #999;
     font-size: 100%;
     width: 150px;
-    padding: 2px;
-    -webkit-border-radius: 5px;
-    -webkit-box-shadow: 0 0 2px #999; }
+    padding: 2px; }
     form.new_enquiry input[type=text]:focus, form.new_enquiry textarea:focus {
       border: 1px solid rgb(11, 97, 174);
-      -webkit-box-shadow: 0 0 2px rgb(11, 97, 174);
       outline: 0px; }
+    #express_contact_us form.new_enquiry input[type=text], #express_contact_us form.new_enquiry textarea {
+      width: 140px; }
   form.new_enquiry textarea {
     width: 280px; }
   form.new_enquiry input[type=image] {
     margin-left: 130px; }
+    #express_contact_us form.new_enquiry input[type=image] {
+      margin-left: 88px; }
 
 #page_content .service {
   float: left;
@@ -205,6 +205,80 @@ form.new_enquiry {
     margin-left: 0;
     margin-top: 0;
     padding-top: 0; }
+
+.main .content .sample_page {
+  width: 728px;
+  height: 1000px;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: #c5c5c5; }
+  .main .content .sample_page a {
+    color: #83a1a9;
+    font-weight: bold; }
+  .main .content .sample_page h3 {
+    font-size: 120%; }
+  .main .content .sample_page h4 {
+    font-size: 120%; }
+  .main .content .sample_page .feature h3 {
+    font-size: 100%;
+    height: 15px; }
+  .main .content .sample_page .feature p {
+    margin: 0;
+    padding: 20px 0; }
+  .main .content .sample_page #banner728x90 {
+    height: 90px;
+    width: 728px;
+    background-color: #c5c5c5; }
+  .main .content .sample_page .left {
+    width: 398px; }
+    .main .content .sample_page .left .feature {
+      width: 179px;
+      margin: 10px;
+      float: left; }
+    .main .content .sample_page .left h3 {
+      color: #83a1a9; }
+  .main .content .sample_page .right h3 {
+    background-color: #c5c5c5;
+    height: 20px;
+    width: 60px; }
+  .main .content .sample_page .right h4 {
+    color: #83a1a9; }
+  .main .content .sample_page .left, .main .content .sample_page .right {
+    border: none;
+    background-image: none;
+    margin-top: 0.5em; }
+    .main .content .sample_page .left ul, .main .content .sample_page .right ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      .main .content .sample_page .left ul li, .main .content .sample_page .right ul li {
+        position: relative;
+        list-style-type: none;
+        list-style-image: none;
+        border-bottom: 1px dashed #c5c5c5;
+        padding-left: 60px;
+        padding-top: 5px;
+        padding-bottom: 15px; }
+      .main .content .sample_page .left ul .picture, .main .content .sample_page .right ul .picture {
+        background-color: #c5c5c5;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 5px;
+        left: 5px; }
+      .main .content .sample_page .left ul h3, .main .content .sample_page .left ul p, .main .content .sample_page .left ul h4, .main .content .sample_page .right ul h3, .main .content .sample_page .right ul p, .main .content .sample_page .right ul h4 {
+        margin: 0;
+        padding: 0; }
+  .main .content .sample_page .feature .picture {
+    background-color: #c5c5c5;
+    width: 100%;
+    height: 200px; }
+  .main .content .sample_page .right {
+    width: 300px; }
+  .main .content .sample_page #banner300x250 {
+    height: 250px;
+    width: 300px;
+    background-color: #c5c5c5; }
 
 * {
   font-family: Arial, Helvetica, sans-serif; }
@@ -381,6 +455,13 @@ body.projects form textarea {
   clear: both; }
   body.projects form textarea#project_description {
     width: 500px; }
+body #page_title {
+  width: 400px;
+  font-size: 120%;
+  padding: 4px; }
+body text_area#page_content {
+  width: 400px;
+  padding: 4px; }
 body.dashboard h1, body.dashboard h2 {
   float: none; }
 
@@ -597,7 +678,8 @@ u {
   padding-bottom: 12  px;
   margin-bottom: 10px;
   background-image: url(../images/footer_bg.gif);
-  background-position: bottom left; }
+  background-position: bottom left;
+  background-repeat: no-repeat; }
 
 .top_banner ul {
   float: right;
@@ -738,3 +820,14 @@ body, body.background {
 
 .clear {
   clear: both; }
+
+.admin {
+  margin: 1em;
+  padding: 1em;
+  background-color: #EEE;
+  border: #DDD dashed 1px;
+  clear: both; }
+
+#express_contact_us .formError {
+  margin-left: 1em;
+  font-size: 80%; }

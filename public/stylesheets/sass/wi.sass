@@ -3,6 +3,7 @@
 @import projects.sass
 @import enquiry.sass
 @import services.sass
+@import sample.sass
 *
   :font-family Arial, Helvetica, sans-serif
 
@@ -195,7 +196,13 @@ body
 
       &#project_description
         :width 500px
-
+  & #page_title
+    :width 400px
+    :font-size 120%
+    :padding 4px
+  & text_area#page_content
+    :width 400px
+    :padding 4px
   &.dashboard
     h1, h2
       :float none
@@ -436,6 +443,7 @@ u
   :margin-bottom 10px
   :background-image url(../images/footer_bg.gif)
   :background-position bottom left
+  :background-repeat no-repeat
 
 .top_banner
   ul
@@ -575,3 +583,15 @@ body, body.background
   
 .clear
   :clear both
+
+.admin
+  :margin 1em
+  :padding 1em
+  :background-color #EEE
+  :border #DDD dashed 1px
+  :clear both
+  
+#express_contact_us
+  .formError
+    :margin-left 1em
+    :font-size 80%

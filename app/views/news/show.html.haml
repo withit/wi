@@ -1,4 +1,4 @@
-= @page_title = "Latest News"
+= @page_title = @news.title 
 - content_for :head do 
   = auto_discovery_link_tag(:rss, "/news.rss")
 
@@ -6,6 +6,8 @@
   = link_to 'home', '/'
   &gt;
   = link_to 'latest news', news_path
+  &gt; 
+  = @news.title
 
 .left
   .side_menu
@@ -22,15 +24,14 @@
         = mail_to 'info@wi.com.au','info@wi.com.au', :encode => "javascript"
       %p Phone: + 61 2 9929 9229
       %p Fax: + 61 2 9460 4770
-    .twitter= link_to 'Follow', '#TODO'
+    .twitter= link_to 'Follow', twitter_path
     .subscribe= link_to 'Subscribe Latest News', '#TODO'
 
 .center
   = image_tag 'news/slatest_news.jpg', :alt => 'latest_news'
   #page_content
-    - @news.each do |news|
-      %h1{:style => 'float: none'}= link_to news.title,news_item_path(news)
-      .content= simple_format(news.content )
-    - if admin?
-      .admin= link_to 'Add more news...', new_news_item_path
+    %h1{:style => 'float: none'}= link_to_if admin?, @news.title,edit_news_item_path(@news)
+    .content= simple_format(@news.content )
+  - if admin?
+    .admin= link_to 'Add more news...', new_news_item_path
 .clear

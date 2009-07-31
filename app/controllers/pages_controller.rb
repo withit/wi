@@ -7,6 +7,7 @@ class PagesController < ApplicationController
 
   def edit
     @page = Page.find_or_create_by_permalink(params[:id])
+    @assets = Asset.all
   end
 
   def update
@@ -16,6 +17,7 @@ class PagesController < ApplicationController
       flash[:notice] = 'Page was successfully updated.'
       redirect_to(@page)
     else
+      @assets = Asset.all
       render :action => "edit"
     end
   end
@@ -45,6 +47,7 @@ class PagesController < ApplicationController
   end
   
   def new
+    @assets = Asset.all
     @page = Page.new
   end
 end

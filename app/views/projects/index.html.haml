@@ -11,3 +11,5 @@
       of 
       = @projects.total_pages 
     = will_paginate(@projects )
+    - if admin?
+      .admin= link_to 'Add a new project', new_project_path

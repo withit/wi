@@ -49,6 +49,22 @@ document.observe("dom:loaded", function() {
   }
 });
 
+var DefaultClearingInput = Behavior.create({
+  initialize: function(default_value) {
+    this.default_value = default_value;
+  },
+  onfocus: function(e) {
+    if(e.element().value == this.default_value){
+      e.element().value = '';
+    }
+  },
+  onblur: function(e) {
+    if(e.element().value == ''){
+      e.element().value = this.default_value;
+    }
+  }
+});
+
 Event.addBehavior({
   '.assets li:click' : function(e){
     $('page_content').value += (" !" + e.element().down('.full_path').innerHTML + "! ");
@@ -58,5 +74,11 @@ Event.addBehavior({
   },
   'body.home .hero #previous:click' : function(e){
     prev_slide();
+  },
+  '#express_contact_us #enquiry_name': DefaultClearingInput('name'),
+  '#express_contact_us #enquiry_email': DefaultClearingInput('email address'),
+  '#express_contact_us #enquiry_phone': DefaultClearingInput('phone'),
+  '.sizes select#size:change': function(e){
+    window.location = "/banners/" + e.element().value
   }
 })

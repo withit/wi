@@ -1,5 +1,5 @@
 class NewsController < ApplicationController
-  before_filter :authorize, :except => :index
+  before_filter :authorize, :except => [:index,:show]
   
   def index
     @news = News.all
@@ -28,5 +28,9 @@ class NewsController < ApplicationController
     @news = News.find(params[:id])
     @news.destroy
     redirect_to news_path
+  end
+  
+  def show
+    @news = News.find(params[:id])
   end
 end

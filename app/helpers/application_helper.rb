@@ -5,4 +5,8 @@ module ApplicationHelper
     l = length - truncate_string.mb_chars.length
     text.mb_chars.length > length ? text[/\A.{#{l}}\w*\;?/m][/.*[\w\;]/m] + truncate_string : text
   end
+  
+  def twitter_path
+    "http://twitter.com/withimagination"
+  end
 end

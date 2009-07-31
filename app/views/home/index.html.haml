@@ -21,7 +21,7 @@
   #share= share_link
   #page_content.home_page
     = RedCloth.new(@page.content.to_s).to_html
-=link_to 'Follow on twitter', 'http://www.twitter.com',:class => "twitter"
+=link_to 'Follow on twitter', twitter_path,:class => "twitter"
 #news_outer
   #news
     = image_tag 'rss_icon.jpg', :style => 'float: right; margin-right: 10px; margin-top: 10px;'
@@ -62,7 +62,7 @@
         = mail_to "info@wi.com.au","info@wi.com.au", :encode => :javascript
       %p Phone: + 61 2 9929 9229
       %p Fax: + 61 2 9460 4770
-      = '<span class="errorExplanation">Your enquiry could not be submitted</span>' unless f.object.errors.empty? 
+      = '<p><span class="errorExplanation">Your enquiry could not be submitted</span></p>' unless f.object.errors.empty? 
       = f.hidden_field :express 
       %p
         = f.text_field :name, :class => 'field', :size => 11, :maxlength => 100 

@@ -15,6 +15,7 @@ class EnquiriesController < ApplicationController
   rescue ActiveRecord::RecordInvalid
     if @enquiry.express
       @body_class = 'home'
+      @page = Page.find_by_permalink('home') || Page.new
       render :file => 'home/index', :layout => true
     else
       render :action => 'new'

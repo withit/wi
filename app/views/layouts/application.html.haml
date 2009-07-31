@@ -10,7 +10,15 @@
     .main
       - if admin? 
         .admin_toolbar
-          = link_to 'Dashboard', dashboard_path 
+          = link_to 'Overview', dashboard_path 
+          |
+          = link_to 'News', news_path
+          |
+          = link_to 'Projects', projects_path
+          |
+          = link_to 'Pages', pages_path
+          |
+          = link_to 'Banners', banners_path
           |
           = link_to 'Log out', session_path, :method => :delete
       .top_banner

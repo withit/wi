@@ -1,0 +1,30 @@
+.breadcrumb
+  = link_to 'home', '/'
+  &gt;
+  = link_to 'projects', projects_path
+  &gt;
+  banners
+
+.left
+  .side_menu
+    = image_tag 'news/slatest_news.jpg', :alt => 'projects'
+    %ul
+      %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}= link_to 'Websites', projects_path, :style => 'text-transform: uppercase;'
+      %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'} 
+        Banners 
+        %ul{:style => "margin: 0; padding: 0; padding-left: 1em;"}
+          - Campaign.all.each do |campaign|
+            %li{:style => "text-transform: none; line-height: 12px; border: none"}= link_to campaign.name, campaign.banners.first
+      %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}= link_to 'Newsletter', '#TODO', :style => 'text-transform: uppercase;'
+
+.center
+  %h1 Online banner Ads
+  %p
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  - @campaigns.each do |campaign|
+    .campaign
+      %h2= campaign.name
+      %ul
+        - campaign.banners.each do |banner|
+          %li= link_to banner.description, banner
+.clear

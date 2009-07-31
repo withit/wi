@@ -1,0 +1,83 @@
+!grayed_out = #C5C5C5
+!header_banner_width = 728px
+!right_banner_width = 300px
+!left_width = !header_banner_width - !right_banner_width - 30px
+!sample_hightlight_color = #83A1A9
+.main .content .sample_page
+  a
+    :color= !sample_hightlight_color
+    :font-weight bold
+  :width= !header_banner_width
+  :height 1000px
+  :margin-left 10px
+  :margin-top 10px
+  :color= !grayed_out
+  h3
+    :font-size 120%
+  h4 
+    :font-size 120%
+  .feature
+    h3
+      :font-size 100%
+      :height 15px
+    p
+      :margin 0
+      :padding 20px 0
+  #banner728x90
+    :height 90px
+    :width= !header_banner_width
+    :background-color= !grayed_out
+  .left
+    :width= !left_width 
+    .feature
+      :width= !left_width / 2 - 20px
+      :margin 10px
+      :float left
+    h3
+      :color= !sample_hightlight_color
+  .right  
+    h3
+      :background-color= !grayed_out
+      :height 20px
+      :width 60px
+    h4
+      :color= !sample_hightlight_color
+  .left, .right
+    :border none
+    :background-image none
+    :margin-top 0.5em
+    ul
+      :list-style-type none
+      :margin 0
+      :padding 0 
+      li
+        :position relative
+        :list-style-type none
+        :list-style-image none
+        :border-bottom= 1px dashed !grayed_out
+        :padding-left 60px
+        :padding-top 5px
+        :padding-bottom 15px
+      .picture
+        :background-color= !grayed_out
+        :width 50px
+        :height 50px 
+        :position absolute
+        :top 5px
+        :left 5px
+      h3, p, h4
+        :margin 0
+        :padding 0
+  .feature
+    .picture
+      :background-color= !grayed_out
+      :width 100%
+      :height 200px 
+        
+  .right
+    :width 300px
+  #banner300x250
+    :height 250px
+    :width 300px
+    :background-color= !grayed_out
+    

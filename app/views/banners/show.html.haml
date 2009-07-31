@@ -1,0 +1,89 @@
+= @page_title = nil
+- content_for :head do 
+  = javascript_include_tag 'swfobject'
+  = javascript_tag("swfobject.embedSWF('#{@banner.flash.url}', 'banner#{@banner.width}x#{@banner.height}', #{@banner.width}, #{@banner.height}, '9.0.0','expressInstall.swf')")
+
+.breadcrumb
+  = link_to 'home', '/'
+  &gt;
+  = link_to 'projects', projects_path
+  &gt;
+  = link_to 'banners', banners_path
+  &gt;
+  = @banner.description
+.left
+  .side_menu
+    = image_tag 'news/slatest_news.jpg', :alt => 'projects'
+    %ul
+      %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}= link_to 'Websites', projects_path, :style => 'text-transform: uppercase;'
+      %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'} 
+        = link_to 'Banners', banners_path 
+        %ul{:style => "margin: 0; padding: 0; padding-left: 1em;"}
+          - Campaign.all.each do |campaign|
+            %li{:style => "text-transform: none; line-height: 12px; border: none"}= link_to_unless campaign == @banner.campaign, campaign.name, campaign.banners.first
+      %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}= link_to 'Newsletter', '#TODO', :style => 'text-transform: uppercase;'
+      
+.center
+  .sizes= select_tag(:size, options_for_select(@banner.campaign.banners.collect{|b| [b.description,b.id]}, @banner.id))
+  .sample_page
+    #banner728x90
+    .left
+      %ul
+        %li
+          .picture
+          %h3 Face it
+          %p 
+            Is it possible to apply mascara withoyr pulling a completely ridiculous face? Bh&r...
+            = link_to 'read on', '#'
+        %li
+          .picture
+          %h3 Bid adieu to bad beauty behaviour
+          %p 
+            A new financial year is a good time as any to rid yourself of crimes against ha..  
+            = link_to 'read on', '#'
+        %li
+          .picture
+          %h3 Make-up masterclass
+          %p 
+            BECCA's founder Rebecca Morris Williams is on hand to answer some of your make-up...
+            = link_to 'read on', '#'
+        %li
+          .picture
+          %h3 Get the R&R you so deserve
+          %p 
+            What better day to indulge in some relaxation than a public holiday? Espacially wh...
+            = link_to 'read on', '#'
+      .feature
+        .picture
+        %h3 How to: slicked back hair
+        %p
+          Create a super-slick and sexy 'do like Megan Fox with handy hints from Oscar Orscar's
+          = link_to 'Adrian Bowsorth','#'
+      .feature
+        .picture
+        %h3 Mineral make-up 101
+        %p
+          Mineral make-up, is the healthy optional or just a lot of hype? Beautyheaven 
+          = link_to 'clears up the confusion','#'
+    .right
+      #banner300x600
+        #banner300x250
+        %h3
+        %ul
+          %li
+            .picture
+            %strong Article comment:
+            %h4 Fashionably late
+            %p
+              I'm always runnnig late - anything that helps is awesome!
+              = link_to 'read on' ,'#'
+          %li
+            .picture
+            %strong Product review:
+            %h4 Collectors Edition
+            %p
+              If you can only carry one product in your handbag - make it this one!! I...
+              = link_to 'read on' ,'#'
+              
+            
+.clear

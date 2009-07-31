@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090610005621) do
+ActiveRecord::Schema.define(:version => 20090730052855) do
 
   create_table "assets", :force => true do |t|
     t.datetime "created_at"
@@ -17,6 +17,22 @@ ActiveRecord::Schema.define(:version => 20090610005621) do
     t.string   "attachment_file_name"
     t.string   "attachment_content_type"
     t.integer  "attachment_file_size"
+  end
+
+  create_table "banners", :force => true do |t|
+    t.integer  "campaign_id"
+    t.integer  "sample_layout_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "flash_file_name"
+    t.string   "flash_content_type"
+    t.integer  "flash_file_size"
+  end
+
+  create_table "campaigns", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "enquiries", :force => true do |t|
@@ -86,6 +102,14 @@ ActiveRecord::Schema.define(:version => 20090610005621) do
     t.integer  "position"
     t.boolean  "helped"
     t.boolean  "current"
+  end
+
+  create_table "sample_layouts", :force => true do |t|
+    t.integer  "banner_height"
+    t.integer  "banner_width"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  banner_height: 1
+  banner_width: 1
+  content: MyText
+
+two:
+  banner_height: 1
+  banner_width: 1
+  content: MyText
