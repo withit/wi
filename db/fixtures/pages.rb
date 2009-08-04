@@ -14,14 +14,14 @@ Page.seed(:permalink) do |p|
   p.permalink = 'home'
   p.title = 'Home'
   p.is_wrapper = true
-  p.tab = seed_image 'home.jpg'
-  p.hover_tab = seed_image 'home_hover.jpg'
+  p.tab = seed_image 'home01.png'
+  p.hover_tab = seed_image 'home02.png'
   p.content = <<-EOF
 h1. Welcome to With Imagination
 
 So how is With Imagination different you may ask?
 
-With Imagination is a highly regarded company with over 16 years experience in providing a complete range of online business solutions.  We specialize in "website design":services.html#design and "website development":services.html#development, "e-commerce solutions":services.html#ecommerce and "online marketing services":services.html#advertising". 
+With Imagination is a highly regarded company with over 16 years experience in providing a complete range of online business solutions.  We specialize in "website design":services.html#design and "website development":services.html#development, "e-commerce solutions":services.html#ecommerce and "online marketing services":services.html#advertising. 
 
 Our website design and website development experience ranges from simple brochure based websites to more advanced e-commerce solutions. Check out "our projects":/projects. In addition, to designing and developing effective websites we also provide a full range of supporting online marketing services including "search engine optimisation":services.html#seo to ensure you achieve a maximum return on your investment. 
 
@@ -32,8 +32,10 @@ end
 company_page = Page.seed(:permalink) do |p|
   p.permalink = 'company'
   p.title = 'Company'
-  p.tab = seed_image 'company.jpg'
-  p.hover_tab = seed_image 'company_hover.jpg'
+  p.tab = seed_image 'company01.png'
+  p.hover_tab = seed_image 'company02.png'
+  p.banner = seed_image 'company-banner.jpg'
+  p.menu_heading = seed_image 'company-lhs.png'
   p.content = <<-EOF
 With Imagination was incorporated in 1993 with a vision to provide technology based business solutions. We offer a range of online solutions including "website design":services.html#design & "website development":services.html#development,"e-commerce solutions":services.html#ecommerce and "online marketing services":services.html#advertising.
 
@@ -49,6 +51,7 @@ Page.seed(:permalink) do |p|
   p.permalink = 'why_choose_us'
   p.title ='Why Choose Us'
   p.parent = company_page
+  p.banner = seed_image 'why_choose_us.jpg'
   p.content = <<-EOF
 *We are passionate about helping businesses to grow online by:*
 
@@ -66,8 +69,10 @@ end
 Page.seed(:permalink) do |p|
   p.permalink = 'services'
   p.title = 'Services'
-  p.tab = seed_image('services.jpg')
-  p.hover_tab = seed_image('services_hover.jpg')
+  p.tab = seed_image('services01.png')
+  p.hover_tab = seed_image('services02.png')
+  p.banner = seed_image 'services-banner.jpg'
+  p.menu_heading = seed_image 'services.png'
   p.content = <<-EOF
 Our services are delivered by passionate and highly skilled creative, technical and account management staff that help to plan, manage and implement your project successfully.
 
@@ -178,35 +183,32 @@ end
 project_page = Page.seed(:permalink) do |p|
   p.title = "Projects"
   p.is_wrapper = false
-  p.tab = seed_image 'projects.jpg'
-  p.hover_tab = seed_image 'projects_hover.jpg'
+  p.tab = seed_image 'projects01.png'
+  p.hover_tab = seed_image 'projects02.png'
   p.permalink = 'projects'
+  # p.banner = seed_image 'projects-banner.jpg'
+  p.menu_heading = seed_image 'projects-lhs.png'
 end
 
 Page.seed(:permalink) do |p|
   p.title = "Contact Us"
   p.is_wrapper = true
-  p.tab = seed_image 'contact_us.jpg'
-  p.hover_tab = seed_image 'contact_us_hover.jpg'
+  p.tab = seed_image 'contact01.png'
+  p.hover_tab = seed_image 'contact02.png'
   p.permalink = 'contact_us'
-end
-
-Page.seed(:permalink) do |p|
-  p.parent = company_page
-  p.title = "How We Work"
-  p.permalink = 'process'
-  p.content = <<-EOF
-  !/images/portfolio/process/how-we-work.jpg(how we work)!
-  EOF
+  p.banner = seed_image('contact-banner.jpg')
+  p.menu_heading = seed_image 'contact-lhs.png'
 end
 
 Page.seed(:permalink) do |p|
   p.title = "Who We Helped"
   p.parent = company_page
   # p.is_wrapper = true
-  p.tab = seed_image 'projects.jpg'
-  p.hover_tab = seed_image 'projects_hover.jpg'
+  p.tab = seed_image 'projects01.png'
+  p.hover_tab = seed_image 'projects02.png'
   p.permalink = 'who_we_helped'
+  p.banner = seed_image 'who_we_helped-banner.jpg'
+  p.is_wrapper = true
 end
 
 Page.seed(:permalink) do |p|
@@ -214,13 +216,15 @@ Page.seed(:permalink) do |p|
   p.parent = project_page
   p.is_wrapper = true
   p.permalink = 'websites'
+  p.banner = seed_image 'websites.jpg'
 end
 
 Page.seed(:permalink) do |p|
   p.title = "Banners"
   p.parent = project_page
-  # p.is_wrapper = true
+  p.is_wrapper = true
   p.permalink = 'banners'
+  p.banner = seed_image 'online-banners.jpg'
 end
 
 Page.seed(:permalink) do |p|

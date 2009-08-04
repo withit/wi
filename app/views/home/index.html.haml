@@ -16,12 +16,14 @@
   #next
     = link_to 'Next Project',"#"
 .line{:style => 'float: left;'}
-  = image_tag "line.jpg",  :alt => "line",  :width => "7",  :height => "320"
+  = image_tag "line.jpg",  :alt => "line",  :width => "7",  :height => "280"
 .text_container{:style => 'float: left;'}
   #share= share_link
   #page_content.home_page
     = RedCloth.new(@page.content.to_s).to_html
-=link_to 'Follow on twitter', twitter_path,:class => "twitter"
+%div{:style => "position: relative; clear: both; height: 0px; overflow: visible;"}
+  = link_to 'Follow on twitter', twitter_path,:class => "twitter"
+  #latest_tweet{:style => 'display: none;'}= latest_tweet
 #news_outer
   #news
     = image_tag 'rss_icon.jpg', :style => 'float: right; margin-right: 10px; margin-top: 10px;'

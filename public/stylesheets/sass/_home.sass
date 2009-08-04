@@ -1,6 +1,6 @@
 !home_box_height = 264px
 !home_box_radius = 8px
-!home_box_background = rgb(225, 225, 225)
+!home_box_background = #FEE4C9
 body.home 
   #services,
   #news,
@@ -10,7 +10,7 @@ body.home
     :background-color= !home_box_background
     :text-align left
     :background
-      :image url(../images/boxes/bg.jpg)
+      :image url(../images/bg-orange.jpg)
       :repeat no-repeat
       :position 0 30px
     li
@@ -46,6 +46,7 @@ body.home
     h3
       :background-image url(../images/boxes/contact_us.jpg)
       :margin-bottom 25px
+      :height 29px
     p
       :margin-bottom 5px
       :margin-left 25px
@@ -53,7 +54,15 @@ body.home
       :width 180px
     input[type=image]
       :margin-left 132px
-
+    input[type=submit]
+      :margin-left 132px
+      :height 23px
+      :width 58px
+      :display block
+      :border 1px solid #BBB
+      :text-transform uppercase
+      :background-color transparent
+      :color #007AA4
   .errorExplanation h2
     :font-size 11px
     :padding 0px
@@ -66,7 +75,6 @@ body.home
     :height 300px
     :width 400px
     :clear left
-    :padding-bottom 30px
 
     img
       :position absolute
@@ -96,16 +104,16 @@ body.home
     :background-repeat no-repeat
     :background-position center center
     :text-indent -9999px
-    :height 350px
+    :height 280px
     a
       :display block
       :height 100%
       :width 100%
       :outline none
   #next
-    :background-image url(../images/right_arrow.jpg)
+    :background-image url(../images/arrow-right.jpg)
   #previous
-    :background-image url(../images/left_arrow.jpg)
+    :background-image url(../images/arrow-left.jpg)
   
   .text_container, .content 
     :padding-top 1px
@@ -130,8 +138,8 @@ body.home
     :background-color= !home_box_background
   #news_outer
     :clear both
-    :background-image url(../images/boxes/bottom_left.jpg)
-    :background-position bottom left
+    :-moz-border-radius-bottomleft 5px
+    :-webkit-border-bottom-left-radius 5px
   #express_contact_us_outer
-    :background-image url(../images/boxes/bottom_right.jpg)
-    :background-position bottom right
+    :-moz-border-radius-bottomright 5px
+    :-webkit-border-bottom-right-radius 5px

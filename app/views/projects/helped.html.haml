@@ -1,4 +1,6 @@
 - render :layout => 'pages/layout' do 
   .who_we_helped
     - @projects.each do |project|
-      = image_tag project.logo.url
+      %table.project
+        %tr
+          %td{:valign => 'center'}= image_tag project.logo.url

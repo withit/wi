@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :twitter_users
+
   # The priority is based upon order of creation: first created -> highest priority.
   #map.home '/', :controller => 'home', :action => 'index'
   map.resource :session, :only => [:create, :destroy]

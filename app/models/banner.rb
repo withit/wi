@@ -1,6 +1,9 @@
 class Banner < ActiveRecord::Base
   has_attached_file :flash
   
+  has_attached_file :swf, :url => "/system/:class/:id/:basename.:extension"
+  has_attached_file :flv, :url => "/system/:class/:id/:basename.:extension"
+  
   belongs_to :sample_layout
   belongs_to :campaign
   
@@ -30,5 +33,12 @@ class Banner < ActiveRecord::Base
   
   def description
     sample_layout.size + " streaming"
+  end
+  
+  def add_suporting_file= file
+    dir = File.dirname(flash.path)
+    basename = file.original_filename
+    dest = File.join(dir, basename)
+    FileUtils.cp(file.path, dest)
   end
 end

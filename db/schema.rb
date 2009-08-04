@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090730052855) do
+ActiveRecord::Schema.define(:version => 20090804230639) do
 
   create_table "assets", :force => true do |t|
     t.datetime "created_at"
@@ -27,12 +27,21 @@ ActiveRecord::Schema.define(:version => 20090730052855) do
     t.string   "flash_file_name"
     t.string   "flash_content_type"
     t.integer  "flash_file_size"
+    t.string   "swf_file_name"
+    t.string   "swf_content_type"
+    t.integer  "swf_file_size"
+    t.string   "flv_file_name"
+    t.string   "flv_content_type"
+    t.integer  "flv_file_size"
   end
 
   create_table "campaigns", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
   end
 
   create_table "enquiries", :force => true do |t|
@@ -108,6 +117,11 @@ ActiveRecord::Schema.define(:version => 20090730052855) do
     t.integer  "banner_height"
     t.integer  "banner_width"
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "twitter_users", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,7 +1,7 @@
 = @page_title = nil
 - content_for :head do 
   = javascript_include_tag 'swfobject'
-  = javascript_tag("swfobject.embedSWF('#{@banner.flash.url}', 'banner#{@banner.width}x#{@banner.height}', #{@banner.width}, #{@banner.height}, '9.0.0','expressInstall.swf')")
+  = javascript_tag("swfobject.embedSWF('#{@banner.swf.url}', 'banner#{@banner.width}x#{@banner.height}', #{@banner.width}, #{@banner.height}, '9.0.0','expressInstall.swf')")
 
 .breadcrumb
   = link_to 'home', '/'
@@ -13,14 +13,14 @@
   = @banner.description
 .left
   .side_menu
-    = image_tag 'news/slatest_news.jpg', :alt => 'projects'
+    = image_tag 'projects-lhs.png', :alt => 'projects'
     %ul
       %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}= link_to 'Websites', projects_path, :style => 'text-transform: uppercase;'
       %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'} 
         = link_to 'Banners', banners_path 
         %ul{:style => "margin: 0; padding: 0; padding-left: 1em;"}
           - Campaign.all.each do |campaign|
-            %li{:style => "text-transform: none; line-height: 12px; border: none"}= link_to_unless campaign == @banner.campaign, campaign.name, campaign.banners.first
+            %li{:style => "border: medium none ; margin: 0pt; padding: 0pt; text-transform: none; line-height: 12px; height: 16px;"}= link_to_unless campaign == @banner.campaign, campaign.name, campaign.banners.first
       %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}= link_to 'Newsletter', '#TODO', :style => 'text-transform: uppercase;'
       
 .center
@@ -33,7 +33,7 @@
           .picture
           %h3 Face it
           %p 
-            Is it possible to apply mascara withoyr pulling a completely ridiculous face? Bh&r...
+            Is it possible to apply mascara without pulling a completely ridiculous face? Bh&r...
             = link_to 'read on', '#'
         %li
           .picture
@@ -67,7 +67,8 @@
           = link_to 'clears up the confusion','#'
     .right
       #banner300x600
-        #banner300x250
+        #banner600x350
+          #banner300x250
         %h3
         %ul
           %li

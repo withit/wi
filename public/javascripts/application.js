@@ -66,6 +66,16 @@ var DefaultClearingInput = Behavior.create({
 });
 
 Event.addBehavior({
+  '.twitter:mouseover': function(e){
+    if($('latest_tweet')){
+      $('latest_tweet').show();
+    }
+  },
+  '.twitter:mouseout': function(e){
+    if($('latest_tweet')){
+      $('latest_tweet').hide();
+    }
+  },
   '.assets li:click' : function(e){
     $('page_content').value += (" !" + e.element().down('.full_path').innerHTML + "! ");
   },

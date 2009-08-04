@@ -1,15 +1,54 @@
-- render :layout => 'pages/layout' do
-  #projects
-    - @projects.each do |project| 
-      .thumbnail= link_to_if admin?, image_tag(project.picture.url, :alt => project.name), [:edit, project]
-      .project
-        %h3= image_tag project.logo.url, :alt => project.name
-        = project.description 
-    .page_info 
-      PAGE 
-      = h(params[:page] || '1')
-      of 
-      = @projects.total_pages 
-    = will_paginate(@projects )
-    - if admin?
-      .admin= link_to 'Add a new project', new_project_path
+- @page_title = nil 
+- content_for :head do 
+  \
+
+.breadcrumb
+  = link_to 'home', '/'
+  &gt;
+  = link_to 'projects', projects_path
+  &gt; 
+  websites
+
+.left
+  .side_menu
+    = image_tag @page.root.menu_heading.url
+    %ul
+      - (@page.root.children).each do |page| 
+        %li{:class => page == @page ? "current" : nil}= link_to_if page != @page, page.title, unwrapped_page_path(page)
+.right
+  .side_menu
+    - if controller.controller_name == 'enquiries'
+      #inspiration
+        %h3 Inspiration
+        = image_tag 'projects.jpg'
+        = link_to 'Projects', 'projects_path', :class => 'projects'
+    - else
+      #contact_information
+        %h3 Contact Us
+        %p
+          Email: 
+          = mail_to 'info@wi.com.au','info@wi.com.au', :encode => "javascript"
+        %p Phone: + 61 2 9929 9229
+        %p Fax: + 61 2 9460 4770
+    .twitter= link_to 'Follow', twitter_path
+    .subscribe= link_to 'Subscribe Latest News', '#TODO'
+
+.center
+  #page_content
+    .banner{:style => "margin: auto; width: 501px"}= image_tag @page.banner.url
+    .clear
+    #projects
+      - @projects.each do |project| 
+        .thumbnail= link_to_if admin?, image_tag(project.picture.url, :alt => project.name), [:edit, project]
+        .project
+          %h3= image_tag project.logo.url, :alt => project.name
+          = project.description 
+      .page_info 
+        PAGE 
+        = h(params[:page] || '1')
+        of 
+        = @projects.total_pages 
+      = will_paginate(@projects )
+      - if admin?
+        .admin= link_to 'Add a new project', new_project_path
+.clear

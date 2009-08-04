@@ -46,7 +46,7 @@
     = f.file_field :menu_heading
   %p
     = f.label :parent_id
-    = f.collection_select :parent_id, Page.roots - [@page], :id, :title
+    = f.collection_select :parent_id, Page.roots - [@page], :id, :title, :include_blank => true
   %p
     = f.submit "Update"
 = link_to 'Show', unwrapped_page_path(@page)

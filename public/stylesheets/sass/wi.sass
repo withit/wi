@@ -4,6 +4,12 @@
 @import enquiry.sass
 @import services.sass
 @import sample.sass
+@import tweet.sass
+@import helped.sass
+@import inspiration.sass
+@import banners.sass
+
+
 *
   :font-family Arial, Helvetica, sans-serif
 
@@ -424,17 +430,6 @@ u
       :font-weight bold
     
 
-.side_menu
-  :font-weight bold
-  :text-transform uppercase
-  li
-    :height 32px
-    :border-bottom 1px dashed #909090
-    :line-height 32px
-  a
-    :font-weight normal
-    :text-transform none
-
 .main
   :width 1005px
   :position relative
@@ -541,7 +536,7 @@ body, body.background
       :display block
       :width 100%
       :height 56px
-      :background-image url(../images/twitter.jpg)
+      :background-image url(../images/twitter2.jpg)
       :background-repeat no-repeat
       :background-position top right
       :text-indent -9999px
@@ -570,6 +565,27 @@ body, body.background
   :background-position top right
   :height 400px
   .side_menu
+    :font-weight normal
+    :text-transform uppercase
+    ul
+      :margin 0
+      :padding-left 20px
+      :list-style-type none
+      :list-style-image none
+    li
+      :list-style-image none
+      :height 32px
+      :border-bottom 1px dashed #CCC
+      :line-height 32px
+      :color #2D9DD8
+      :padding-left 30px
+      &.current 
+        :background-image url(../images/menu/li.jpg)
+        :background-repeat no-repeat
+        :background-position 10px 13px
+    a
+      :font-weight normal
+      :color #595959
     :background-image url(../images/menu/bg.jpg)
     :padding-top 15px
     :margin-right 15px
@@ -578,6 +594,7 @@ body, body.background
       :margin-top 0px
       :text-align right
       :margin-left 15px
+      :margin-bottom 15px
 .center
   :width 551px
   
@@ -595,3 +612,26 @@ body, body.background
   .formError
     :margin-left 1em
     :font-size 80%
+
+#contact_information
+  h3
+    :background-image url(../images/contact-lhs.png)
+    :height 21px
+    :background-position top right
+    :background-repeat no-repeat
+    :text-indent -99999px
+    :text-align left
+  p
+    :padding 2px 0px
+    
+    
+#page_content
+  ul
+    :margin 0
+    :padding 0
+    :padding-left 10px
+    :list-style-position inside
+    li
+      :list-style-position inside
+  li
+    :padding 5px

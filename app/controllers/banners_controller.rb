@@ -31,6 +31,7 @@ class BannersController < ApplicationController
   end
   
   def index
+    @page = Page.find_by_permalink('banners')
     @campaigns = Campaign.all
   end
 end
