@@ -86,5 +86,6 @@
               If you can only carry one product in your handbag - make it this one!! I...
               = link_to 'read on' ,'#'
               
-            
+  - if admin?
+    .admin= link_to 'Edit...', [:edit, @banner]            
 .clear

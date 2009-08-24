@@ -7,7 +7,7 @@ class BannersController < ApplicationController
   def create
     @banner = Banner.new(params[:banner])
     if @banner.save
-      redirect_to :action => 'new'
+      redirect_to :action => 'index'
     else
       render :new
     end
@@ -20,7 +20,7 @@ class BannersController < ApplicationController
   def update
     @banner = Banner.find(params[:id])
     if @banner.update_attributes(params[:banner])
-      redirect_to :action => 'new'
+      redirect_to :action => 'show'
     else
       render :edit
     end

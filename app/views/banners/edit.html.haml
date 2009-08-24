@@ -4,6 +4,9 @@
     = f.label :flash, 'Banner File'
     = f.file_field :flash
   %p
+    = f.label :flv, 'Video File'
+    = f.file_field :flv
+  %p
     = f.label :size_id
     = f.collection_select :size_id, SampleLayout.all, :id, :size
   %p

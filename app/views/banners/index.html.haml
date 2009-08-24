@@ -15,7 +15,7 @@
         %ul{:style => "margin: 0; padding: 0; padding-left: 1em;"}
           - Campaign.all.each do |campaign|
             %li{:style => "text-transform: none; line-height: 12px; border: none; padding: 0; margin: 0; height: 16px;"}= link_to campaign.name, campaign.banners.first
-      %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}= link_to 'Newsletter', news_path(:action => :index, :format => 'rss'), :style => 'text-transform: uppercase;'
+      %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}= link_to 'Newsletter', '#TODO'
 .right
   .side_menu
     - if controller.controller_name == 'enquiries'
@@ -49,4 +49,6 @@
         %ul
           - campaign.banners.each do |banner|
             %li= link_to banner.description, banner
+    - if admin?
+      .admin= link_to 'Add a new banner...', new_banner_path
 .clear

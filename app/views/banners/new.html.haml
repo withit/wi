@@ -1,8 +1,11 @@
 %h1 Add a new banner
 - form_for @banner, :html => {:multipart => true} do |f|
   %p
-    = f.label :flash, 'Banner File'
-    = f.file_field :flash
+    = f.label :swf, 'Banner File'
+    = f.file_field :swf
+  %p
+    = f.label :flv, 'Video File'
+    = f.file_field :flv
   %p
     = f.label :size_id
     = f.collection_select :size_id, SampleLayout.all, :id, :size
