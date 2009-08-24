@@ -9,7 +9,7 @@
 
 .left
   .side_menu
-    = image_tag 'news/slatest_news.jpg', :alt => 'latest_news'
+    = image_tag 'news/menu.png', :alt => 'latest_news'
     %ul
       - News.all.each do |news| 
         %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}= link_to_if news != @news, news.title, news_item_path(news), :style => 'text-transform: uppercase;'
@@ -26,7 +26,7 @@
     .subscribe= link_to 'Subscribe Latest News', '#TODO'
 
 .center
-  = image_tag 'news/slatest_news.jpg', :alt => 'latest_news'
+  = image_tag 'news/banner.jpg', :alt => 'latest_news'
   #page_content
     - @news.each do |news|
       %h1{:style => 'float: none'}= link_to news.title,news_item_path(news)
