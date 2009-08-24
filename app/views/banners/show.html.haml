@@ -20,13 +20,14 @@
         = link_to 'Banners', banners_path 
         %ul{:style => "margin: 0; padding: 0; padding-left: 1em;"}
           - Campaign.all.each do |campaign|
-            %li{:style => "border: medium none ; margin: 0pt; padding: 0pt; text-transform: none; line-height: 12px; height: 16px;"}= link_to_unless campaign == @banner.campaign, campaign.name, campaign.banners.first
-      %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}= link_to 'Newsletter', '#TODO', :style => 'text-transform: uppercase;'
+            %li{:style => "border: medium none ; margin: 0pt; padding: 0pt; text-transform: none; padding-top : 1em; line-height: 12px; height: 16px;"}= link_to_unless campaign == @banner.campaign, campaign.name, campaign.banners.first
+      %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}= link_to 'Newsletter', news_letters_path, :style => 'text-transform: uppercase;'
       
 .center
   .sizes= select_tag(:size, options_for_select(@banner.campaign.banners.collect{|b| [b.description,b.id]}, @banner.id))
   .sample_page
     #banner728x90
+      #banner600x350
     .left
       %ul
         %li
@@ -67,8 +68,7 @@
           = link_to 'clears up the confusion','#'
     .right
       #banner300x600
-        #banner600x350
-          #banner300x250
+        #banner300x250
         %h3
         %ul
           %li

@@ -6,8 +6,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :session, :only => [:create, :destroy]
   map.login 'login', :controller => 'sessions', :action => 'new'
   map.portfolio '/portfolio', :controller => 'projects', :action => 'index'
-  map.resources :projects
-  map.projects '/websites', :controller => 'projects'
+  map.resources :projects, :as => 'websites'
+  map.resources :news_letters, :as => 'news-letters'
   map.resources :news, :singular => 'news_item'
   map.news_by_month 'news/:year/:month', :controller => 'news', :action => 'index'
   map.news_item_by_month 'news/:year/:month/:id', :controller => 'news', :action => 'show'

@@ -2,7 +2,7 @@ class NewsController < ApplicationController
   before_filter :find_months
   before_filter :authorize, :except => [:index, :show]
 
-  WINDOW = (-2..2)
+  WINDOW = (-3..3)
 
   def index
     respond_to do |format|

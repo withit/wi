@@ -12,7 +12,8 @@
       = image_tag 'news/menu.png', :alt => 'latest_news'
       %ul
         - @window.each do |month|
-          %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}
+          %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;', |
+              :class => month == @current_month ? 'current' : ''} |
             - case month
             - when :prev
               - month = @current_month - 1.month
@@ -23,10 +24,9 @@
             - else
               - if month == @current_month
                 = month.to_formatted_s(:long_year_month)
-                %ul{:style => 'padding-left:0'}
+                %ul{:style => 'margin: 0pt; padding: 1em 0pt 0pt 1em;'}
                   - @current_month_items.each do |item|
-                    %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase; border-bottom:none',
-                        :class => (item == @news) ? 'current' : ''}
+                    %li{:style => 'border: medium none ; margin: 0pt; padding: 0pt; padding-top : 1em; text-transform: none; line-height: 12px; height: auto;'}
                       = link_to_if item != @news, item.title, |
                       news_item_by_month_path(:year => @current_month.year,  :month => @current_month.month, :id => item.to_param) |                      
               - else

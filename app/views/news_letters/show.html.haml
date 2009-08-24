@@ -1,0 +1,5 @@
+#news-letter
+  =image_tag @news_letter.image.url
+
+  -if admin?
+    .admin= link_to "Edit News Letter...", [:edit, @news_letter]

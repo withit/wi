@@ -352,6 +352,26 @@ form.new_enquiry {
       #banners .campaign ul li {
         list-style-image: url(../images/blue-arrow.jpg); }
 
+#news_letters {
+  margin: 10px auto auto auto;
+  width: 500px; }
+  #news_letters .news_letter {
+    margin-right: 6px;
+    margin-bottom: 6px;
+    float: left;
+    width: 247px; }
+    #news_letters .news_letter a {
+      border: none; }
+      #news_letters .news_letter a img {
+        border: none; }
+    #news_letters .news_letter h2 {
+      vertical-align: middle;
+      padding: 0;
+      text-transform: uppercase;
+      margin: 5px 0 0; }
+      #news_letters .news_letter h2 img {
+        vertical-align: middle; }
+
 * {
   font-family: Arial, Helvetica, sans-serif; }
 
@@ -378,7 +398,7 @@ a {
 .top_banner {
   background-image: url(../images/banner.jpg);
   background-repeat: no-repeat;
-  height: 133px; }
+  height: 128px; }
 
 .top_menu {
   padding-left: 5px; }
@@ -564,7 +584,6 @@ body.dashboard h1, body.dashboard h2 {
   text-decoration: none;
   background-image: url(../images/menu/bg.jpg);
   background-repeat: no-repeat;
-  height: 300px;
   width: 217px; }
 
 .list {
@@ -745,7 +764,7 @@ u {
 .top_banner ul {
   float: right;
   list-style-type: none;
-  margin-top: 107px; }
+  margin-top: 102px; }
   .top_banner ul li {
     float: left;
     list-style-type: none;
@@ -934,3 +953,6 @@ body, body.background {
     list-style-position: inside; }
 #page_content li {
   padding: 5px; }
+
+.hide {
+  display: none; }

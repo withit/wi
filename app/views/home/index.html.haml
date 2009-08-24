@@ -32,7 +32,7 @@
       - News.all(:limit => 1).each do |news|
         %li
           %h4= news.title 
-          %p= truncate_preserving_words(strip_tags(news.content), 480)
+          %p= truncate_preserving_words(strip_tags(news.content), 200)
           %p= link_to "more &gt;&gt;", news_by_month_path(:year => Date.today.year, :month => Date.today.month)
 #services_outer
   #services
@@ -45,7 +45,7 @@
           on-time and within  budget.
         %p= link_to "more &gt;&gt;","/services.html#design"
       %li
-        %h4 e-Commerce Solutions
+        %h4 Web Applications
         %p 
           Thinking of building an online store? We can offer a complete range of e-commerce solutions.
         %p= link_to "more &gt;&gt;","/services.html#e-commerce"
