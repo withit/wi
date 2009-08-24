@@ -8,7 +8,7 @@ ActionController::Routing::Routes.draw do |map|
   map.portfolio '/portfolio', :controller => 'projects', :action => 'index'
   map.resources :projects
   map.projects '/websites', :controller => 'projects'
-  map.resources :news, :singular => 'news_item', :collection => {:latest => :get}
+  map.resources :news, :singular => 'news_item'
   map.news_by_month 'news/:year/:month', :controller => 'news', :action => 'index'
   map.news_item_by_month 'news/:year/:month/:id', :controller => 'news', :action => 'show'
   map.services 'services', :controller => 'pages', :action => 'show', :id => 'services'

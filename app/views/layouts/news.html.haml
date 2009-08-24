@@ -41,8 +41,8 @@
           = mail_to 'info@wi.com.au','info@wi.com.au', :encode => "javascript"
         %p Phone: + 61 2 9929 9229
         %p Fax: + 61 2 9460 4770
-      .twitter= link_to 'Follow', '#TODO'
-      .subscribe= link_to 'Subscribe Latest News', '#TODO'
+      .twitter= link_to 'Follow', twitter_path
+      .subscribe= link_to 'Subscribe Latest News', news_path(:format => 'rss')
 
   .center
     = image_tag 'news/banner.jpg', :alt => 'latest_news'
