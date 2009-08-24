@@ -29,11 +29,11 @@
     = image_tag 'rss_icon.jpg', :style => 'float: right; margin-right: 10px; margin-top: 10px;'
     %h3 Latest news
     %ul
-      - News.all(:limit => 2).each do |news|
+      - News.all(:limit => 1).each do |news|
         %li
           %h4= news.title 
-          %p= truncate_preserving_words(strip_tags(news.content),120)
-          %p= link_to "more &gt;&gt;", "/news#news_#{news.id}"
+          %p= truncate_preserving_words(strip_tags(news.content), 480)
+          %p= link_to "more &gt;&gt;", news_by_month_path(:year => Date.today.year, :month => Date.today.month)
 #services_outer
   #services
     %h3 Services
