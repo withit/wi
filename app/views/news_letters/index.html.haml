@@ -1,0 +1,10 @@
+#news_letters
+  - @news_letters.each do |news_letter|
+    .news_letter{:class => cycle(nil, 'last')}
+      = link_to image_tag(news_letter.logo.url), news_letter
+      %h2
+        New
+        = news_letter.name
+        = link_to image_tag("arrow-orange.jpg"), news_letter
+- if admin?
+  .admin= link_to 'Add a new news letter', new_news_letter_path
