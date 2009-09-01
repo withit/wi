@@ -38,7 +38,7 @@ class BannersController < ApplicationController
   def destroy
     @banner = Banner.find(params[:id])
     @banner.destroy
-    campaign = @banner.compaign
+    campaign = @banner.campaign
     campaign.reload
     if campaign.banners.length == 0
       campaign.destroy
