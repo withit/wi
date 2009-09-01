@@ -368,6 +368,8 @@ form.new_enquiry {
     margin-bottom: 6px;
     float: left;
     width: 247px; }
+    #news_letters .news_letter.last {
+      margin-right: 0px; }
     #news_letters .news_letter a {
       border: none; }
       #news_letters .news_letter a img {

@@ -17,15 +17,15 @@ Page.seed(:permalink) do |p|
   p.tab = seed_image 'home01.png'
   p.hover_tab = seed_image 'home02.png'
   p.content = <<-EOF
-h1. Welcome to With Imagination
+h1. Welcome to With Imagination providers of web based solutions since 1993.
 
-So how is With Imagination different you may ask?
+We specialize in website design and development, application solutions and a range of online marketing services. "Our services":/services
 
-With Imagination is a highly regarded company with over 16 years experience in providing a complete range of online business solutions.  We specialize in "website design":services.html#design and "website development":services.html#development, "e-commerce solutions":services.html#ecommerce and "online marketing services":services.html#advertising. 
+Our focus is simple, to provide a range of cost effective web based solutions that add value to our clients business. "Our clients (who we’ve helped)":/who_we_helped
 
-Our website design and website development experience ranges from simple brochure based websites to more advanced e-commerce solutions. Check out "our projects":/projects. In addition, to designing and developing effective websites we also provide a full range of supporting online marketing services including "search engine optimisation":services.html#seo to ensure you achieve a maximum return on your investment. 
+We are passionate about delivering successful projects and we believe that with every project we deliver should make a difference to our clients business. "Our portfolio":/websites
 
-Would you like to know more about us? Then why not contact us today!
+Would you like to know more? Then why not "contact us":/contact_us today!
 EOF
 end
 
@@ -37,13 +37,17 @@ company_page = Page.seed(:permalink) do |p|
   p.banner = seed_image 'company-banner.jpg'
   p.menu_heading = seed_image 'company-lhs.png'
   p.content = <<-EOF
-With Imagination was incorporated in 1993 with a vision to provide technology based business solutions. We offer a range of online solutions including "website design":services.html#design & "website development":services.html#development,"e-commerce solutions":services.html#ecommerce and "online marketing services":services.html#advertising.
+With Imagination is a highly regarded company with over 16 years experience in providing a complete range of web based solutions.
 
-Our focus is simple, to provide are range of cost effective internet consultancy products and services that add value to our clients business.
+We know that every business is different and will therefore have distinctive technical and business requirements. Therefore as a priority we take special care in understanding your business including your processes and systems in order to deliver the best solution to suit your needs.
 
-Through "our services":services.html With Imagination has helped many successful small & medium sized companies to fully understand the commercial opportunities of the internet along with maximizing their online investment. 
- 
-Do you have a project in mind? Then why not "contact us":contact_us.html today!      
+"Our services":/services are delivered by passionate and highly skilled creative, technical and account management staff that help to plan, manage and implement your project successfully.
+
+We also strive to provide the best possible service to small & medium enterprises and corporations.
+
+For those more technically minded our preferred application platform is "Ruby on Rails":http://www.rubyonrails.org. Ruby on Rails is an open source web framework that optimizes programmer happiness for web development that doesn’t hurt. Ruby let’s us write beautiful code by favouring convention over configuration. Yellow Pages and Twitter use Ruby on Rails.
+
+Do you have a project in mind? Then why not "contact us":/contact_us today!
   EOF
 end
 
@@ -76,7 +80,7 @@ Page.seed(:permalink) do |p|
   p.content = <<-EOF
 Our services are delivered by passionate and highly skilled creative, technical and account management staff that help to plan, manage and implement your project successfully.
 
-Our experience and "process":process.html guarantees quality, competent and timely execution of any projects - from online creative, email campaigns to website solutions. Through our services we translate our knowledge of the internet and online technologies into real value for our customers. We use the best internet technology to drive the best results for your business.
+Our experience and process guarantees quality, competent and timely execution of any projects - from online creative, email campaigns to website solutions. Through our services we translate our knowledge of the internet and online technologies into real value for our customers. We use the best internet technology to drive the best results for your business.
 
 We know that every business is different and will therefore have distinctive technical and business requirements. Therefore as a priority we take special care in understanding your business including your processes and systems in order to deliver the best solution to suit your needs.
 
