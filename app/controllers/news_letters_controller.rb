@@ -14,7 +14,7 @@ class NewsLettersController < ApplicationController
   # GET /news_letters/1
   # GET /news_letters/1.xml
   def show
-    @hide_extras = true
+    @hide_extras = true  
     @news_letter = NewsLetter.find(params[:id])
 
     respond_to do |format|

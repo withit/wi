@@ -376,9 +376,9 @@ form.new_enquiry {
       #news_letters .news_letter h2 img {
         vertical-align: middle; }
 
-.news_letters .center {
+.news_letters .center.no-rhs {
   width: 768px; }
-  .news_letters .center #news-letter {
+  .news_letters .center.no-rhs #news-letter {
     text-align: center; }
 
 * {
