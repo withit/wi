@@ -50,4 +50,10 @@ class PagesController < ApplicationController
     @assets = Asset.all
     @page = Page.new
   end
+
+  def destroy
+    @page = Page.find_or_create_by_permalink(params[:id])
+    @page.destroy
+    redirect_to :action => :index
+  end
 end
