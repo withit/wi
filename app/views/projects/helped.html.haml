@@ -1,6 +1,7 @@
-- render :layout => 'pages/layout' do 
+- render :layout => 'pages/layout' do
   .who_we_helped
-    - @projects.each do |project|
-      %table.project
+    %table
+      - @projects.each_slice 3 do |projects|
         %tr
-          %td{:valign => 'center'}= image_tag project.logo.url
+          - projects.each do |project|
+            %td.project{:valign => 'center'}= image_tag project.logo.url

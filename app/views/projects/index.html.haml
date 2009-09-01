@@ -42,13 +42,14 @@
         .thumbnail= link_to_if admin?, image_tag(project.picture.url, :alt => project.name), [:edit, project]
         .project
           %h3= image_tag project.logo.url, :alt => project.name
-          = project.description 
-      .page_info 
-        PAGE 
-        = h(params[:page] || '1')
-        of 
-        = @projects.total_pages 
-      = will_paginate(@projects )
+          = project.description
+      .page_info_container
+        .page_info
+          PAGE
+          = h(params[:page] || '1')
+          of
+          = @projects.total_pages
+        = will_paginate(@projects )
       - if admin?
         .admin= link_to 'Add a new project', new_project_path
 .clear

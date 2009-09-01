@@ -152,9 +152,12 @@ body.projects #projects {
     line-height: 15px;
     padding: 10px; }
   body.projects #projects .thumbnail,
-  body.projects #projects .page_info {
+  body.projects #projects .page_info_container {
     clear: both;
     float: left; }
+    body.projects #projects .thumbnail .pagination,
+    body.projects #projects .page_info_container .pagination {
+      padding-left: 5px; }
   body.projects #projects .thumbnail {
     width: 250px; }
   body.projects #projects .project {
@@ -804,7 +807,8 @@ u {
     height: 90px;
     padding-bottom: 0px;
     margin-bottom: 0px;
-    width: auto;
+    padding-left: 25px;
+    width: 100%;
     line-height: 100px; }
   .footer .reflection {
     text-align: right; }
