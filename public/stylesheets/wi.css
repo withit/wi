@@ -332,14 +332,14 @@ form.new_enquiry {
 #banners {
   width: 500px;
   margin: auto; }
+  #banners a {
+    border: none; }
+    #banners a img {
+      border: none; }
   #banners .campaign {
     width: 247px;
     float: left;
     margin-right: 6px; }
-    #banners .campaign a {
-      border: none; }
-      #banners .campaign a img {
-        border: none; }
     #banners .campaign.last {
       margin-right: 0px; }
     #banners .campaign h2 {
