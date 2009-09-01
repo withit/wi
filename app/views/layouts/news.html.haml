@@ -45,7 +45,8 @@
       .subscribe= link_to 'Subscribe Latest News', news_path(:format => 'rss')
 
   .center
-    = image_tag 'news/banner.jpg', :alt => 'latest_news'
+    .banner{:style => "margin:auto; width:501px;"}
+      = image_tag 'news/banner.jpg', :alt => 'latest_news'
     #page_content
       = yield
       - if admin?

@@ -462,7 +462,7 @@ h1 {
 .news #page_content h1 {
   float: none;
   font-size: 14px !important;
-  margin-left: 10px; }
+  padding-left: 24px; }
 
 h2 {
   font-size: 11px;
@@ -970,3 +970,6 @@ body, body.background {
 
 .hide {
   display: none; }
+
+.news-content {
+  padding-left: 16px; }

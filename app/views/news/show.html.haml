@@ -1,4 +1,4 @@
 - @page_title = @news.title
 
 %h1{:style => 'float: none'}= link_to_if admin?, @news.title,edit_news_item_path(@news)
-.content= simple_format(@news.content )
+.news-content= simple_format(@news.content )
