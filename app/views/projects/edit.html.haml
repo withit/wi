@@ -1,4 +1,6 @@
 %h1= t('project.edit.heading')
+= button_to "Delete", @project, :method => :delete
+
 - form_for @project, :html => {:multipart => true} do |f|
   %p
     %label= t('project.name')

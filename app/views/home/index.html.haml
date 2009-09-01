@@ -21,7 +21,7 @@
   #share= share_link
   #page_content.home_page
     = RedCloth.new(@page.content.to_s).to_html
-%div{:style => "position: relative; clear: both; height: 0px; overflow: visible;"}
+%div{:style => "clear: both; overflow: visible;"}
   = link_to 'Follow on twitter', twitter_path,:class => "twitter"
   #latest_tweet{:style => 'display: none;'}= latest_tweet
 #news_outer

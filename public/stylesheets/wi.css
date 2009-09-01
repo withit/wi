@@ -163,7 +163,7 @@ body.projects #projects {
 form.new_enquiry {
   margin-top: 2em; }
   form.new_enquiry div {
-    overflow: auto;
+    overflow: hidden;
     padding: 0.2em;
     padding-left: 0; }
     form.new_enquiry div.fieldWithErrors {
@@ -336,6 +336,10 @@ form.new_enquiry {
     width: 247px;
     float: left;
     margin-right: 6px; }
+    #banners .campaign a {
+      border: none; }
+      #banners .campaign a img {
+        border: none; }
     #banners .campaign.last {
       margin-right: 0px; }
     #banners .campaign h2 {
@@ -371,6 +375,11 @@ form.new_enquiry {
       margin: 5px 0 0; }
       #news_letters .news_letter h2 img {
         vertical-align: middle; }
+
+.news_letters .center {
+  width: 768px; }
+  .news_letters .center #news-letter {
+    text-align: center; }
 
 * {
   font-family: Arial, Helvetica, sans-serif; }
@@ -449,6 +458,11 @@ h1 {
   padding-left: 10px;
   padding-top: 10px;
   float: left; }
+
+.news #page_content h1 {
+  float: none;
+  font-size: 14px !important;
+  margin-left: 10px; }
 
 h2 {
   font-size: 11px;

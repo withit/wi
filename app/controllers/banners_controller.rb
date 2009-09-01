@@ -34,4 +34,15 @@ class BannersController < ApplicationController
     @page = Page.find_by_permalink('banners')
     @campaigns = Campaign.all
   end
+
+  def destroy
+    @banner = Banner.find(params[:id])
+    @banner.destroy
+    campaign = @banner.compaign
+    campaign.reload
+    if campaign.banners.length == 0
+      campaign.destroy
+    end
+    redirect_to :action => :index
+  end
 end

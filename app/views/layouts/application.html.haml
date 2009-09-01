@@ -31,7 +31,7 @@
       .footer
         .clients
           &nbsp;
-          = image_tag "footer/our_clients.jpg", :alt => "our clients",  :width => "84", :height => "20", :style => 'margin-right: 20px'
+          /= image_tag "footer/our_clients.jpg", :alt => "our clients",  :width => "84", :height => "20", :style => 'margin-right: 20px'
           - Project.find(:all, :conditions => {:in_footer => true}, :order => 'position').each do |p|
             = image_tag p.logo.url, :alt => p.name, :border => 0
         .reflection

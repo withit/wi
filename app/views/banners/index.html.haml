@@ -45,7 +45,7 @@
         %h2
           New  
           = campaign.name
-          = image_tag "arrow-orange.jpg"
+          = link_to image_tag("arrow-orange.jpg"), campaign.banners.first || ''
         %ul
           - campaign.banners.each do |banner|
             %li= link_to banner.description, banner

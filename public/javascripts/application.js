@@ -35,7 +35,7 @@ function prev_slide()
 document.observe("dom:loaded", function() {
   $$('div#slide_show img').invoke('hide');
   
-  if($('slide_show') && $('markers'))
+  if($('slide_show') && $('slide_show').down() && $('markers'))
   {
     current_slide = $('slide_show').down().show();
     current_marker = $('markers').down().setStyle({backgroundColor: '#2D9DD8'});
