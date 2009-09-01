@@ -20,7 +20,7 @@ end
 Banner.seed(:campaign_id, :sample_layout_id) do |b|
   b.campaign_id = matte.id
   b.swf = seed_image("../banners/revlon-matte/300x250/300x250.swf")
-  b.flv = seed_image("../banners/revlon-matte/300x250/Revlon Matte 30 sec rev 2 MAR 09.flv")
+  b.flv = seed_image("../banners/revlon-matte/300x250/Revlon Matte 30 sec rev 2 MAR 09.flv") 
   b.sample_layout_id = SampleLayout.find_by_banner_height_and_banner_width(250,300).id
 end
 

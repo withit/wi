@@ -1,8 +1,8 @@
 class Banner < ActiveRecord::Base
   has_attached_file :flash
   
-  has_attached_file :swf, :url => "/swfs/:id/:style/:basename.:extension"
-  has_attached_file :flv, :url => "/swfs/:id/:style/:basename.:extension"
+  has_attached_file :swf, :url => "/swfs/:id/:style/:filename"
+  has_attached_file :flv, :url => "/swfs/:id/:style/:original_filename"
 
   belongs_to :sample_layout
   belongs_to :campaign

@@ -2,8 +2,8 @@
 = button_to "Delete", @banner, :method => :delete
 - form_for @banner, :html => {:multipart => true} do |f|
   %p
-    = f.label :flash, 'Banner File'
-    = f.file_field :flash
+    = f.label :swf, 'Banner File'
+    = f.file_field :swf
   %p
     = f.label :flv, 'Video File'
     = f.file_field :flv
