@@ -27,7 +27,6 @@
   .sizes= select_tag(:size, options_for_select(@banner.campaign.banners.collect{|b| [b.description,b.id]}, @banner.id))
   .sample_page
     #banner728x90
-      #banner600x350
     .left
       %ul
         %li
@@ -68,7 +67,8 @@
           = link_to 'clears up the confusion','#'
     .right
       #banner300x600
-        #banner300x250
+        #banner600x350
+          #banner300x250
         %h3
         %ul
           %li
