@@ -77,7 +77,8 @@ body.home #slide_show {
   position: relative;
   height: 300px;
   width: 400px;
-  clear: left; }
+  clear: left;
+  top: 3px; }
   body.home #slide_show img {
     position: absolute;
     top: 0px;
