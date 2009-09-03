@@ -4,4 +4,8 @@ class SampleLayout < ActiveRecord::Base
   def size
     [banner_width, banner_height] * "x"
   end
+
+  def expandable?
+    banner_width == 600 and banner_height == 350
+  end
 end

@@ -32,7 +32,11 @@ class Banner < ActiveRecord::Base
   end
   
   def description
-    sample_layout.size + " streaming"
+    if sample_layout.expandable?
+      "300x250 expandable to 600x350"   
+    else
+      sample_layout.size + " streaming"
+    end
   end
   
   def add_suporting_file= file
