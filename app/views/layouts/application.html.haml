@@ -35,8 +35,11 @@
             - Project.find(:all, :conditions => {:in_footer => true, :current => true}, :order => 'position').each do |p|
               %td= image_tag p.logo.url, :alt => p.name, :border => 0
         .reflection
-          &reg; Copyright 
-          = Date.today.year 
+          &reg; Copyright
+          = Date.today.year
+          Powered by
+          %strong #{link_to "Ruby on Rails", 'http://www.rubyonrails.org'} 
+
           |
           = link_to "Contact Us", contact_us_path
           |
