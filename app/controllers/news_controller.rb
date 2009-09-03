@@ -56,7 +56,7 @@ class NewsController < ApplicationController
     @last_month = (News.find(:last, :order => "created_at").try(:created_at) || Date.today).to_date.beginning_of_month
     @current_month = (params[:year] and params[:month]) ?
       Date.new(params[:year].to_i, params[:month].to_i, 1) :
-      Date.today.beginning_of_month
+      @last_month  
     @current_month_items = News.find(:all, :conditions => ["created_at >= ? and created_at <= ?",
                                                            @current_month,
                                                            @current_month.end_of_month])

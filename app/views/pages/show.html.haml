@@ -1,2 +1,2 @@
 - render :layout => 'layout' do 
-  %div{:style => "padding: 2em"}= RedCloth.new(@page.content.to_s).to_html
+  %div.page_text_content= RedCloth.new(@page.content.to_s).to_html

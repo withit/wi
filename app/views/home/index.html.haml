@@ -33,7 +33,8 @@
         %li
           %h4= news.title 
           %p= truncate_preserving_words(strip_tags(news.content), 200)
-          %p= link_to "more &gt;&gt;", news_by_month_path(:year => Date.today.year, :month => Date.today.month)
+          - latest_month = ((News.find(:last, :order => "created_at").try(:created_at).try(:to_date)) || Date.today)
+          %p= link_to "more &gt;&gt;", news_by_month_path(:year => latest_month.year, :month => latest_month.month)
 #services_outer
   #services
     %h3 Services

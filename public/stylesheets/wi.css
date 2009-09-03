@@ -142,7 +142,9 @@ body.home #express_contact_us_outer {
   -webkit-border-bottom-right-radius: 5px; }
 
 body.projects #projects {
-  padding: 10px; }
+  padding: 10px 0;
+  margin: auto;
+  width: 501px; }
   body.projects #projects .project,
   body.projects #projects .thumbnail {
     float: left;
@@ -150,8 +152,7 @@ body.projects #projects {
     color: #595959;
     font-size: 11px;
     font-weight: normal;
-    line-height: 15px;
-    padding: 10px; }
+    line-height: 15px; }
   body.projects #projects .thumbnail,
   body.projects #projects .page_info_container {
     clear: both;
@@ -162,7 +163,8 @@ body.projects #projects {
   body.projects #projects .thumbnail {
     width: 250px; }
   body.projects #projects .project {
-    width: 240px; }
+    width: 240px;
+    padding-left: 10px; }
 
 form.new_enquiry {
   margin-top: 2em; }
@@ -334,7 +336,7 @@ form.new_enquiry {
   background-position: top center; }
 
 #banners {
-  width: 500px;
+  width: 501px;
   margin: auto; }
   #banners a {
     border: none; }
@@ -343,7 +345,7 @@ form.new_enquiry {
   #banners .campaign {
     width: 247px;
     float: left;
-    margin-right: 6px; }
+    margin-right: 7px; }
     #banners .campaign.last {
       margin-right: 0px; }
     #banners .campaign h2 {
@@ -362,7 +364,7 @@ form.new_enquiry {
 
 #news_letters {
   margin: 10px auto auto auto;
-  width: 500px; }
+  width: 501px; }
   #news_letters .news_letter {
     margin-right: 6px;
     margin-bottom: 6px;
@@ -945,8 +947,8 @@ body, body.background {
   clear: both; }
 
 .admin {
-  margin: 1em;
-  padding: 1em;
+  margin: auto;
+  padding: 10px;
   background-color: #EEE;
   border: #DDD dashed 1px;
   clear: both; }
@@ -980,3 +982,17 @@ body, body.background {
 
 .news-content {
   padding-left: 16px; }
+
+.page_text_content {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 10px;
+  padding-bottom: 2em;
+  margin: auto;
+  width: 501px; }
+  .page_text_content p, .page_text_content h1 {
+    margin-top: 0 !important;
+    padding-left: 0  !important;
+    padding-right: 0 !important; }
+  .page_text_content.news_text_content {
+    padding-top: 0px; }

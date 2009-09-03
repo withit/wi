@@ -12,7 +12,12 @@
       = image_tag @page.root.menu_heading.url
       %ul
         - (@page.root.children).each do |page|
-          %li{:class => page == @page ? "current" : nil}= link_to_if((page != @page), page.title, unwrapped_page_path(page))
+          %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;', :class => page == @page && action_name != 'show' ? "current" : nil}
+            = link_to_if((page != @page || action_name == 'show'), page.title, unwrapped_page_path(page))
+            - if page == @page
+              %ul{:style => "margin: 0; padding: 0; padding-left: 1em;"}
+                - NewsLetter.all.each do |news_letter|
+                  %li{:style => "text-transform: none; line-height: 12px; border: none; padding: 0; padding-top : 1em; margin: 0; height: 16px;"}= link_to_if(@news_letter != news_letter, news_letter.name, news_letter)
   .right{:class => @hide_extras ? "hide" : ''}
     .side_menu
       #contact_information
