@@ -4,4 +4,4 @@
       - @projects.each_slice 3 do |projects|
         %tr
           - projects.each do |project|
-            %td.project{:valign => 'center'}= image_tag project.logo.url
+            %td.project{:valign => 'center'}= link_to_if(admin?, image_tag(project.logo.url), [:edit, project])
