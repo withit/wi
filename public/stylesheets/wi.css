@@ -299,8 +299,8 @@ form.new_enquiry {
   border: 1px solid #FD7801;
   font-size: 80%;
   position: absolute;
-  right: -50px;
-  bottom: -10px;
+  right: 150px;
+  bottom: 280px;
   padding: 1em;
   width: 250px; }
 
@@ -333,6 +333,7 @@ form.new_enquiry {
   text-align: left;
   text-indent: -9999px;
   margin-top: 15px;
+  margin-left: 3px;
   background-position: top center; }
 
 #banners {
@@ -539,7 +540,7 @@ body.news form label {
   line-height: 12px;
   font-weight: normal;
   padding: 5px;
-  font-size: 16px; }
+  font-size: 14px; }
 body.news form input {
   display: block;
   clear: both; }
@@ -838,9 +839,8 @@ body.home .hero {
 body.home .home_page a {
   font-weight: bold; }
 body.home .home_page h1 {
-  text-transform: uppercase;
   font-weight: normal;
-  font-size: 18px; }
+  font-size: 14px; }
 
 body, body.background {
   background-image: url(../images/background.jpg);
