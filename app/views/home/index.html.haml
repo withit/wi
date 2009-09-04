@@ -29,7 +29,7 @@
     = image_tag 'rss_icon.jpg', :style => 'float: right; margin-right: 10px; margin-top: 10px;'
     %h3 Latest news
     %ul
-      - News.all(:limit => 1).each do |news|
+      - News.find(:all, :limit => 1, :order => "created_at desc").each do |news|
         %li
           %h4= news.title 
           %p= truncate_preserving_words(strip_tags(news.content), 200)
