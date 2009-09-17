@@ -1,40 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :contents
+
   # The priority is based upon order of creation: first created -> highest priority.
-  #map.home '/', :controller => 'home', :action => 'index'
 
-  map.login 'login', :controller => 'sessions', :action => 'new'  
-  map.resource :session, :only => [:create, :destroy]
-  map.resources :twitter_users
-
-  map.root :controller  => 'home', :action => 'index'
-  map.home '/', :controller => 'home', :action => 'index'  
-  map.services '/services', :controller => 'pages', :action => 'show', :id => 'services'
-  map.about '/about', :controller => 'pages', :action => 'show', :id => 'about'
-  map.connect '/index', :controller => 'home', :action => 'index'
-  map.connect '/contact_us', :controller => 'enquiries', :action => 'new'
-  map.contact_us '/contact_us', :controller => 'enquiries', :action => 'new'
-  map.connect '/company', :controller => 'pages', :action => 'company'
-  map.connect '/services', :controller => 'pages', :action => 'services'
-  map.connect '/who_we_helped', :controller => 'projects', :action => 'helped'
-  map.connect '/why_choose_us', :controller => 'pages', :action => 'why_choose_us'
-        
-  map.resources :projects, :as => 'websites'
-  map.portfolio '/portfolio', :controller => 'projects', :action => 'index'  
-  map.resources :news_letters, :as => 'news-letters'
-  map.resources :banners
-                      
-  map.resources :news, :singular => 'news_item'
-  map.news_by_month 'news/:year/:month', :controller => 'news', :action => 'index'
-  map.news_item_by_month 'news/:year/:month/:id', :controller => 'news', :action => 'show'
-
-  map.resource :enquiry, :only => [:create, :show]
-  
-  map.resources :pages  
-  map.resources :assets
-  map.resources :previews
-
-  map.dashboard '/dashboard', :controller => 'dashboard'
-  
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
   # Keep in mind you can assign values other than :controller and :action
@@ -71,7 +39,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
-  # consider removing the them or commenting them out if you're using named routes and resources.
+  # consider removing or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end
