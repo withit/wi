@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
   end
   
   def new
-    @project = Project.new
+    @project = Project.new(:in_footer => true, :current => true, :helped => true)
   end
   
   def create
