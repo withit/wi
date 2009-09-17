@@ -5,6 +5,8 @@
     %title= ['With Imagination', @page_title].compact * ' - '
     = stylesheet_link_tag 'wi', :media => 'all'
     = javascript_include_tag :defaults, 'lowpro', :cache => true
+    %link{:rel => "icon", :type => "image/vnd.microsoft.icon", :href=>"/favicon.ico"}
+    %link{:rel => "SHORTCUT ICON", :href=>"/favicon.ico"}
     = yield :head 
   %body.background{:class => "#{controller_name}  #{@body_class}"}
     .main
