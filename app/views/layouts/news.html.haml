@@ -49,7 +49,9 @@
     #page_content
       = yield
       - if admin?
-        .admin= link_to 'Add more news...', new_news_item_path
+        .admin
+          = link_to 'Add more news...', new_news_item_path
+            
   .clear
 
 = render :file => "layouts/application"
