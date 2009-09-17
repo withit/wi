@@ -9,15 +9,29 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller  => 'home', :action => 'index'
   map.home '/', :controller => 'home', :action => 'index'  
   map.services '/services', :controller => 'pages', :action => 'show', :id => 'services'
+  map.connect '/services.html', :controller => 'pages', :action => 'show', :id => 'services'
+
   map.about '/about', :controller => 'pages', :action => 'show', :id => 'about'
+  map.connect '/about.html', :controller => 'pages', :action => 'show', :id => 'about'
+
   map.connect '/index', :controller => 'home', :action => 'index'
-  map.connect '/contact_us', :controller => 'enquiries', :action => 'new'
+  map.connect '/index.html', :controller => 'home', :action => 'index'
+
   map.contact_us '/contact_us', :controller => 'enquiries', :action => 'new'
+  map.connect '/contact_us.html', :controller => 'enquiries', :action => 'new'
+    
   map.connect '/company', :controller => 'pages', :action => 'company'
+  map.connect '/company.html', :controller => 'pages', :action => 'company'
+
   map.connect '/services', :controller => 'pages', :action => 'services'
+  map.connect '/services.html', :controller => 'pages', :action => 'services'
+
   map.connect '/who_we_helped', :controller => 'projects', :action => 'helped'
+  map.connect '/who_we_helped.html', :controller => 'projects', :action => 'helped'
+
   map.connect '/why_choose_us', :controller => 'pages', :action => 'why_choose_us'
-        
+  map.connect '/why_choose_us.html', :controller => 'pages', :action => 'why_choose_us'
+          
   map.resources :projects, :as => 'websites'
   map.portfolio '/portfolio', :controller => 'projects', :action => 'index'  
   map.resources :news_letters, :as => 'news-letters'
