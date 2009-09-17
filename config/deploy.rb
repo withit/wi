@@ -20,6 +20,8 @@ Proc.new { "--username #{svn_user} " +
              "--no-auth-cache " +
              "http://trac.wi.com.au/svn/repo1/#{svn_path}/trunk/"}
 
+set :deploy_via, :rsync_with_remote_cache
+
 namespace :mod_rails do
   desc "Restart the application altering tmp/restart.txt for mod_rails."
   task :restart, :roles => :app do
@@ -38,7 +40,10 @@ task :after_update_code, :roles => :app do
   run "ln -s /var/www/vhosts/#{vhost}/httpdocs/apps/#{application}/current/public /var/www/vhosts/#{vhost}/httpdocs/rails"
   run "ln -s /var/www/vhosts/#{vhost}/httpdocs/apps/#{application}/current/public /var/www/vhosts/#{vhost}/httpdocs/public"
 
-  %w(logos pictures slides).each do |dir|
+  run "rm -rf #{release_path}/public/system"
+  run "ln -s #{shared_path}/system #{release_path}/public/system"
+  
+  %w(swfs).each do |dir|
     run "rm -fr #{release_path}/public/#{dir}"
     run "ln -s #{shared_path}/system/#{dir} #{release_path}/public/#{dir}"
   end
