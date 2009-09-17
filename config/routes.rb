@@ -28,8 +28,9 @@ ActionController::Routing::Routes.draw do |map|
   map.news_item_by_month 'news/:year/:month/:id', :controller => 'news', :action => 'show'
 
   map.resource :enquiry, :only => [:create, :show]
-  
-  map.resources :pages  
+
+  map.resources :pages
+
   map.resources :assets
   map.resources :previews
 
