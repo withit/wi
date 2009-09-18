@@ -43,7 +43,7 @@ task :after_update_code, :roles => :app do
   run "rm -rf #{release_path}/public/system"
   run "ln -s #{shared_path}/system #{release_path}/public/system"
   
-  %w(swfs).each do |dir|
+  %w(swfs banners).each do |dir|
     run "rm -fr #{release_path}/public/#{dir}"
     run "ln -s #{shared_path}/system/#{dir} #{release_path}/public/#{dir}"
   end

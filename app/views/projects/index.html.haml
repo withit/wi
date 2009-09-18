@@ -38,11 +38,12 @@
     .banner{:style => "margin: auto; width: 501px"}= image_tag @page.banner.url
     .clear
     #projects
-      - @projects.each do |project| 
-        .thumbnail= link_to_if admin?, image_tag(project.picture.url, :alt => project.name), [:edit, project]
-        .project
-          %h3= image_tag project.logo.url, :alt => project.name
-          = project.description
+      - @projects.each do |project|
+        .project-container
+          .thumbnail= link_to_if admin?, image_tag(project.picture.url, :alt => project.name), [:edit, project]
+          .project
+            %h3= image_tag project.logo.url, :alt => project.name
+            = project.description
       .page_info_container
         .page_info
           PAGE

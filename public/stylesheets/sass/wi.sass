@@ -1,4 +1,8 @@
 @charset "utf-8"
+@import blueprint/reset.sass
+@import blueprint
++blueprint-typography("body")
+
 @import home.sass
 @import projects.sass
 @import enquiry.sass
@@ -301,6 +305,7 @@ body
   :background-position bottom left
   :position relative
   :top -45px
+  
 
 .reflection
   :background-image url(../images/reflection.jpg)
@@ -314,7 +319,7 @@ body
 
 li
   :list-style-position outside
-  :list-style-image url(../images/boxes/li.gif)
+  :list-style-image url("../images/boxes/li.gif")
   :font-size 11px
   :color #595959
 
@@ -322,7 +327,10 @@ ul
   :color #595959
   :margin-top 0px
   :padding-top 0px
-
+  :padding-left 40px
+  :margin-left 0
+  :margin-right 0
+    
 p
   :color #8E8E8E
   :font-size 11px
@@ -471,14 +479,15 @@ u
   :width 1005px
   :margin auto
   :position relative
+  
+  
   .clients
     :height 90px
     :padding-bottom 0px
     :margin-bottom 0px
-    :padding-left 25px
     :width 100%
     :line-height 100px
-
+    
   .reflection
     :text-align right
 form.edit_page,
@@ -660,6 +669,16 @@ body, body.background
 
   &.news_text_content
     :padding-top 0px
+
 #slide_show
   :width 393px
   :text-align center
+
+h4
+  :font-size 11px
+
+h3                  
+  :font-size 16px
+
+.main
+  :clear both

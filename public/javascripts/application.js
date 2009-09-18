@@ -1,5 +1,6 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
+
 var current_slide;
 var current_marker;
 var in_transaction = false;
@@ -92,3 +93,4 @@ Event.addBehavior({
     window.location = "/banners/" + e.element().value
   }
 })
+

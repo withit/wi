@@ -4,6 +4,8 @@
     %meta{:"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
     %title= ['With Imagination', @page_title].compact * ' - '
     = stylesheet_link_tag 'wi', :media => 'all'
+    /[if lte IE 7]
+      = stylesheet_link_tag 'ie', :media => 'all'    
     = javascript_include_tag :defaults, 'lowpro', :cache => true
     %link{:rel => "icon", :type => "image/vnd.microsoft.icon", :href=>"/favicon.ico"}
     %link{:rel => "SHORTCUT ICON", :href=>"/favicon.ico"}
@@ -34,6 +36,7 @@
         %table.clients
           %tr
             /= image_tag "footer/our_clients.jpg", :alt => "our clients",  :width => "84", :height => "20", :style => 'margin-right: 20px'
+            %td
             - Project.find(:all, :conditions => {:in_footer => true, :current => true}, :order => 'position').each do |p|
               %td= image_tag p.logo.url, :alt => p.name, :border => 0
         .reflection
@@ -45,6 +48,6 @@
           |
           = link_to "Contact Us", contact_us_path
           |
-          = link_to 'Company', page_path(:company)
+          = link_to 'Company', '/company'
           |
-          = link_to 'Projects', page_path(:projects)
+          = link_to 'Projects', projects_path
