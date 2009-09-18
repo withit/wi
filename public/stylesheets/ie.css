@@ -85,4 +85,14 @@ button {
 
 /* line 19, sass/ie.sass */
 li {
-  list-style-image: none; }
+  list-style-image: url("../images/boxes/lie.gif"); }
+
+/* line 22, sass/ie.sass */
+* html img,
+* html .png {
+  position: relative;
+  behavior: expression((this.runtimeStyle.behavior="none")&&(this.pngSet?this.pngSet=true:(this.nodeName == "IMG" && this.src.toLowerCase().indexOf('.png')>-1?(this.runtimeStyle.backgroundImage = "none", this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src + "', sizingMethod='image')", this.src = "/javascripts/blank.gif"):(this.origBg = this.origBg? this.origBg :this.currentStyle.backgroundImage.toString().replace('url("','').replace('")',''), this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.origBg + "', sizingMethod='crop')", this.runtimeStyle.backgroundImage = "none")),this.pngSet=true)); }
+
+/* line 29, sass/ie.sass */
+#page_content ul li {
+  background-position: 0 10px; }

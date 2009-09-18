@@ -729,11 +729,15 @@ form.new_enquiry {
         vertical-align: middle; }
     /* line 25, sass/_banners.sass */
     #banners .campaign ul {
-      padding: 0;
-      padding-left: 1em; }
-      /* line 28, sass/_banners.sass */
+      padding: 0; }
+      /* line 27, sass/_banners.sass */
       #banners .campaign ul li {
-        list-style-image: url(../images/blue-arrow.jpg); }
+        background-image: url("../images/blue-arrow.jpg");
+        background-repeat: no-repeat;
+        background-position: 0px;
+        list-style-image: none;
+        list-style: none;
+        padding-left: 1em; }
 
 /* line 1, sass/_news_letters.sass */
 #news_letters {
@@ -1472,24 +1476,27 @@ body, body.background {
 #page_content ul {
   margin: 0;
   padding: 0;
-  padding-left: 10px;
-  list-style-position: inside; }
-  /* line 648, sass/wi.sass */
+  padding-left: 10px; }
+  /* line 647, sass/wi.sass */
   #page_content ul li {
-    list-style-position: inside; }
-/* line 650, sass/wi.sass */
+    padding-left: 12px;
+    list-style: none;
+    background-image: url("/images/boxes/li.gif");
+    background-repeat: no-repeat;
+    background-position: 0 8px; }
+/* line 653, sass/wi.sass */
 #page_content li {
   padding: 5px; }
 
-/* line 652, sass/wi.sass */
+/* line 655, sass/wi.sass */
 .hide {
   display: none; }
 
-/* line 655, sass/wi.sass */
+/* line 658, sass/wi.sass */
 .news-content {
   padding-left: 16px; }
 
-/* line 658, sass/wi.sass */
+/* line 661, sass/wi.sass */
 .page_text_content {
   padding-left: 0;
   padding-right: 0;
@@ -1497,28 +1504,28 @@ body, body.background {
   padding-bottom: 2em;
   margin: auto;
   width: 501px; }
-  /* line 665, sass/wi.sass */
+  /* line 668, sass/wi.sass */
   .page_text_content p, .page_text_content h1 {
     margin-top: 0 !important;
     padding-left: 0  !important;
     padding-right: 0 !important; }
-  /* line 670, sass/wi.sass */
+  /* line 673, sass/wi.sass */
   .page_text_content.news_text_content {
     padding-top: 0px; }
 
-/* line 673, sass/wi.sass */
+/* line 676, sass/wi.sass */
 #slide_show {
   width: 393px;
   text-align: center; }
 
-/* line 677, sass/wi.sass */
+/* line 680, sass/wi.sass */
 h4 {
   font-size: 11px; }
 
-/* line 680, sass/wi.sass */
+/* line 683, sass/wi.sass */
 h3 {
   font-size: 16px; }
 
-/* line 683, sass/wi.sass */
+/* line 686, sass/wi.sass */
 .main {
   clear: both; }
