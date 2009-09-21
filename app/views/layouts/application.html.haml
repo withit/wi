@@ -2,7 +2,11 @@
 %html{:xmlns => "http://www.w3.org/1999/xhtml"}
   %head
     %meta{:"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
-    %title= ['With Imagination', @page_title].compact * ' - '
+    %title= ['With Imagination', @page_title || @page.try(:browser_title)].compact * ' - '
+    - unless @page.try(:keywords).blank?
+      %meta{"name" => "keywords", "content" => @page.keywords}
+    - unless @page.try(:description).blank?
+      %meta{"name" => "description", "content" => @page.description}
     = stylesheet_link_tag 'wi', :media => 'all'
     /[if lte IE 7]
       = stylesheet_link_tag 'ie', :media => 'all'

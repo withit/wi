@@ -6,10 +6,13 @@
 
   %p
     = f.label :title 
-    %br
     = f.text_field :title
-  #preview 
+  #preview
     = RedCloth.new(f.object.content.to_s).to_html
+  %p
+    = f.label :browser_title
+    %br
+    = f.text_field :browser_title
   %p
     = f.label :content
     %br
@@ -26,10 +29,11 @@
     %br
     = f.text_field :keywords
   %p
-    = f.label :description 
+    = f.label :description
     %br
-    = f.text_area :description 
+    = f.text_area :description
   %p
+    %br
     = f.label :summary
     %br 
     = f.text_field :summary

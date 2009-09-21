@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090824051927) do
+ActiveRecord::Schema.define(:version => 20090921013657) do
 
   create_table "assets", :force => true do |t|
     t.datetime "created_at"
@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(:version => 20090824051927) do
     t.string   "menu_heading_file_name"
     t.string   "menu_heading_content_type"
     t.integer  "menu_heading_file_size"
+    t.string   "browser_title"
   end
 
   create_table "projects", :force => true do |t|
