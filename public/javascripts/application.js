@@ -94,3 +94,10 @@ Event.addBehavior({
   }
 })
 
+
+document.observe("dom:loaded", function () {
+   var banner = $$('.top_banner').first();
+   if (banner) {
+    banner.setStyle({'margin' : '0'});
+   }
+});
