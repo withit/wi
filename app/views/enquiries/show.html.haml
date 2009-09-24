@@ -1,0 +1,2 @@
+- render :layout => 'pages/layout' do
+  %div.page_text_content= RedCloth.new(@page.content.to_s).to_html

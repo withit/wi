@@ -481,21 +481,24 @@ body.projects #projects {
 /* line 1, sass/_enquiry.sass */
 form.new_enquiry {
   margin-top: 2em; }
-  /* line 3, sass/_enquiry.sass */
+  /* line 4, sass/_enquiry.sass */
+  form.new_enquiry .errorExplanation h2 {
+    padding-left: 0px; }
+  /* line 6, sass/_enquiry.sass */
   form.new_enquiry div {
     overflow: hidden;
     padding: 0.2em;
     padding-left: 0; }
-    /* line 7, sass/_enquiry.sass */
+    /* line 10, sass/_enquiry.sass */
     form.new_enquiry div.fieldWithErrors {
       display: inline; }
-      /* line 9, sass/_enquiry.sass */
+      /* line 12, sass/_enquiry.sass */
       form.new_enquiry div.fieldWithErrors input[type=text], form.new_enquiry div.fieldWithErrors textarea {
         border: 1px solid rgb(255, 97, 84); }
-      /* line 11, sass/_enquiry.sass */
+      /* line 14, sass/_enquiry.sass */
       form.new_enquiry div.fieldWithErrors label {
         color: rgb(255, 97, 84); }
-  /* line 13, sass/_enquiry.sass */
+  /* line 16, sass/_enquiry.sass */
   form.new_enquiry label {
     display: block;
     float: left;
@@ -505,26 +508,26 @@ form.new_enquiry {
     font-size: 90%;
     line-height: 200%;
     vertical-align: middle; }
-  /* line 22, sass/_enquiry.sass */
+  /* line 25, sass/_enquiry.sass */
   form.new_enquiry input[type=text], form.new_enquiry textarea {
     border: 1px solid #999;
     font-size: 100%;
     width: 150px;
     padding: 2px; }
-    /* line 27, sass/_enquiry.sass */
+    /* line 30, sass/_enquiry.sass */
     form.new_enquiry input[type=text]:focus, form.new_enquiry textarea:focus {
       border: 1px solid rgb(11, 97, 174);
       outline: 0px; }
-    /* line 30, sass/_enquiry.sass */
+    /* line 33, sass/_enquiry.sass */
     #express_contact_us form.new_enquiry input[type=text], #express_contact_us form.new_enquiry textarea {
       width: 140px; }
-  /* line 32, sass/_enquiry.sass */
+  /* line 35, sass/_enquiry.sass */
   form.new_enquiry textarea {
     width: 280px; }
-  /* line 34, sass/_enquiry.sass */
+  /* line 37, sass/_enquiry.sass */
   form.new_enquiry input[type=image] {
     margin-left: 130px; }
-    /* line 36, sass/_enquiry.sass */
+    /* line 39, sass/_enquiry.sass */
     #express_contact_us form.new_enquiry input[type=image] {
       margin-left: 88px; }
 
