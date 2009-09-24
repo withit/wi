@@ -21,7 +21,7 @@
         %ul{:style => "margin: 0; padding: 0; padding-left: 1em;"}
           - Campaign.all.each do |campaign|
             %li{:style => "border: medium none ; margin: 0pt; padding: 0pt; text-transform: none; padding-top : 1em; line-height: 12px; height: 16px;"}= link_to_unless campaign == @banner.campaign, campaign.name, campaign.banners.first
-      %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}= link_to 'Newsletter', news_letters_path, :style => 'text-transform: uppercase;'
+      %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}= link_to 'Email Campaigns', news_letters_path, :style => 'text-transform: uppercase;'
       
 .center
   .sizes= select_tag(:size, options_for_select(@banner.campaign.banners.collect{|b| [b.description,b.id]}, @banner.id))

@@ -88,6 +88,6 @@ class NewsLettersController < ApplicationController
   protected
   
   def load_page
-    @page = Page.find_by_permalink 'news-letters'
+    @page = Page.find_by_permalink 'email-campaigns'
   end
 end

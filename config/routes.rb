@@ -34,7 +34,7 @@ ActionController::Routing::Routes.draw do |map|
           
   map.resources :projects, :as => 'websites'
   map.portfolio '/portfolio', :controller => 'projects', :action => 'index'  
-  map.resources :news_letters, :as => 'news-letters'
+  map.resources :news_letters, :as => 'email-campaigns'
   map.resources :banners
                       
   map.resources :news, :singular => 'news_item'

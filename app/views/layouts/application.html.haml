@@ -2,7 +2,8 @@
 %html{:xmlns => "http://www.w3.org/1999/xhtml"}
   %head
     %meta{:"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
-    %title= ['With Imagination', @page_title || @page.try(:browser_title)].compact * ' - '
+    - browser_title = (@page_title || @page.try(:browser_title))
+    %title= ['With Imagination', (browser_title unless browser_title.blank?)].compact * ' - '
     - unless @page.try(:keywords).blank?
       %meta{"name" => "keywords", "content" => @page.keywords}
     - unless @page.try(:description).blank?

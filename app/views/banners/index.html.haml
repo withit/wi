@@ -15,7 +15,7 @@
         %ul{:style => "margin: 0; padding: 0; padding-left: 1em;"}
           - Campaign.all.each do |campaign|
             %li{:style => "text-transform: none; line-height: 12px; border: none; padding: 0; padding-top : 1em; margin: 0; height: 16px;"}= link_to campaign.name, campaign.banners.first
-      %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}= link_to 'Newsletter', news_letters_path
+      %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}= link_to 'Email Campaigns', news_letters_path
 .right
   .side_menu
     - if controller.controller_name == 'enquiries'
