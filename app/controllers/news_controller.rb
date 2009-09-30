@@ -57,10 +57,10 @@ class NewsController < ApplicationController
     @current_month = (params[:year] and params[:month]) ?
       Date.new(params[:year].to_i, params[:month].to_i, 1) :
       @last_month  
-    @current_month_items = News.find(:all, :conditions => ["created_at >= ? and created_at <= ?",
+    @current_month_items = News.find(:all, :conditions => ["created_at >= ? and created_at < ?",
                                                            @current_month,
-                                                           @current_month.end_of_month])
-
+                                                           @current_month.end_of_month + 1])
+    
     @window = WINDOW.map do |diff|
       @current_month + diff.month
     end.select do |month|
