@@ -8,4 +8,6 @@ class Page < ActiveRecord::Base
   def to_param
     permalink
   end
+  
+  #default_scope :order => 'position'
 end
