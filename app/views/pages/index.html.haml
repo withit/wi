@@ -5,9 +5,13 @@
     %li
       = link_to page.title, unwrapped_page_path(page)
       = link_to '(edit)', [:edit, page]
+      = link_to '(move up)', [:move_up, page], :method => :put
+      = link_to '(move down)', [:move_down, page], :method => :put
       %ul
         - page.children.each do |page|
           %li
             = link_to page.title, unwrapped_page_path(page)
             = link_to '(edit)', [:edit, page]
+            = link_to '(move up)', [:move_up, page], :method => :put
+            = link_to '(move down)', [:move_down, page], :method => :put
 = link_to 'Add a new page',new_page_path

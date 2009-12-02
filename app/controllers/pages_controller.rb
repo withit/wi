@@ -56,4 +56,16 @@ class PagesController < ApplicationController
     @page.destroy
     redirect_to :action => :index
   end
+  
+  def move_up
+    @page = Page.find_by_permalink!(params[:id])
+    @page.move_higher
+    redirect_to pages_path
+  end
+  
+  def move_down
+    @page = Page.find_by_permalink!(params[:id])
+    @page.move_lower
+    redirect_to pages_path
+  end
 end

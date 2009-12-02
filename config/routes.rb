@@ -43,7 +43,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resource :enquiry, :only => [:create, :show]
 
-  map.resources :pages
+  map.resources :pages, :member => {:move_up => :put, :move_down => :put}
 
   map.resources :assets
   map.resources :previews
