@@ -15,4 +15,5 @@ class Project < ActiveRecord::Base
   end
   
   named_scope :who_we_helped, :conditions => {:helped => true}
+  named_scope :in_footer, :conditions => {:in_footer => true}, :order => 'position'
 end

@@ -3,7 +3,7 @@
 
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
-
+  before_filter :load_footer_projects
   # See ActionController::RequestForgeryProtection for details
   # Uncomment the :secret if you're not using the cookie session store
   protect_from_forgery # :secret => 'bba6ef3ec6d8ccd5165aa2523b6c5334'
@@ -25,5 +25,9 @@ class ApplicationController < ActionController::Base
       redirect_to home_path 
       flash[:notice] = t('flash.not_authorised')
     end
+  end
+  
+  def load_footer_projects
+    @footer_projects = Project.in_footer
   end
 end

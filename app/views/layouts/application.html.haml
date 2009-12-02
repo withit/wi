@@ -43,7 +43,7 @@
           %tr
             /= image_tag "footer/our_clients.jpg", :alt => "our clients",  :width => "84", :height => "20", :style => 'margin-right: 20px'
             %td
-            - Project.find(:all, :conditions => {:in_footer => true, :current => true}, :order => 'position').each do |p|
+            - @footer_projects.each do |p|
               %td= image_tag p.logo.url, :alt => p.name, :border => 0
         .reflection
           &reg; Copyright
