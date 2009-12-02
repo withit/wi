@@ -9,5 +9,5 @@ class Page < ActiveRecord::Base
     permalink
   end
   
-  #default_scope :order => 'position'
+  default_scope :order => 'position'
 end
