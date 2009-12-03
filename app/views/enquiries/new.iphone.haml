@@ -1,0 +1,39 @@
+%div.page_text_content
+  %p
+    If you are interested in talking to us then we would love to hear from you.
+    The best person to get in touch with is our General Manager
+    %strong Derek Nash
+  %p
+    %strong Phone: +61 2 9929 9229
+  %p
+    %strong Fax: +61 2 9490 4770
+  %p
+    Email:
+    = mail_to 'info@wi.com.au', 'info@wi.com.au', :encode => :javascript
+  %p
+    Address: Level 5, 44 Miller St North Sydney NSW 2060 Australia
+  - form_for @enquiry, :url => enquiry_path do |f|
+    = f.error_messages :header_message => 'Your enquiry could not be submitted'
+    %div
+      = f.label :title
+      = f.select :title, %w(Mr Mrs Ms Miss)
+    %div
+      = f.label :first_name, "First Name*"
+      = f.text_field :first_name, :size => nil
+    %div
+      = f.label :last_name, "Last Name*"
+      = f.text_field :last_name, :size => nil
+    %div
+      = f.label :email, "Email*"
+      = f.text_field :email, :size => nil
+    %div
+      = f.label :email_confirmation, "Confirm Email*"
+      = f.text_field :email_confirmation, :size => nil
+    %div
+      = f.label :phone, "Phone Number"
+      = f.text_field :phone, :size => nil
+    %div
+      = f.label :message, "Comments"
+      = f.text_area :message, :cols => 45, :rows => 5
+    %div
+      = image_submit_tag "/images/contact/submit.jpg"

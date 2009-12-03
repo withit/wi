@@ -9,7 +9,7 @@
 
 
 *					{ margin: 0; padding: 0; }
-body				{ font-family: Arial, Helvetica, sans-serif; color:#646464; background:#FFF}
+body				{ font-family: Arial, Helvetica, sans-serif; color:#646464; background:#FFF; width: 310px;}
 
 a:link 				{ color: #157cb7; text-decoration: none;}
 
@@ -215,4 +215,21 @@ p {
   font-weight: normal;
   text-transform: uppercase;
   margin: 4px;
+}
+
+form.new_enquiry label{
+  display: block;
+}
+
+form.new_enquiry textarea
+{
+  width: 250px;
+}
+
+.errorExplanation h2,.errorExplanation p, .errorExplanation ul li,  span.errorExplanation{
+  color: #CC0000;
+}
+
+.page_text_content{
+  padding: 4px;
 }

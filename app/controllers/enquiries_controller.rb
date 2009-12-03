@@ -1,6 +1,6 @@
 class EnquiriesController < ApplicationController
   before_filter :load_page
-  
+  before_filter :adjust_format_for_iphone
   def new
     @enquiry = Enquiry.new
   end
