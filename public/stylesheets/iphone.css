@@ -192,3 +192,20 @@ p {
   margin-bottom: 10px;
   
 }
+
+.page_services {
+  font-size: 12px;
+}
+
+.page_services img{
+  width: 72px;
+  height: 68px;
+}
+
+.page_services h3{
+  color: #FF7B08;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 4px;
+}

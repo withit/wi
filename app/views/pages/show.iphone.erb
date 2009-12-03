@@ -1,0 +1,4 @@
+<%= image_tag @page.banner.url, :size => '311x40' %>
+<div class='page_<%= @page.permalink %>'>
+  <%= RedCloth.new(@page.content.to_s).to_html %>
+</div>
