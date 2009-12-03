@@ -195,11 +195,13 @@ p {
 
 .page_services {
   font-size: 12px;
+  margin: 4px;
 }
 
 .page_services img{
   width: 72px;
   height: 68px;
+  margin: 4px;
 }
 
 .page_services h3{
