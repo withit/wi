@@ -1,133 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<div id="markers">
+  <div></div>
+  <span id="project">LATEST PROJECT </span> 
+</div>
+<div id="slide_show" align="center"><%= image_tag Project.find(:first, :conditions => 'slide_file_name is not null', :order => 'position').slide.url, :size => '300x227' %></div>
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="viewport" content="width=320;" />
-	
-	<title><% browser_title = (@page_title || @page.try(:browser_title)) %><%= ['With Imagination', (browser_title unless browser_title.blank?)].compact * ' - ' %></title>
-	
-	<link rel="stylesheet" type="text/css" href="stylesheets/iphone.css" />
-	<link rel="stylesheet" type="text/css" href="stylesheets/iphone_portrait.css" id="orient_css" />
-	
-	<!-- HIDE MENU BAR WHEN PAGE LOADS -->
-	<script type="application/x-javascript">
-		addEventListener('load', function() { 
-			setTimeout(hideAddressBar, 0); 
-		}, false);
-		function hideAddressBar() { 
-			window.scrollTo(0, 1); 
-		}
-	</script>
-	
-	<!-- SWITCH STYLESHEETS WHEN ORIENTATION OF PHONE CHANGES -->
-	<script type="text/javascript">
-		function orient()
-		{
-			switch(window.orientation){  
-				case 0: document.getElementById("orient_css").href = "stylesheets/iphone_portrait.css";
-				break;
-
-				case -90: document.getElementById("orient_css").href = "stylesheets/iphone_landscape.css";
-				break;
-
-				case 90: document.getElementById("orient_css").href = "stylesheets/iphone_landscape.css";
-				break;
-			}
-		}
-		window.onload = orient();
-	</script>
-	
-	<!-- BACK TO TOP BUTTON -->
-	<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
-	<script type="text/javascript">
-		$(function(){
-			$('.backtotop').click(function() {
-				$('html, body').animate({scrollTop:0}, 'slow');
-				return false;
-			});
-		});
-	</script>
-    <script>
-	// Place your application-specific JavaScript functions and classes here
-	// This file is automatically included by javascript_include_tag :defaults
-	var current_slide;
-	var current_marker;
-	function next_slide()
-	{
-	 current_slide.fade();
-	 current_slide = current_slide.next() || $('slide_show').down()
-	 current_slide.appear();
-
-	 current_marker.morph({backgroundColor: '#E1E1E1'});
-	 current_marker = current_marker.next('div') || $('markers').down();
-	 current_marker.morph({backgroundColor: '#2D9DD8'});
-	}
-
-
-	document.observe("dom:loaded", function() {
-	 $$('div#services div').invoke('hide');
-	 $$('div#slide_show img').invoke('hide');
-
-	 if($('slide_show') && $('markers'))
-	 {
-	 current_slide = $('slide_show').down().show();
-	 current_marker = $('markers').down().setStyle({backgroundColor: '#2D9DD8'});
-	 new PeriodicalExecuter(next_slide, 3);
-	 }
-	});
-
-	Event.addBehavior({
-	'div#services a:mouseover' : function() {
-	Effect.BlindDown(this.up('u').next('div'),{ delay: 0.2, duration: 0.7, queue: {scope: this.identify(), position: 'end', limit: 1}});
-	 },	
-	'div#services a:mouseout' : function() {
-	 var q = Effect.Queues.get(this.identify());
-	 var c = false;
-	 q.each(function(e){
-	 if(e.currentFrame == 0)
-	 {e.cancel();c = true;}
-	 });
-	 if(!c)
-	 {
-	 Effect.BlindUp(this.up('u').next('div'),{ duration: 0.7, queue: {scope: this.identify(), position: 'end'}});
-	 }
-	 }
-	}); 
-	</script>
-<style type="text/css">
-<!--
-body {
-	background-color: #FFF;
-}
--->
-</style></head>
-
-<body onorientationchange="orient();">
-
-	<div id="page-wrap">
-    	<div id="banner"><img src="/images/iphone/with-imagination.jpg" alt="with imagination" /></div>
-        <div id="top-menu">
-          <% Page.roots.select{|page| %w(home services projects contact_us).include?(page.permalink)}.each do |page| %>
-            <span class="<%= 'active' if ((@page && @page.root) == page) %>"><%= link_to_unless_current(page.permalink.humanize, unwrapped_page_path(page)) %></span>
-          <% end %>
-        </div>
-        <div id="markers">
-       	  <div></div>
-       	  <span id="project">LATEST PROJECT </span> 
-        </div>
-		<div id="slide_show" align="center"><%= image_tag Project.find(:first, :conditions => 'slide_file_name is not null', :order => 'position').slide.url, :size => '300x227' %></div>
-    
-        <div id="content">
-        <%= RedCloth.new(@page.content.to_s).to_html %></div>
-	</div>
-    <div id="sub-category" align="right"><img src="/images/iphone/latest-news.gif" width="93" height="18" alt="latest news" /></div>
-    <div id="sub-category" align="right">
-    <img src="/images/iphone/services-2.gif" width="93" height="19" alt="services" /></div>
-    <div id="sub-category" align="right">
-    <img src="/images/iphone/contact-2.gif" width="93" height="19" alt="contact us" /></div>
+<div id="content">
+<%= RedCloth.new(@page.content.to_s).to_html %></div>
+</div>
+<div id="sub-category" align="right"><img src="/images/iphone/latest-news.gif" width="93" height="18" alt="latest news" /></div>
+<div id="sub-category" align="right">
+<img src="/images/iphone/services-2.gif" width="93" height="19" alt="services" /></div>
+<div id="sub-category" align="right">
+<img src="/images/iphone/contact-2.gif" width="93" height="19" alt="contact us" /></div>
 <div id="twitter" align="right"><img src="images/iphone/follow.gif" alt="twitter" /></div>
-    <div id="footer"><img src="/images/iphone/footer.gif" alt="footer" /></div>
-</body>
-
-</html>
