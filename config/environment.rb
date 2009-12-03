@@ -31,7 +31,7 @@ Rails::Initializer.run do |config|
   config.gem "haml"
   config.gem "RedCloth", :verison => '4.0.3'
   config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com'
-  config.gem 'mbleigh-subdomain-fu'
+  config.gem 'mbleigh-subdomain-fu', :lib => 'subdomain-fu'
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
   # :all can be used as a placeholder for all plugins not explicitly named
