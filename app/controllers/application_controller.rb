@@ -40,6 +40,4 @@ class ApplicationController < ActionController::Base
   def iphone_request?
     return (request.subdomains.first == "i" || params[:format] == "iphone")
   end
-  
-  before_filter :adjust_format_for_iphone
 end
