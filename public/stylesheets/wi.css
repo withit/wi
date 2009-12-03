@@ -1546,3 +1546,20 @@ h3 {
   border: 1px dashed #AAA;
   text-align: center;
   padding: 0.2em; }
+
+/* line 699, sass/wi.sass */
+.iphone_message {
+  width: 100%;
+  padding: 0.5em;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#EFE256), to(#E88627));
+  color: white; }
+  /* line 705, sass/wi.sass */
+  .iphone_message p {
+    font-size: 14px;
+    padding: 0;
+    color: #483D33; }
+    /* line 709, sass/wi.sass */
+    .iphone_message p a {
+      font-size: 14px;
+      text-decoration: underline; }
