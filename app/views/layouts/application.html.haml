@@ -17,6 +17,9 @@
     %link{:rel => "SHORTCUT ICON", :href=>"/favicon.ico"}
     = yield :head 
   %body.background{:class => "#{controller_name}  #{@body_class}"}
+    - if iphone_user_agent? # Show message for iPhone users 
+      .message
+        %p Using an iPhone? #{link_to "Use the optimised version", 'http://i.wi.com.au'}.
     .main
       - if admin? 
         .admin_toolbar

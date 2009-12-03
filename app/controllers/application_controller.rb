@@ -30,4 +30,16 @@ class ApplicationController < ActionController::Base
   def load_footer_projects
     @footer_projects = Project.in_footer
   end
+  
+  # Set iPhone format if request to i subdomain
+  def adjust_format_for_iphone
+    request.format = :iphone if iphone_request?
+  end
+
+  # Return true for requests to i subdomain
+  def iphone_request?
+    return (request.subdomains.first == "i" || params[:format] == "iphone")
+  end
+  
+  before_filter :adjust_format_for_iphone
 end
