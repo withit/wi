@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* line 4, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+/* line 4, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
 html, body {
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@ html, body {
   font-family: inherit;
   vertical-align: baseline; }
 
-/* line 12, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+/* line 12, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
 div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
 pre, a, abbr, acronym, address, code, del, dfn, em, img,
 dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {
@@ -23,7 +23,7 @@ dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, th
   font-family: inherit;
   vertical-align: baseline; }
 
-/* line 16, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+/* line 16, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
 blockquote, q {
   margin: 0;
   padding: 0;
@@ -34,12 +34,12 @@ blockquote, q {
   font-family: inherit;
   vertical-align: baseline;
   quotes: "" ""; }
-  /* line 42, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+  /* line 42, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
   blockquote:before, q:before,
   blockquote:after, q:after {
     content: ""; }
 
-/* line 18, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+/* line 18, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
 th, td, caption {
   margin: 0;
   padding: 0;
@@ -53,7 +53,7 @@ th, td, caption {
   font-weight: normal;
   vertical-align: middle; }
 
-/* line 20, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+/* line 20, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
 table {
   margin: 0;
   padding: 0;
@@ -67,36 +67,36 @@ table {
   border-spacing: 0;
   vertical-align: middle; }
 
-/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
+/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_reset.sass */
 a img {
   border: none; }
 
-/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 body {
   line-height: 1.5;
   font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
   color: #333333;
   font-size: 75%; }
 
-/* line 53, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 53, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 h1 {
   font-weight: normal;
   color: #222222;
   font-size: 3em;
   line-height: 1;
   margin-bottom: 0.5em; }
-  /* line 58, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+  /* line 58, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
   h1 img {
     margin: 0; }
 
-/* line 60, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 60, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 h2 {
   font-weight: normal;
   color: #222222;
   font-size: 2em;
   margin-bottom: 0.75em; }
 
-/* line 64, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 64, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 h3 {
   font-weight: normal;
   color: #222222;
@@ -104,7 +104,7 @@ h3 {
   line-height: 1;
   margin-bottom: 1em; }
 
-/* line 69, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 69, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 h4 {
   font-weight: normal;
   color: #222222;
@@ -112,7 +112,7 @@ h4 {
   line-height: 1.25;
   margin-bottom: 1.25em; }
 
-/* line 74, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 74, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 h5 {
   font-weight: normal;
   color: #222222;
@@ -120,155 +120,155 @@ h5 {
   font-weight: bold;
   margin-bottom: 1.5em; }
 
-/* line 79, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 79, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 h6 {
   font-weight: normal;
   color: #222222;
   font-size: 1em;
   font-weight: bold; }
 
-/* line 83, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 83, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 h2 img, h3 img, h4 img, h5 img, h6 img {
   margin: 0; }
 
-/* line 85, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 85, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 p {
   margin: 0 0 1.5em; }
-  /* line 87, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+  /* line 87, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
   p img.left {
     display: inline;
     float: left;
     margin: 1.5em 1.5em 1.5em 0;
     padding: 0; }
-  /* line 91, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+  /* line 91, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
   p img.right {
     display: inline;
     float: right;
     margin: 1.5em 0 1.5em 1.5em;
     padding: 0; }
 
-/* line 95, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 95, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 a {
   text-decoration: underline;
   color: #000099; }
-  /* line 12, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/compass/stylesheets/compass/utilities/links/_link_colors.sass */
+  /* line 12, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/links/_link_colors.sass */
   a:visited {
     color: #000066; }
-  /* line 15, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/compass/stylesheets/compass/utilities/links/_link_colors.sass */
+  /* line 15, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/links/_link_colors.sass */
   a:focus {
     color: black; }
-  /* line 18, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/compass/stylesheets/compass/utilities/links/_link_colors.sass */
+  /* line 18, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/links/_link_colors.sass */
   a:hover {
     color: black; }
-  /* line 21, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/compass/stylesheets/compass/utilities/links/_link_colors.sass */
+  /* line 21, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/links/_link_colors.sass */
   a:active {
     color: #cc0099; }
 
-/* line 98, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 98, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 blockquote {
   margin: 1.5em;
   color: #666;
   font-style: italic; }
 
-/* line 102, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 102, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 strong {
   font-weight: bold; }
 
-/* line 104, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 104, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 em {
   font-style: italic; }
 
-/* line 106, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 106, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 dfn {
   font-style: italic;
   font-weight: bold; }
 
-/* line 109, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 109, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 sup, sub {
   line-height: 0; }
 
-/* line 111, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 111, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 abbr, acronym {
   border-bottom: 1px dotted #666; }
 
-/* line 113, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 113, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 address {
   margin: 0 0 1.5em;
   font-style: italic; }
 
-/* line 116, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 116, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 del {
   color: #666; }
 
-/* line 118, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 118, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 pre {
   margin: 1.5em 0;
   white-space: pre; }
 
-/* line 121, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 121, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 pre, code, tt {
   font: 1em 'andale mono', 'lucida console', monospace;
   line-height: 1.5; }
 
-/* line 123, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 123, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 li ul, li ol {
   margin: 0 1.5em; }
 
-/* line 125, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 125, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 ul {
   margin: 0 1.5em 1.5em 1.5em;
   list-style-type: disc; }
 
-/* line 128, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 128, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 ol {
   margin: 0 1.5em 1.5em 1.5em;
   list-style-type: decimal; }
 
-/* line 131, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 131, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 dl {
   margin: 0 0 1.5em 0; }
-  /* line 133, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+  /* line 133, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
   dl dt {
     font-weight: bold; }
 
-/* line 135, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 135, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 dd {
   margin-left: 1.5em; }
 
-/* line 137, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 137, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 table {
   margin-bottom: 1.4em;
   width: 100%; }
 
-/* line 140, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 140, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 th {
   font-weight: bold; }
 
-/* line 142, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 142, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 thead th {
   background: #c3d9ff; }
 
-/* line 144, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 144, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 th, td, caption {
   padding: 4px 10px 4px 5px; }
 
-/* line 146, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 146, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 tr.even td {
   background: #e5ecf9; }
 
-/* line 148, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 148, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 tfoot {
   font-style: italic; }
 
-/* line 150, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 150, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 caption {
   background: #eee; }
 
-/* line 152, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 152, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 .quiet {
   color: #666666; }
 
-/* line 154, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
+/* line 154, ../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_typography.sass */
 .loud {
   color: #111111; }
 
@@ -1537,3 +1537,12 @@ h3 {
 /* line 689, sass/wi.sass */
 .top_menu {
   margin-bottom: 0; }
+
+/* line 691, sass/wi.sass */
+#page_admin_quick_links {
+  margin: auto;
+  width: 120px;
+  color: #AAA;
+  border: 1px dashed #AAA;
+  text-align: center;
+  padding: 0.2em; }
