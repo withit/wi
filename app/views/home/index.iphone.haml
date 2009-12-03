@@ -1,0 +1,12 @@
+#markers
+  %div
+  %span#project LATEST PROJECT
+
+#slide_show{:align => "center"}= image_tag @projects.first.slide.url, :size => '300x227'
+
+#content= RedCloth.new(@page.content.to_s).to_html
+- latest_month = ((News.find(:last, :order => "created_at").try(:created_at).try(:to_date)) || Date.today)
+.sub-category= link_to 'Latest News', news_by_month_path(:year => latest_month.year, :month => latest_month.month)
+.sub-category= link_to 'Services', services_path
+.sub-category= link_to 'Contact Us', contact_us_path
+#twitter{:align => "right"}= image_tag "iphone/follow.gif", :alt => "twitter"
