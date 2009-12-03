@@ -1,0 +1,13 @@
+- @page_title = @news.title
+.page_text_content.news_text_content
+  %h1{:style => 'float: none'}= @news.title
+  - if admin?
+    = link_to "edit", edit_news_item_path(@news)
+  = simple_format(@news.content )
+%div
+  %ul
+    - @window.each do |month|
+      - unless month == :prev || month == :next
+        %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;', |
+          :class => month == @current_month && action_name != 'show' ? 'current sub-category' : 'sub-category'} |
+          = link_to month.to_formatted_s(:long_year_month), news_by_month_path(:year => month.year, :month => month.month)

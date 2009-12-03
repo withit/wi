@@ -7,8 +7,8 @@
 	
 	<title><% browser_title = (@page_title || @page.try(:browser_title)) %><%= ['With Imagination', (browser_title unless browser_title.blank?)].compact * ' - ' %></title>
 	
-	<link rel="stylesheet" type="text/css" href="stylesheets/iphone.css" />
-	<link rel="stylesheet" type="text/css" href="stylesheets/iphone_portrait.css" id="orient_css" />
+	<link rel="stylesheet" type="text/css" href="/stylesheets/iphone.css" />
+	<link rel="stylesheet" type="text/css" href="/stylesheets/iphone_portrait.css" id="orient_css" />
 	
 	<!-- HIDE MENU BAR WHEN PAGE LOADS -->
 	<script type="application/x-javascript">
@@ -25,13 +25,13 @@
 		function orient()
 		{
 			switch(window.orientation){  
-				case 0: document.getElementById("orient_css").href = "stylesheets/iphone_portrait.css";
+				case 0: document.getElementById("orient_css").href = "/stylesheets/iphone_portrait.css";
 				break;
 
-				case -90: document.getElementById("orient_css").href = "stylesheets/iphone_landscape.css";
+				case -90: document.getElementById("orient_css").href = "/stylesheets/iphone_landscape.css";
 				break;
 
-				case 90: document.getElementById("orient_css").href = "stylesheets/iphone_landscape.css";
+				case 90: document.getElementById("orient_css").href = "/stylesheets/iphone_landscape.css";
 				break;
 			}
 		}

@@ -81,6 +81,11 @@ a:active 			{ text-decoration: none;}
 	text-transform: uppercase;
 	font-size: 12px;
 }
+
+li.sub-category
+{
+  list-style-type: none;
+}
 .sub-category	 a
 {
   color: black;

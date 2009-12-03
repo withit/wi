@@ -1,6 +1,7 @@
 class NewsController < ApplicationController
   before_filter :find_months
   before_filter :authorize, :except => [:index, :show]
+  before_filter :adjust_format_for_iphone, :only => :show
 
   WINDOW = (-3..3)
 
@@ -47,6 +48,10 @@ class NewsController < ApplicationController
 
   def show
     @news = News.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.iphone{ render :layout => 'application'}
+    end
   end
 
   private
