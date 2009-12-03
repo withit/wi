@@ -1,0 +1,1 @@
+SubdomainFu.tld_sizes = {:development => 5,:test => 0, :production => 2} # set all at once (also the defaults)
