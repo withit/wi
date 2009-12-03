@@ -113,7 +113,7 @@ a:active 			{ text-decoration: none;}
 #projects			{
 	float:left; 
 	width:300px; 
-	background-image:url(../images/bg-project.jpg);
+	background-image:url(../images/iphone/bg-project.jpg);
 	background-repeat:no-repeat;
 }
 
@@ -122,7 +122,17 @@ a:active 			{ text-decoration: none;}
 	margin-top:10px;
 	padding-bottom:10px;
 	float:left;
-	width:200px;
+	width:250px;
+}
+
+#projects-img img.pic
+{
+	-webkit-border-radius: 8px;
+}
+
+#projects-img img.logo
+{
+	max-width: 130px;
 }
 
 #project-content	{
@@ -174,4 +184,11 @@ p {
   display: block;
   color: #483D33;
   background: -webkit-gradient(linear, left top, left bottom, from(#EFE256), to(#E88627));
+}
+
+.pagination{
+  font-size: 12px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  
 }

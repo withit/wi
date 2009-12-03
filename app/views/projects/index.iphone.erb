@@ -1,0 +1,15 @@
+    <div id="sub-banner">
+      <%= image_tag @page.banner.url, :alt => 'Websites', :size => '311x40'%>
+</div>
+  <% @projects.each do |project| %>
+   	<div id="projects">
+    	<div id="projects-img">
+    	  <img src="<%= project.picture.url %>" width="99" height="63" alt="<%= project.name %>" class='pic' />
+        <img src="<%= project.logo.url %>" alt="<%= project.name %>" class='logo'/>
+        </div>
+    </div>
+    <div id="project-content">
+      <%= project.description %>
+    </div>
+  <% end %>
+  <%= will_paginate(@projects ) %>
