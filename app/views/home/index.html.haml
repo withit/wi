@@ -1,6 +1,5 @@
 - content_for :head do 
   = auto_discovery_link_tag(:rss, "/news.rss") 
-
 .hero
   #previous
     = link_to "Previous Project", '#'
@@ -22,7 +21,7 @@
     = RedCloth.new(@page.content.to_s).to_html
 %div{:style => "clear: both; overflow: visible;"}
   = link_to 'Follow on twitter', twitter_path,:class => "twitter"
-  #latest_tweet{:style => 'display: none;'}= latest_tweet
+  #latest_tweet{:style => 'display: none;'}
 #news_outer
   #news
     = image_tag 'rss_icon.jpg', :style => 'float: right; margin-right: 10px; margin-top: 10px;'
@@ -77,3 +76,4 @@
         = error_message_on f.object, :phone
       %p= image_submit_tag "submit.jpg"
 .clear{:style => 'clear: both'}
+= javascript_include_tag 'twitter'
