@@ -44,12 +44,20 @@ class News < ActiveRecord::Base
       Month.new(to_date << 1)
     end
     
+    def + number
+      Month.new(to_date >> number)
+    end
+    
+    def - number
+      Month.new(to_date << number)
+    end
+      
     # returns all months within size of this month
     def window size
-      start_date = [to_date << size, Month.first.to_date].max
-      end_date = [to_date >> size, Month.last.to_date].min
+      start_month= [self - size, Month.first].max
+      end_month = [self + size, Month.last].min
       
-      (Month.new(start_date)..Month.new(end_date)).to_a.reverse
+      (start_month..end_month).to_a.reverse
     end
     
     def <=> other
