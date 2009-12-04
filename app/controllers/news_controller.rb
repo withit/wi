@@ -8,7 +8,7 @@ class NewsController < ApplicationController
   def index
     respond_to do |format|
       format.html do
-        if @months.first
+        if @month.news_items.first
           redirect_to news_item_by_month_path(:year => @month.year,
                                               :month => @month.month,
                                               :id => @month.news_items.first)
