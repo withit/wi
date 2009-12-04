@@ -6,8 +6,7 @@
   = simple_format(@news.content )
 %div
   %ul
-    - @window.each do |month|
-      - unless month == :prev || month == :next
-        %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;', |
-          :class => month == @current_month && action_name != 'show' ? 'current sub-category' : 'sub-category'} |
-          = link_to month.to_formatted_s(:long_year_month), news_by_month_path(:year => month.year, :month => month.month)
+    - @months.each do |month|
+      %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;', |
+        :class => month == @month && action_name != 'show' ? 'current sub-category' : 'sub-category'} |
+        = link_to month.to_date.to_formatted_s(:long_year_month), news_by_month_path(:year => month.year, :month => month.month)
