@@ -11,25 +11,25 @@ class News < ActiveRecord::Base
     attr_reader :year, :month
     
     def self.first
-      time = News.minimum(:created_at) || Time.now
-      new(time.year, time.month)
+      new(News.minimum(:created_at) || Time.now)
     end
     
     def self.last
-      time = News.maximum(:created_at) || Time.now
-      new(time.year, time.month)
-    end
-    
-    def self.all
+      new(News.maximum(:created_at) || Time.now)
     end
     
     def news_items
       News.find(:all, :conditions => {:created_at => beginning_of_month..end_of_month})
     end
     
-    def initialize year, month
-      @month = (month || Date.today.month).to_i
-      @year = (year || Date.today.year).to_i
+    def initialize year_or_date, month=nil
+      if year_or_date.respond_to?(:year) && year_or_date.respond_to?(:month)
+        @month = year_or_date.month
+        @year = year_or_date.year
+      else
+        @month = (month || Date.today.month).to_i
+        @year = (year_or_date || Date.today.year).to_i
+      end
     end
     
     def to_date
@@ -37,23 +37,19 @@ class News < ActiveRecord::Base
     end
     
     def succ
-      date = to_date >> 1
-      Month.new(date.year, date.month)
+      Month.new(to_date >> 1)
     end
     
     def prev
-      date = to_date << 1
-      Month.new(date.year, date.month)
+      Month.new(to_date << 1)
     end
     
     # returns all months within size of this month
     def window size
       start_date = [to_date << size, Month.first.to_date].max
       end_date = [to_date >> size, Month.last.to_date].min
-      start_month = Month.new(start_date.year, start_date.month)
-      end_month = Month.new(end_date.year, end_date.month)
       
-      (start_month..end_month).to_a.reverse
+      (Month.new(start_date)..Month.new(end_date)).to_a.reverse
     end
     
     def <=> other
