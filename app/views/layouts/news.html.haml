@@ -5,31 +5,28 @@
   .breadcrumb
     = link_to 'home', '/'
     &gt;
-    = link_to @current_month.to_formatted_s(:year_month), news_by_month_path(@current_month.year, @current_month.month)
+    = link_to @month.to_date.to_formatted_s(:year_month), news_by_month_path(@month.year, @month.month)
 
   .left
     .side_menu
       = image_tag 'news/menu.png', :alt => 'latest_news'
       %ul
-        - @window.each do |month|
+        - unless @month.first?
+          %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}
+            = link_to "prev", news_by_month_path(:year => @month.prev.year, :month => @month.prev.month)
+        - @months.each do |month|
           %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;', |
-              :class => month == @current_month && action_name != 'show' ? 'current' : ''} |
-            - case month
-            - when :prev
-              - month = @current_month - 1.month
-              = link_to "prev", news_by_month_path(:year => month.year, :month => month.month)  
-            - when :next
-              - month = @current_month + 1.month
-              = link_to "next", news_by_month_path(:year => month.year, :month => month.month)
-            - else
-              = link_to month.to_formatted_s(:long_year_month), news_by_month_path(:year => month.year, :month => month.month)
-              - if month == @current_month
-                %ul{:style => "margin: 0; padding: 0; padding-left: 1em;"}                
-                  - @current_month_items.each do |item|
-                    %li{:style => "text-transform: none; line-height: 12px; border: none; padding: 0; padding-top : 1em; margin: 0; height: 16px;"}
-                      = link_to_if item != @news, item.title, |
-                      news_item_by_month_path(:year => @current_month.year,  :month => @current_month.month, :id => item.to_param) |                      
-                 
+              :class => month == @month && action_name != 'show' ? 'current' : ''} |
+            = link_to month.to_date.to_formatted_s(:long_year_month), news_by_month_path(:year => month.year, :month => month.month)
+            - if month == @month
+              %ul{:style => "margin: 0; padding: 0; padding-left: 1em;"}                
+                - @month.news_items.each do |item|
+                  %li{:style => "text-transform: none; line-height: 12px; border: none; padding: 0; padding-top : 1em; margin: 0; height: 16px;"}
+                    = link_to_if item != @news, item.title, |
+                    news_item_by_month_path(:year => @month.year,  :month => @month.month, :id => item.to_param) |                      
+        - unless @month.last?
+          %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}
+            = link_to "next", news_by_month_path(:year => @month.succ.year, :month => @month.succ.month)         
           //=link_to_if news != @news, news.title, news_item_path(news), :style => 'text-transform: uppercase;'
   .right
     .side_menu
