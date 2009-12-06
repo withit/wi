@@ -1,7 +1,3 @@
-#markers
-  %div
-  %span#project LATEST PROJECT
-
 #content= RedCloth.new(@page.content.to_s).to_html
 - latest_month = ((News.find(:last, :order => "created_at").try(:created_at).try(:to_date)) || Date.today)
 .sub-category= link_to 'Latest News', news_by_month_path(:year => latest_month.year, :month => latest_month.month)
