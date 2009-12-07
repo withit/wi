@@ -4,23 +4,18 @@ require 'capistrano/ext/multistage'
 
 set :application, "wi"
 #set :user, 'withit_prod'
-set :svn_path, 'wi'
+#set :svn_path, 'wi'
 set :use_sudo, false
 set :vhost,  "wi.com.au"
 role :app, "203.145.48.37"
 role :web, "203.145.48.37"
 role :db,  "203.145.48.37", :primary => true
-
+set :repository,  "git@github.com:withit/wi.git"
 set :deploy_to, "/var/www/vhosts/#{vhost}/httpdocs/apps/#{application}"
-set :svn_user, ENV['svn_user'] || Proc.new { Capistrano::CLI.password_prompt('SVN User: ') }
-set :svn_password, ENV['svn_password'] || Proc.new { Capistrano::CLI.password_prompt('SVN Password: ') }
-set :repository,
-Proc.new { "--username #{svn_user} " +
-             "--password #{svn_password} " +
-             "--no-auth-cache " +
-             "http://trac.wi.com.au/svn/repo1/#{svn_path}/trunk/"}
 
-set :deploy_via, :rsync_with_remote_cache
+set :scm, :git
+set :deploy_via, :copy
+set :copy_compression, :gzip
 
 namespace :mod_rails do
   desc "Restart the application altering tmp/restart.txt for mod_rails."
