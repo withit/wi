@@ -2,6 +2,12 @@
 
 %h2 Projects
 = link_to 'Create a new project', new_project_path
+%ul
+  - @projects.each do |project|
+    %li
+      = project.name
+      = link_to 'edit', [:edit, project]
+      = link_to 'delete', project, :method => :delete, :confirm => "Are you sure?"
 
 %h2 News
 = link_to 'Create a new news item', new_news_item_path
