@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091202225357) do
+ActiveRecord::Schema.define(:version => 20091210225721) do
 
   create_table "assets", :force => true do |t|
     t.datetime "created_at"
@@ -129,6 +129,7 @@ ActiveRecord::Schema.define(:version => 20091202225357) do
     t.integer  "position"
     t.boolean  "helped"
     t.boolean  "current"
+    t.boolean  "in_slideshow"
   end
 
   create_table "sample_layouts", :force => true do |t|

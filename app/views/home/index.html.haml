@@ -5,11 +5,11 @@
     = link_to "Previous Project", '#'
   #slide_show_container
     #markers
-      - Project.find(:all, :conditions => 'slide_file_name is not null', :order => 'position').each do |p| 
+      - Project.find(:all, :conditions => {:in_slideshow => true},  :order => 'position').each do |p| 
         %div &nbsp;
       %span Recent Projects
     #slide_show
-      - Project.find(:all, :conditions => 'slide_file_name is not null',  :order => 'position').each_with_index do |p, i| 
+      - Project.find(:all, :conditions => {:in_slideshow => true},  :order => 'position').each_with_index do |p, i| 
         = image_tag p.slide.url, :style => i == 0 ? nil : 'display: none;'
   #next
     = link_to 'Next Project',"#"
