@@ -15,9 +15,6 @@
   - form_for @enquiry, :url => enquiry_path do |f|
     = f.error_messages :header_message => 'Your enquiry could not be submitted'
     %div
-      = f.label :title
-      = f.select :title, %w(Mr Mrs Ms Miss)
-    %div
       = f.label :first_name, "First Name*"
       = f.text_field :first_name, :size => nil
     %div

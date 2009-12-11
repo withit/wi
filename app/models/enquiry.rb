@@ -6,7 +6,7 @@ class Enquiry < ActiveRecord::Base
   end
   
   def full_name
-    name || [title, first_name, last_name] * ' '
+    name || [first_name, last_name] * ' '
   end
   
   validates_confirmation_of :email
