@@ -674,11 +674,12 @@ form.new_enquiry {
     width: 155px;
     background-image: url(../images/logo-bg.jpg);
     background-repeat: no-repeat;
+    background-position: bottom right;
     padding-right: 6px;
     padding-bottom: 6px;
     text-align: center;
     line-height: 120px; }
-    /* line 12, sass/_helped.sass */
+    /* line 13, sass/_helped.sass */
     .who_we_helped .project img {
       line-height: 120px;
       vertical-align: baseline; }
