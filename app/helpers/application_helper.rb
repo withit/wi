@@ -9,8 +9,4 @@ module ApplicationHelper
   def twitter_path
     "http://twitter.com/withimagination"
   end
-  
-  def iphone_user_agent?
-    request.env["HTTP_USER_AGENT"] && request.env["HTTP_USER_AGENT"][/(Mobile\/.+Safari)/]
-  end
 end

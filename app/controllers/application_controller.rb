@@ -40,4 +40,17 @@ class ApplicationController < ActionController::Base
   def iphone_request?
     return (request.subdomains.first == "i" || params[:format] == "iphone")
   end
+  
+  def redirect_to_iphone
+    redirect_to :subdomain => 'i' if iphone_user_agent? && request.subdomains.first != 'i'
+  end
+  
+  def iphone_user_agent?
+    request.env["HTTP_USER_AGENT"] && request.env["HTTP_USER_AGENT"][/(Mobile\/.+Safari)/]
+  end
+  
+  helper_method :iphone_user_agent?
+
+  
+  before_filter :redirect_to_iphone
 end
