@@ -1,6 +1,8 @@
 echo "gem: --no-ri --no-rdoc" >> ~/.gemrc
-
-sudo rake gems:install
+sudo gem install haml
+sudo gem install compass
+gem sources -a http://gems.github.com
+sudo rake gems:install RAILS_ENV=production
 
 # Assembles Rails database.yml based on information
 # provided from a ReadyStack redeploy
