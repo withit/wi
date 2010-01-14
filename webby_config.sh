@@ -10,6 +10,17 @@ sudo rake gems:install RAILS_ENV=production
 # WC_DB_ENGINE = [mysql|postgresql]
 # WC_APP_NAME = The name of you app, the GitHub repo name
 # WC_DB_PASSWORD = the DB password, chosen on the UI
+
+# on old
+#mysqldump suzanne_wi -u wi -p | gzip > wi_db.gz
+#tar -cjf wi_sys.tar.bz2 ~/httpdocs/apps/wi/shared/system
+
+# on new
+#scp withit_prod@203.145.48.37:private/wi_db.gz wi_db.gz
+#scp withit_prod@203.145.48.37:private/wi_sys.zip wi_sys.zip
+
+# gunzip < wi_db.gz | mysql wi -u root -p
+# tar -xjf wi_sys.tar.bz2
 echo WC_DB_ENGINE=${WC_DB_ENGINE}
  
 echo "
