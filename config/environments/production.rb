@@ -22,3 +22,11 @@ config.action_controller.perform_caching             = true
 
 # Disable delivery errors, bad email addresses will be ignored
 # config.action_mailer.raise_delivery_errors = false
+ActionMailer::Base.smtp_settings = {
+  :address  => "smtp.sendgrid.net",
+  :port  => 25, 
+  :domain  => "wi.com.au",
+  :user_name  => "apps@wi.com.au",
+  :authentication  => :plain,
+  :password => 'imagination2010'
+}
