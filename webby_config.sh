@@ -21,6 +21,13 @@ sudo rake gems:install RAILS_ENV=production
 
 # gunzip < wi_db.gz | mysql wi -u root -p
 # tar -xjf wi_sys.tar.bz2
+
+#mysqldump -u wi -p suzanne_wi --default-character-set=latin1 --character-sets-dir=/usr/share/mysql/charsets  > latin1.sql
+
+#mysql -u wi -p wi --default-character-set=utf8 --character-sets-dir=/usr/share/mysql/charsets < latin1.sql
+#change in sql file /*!40101 SET NAMES utf8 */;
+
+
 echo WC_DB_ENGINE=${WC_DB_ENGINE}
  
 echo "
