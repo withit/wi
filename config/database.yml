@@ -17,6 +17,6 @@ test:
 
 production:
   adapter: mysql
-  database: suzanne_wi
+  database: wi
   username: wi
-  password: g$d0pt6wCC
+  password: netgpa2010
