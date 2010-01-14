@@ -25,7 +25,8 @@ sudo rake gems:install RAILS_ENV=production
 #mysqldump -u wi -p suzanne_wi --default-character-set=latin1 --character-sets-dir=/usr/share/mysql/charsets  > latin1.sql
 
 #mysql -u wi -p wi --default-character-set=utf8 --character-sets-dir=/usr/share/mysql/charsets < latin1.sql
-#change in sql file /*!40101 SET NAMES utf8 */;
+#change in sql file /*!40101 SET NAMES utf8 */; or not
+#passwd www-data
 
 
 echo WC_DB_ENGINE=${WC_DB_ENGINE}

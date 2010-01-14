@@ -3,12 +3,13 @@
 # require 'capistrano/ext/multistage'
 
 set :application, "wi"
-set :user, 'www-data'
-set :use_sudo, false
-
 role :app, "67.23.79.33"
 role :web, "67.23.79.33"
 role :db,  "67.23.79.33", :primary => true
+
+set :use_sudo, false
+set :user, 'www-data'
+
 set :repository,  "git@github.com:withit/#{application}.git"
 set :deploy_to, "/var/rails/#{application}"
 
