@@ -16,7 +16,9 @@ class NewsController < ApplicationController
           @current_month_items = []
         end
       end
-      format.rss
+      format.rss do
+        @current_month_items = News.all
+      end
     end
 
   end
