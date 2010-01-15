@@ -27,15 +27,15 @@ sudo rake gems:install RAILS_ENV=production
 #mysql -u wi -p wi --default-character-set=utf8 --character-sets-dir=/usr/share/mysql/charsets < latin1.sql
 #change in sql file /*!40101 SET NAMES utf8 */; or not
 #passwd www-data
-# cd ..
-# mkdir initial
-# mv wi/* initial
-# mkdir -p wi/shared 
-# mv initial wi
-# cd wi
-# ln -s initial current
-# sed  's/public/current\/public/' /etc/apache2/sites-available/default > /etc/apache2/sites-available/default
-# apache2ctl graceful
+cd ..
+mkdir initial
+mv ${WC_APP_NAME}/* initial
+mkdir -p ${WC_APP_NAME}/shared 
+mv initial ${WC_APP_NAME}
+cd ${WC_APP_NAME}
+ln -s initial current
+sed -i 's/public/current\/public/' /etc/apache2/sites-available/default
+apache2ctl graceful
 
 echo WC_DB_ENGINE=${WC_DB_ENGINE}
  
