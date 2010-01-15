@@ -1,8 +1,8 @@
-# echo "gem: --no-ri --no-rdoc" >> ~/.gemrc
-# sudo gem install haml
-# sudo gem install compass
-# gem sources -a http://gems.github.com
-# sudo rake gems:install RAILS_ENV=production
+echo "gem: --no-ri --no-rdoc" >> ~/.gemrc
+sudo gem install haml
+sudo gem install compass
+gem sources -a http://gems.github.com
+sudo rake gems:install RAILS_ENV=production
 
 # Assembles Rails database.yml based on information
 # provided from a ReadyStack redeploy
@@ -27,15 +27,15 @@
 #mysql -u wi -p wi --default-character-set=utf8 --character-sets-dir=/usr/share/mysql/charsets < latin1.sql
 #change in sql file /*!40101 SET NAMES utf8 */; or not
 #passwd www-data
-cd ..
-mkdir initial
-mv wi/* initial
-mkdir -p wi/shared 
-mv initial wi
-cd wi
-ln -s initial current
-sed  's/public/current\/public/' /etc/apache2/sites-available/default > /etc/apache2/sites-available/default
-apache2ctl graceful
+# cd ..
+# mkdir initial
+# mv wi/* initial
+# mkdir -p wi/shared 
+# mv initial wi
+# cd wi
+# ln -s initial current
+# sed  's/public/current\/public/' /etc/apache2/sites-available/default > /etc/apache2/sites-available/default
+# apache2ctl graceful
 
 echo WC_DB_ENGINE=${WC_DB_ENGINE}
  
