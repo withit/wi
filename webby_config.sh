@@ -1,8 +1,8 @@
-echo "gem: --no-ri --no-rdoc" >> ~/.gemrc
-sudo gem install haml
-sudo gem install compass
-gem sources -a http://gems.github.com
-sudo rake gems:install RAILS_ENV=production
+# echo "gem: --no-ri --no-rdoc" >> ~/.gemrc
+# sudo gem install haml
+# sudo gem install compass
+# gem sources -a http://gems.github.com
+# sudo rake gems:install RAILS_ENV=production
 
 # Assembles Rails database.yml based on information
 # provided from a ReadyStack redeploy
@@ -34,6 +34,8 @@ mkdir -p wi/shared
 mv initial wi
 cd wi
 ln -s initial current
+sed  's/public/current\/public/' /etc/apache2/sites-available/default > /etc/apache2/sites-available/default
+apache2ctl graceful
 
 echo WC_DB_ENGINE=${WC_DB_ENGINE}
  
