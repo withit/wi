@@ -66,4 +66,6 @@ production:
 " >> config/database.yml
 fi
 
+ln -s current/config/database.yml shared/database.yml
+
 
