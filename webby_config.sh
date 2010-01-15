@@ -27,7 +27,13 @@ sudo rake gems:install RAILS_ENV=production
 #mysql -u wi -p wi --default-character-set=utf8 --character-sets-dir=/usr/share/mysql/charsets < latin1.sql
 #change in sql file /*!40101 SET NAMES utf8 */; or not
 #passwd www-data
-
+cd ..
+mkdir initial
+mv wi/* initial
+mkdir -p wi/shared 
+mv initial wi
+cd wi
+ln -s initial current
 
 echo WC_DB_ENGINE=${WC_DB_ENGINE}
  
@@ -38,14 +44,14 @@ login: &login
   username: ${WC_APP_NAME}
   password: ${WC_DB_PASSWORD}
   host: localhost
-" > config/database.yml
+" > shared/database.yml
  
 if [ "${WC_DB_ENGINE}" == "mysql" ]; then
 echo "
 production:
   <<: *login
   encoding: utf8
-" >> config/database.yml
+" >> shared/database.yml
 fi
  
 if [ "${WC_DB_ENGINE}" == "postgresql" ]; then
@@ -57,3 +63,5 @@ production:
   port: 5432
 " >> config/database.yml
 fi
+
+
