@@ -65,7 +65,6 @@ production:
   port: 5432
 " >> config/database.yml
 fi
-
-ln -s current/config/database.yml shared/database.yml
-
+rm current/config/database.yml
+ln -s ../../shared/database.yml current/config/database.yml
 
