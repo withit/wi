@@ -1,0 +1,13 @@
+!!! XML
+%rss{:version => "2.0", :"xmlns:dc" => "http://purl.org/dc/elements/1.1/",  :"xmlns:atom" => 'http://www.w3.org/2005/Atom'}
+  %channel
+    %title With Imagination News
+    %link= news_url
+    %description The latest news from With Imagination
+    %atom:link{:href => news_url(:format => :rss), :rel => "self", :type => "application/rss+xml"}
+    - @all_news.each do |news|
+      %item
+        %pubDate= news.created_at.rfc822
+        %title= h(news.title)
+        %description= h simple_format(news.content)
+        %guid= news_item_url(news)

@@ -1,3 +1,7 @@
-- @current_month_items.each do |news|
-  %h1{:style => 'float: none'}= link_to news.title,news_item_path(news)
-  .content= simple_format(news.content )
+- @page_title = "News"
+- @all_news[0..2].each do |news_item| 
+  .page_text_content.news_text_content
+    %h1{:style => 'float: none'}= news_item.title
+    - if admin?
+      = link_to "edit", edit_news_item_path(news_item)
+    = simple_format(news_item.content )

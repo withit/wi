@@ -1,26 +1,11 @@
 class NewsController < ApplicationController
-  before_filter :find_months
+  before_filter :load_all_news, :only => [:index, :show]
   before_filter :authorize, :except => [:index, :show]
   before_filter :adjust_format_for_iphone, :only => :show
 
   WINDOW = (-3..3)
 
   def index
-    respond_to do |format|
-      format.html do
-        if @month.news_items.first
-          redirect_to news_item_by_month_path(:year => @month.year,
-                                              :month => @month.month,
-                                              :id => @month.news_items.first)
-        else
-          @current_month_items = []
-        end
-      end
-      format.rss do
-        @current_month_items = News.all
-      end
-    end
-
   end
 
   def new
@@ -58,8 +43,7 @@ class NewsController < ApplicationController
 
   private
 
-  def find_months
-    @month = News::Month.new(params[:year], params[:month])
-    @months = @month.window(3)
+  def load_all_news
+    @all_news = News.all(:order => 'created_at desc')
   end
 end
