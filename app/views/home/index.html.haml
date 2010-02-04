@@ -24,15 +24,14 @@
   #latest_tweet{:style => 'display: none;'}
 #news_outer
   #news
-    = image_tag 'rss_icon.jpg', :style => 'float: right; margin-right: 10px; margin-top: 10px;'
+    = link_to image_tag('rss_icon.jpg', :style => 'float: right; margin-right: 10px; margin-top: 10px;'), news_path(:format => :rss)
     %h3 Latest news
     %ul
       - News.find(:all, :limit => 1, :order => "created_at desc").each do |news|
         %li
           %h4= news.title 
           %p= truncate_preserving_words(strip_tags(news.content), 200)
-          - latest_month = ((News.find(:last, :order => "created_at").try(:created_at).try(:to_date)) || Date.today)
-          %p= link_to "more &gt;&gt;", news_by_month_path(:year => latest_month.year, :month => latest_month.month)
+          %p= link_to "more &gt;&gt;", news_item_path(news)
 #services_outer
   #services
     %h3 Services
