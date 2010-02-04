@@ -25,7 +25,7 @@
 #news_outer
   #news
     = link_to image_tag('rss_icon.jpg', :style => 'float: right; margin-right: 10px; margin-top: 10px;'), news_path(:format => :rss)
-    %h3 Latest news
+    %h3= link_to "Latest news", news_path
     %ul
       - News.find(:all, :limit => 1, :order => "created_at desc").each do |news|
         %li
