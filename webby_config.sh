@@ -13,14 +13,14 @@ sudo rake gems:install RAILS_ENV=production
 
 # on old
 #mysqldump suzanne_wi -u wi -p | gzip > wi_db.gz
-#tar -cjf wi_sys.tar.bz2 ~/httpdocs/apps/wi/shared/system
+#tar -cjf system.tar.bz2 ~/httpdocs/apps/bushit/shared/system
 
 # on new
 #scp withit_prod@203.145.48.37:private/wi_db.gz wi_db.gz
 #scp withit_prod@203.145.48.37:private/wi_sys.zip wi_sys.zip
 
 # gunzip < wi_db.gz | mysql wi -u root -p
-# tar -xjf wi_sys.tar.bz2
+# tar -xjf system.tar.bz2
 
 #mysqldump -u wi -p suzanne_wi --default-character-set=latin1 --character-sets-dir=/usr/share/mysql/charsets  > latin1.sql
 
