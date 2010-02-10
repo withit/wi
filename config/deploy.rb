@@ -23,18 +23,9 @@ namespace :deploy do
   end
 end
   
-# task :after_update_code, :roles => :app do
-#   desc "symlink current to rails folder"
-#   run "rm -f /var/www/vhosts/#{vhost}/httpdocs/rails"
-#   run "rm -f /var/www/vhosts/#{vhost}/httpdocs/public"
-#   run "ln -s /var/www/vhosts/#{vhost}/httpdocs/apps/#{application}/current/public /var/www/vhosts/#{vhost}/httpdocs/rails"
-#   run "ln -s /var/www/vhosts/#{vhost}/httpdocs/apps/#{application}/current/public /var/www/vhosts/#{vhost}/httpdocs/public"
-# 
-#   run "rm -rf #{release_path}/public/system"
-#   run "ln -s #{shared_path}/system #{release_path}/public/system"
-#   
-#   %w(swfs banners).each do |dir|
-#     run "rm -fr #{release_path}/public/#{dir}"
-#     run "ln -s #{shared_path}/system/#{dir} #{release_path}/public/#{dir}"
-#   end
-# end
+task :after_update_code, :roles => :app do
+  %w(swfs banners).each do |dir|
+    run "rm -fr #{release_path}/public/#{dir}"
+    run "ln -s #{shared_path}/system/#{dir} #{release_path}/public/#{dir}"
+  end
+end
