@@ -1,0 +1,23 @@
+.banner
+  = link_to image_tag(@page.case_study.banner.url,:alt => "Preview of #{@page.case_study.name} case study"), @page.case_study.url
+.breadcrumbs
+  %ul
+    - @page.breadcrumbs.each do |crumb|
+      %li= link_to crumb, '#'
+    %li= @page.name
+.main
+  .sidebar
+    = image_tag @page.image.url
+    %ul
+      %li.current.first
+        = link_to @page.name
+        %p= @page.description
+      %li= link_to 'banners'
+      %li= link_to 'news letters'
+  .websites
+    %h1= @page.name
+    - @websites.each do |website|
+      .website
+        = image_tag website.thumbnail.url
+        %h2= link_to website.name
+        %p= website.description

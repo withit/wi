@@ -1,0 +1,554 @@
+img {
+  border: none; }
+
+body {
+  background-color: #F5F5F5;
+  background-image: url(/images/bg-gradient.jpg);
+  background-repeat: repeat-x;
+  font-family: Arial;
+  margin: 0; }
+  body .outer {
+    background-image: url(/images/bg-image.jpg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 1px;
+    margin: 0; }
+
+.header {
+  background-image: url(/images/WI-logo.png);
+  background-position: 40px 10px;
+  background-repeat: no-repeat;
+  height: 138px; }
+  .header h1, .header h2 {
+    text-indent: -9999px;
+    overflow: hidden; }
+
+.nav {
+  background-image: url(/images/top-nav-bar.jpg);
+  height: 41px;
+  -webkit-border-top-left-radius: 12px;
+  -moz-border-radius-topleft: 12px;
+  -webkit-border-top-right-radius: 12px;
+  -moz-border-radius-topright: 12px; }
+  .nav li {
+    list-style-type: none;
+    float: left; }
+    .nav li a {
+      color: #AAA;
+      line-height: 41px;
+      display: block;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: Arial;
+      font-size: 12px;
+      padding: 0 18px; }
+  .nav.index_action li.home_tab, .nav.websites_action li.projects_tab {
+    background-image: url(/images/arrow-nav-bar.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 100%; }
+    .nav.index_action li.home_tab a, .nav.websites_action li.projects_tab a {
+      font-weight: bold;
+      color: #FFF; }
+
+.container {
+  width: 1004px;
+  margin: 0 auto; }
+
+.testimonials {
+  background-color: #FAFAFA;
+  border-top: 1px solid #CCC;
+  height: 54px;
+  font-family: Arial;
+  font-size: 12px;
+  line-height: 14px; }
+  .testimonials h2 {
+    background-image: url(/images/testimonials.png);
+    height: 31px;
+    width: 96px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-indent: -9999px;
+    margin: 12px 46px;
+    float: left; }
+  .testimonials .testimonial {
+    float: left; }
+    .testimonials .testimonial img {
+      float: left;
+      margin-top: 4px;
+      margin-right: 20px; }
+    .testimonials .testimonial p {
+      margin: 0;
+      margin-top: 13px;
+      line-height: 14px;
+      width: 660px;
+      color: #54616E; }
+      .testimonials .testimonial p.author {
+        color: #F3A144;
+        margin-top: 0; }
+
+.blog {
+  width: 302px;
+  background-color: #EFEFEF;
+  margin: 10px;
+  padding: 12px;
+  float: right;
+  border: 1px solid #D3D3D3;
+  display: inline;
+  height: 433px;
+  font-size: 12px;
+  color: #54616E; }
+  .blog .blog_links {
+    float: right; }
+    .blog .blog_links a {
+      padding-left: 30px; }
+      .blog .blog_links a.rss {
+        background-image: url(/images/rss-icon.jpg);
+        background-repeat: no-repeat;
+        padding-top: 10px; }
+  .blog h2 {
+    background-image: url(/images/blog.png);
+    height: 44px;
+    width: 61px;
+    float: left;
+    overflow: hidden;
+    text-indent: -9999px;
+    margin: 0; }
+  .blog a {
+    color: #0E66AE;
+    text-decoration: none;
+    display: block; }
+    .blog a:hover {
+      text-decoration: underline; }
+  .blog .calendar {
+    float: right;
+    background-image: url(/images/icon-calendar.jpg);
+    height: 43px;
+    width: 48px;
+    background-repeat: no-repeat;
+    color: #222; }
+    .blog .calendar .day, .blog .calendar .month {
+      display: block;
+      text-align: center;
+      font-weight: bold; }
+    .blog .calendar .day {
+      margin-top: 18px;
+      margin-bottom: 0px;
+      line-height: 12px;
+      font-size: 14px; }
+    .blog .calendar .month {
+      font-size: 10px;
+      line-height: 8px; }
+  .blog .post {
+    clear: both; }
+    .blog .post .actions {
+      background-color: #8A8782;
+      color: #FFF;
+      line-height: 29px;
+      padding-left: 10px;
+      margin-top: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      -webkit-border-bottom-right-radius: 12px;
+      -moz-border-radius-bottomright: 12px;
+      -webkit-border-top-right-radius: 12px;
+      -moz-border-radius-topright: 12px; }
+      .blog .post .actions a {
+        display: inline;
+        color: #FFF; }
+    .blog .post h3 {
+      font-size: 16px;
+      margin: 0; }
+    .blog .post p.author {
+      margin: 0;
+      font-size: 12px;
+      color: #54616E; }
+    .blog .post img {
+      margin: 6px 0; }
+
+.twitter {
+  height: 200px;
+  float: right; }
+
+.content {
+  background-color: #FFF;
+  border-top: 1px solid #BABABA;
+  float: left;
+  width: 100%;
+  padding-bottom: 10px;
+  padding-top: 1px; }
+  .content h1 {
+    background-color: #F3F3F3;
+    margin-top: 6px;
+    padding: 17px 24px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+    color: #0E66AE;
+    margin-bottom: 13px;
+    line-height: 22px; }
+  .content p {
+    font-size: 13px;
+    line-height: 17px;
+    margin-left: 24px;
+    color: #30393E; }
+  .content .contact {
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 48px;
+    height: 20px;
+    margin-bottom: 7px; }
+    .content .contact a {
+      color: #FFF;
+      background-color: #A3101A;
+      padding: 8px 60px 8px 16px;
+      margin-left: 10px;
+      text-decoration: none;
+      background-image: url(/images/arrow-contact-button.png);
+      background-repeat: no-repeat;
+      background-position: 90% 50%;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px; }
+
+.services {
+  float: left;
+  display: inline;
+  width: 308px;
+  background-color: #EFEFEF;
+  margin-left: 12px;
+  float: left;
+  border: 1px solid #D3D3D3;
+  margin-top: 20px;
+  height: 373px; }
+  .services p {
+    font-size: 12px;
+    line-height: 14px; }
+  .services h2 {
+    background-image: url(/images/services.png);
+    height: 40px;
+    width: 92px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-indent: -9999px;
+    margin: 12px 12px 0px 8px; }
+  .services .service {
+    background-position: 4px 0px;
+    background-repeat: no-repeat;
+    padding-left: 85px;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px dashed #D3D3D3; }
+    .services .service h3 {
+      margin: 0;
+      color: #0E66AE;
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 14px; }
+    .services .service p {
+      margin: 0;
+      margin-right: 10px; }
+    .services .service a {
+      color: #0E66AE;
+      text-decoration: none;
+      font-size: 13px; }
+    .services .service.last {
+      border-bottom: none;
+      margin-bottom: 0; }
+
+.case_study {
+  float: left;
+  width: 320px;
+  background-color: #EFEFEF;
+  margin-left: 10px;
+  float: left;
+  border: 1px solid #D3D3D3;
+  margin-top: 20px;
+  margin-right: 0;
+  height: 373px; }
+  .case_study p {
+    font-size: 12px;
+    line-height: 14px; }
+  .case_study h2 {
+    background-image: url(/images/case-study.png);
+    height: 43px;
+    width: 133px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-indent: -9999px;
+    margin: 12px 12px 0px 8px; }
+  .case_study h3 {
+    margin: 0;
+    color: #0E66AE;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 14px; }
+  .case_study img {
+    display: block;
+    margin: 5px auto; }
+  .case_study h3, .case_study p {
+    margin-left: 10px; }
+  .case_study p {
+    margin-bottom: 0px; }
+  .case_study a {
+    margin-left: 10px;
+    color: #0E66AE;
+    text-decoration: none;
+    font-size: 13px; }
+
+.twitter {
+  width: 314px;
+  background-color: #EFEFEF;
+  margin: 10px;
+  padding: 12px;
+  padding-right: 0px;
+  float: right;
+  border: 1px solid #D3D3D3;
+  margin-top: 0;
+  height: 173px;
+  margin-bottom: 0px; }
+  .twitter h2 {
+    margin: 0;
+    float: left;
+    background-image: url(/images/twitter.png);
+    height: 42px;
+    width: 87px;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+    margin-bottom: 12px; }
+  .twitter .follow {
+    float: right;
+    background-color: #363227;
+    color: #FFF;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 10px;
+    text-decoration: none;
+    padding-left: 30px;
+    background-image: url('/images/twitter-small.png');
+    background-repeat: no-repeat;
+    background-position: 4px 50%; }
+  .twitter .tweet {
+    clear: both;
+    margin-bottom: 10px; }
+  .twitter p {
+    margin: 0px; }
+    .twitter p.info {
+      font-size: 11px;
+      color: #4ACAF7; }
+
+.projects {
+  position: relative;
+  background-color: #FFF;
+  padding-top: 1px;
+  padding-bottom: 1px; }
+  .projects .main {
+    position: absolute;
+    left: 17px;
+    top: 21px;
+    z-index: 10;
+    clear: both; }
+  .projects ul {
+    background-color: #CCC;
+    border: 1px solid #D9D9D9;
+    border-bottom: none;
+    padding-bottom: 1px;
+    margin: 10px;
+    list-style-type: none;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-image: url(/images/gradient-main-image.jpg);
+    background-repeat: repeat-x;
+    background-bottom: none;
+    zoom: 1; }
+    .projects ul li {
+      height: 87px;
+      overflow: hidden;
+      margin: 10px 10px 0px auto;
+      width: 318px; }
+      .projects ul li .panel {
+        z-index: 20;
+        width: 291px;
+        overflow: hidden;
+        position: relative;
+        background-image: url(/images/grey-main.png);
+        background-repeat: no-repeat;
+        background-position: top right;
+        padding: 7px;
+        padding-left: 24px;
+        color: #0960AD; }
+      .projects ul li .main {
+        display: none; }
+      .projects ul li.selected .panel {
+        background-image: url(/images/blue-main.png);
+        color: #FFF; }
+      .projects ul li.selected .main {
+        display: block; }
+      .projects ul li img {
+        float: left;
+        margin-right: 6px; }
+    .projects ul h3 {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: normal; }
+    .projects ul a {
+      display: none; }
+
+.footer {
+  float: left;
+  width: 100%; }
+  .footer .subscribe {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    float: left; }
+    .footer .subscribe h2 {
+      text-indent: -9999px;
+      background-image: url(/images/subscribe.png);
+      height: 36px;
+      width: 196px;
+      margin: 0; }
+    .footer .subscribe input[type='email'] {
+      border: 1px solid #A5C0DB;
+      line-height: 16px;
+      padding: 4px; }
+    .footer .subscribe input[type='submit'] {
+      color: #FFF;
+      background-color: #A3101A;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border: none;
+      padding: 4px 6px;
+      font-size: 12px; }
+  .footer .external, .footer p {
+    text-align: right;
+    font-size: 12px;
+    color: #30393E; }
+
+.banner {
+  background-color: #FFF;
+  padding: 1px; }
+  .banner img {
+    margin: 10px auto;
+    width: 980px;
+    display: block; }
+
+.breadcrumbs {
+  background-color: #FFF;
+  padding: 1px; }
+  .breadcrumbs ul {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    background-image: url(/images/bg-breadcrumbs.jpg);
+    border: 1px solid #D5D5D3;
+    width: 960px;
+    margin: 0px auto 10px auto;
+    padding: 0;
+    list-style-type: none;
+    height: 30px;
+    font-family: Tahoma, Geneva, sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-left: 20px; }
+    .breadcrumbs ul li {
+      float: left;
+      height: 30px;
+      line-height: 30px;
+      margin-right: 10px; }
+      .breadcrumbs ul li a {
+        display: block;
+        height: 30px;
+        text-decoration: none;
+        color: #0E66AE;
+        padding-right: 20px;
+        background-image: url(/images/arrow-breadcrumbs.jpg);
+        background-repeat: no-repeat;
+        background-position: center right; }
+        .breadcrumbs ul li a:hover {
+          text-decoration: underline; }
+
+div.main {
+  background-color: #FFF;
+  width: 100%;
+  float: left; }
+
+.sidebar {
+  float: left;
+  background-color: #F2F2F2;
+  border: 1px solid #D5D5D3;
+  display: inline;
+  margin-left: 10px;
+  padding: 10px;
+  padding-bottom: 0px; }
+  .sidebar img {
+    border: 9px solid white;
+    -moz-box-shadow: 3px 3px 3px #CCC;
+    -webkit-box-shadow: 3px 3px 3px #CCC; }
+  .sidebar ul {
+    list-style-type: none;
+    width: 185px;
+    padding: 0;
+    margin: 0; }
+    .sidebar ul li {
+      height: 35px;
+      border-top: 1px solid #BBB;
+      padding: 10px 0px; }
+      .sidebar ul li a {
+        line-height: 35px; }
+      .sidebar ul li.current {
+        height: auto; }
+        .sidebar ul li.current a {
+          line-height: 14px; }
+      .sidebar ul li.first {
+        border-top: none; }
+    .sidebar ul p {
+      margin: 0px;
+      font-size: 12px; }
+    .sidebar ul a {
+      text-decoration: none;
+      color: #0E66AE;
+      text-transform: uppercase;
+      font-size: 12px;
+      display: block;
+      background-image: url(/images/arrow-lhs-menu.jpg);
+      background-repeat: no-repeat;
+      background-position: center right; }
+      .sidebar ul a:hover {
+        text-decoration: underline; }
+
+.websites {
+  margin-left: 235px; }
+  .websites h1 {
+    margin: 0px 0px 10px 0px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+    color: #0E66AE; }
+  .websites .website {
+    width: 355px;
+    margin-right: 15px;
+    height: 184px;
+    margin-bottom: 115px;
+    padding: 5px;
+    overflow: visible;
+    float: left;
+    background-color: #EFEFED;
+    -moz-box-shadow: 3px 3px 3px #CCC;
+    -webkit-box-shadow: 3px 3px 3px #CCC; }
+    .websites .website h2 {
+      margin: 4px;
+      font-size: 14px;
+      font-weight: normal; }
+    .websites .website a {
+      text-decoration: none;
+      color: #0E66AE;
+      text-transform: uppercase;
+      display: block;
+      background-image: url(/images/arrow-blue.png);
+      background-repeat: no-repeat;
+      background-position: center right;
+      margin-right: 6px; }
+      .websites .website a:hover {
+        text-decoration: underline; }
+    .websites .website p {
+      font-size: 12px; }

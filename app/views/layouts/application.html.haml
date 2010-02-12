@@ -1,0 +1,34 @@
+!!!
+%html
+  %head
+    %meta{:"http-equiv" => "Content-Type", :content => "text/html; charset=UTF-8"}
+    %title With Imagination
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'jquery', 'rails','supersleight', 'application'
+  %body
+    .outer
+      .container
+        .header
+          %h1 With Imagination
+          %h2 Strategic Web Solutions
+        .nav{:class => "#{controller.action_name}_action"}
+          %ul
+            %li.home_tab= link_to 'Home','#'
+            %li= link_to 'Clients','#'
+            %li= link_to 'Company','#'
+            %li.services_tab= link_to 'Services','#'
+            %li.projects_tab= link_to 'Projects','#'
+            %li= link_to 'Case Study','#'
+            %li= link_to 'Blogs','#'
+            %li= link_to 'Contact Us', '#'
+        = yield
+        .footer
+          .subscribe
+            - form_for :subscription do |subscription_form| 
+              %h2 Subscribe to newsletter
+              = subscription_form.text_field :email, :type => 'email', :placeholder => 'email address'
+              = subscription_form.submit 'subscribe'
+          %p &copy; Copyright 2010  | WITH IMAGINATION | Powered by RUBY ON RAILS
+          .external
+            = link_to image_tag('linkedin.png'),'#'
+            = link_to image_tag('twitter-icon.png'),'#'

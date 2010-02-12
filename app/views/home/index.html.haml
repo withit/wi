@@ -1,0 +1,69 @@
+.projects
+  %ul
+    - @projects.each do |project|
+      %li.project{:class =>  project.url.blank? ? nil : "selected"}
+        .panel
+          = image_tag project.thumbnail.url
+          %h3= project.name
+          = link_to project.url, project.url unless project.url.blank?
+        = image_tag project.main_image.url, :class => 'main'
+
+.testimonials
+  %h2 Testimonials
+  - @testimonials.each do |testimonial| 
+    .testimonial
+      = image_tag testimonial.image.url 
+      %p= testimonial.content
+      %p.author= testimonial.author
+
+.content
+  .blog
+    %h2 Blog
+    .blog_links
+      = link_to 'subscribe blog','#', :class => 'rss'
+      = link_to 'browse all','#'
+  
+    .post
+      .calendar
+        %span.day= @post.date.day
+        %span.month= @post.date.strftime('%B')
+      
+      %h3= link_to @post.title, @post.url 
+      %p.author
+        %label Author:
+        = @post.author
+      = image_tag @post.image.url
+      = @post.summary
+      = link_to 'more ..', @post.url 
+      .actions
+        (#{@post.comment_count}) #{@post.comment_count == 1 ? 'Comment' : 'Comments'} | #{link_to '[+] Share', '#'}
+
+  %h1= @page.heading
+  = sanitize @page.content.to_s
+  .contact
+    == Interested in learning more? #{link_to 'contact us', "#"}
+  
+  .services
+    %h2 Services
+    
+    -  @page.services.each do |service|
+      .service{:class => service == @page.services[-1] ? 'last' : nil, :style => "background-image: url(#{service.image.url});"}
+        %h3= service.name 
+        %p= service.description
+        %p= link_to 'more ..', '#'
+ 
+  .case_study
+    %h2 Case Study
+    = image_tag @case_study.thumbnail.url
+    
+    %h3= @case_study.name 
+    = sanitize @case_study.summary.to_s 
+    = link_to 'more..', @case_study.url 
+
+  .twitter
+    %h2 Twitter
+    = link_to 'follow on twitter', '#', :class => 'follow' 
+    - @tweets.each do |tweet| 
+      .tweet
+        %p= tweet.content
+        %p.info #{ time_ago_in_words tweet.date} ago from #{tweet.source}
