@@ -3,3 +3,11 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    attributes:
+      enquiry:
+        name: Full Name
+        email: Email Us
+        phone: Phone Number
+        message: Comments
+      

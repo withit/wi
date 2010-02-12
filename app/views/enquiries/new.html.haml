@@ -1,0 +1,54 @@
+.main
+  .breadcrumbs
+    %ul
+      - @page.breadcrumbs.each do |crumb|
+        %li= link_to crumb
+      %li= @page.name
+  .sidebar
+    = image_tag @page.image.url
+    %ul
+      %li.current.first
+        = link_to @page.name
+        %p= @page.description
+  .contact_details
+    %h2 Contact Details
+    %p
+      = @page.description
+      The best person to get in touch with is our General Manager <strong>Derek Nash</strong>.
+    %ul
+      %li.phone= @page.phone
+      %li.email= mail_to @page.email,@page.email, :encode => 'hex'
+    .map
+      :plain
+        <iframe width="290" height="320" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=44+miller+st+north+sydney&amp;sll=-33.839891,151.206325&amp;sspn=0.005881,0.009559&amp;ie=UTF8&amp;hq=&amp;hnear=44+Miller+St,+North+Sydney+New+South+Wales+2060,+Australia&amp;ll=-33.837235,151.207924&amp;spn=0.011407,0.012445&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=44+miller+st+north+sydney&amp;sll=-33.839891,151.206325&amp;sspn=0.005881,0.009559&amp;ie=UTF8&amp;hq=&amp;hnear=44+Miller+St,+North+Sydney+New+South+Wales+2060,+Australia&amp;ll=-33.837235,151.207924&amp;spn=0.011407,0.012445&amp;z=15&amp;iwloc=A" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+    .address
+      %h4 Address
+      Level 5, 44 Miller St<br />
+      North Sydney NSW 2060 Australia
+  .contact_us
+    %h1= @page.name
+    = sanitize(@page.content.to_s)
+
+    - form_for(@enquiry) do |f|
+      = f.error_messages
+
+      .field
+        = f.label :name
+        = f.text_field :name
+
+      .field
+        = f.label :email
+        = f.text_field :email, :type => 'email'
+  
+      .field
+        = f.label :phone
+        = f.text_field :phone
+  
+      .field
+        = f.label :message 
+        = f.text_area :message, :rows => 4, :cols => 50
+  
+      .actions
+        = f.submit 'Submit'
+
+

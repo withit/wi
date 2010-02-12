@@ -1,6 +1,12 @@
 R3wi::Application.routes.draw do |map|
+  resources :enquiries
+
   root :to => 'home#index'
   match '/projects/websites' => 'home#websites'
+  
+  get '/contact-us' => 'enquiries#new', :as => 'contact_us'
+  post '/contact-us' => 'enquiries#create'
+  
   resources :services
   
   # The priority is based upon order of creation:
