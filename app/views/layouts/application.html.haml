@@ -13,14 +13,14 @@
           %h2 Strategic Web Solutions
         .nav{:class => "#{controller.action_name}_action"}
           %ul
-            %li.home_tab= link_to 'Home','#'
+            %li.home_tab= link_to 'Home',root_path
             %li= link_to 'Clients','#'
             %li= link_to 'Company','#'
             %li.services_tab= link_to 'Services','#'
             %li.projects_tab= link_to 'Projects','#'
             %li= link_to 'Case Study','#'
             %li= link_to 'Blogs','#'
-            %li.contact_us_tab= link_to 'Contact Us', '#'
+            %li.contact_us_tab= link_to 'Contact Us', contact_us_path
         = yield
         .footer
           .subscribe
