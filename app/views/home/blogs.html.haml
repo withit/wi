@@ -8,7 +8,7 @@
       %ul
         %li.rss= link_to 'Subscribe to our RSS REED','#'
         %li.linked_in= link_to 'Find us on linkedin','#'
-        %li.twitter_link= "Follow us on twitter",'#'
+        %li.twitter_link= link_to "Follow us on twitter",'#'
       .categories
         %h2 Posts
         %ul
@@ -24,23 +24,25 @@
           %p= tweet.content
           %p.info #{ time_ago_in_words tweet.date} ago from #{tweet.source}
     .comments
-      %h2 Comments
+      %h2 Recent Comments
       - @comments.each do |comment|
         .comment
           %span.author= comment.author_name
           = comment.content
   .posts
     - @posts.each do |post|
-      = image_tag post.image.url
-      %h2= post.title
-      %p Posted on #{post.date.strftime('%d. %b, %Y')} | Author: #{post.author}
-      .tweets
-        %span.count= post.tweets_count
-        tweets
-        = link_to 'retweet','#'
-      = post.introduction
-      .links
-        = link_to 'continue reading', '#', :class => 'continue_reading'
-        = link_to "(#{post.comment_count}) #{post.comments_count == 1 ? 'comment' : 'comment'.pluralize}" 
-        | [+] Share
+      .post
+        = image_tag post.image.url
+        %h2= post.title
+        %p.information Posted on #{post.date.strftime('%d. %b, %Y')} | Author: #{post.author}
+        .tweets
+          %span.count= post.tweets_count
+          tweets
+          = link_to 'retweet','#'
+        %p= post.introduction
+        .links
+          = link_to 'continue reading', '#', :class => 'continue_reading'
+          %span
+            = link_to "(#{post.comment_count}) #{post.comments_count == 1 ? 'comment' : 'comment'.pluralize}" 
+            | [+] Share
   

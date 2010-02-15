@@ -1,0 +1,35 @@
+!blue = #0E66AE
+=box
+  :background-color #EFEFEF
+  :margin 10px
+  :padding 12px
+  :border 1px solid #D3D3D3
+=replace(!path)
+  :background
+    :image= url(!path)
+    :repeat no-repeat
+    :position top left
+  :text-indent -9999em
+  :overflow hidden
+  :margin 0
+  :padding 0
+
+=seperator(!spacing=24px, !color=#CCC)
+  :padding-bottom= !spacing / 2
+  :margin-bottom= !spacing / 2
+  :border-bottom= 1px solid !color
+  &:last-child
+    :border-bottom none
+    :margin-bottom 0
+    :padding-bottom 0
+=list_reset
+  ul, li, ol
+    :margin 0
+    :padding 0
+    :list-style-type none
+    
+=arrow(!path)
+  :background-image= url(!path)
+  :background-position center right
+  :background-repeat no-repeat
+  :display block
