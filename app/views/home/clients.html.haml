@@ -1,0 +1,23 @@
+.banner
+.main
+  .breadcrumbs
+    %ul
+      - @page.breadcrumbs.each do |crumb|
+        %li= link_to crumb, '#'
+      %li= @page.name
+  .sidebar
+    = image_tag @page.image.url
+    %ul
+      %li.current.first
+        = link_to "Who we've helped"
+        %p= @page.description
+  .company_testimonials
+    %h2 Testimonials
+    - @testimonials.each do |testimonial| 
+      .testimonial
+        = image_tag testimonial.image.url 
+        %p= testimonial.content
+        %p.author= testimonial.author
+  .clients
+    %h1  Who we've helped
+    = sanitize(@page.content.to_s)

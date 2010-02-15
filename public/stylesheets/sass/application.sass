@@ -14,6 +14,8 @@ body
     :background-position top left
     :padding 1px
     :margin 0
+    :width 100%
+    :float left
 .header
   :background-image url(/images/WI-logo.png)
   :background-position 40px 10px
@@ -22,6 +24,7 @@ body
   h1,h2
     :text-indent -9999px
     :overflow hidden
+    :margin 0px
 
 .nav
   :background-image url(/images/top-nav-bar.jpg)
@@ -197,22 +200,23 @@ body
     :margin-left 24px
     :color #30393E
   .contact
-    :font-size 15px
-    :font-weight bold
     :margin-left 48px
-    :height 20px
-    :margin-bottom 7px
-    a
-      :color #FFF
-      :background-color #A3101A
-      :padding 8px 60px 8px 16px
-      :margin-left 10px
-      :text-decoration none
-      :background-image url(/images/arrow-contact-button.png)
-      :background-repeat no-repeat
-      :background-position 90% 50%
-      :-webkit-border-radius 12px
-      :-moz-border-radius 12px
+.contact
+  :font-size 15px
+  :font-weight bold
+  :height 20px
+  :margin-bottom 7px
+  a
+    :color #FFF
+    :background-color #A3101A
+    :padding 8px 60px 8px 16px
+    :margin-left 10px
+    :text-decoration none
+    :background-image url(/images/arrow-contact-button.png)
+    :background-repeat no-repeat
+    :background-position 90% 50%
+    :-webkit-border-radius 12px
+    :-moz-border-radius 12px
 
 .services
   :float left
@@ -433,3 +437,5 @@ body
     
 @import websites.sass
 @import contact_us.sass
+@import company.sass
+@import case_study.sass

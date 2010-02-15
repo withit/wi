@@ -1,0 +1,22 @@
+.banner
+.main
+  .breadcrumbs
+    %ul
+      %li= link_to 'Home', root_path
+      %li= @page.name
+  .sidebar
+    = image_tag @page.image.url
+    %ul
+      %li.current.first
+        = link_to "Case study"
+        %p= @page.description
+  .case_study_main
+    .images
+      %p Healthworks Homepage
+      = image_tag @case_study.healthworks01.url
+      .thumbnails
+        = image_tag @case_study.thumbnail01.url
+        = image_tag @case_study.thumbnail02.url
+        = image_tag @case_study.thumbnail03.url
+    %h1= @page.name
+    = sanitize(@case_study.content.to_s)

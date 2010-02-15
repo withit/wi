@@ -12,7 +12,9 @@ body {
     background-repeat: no-repeat;
     background-position: top left;
     padding: 1px;
-    margin: 0; }
+    margin: 0;
+    width: 100%;
+    float: left; }
 
 .header {
   background-image: url(/images/WI-logo.png);
@@ -21,7 +23,8 @@ body {
   height: 138px; }
   .header h1, .header h2 {
     text-indent: -9999px;
-    overflow: hidden; }
+    overflow: hidden;
+    margin: 0px; }
 
 .nav {
   background-image: url(/images/top-nav-bar.jpg);
@@ -193,22 +196,24 @@ body {
     margin-left: 24px;
     color: #30393E; }
   .content .contact {
-    font-size: 15px;
-    font-weight: bold;
-    margin-left: 48px;
-    height: 20px;
-    margin-bottom: 7px; }
-    .content .contact a {
-      color: #FFF;
-      background-color: #A3101A;
-      padding: 8px 60px 8px 16px;
-      margin-left: 10px;
-      text-decoration: none;
-      background-image: url(/images/arrow-contact-button.png);
-      background-repeat: no-repeat;
-      background-position: 90% 50%;
-      -webkit-border-radius: 12px;
-      -moz-border-radius: 12px; }
+    margin-left: 48px; }
+
+.contact {
+  font-size: 15px;
+  font-weight: bold;
+  height: 20px;
+  margin-bottom: 7px; }
+  .contact a {
+    color: #FFF;
+    background-color: #A3101A;
+    padding: 8px 60px 8px 16px;
+    margin-left: 10px;
+    text-decoration: none;
+    background-image: url(/images/arrow-contact-button.png);
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px; }
 
 .services {
   float: left;
@@ -631,3 +636,84 @@ div.main {
     .contact_details .address h4 {
       margin: 0;
       font-size: 14px; }
+
+.company, .clients {
+  margin-left: 235px;
+  margin-right: 350px; }
+  .company h1, .clients h1 {
+    margin: 0px 0px 10px 0px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+    color: #0E66AE; }
+  .company p, .clients p {
+    font-size: 12px; }
+    .company p a, .clients p a {
+      font-weight: bold;
+      text-decoration: none;
+      color: rgb(14, 102, 174); }
+      .company p a:hover, .clients p a:hover {
+        text-decoration: underline; }
+  .company .contact, .clients .contact {
+    margin-bottom: 100px;
+    margin-left: 0;
+    margin-top: 20px; }
+    .company .contact a, .clients .contact a {
+      margin-left: 0; }
+
+.company_testimonials {
+  float: right;
+  width: 285px;
+  background-color: #F2F2F2;
+  border: 1px solid #D5D5D3;
+  display: inline;
+  margin-right: 10px;
+  padding: 10px;
+  padding-bottom: 10px; }
+  .company_testimonials h2 {
+    color: #CA1A27;
+    margin-top: 0;
+    font-weight: normal;
+    font-family: Tahoma, Geneva, sans-serif;
+    text-transform: uppercase;
+    font-size: 20px; }
+  .company_testimonials img {
+    float: left; }
+  .company_testimonials p {
+    margin-left: 60px;
+    font-size: 12px;
+    margin-bottom: 0px; }
+    .company_testimonials p.author {
+      color: #F3A144;
+      margin-top: 0; }
+
+.case_study_main {
+  margin-left: 235px;
+  font-size: 12px; }
+  .case_study_main h1 {
+    margin: 0px 0px 10px 0px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+    color: #0E66AE; }
+  .case_study_main h2 {
+    margin: 0px 0px 10px 0px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+    color: #0E66AE; }
+  .case_study_main .images {
+    float: right;
+    margin: 10px; }
+    .case_study_main .images p {
+      text-transform: uppercase;
+      overflow: visible;
+      height: 0px;
+      margin: 0;
+      top: 330px;
+      left: 20px;
+      font-size: 14px;
+      position: relative; }

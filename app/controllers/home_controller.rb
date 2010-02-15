@@ -13,4 +13,26 @@ class HomeController < ApplicationController
     @page = Page.find(:websites)
     @websites = Website.all
   end
+  
+  def company
+    @page = Page.find(:company)
+    @testimonials = Testimonial.all
+  end
+  
+  def clients
+    @page = Page.find(:clients)
+    @testimonials = Testimonial.all
+  end
+  
+  def blogs
+    @page = Page.find(:blogs)
+    @posts = Post.all[0..5]
+    @tweets = Tweet.all
+    @comments = Comment.all
+  end
+  
+  def case_study
+    @page = Page.find(:case_study)
+    @case_study = CaseStudy.all.last
+  end
 end

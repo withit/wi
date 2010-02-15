@@ -14,12 +14,12 @@
         .nav{:class => "#{controller.action_name}_action"}
           %ul
             %li.home_tab= link_to 'Home',root_path
-            %li= link_to 'Clients','#'
-            %li= link_to 'Company','#'
+            %li= link_to 'Clients',clients_path
+            %li= link_to 'Company', company_path
             %li.services_tab= link_to 'Services','#'
             %li.projects_tab= link_to 'Projects','#'
-            %li= link_to 'Case Study','#'
-            %li= link_to 'Blogs','#'
+            %li.case_study_tab= link_to 'Case Study',case_study_path
+            %li= link_to 'Blogs',blogs_path
             %li.contact_us_tab= link_to 'Contact Us', contact_us_path
         = yield
         .footer
