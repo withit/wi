@@ -39,7 +39,7 @@ module ActiveFolder
       @path = path
       load
     end
-
+    
     def load
       yml_file_path = Dir.glob(File.join(@path, '*.yml')).first
       @content = File.open(yml_file_path){|yf| YAML::load(yf)}

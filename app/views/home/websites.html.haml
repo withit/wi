@@ -19,5 +19,5 @@
     - @websites.each do |website|
       .website
         = image_tag website.thumbnail.url
-        %h2= link_to website.name
+        %h2= link_to_if website.enlargement, website.name,  website.enlargement && website.enlargement.url, :target => '_blank'
         %p= website.description

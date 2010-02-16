@@ -14,14 +14,14 @@
         .nav{:class => "#{controller.action_name}_action"}
           %ul
             %li.home_tab= link_to 'Home',root_path
-            %li= link_to 'Clients',clients_path
-            %li= link_to 'Company', company_path
-            %li.services_tab= link_to 'Services','#'
+            %li.clients_tab= link_to 'Clients',clients_path
+            %li.company_tab= link_to 'Company', company_path
+            %li.services_tab= link_to 'Services',services_path
             %li.projects_tab= link_to 'Projects','#'
             %li.case_study_tab= link_to 'Case Study',case_study_path
-            %li= link_to 'Blogs',blogs_path
+            %li.blogs_tab= link_to 'Blogs',blogs_path
             %li.contact_us_tab= link_to 'Contact Us', contact_us_path
-        = yield
+        .wrapper= yield
         .footer
           .subscribe
             - form_for :subscription do |subscription_form| 

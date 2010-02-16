@@ -42,4 +42,9 @@ class HomeController < ApplicationController
     @tweets = Tweet.all
     @comments = Comment.all
   end
+  
+  def services
+    @page = Page.find(:services)
+    @services = Service.all - Page.find(:home).services
+  end
 end

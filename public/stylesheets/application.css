@@ -9,6 +9,12 @@ a {
   a:hover {
     text-decoration: underline; }
 
+.wrapper {
+  margin: 0;
+  padding: 0;
+  padding-top: 1px;
+  background-color: #FFF; }
+
 body {
   background-color: #F5F5F5;
   background-image: url(/images/bg-gradient.jpg);
@@ -53,11 +59,15 @@ body {
       font-family: Arial;
       font-size: 12px;
       padding: 0 18px; }
-  .nav.index_action li.home_tab, .nav.websites_action li.projects_tab, .nav.new_action li.contact_us_tab {
+  .nav.index_action li.home_tab, .nav.websites_action li.projects_tab, .nav.new_action li.contact_us_tab,
+  .nav.clients_action li.clients_tab, .nav.company_action li.company_tab, .nav.case_study_action li.case_study_tab,
+  .nav.blogs_action li.blogs_tab, .nav.post_action li.blogs_tab, .nav.services_action li.services_tab {
     background-image: url(/images/arrow-nav-bar.jpg);
     background-repeat: no-repeat;
     background-position: 50% 100%; }
-    .nav.index_action li.home_tab a, .nav.websites_action li.projects_tab a, .nav.new_action li.contact_us_tab a {
+    .nav.index_action li.home_tab a, .nav.websites_action li.projects_tab a, .nav.new_action li.contact_us_tab a,
+    .nav.clients_action li.clients_tab a, .nav.company_action li.company_tab a, .nav.case_study_action li.case_study_tab a,
+    .nav.blogs_action li.blogs_tab a, .nav.post_action li.blogs_tab a, .nav.services_action li.services_tab a {
       font-weight: bold;
       color: #FFF; }
 
@@ -824,18 +834,18 @@ div.main {
     float: none;
     height: auto; }
 
-.post {
+.main .post {
   margin-left: 15px; }
-  .post .post_content {
+  .main .post .post_content {
     margin-left: 60px;
     width: 570px; }
-    .post .post_content p {
+    .main .post .post_content p {
       margin-left: 0px;
       margin-top: 0px; }
-    .post .post_content h2 {
+    .main .post .post_content h2 {
       margin-bottom: 0px;
       color: #333; }
-  .post .tweets {
+  .main .post .tweets {
     float: left;
     width: 50px;
     background-image: url(/images/retweet-bg.jpg);
@@ -845,12 +855,12 @@ div.main {
     text-align: center;
     line-height: 10px;
     font-size: 10px; }
-    .post .tweets .count {
+    .main .post .tweets .count {
       font-size: 20px;
       display: block;
       margin-top: 5px;
       line-height: 20px; }
-    .post .tweets a {
+    .main .post .tweets a {
       background-image: url(/images/retweet-button.jpg);
       background-repeat: no-repeat;
       background-position: top left;
@@ -920,3 +930,39 @@ div.main {
       width: 570px; }
     .posts .post:first-child img {
       width: 100%; }
+
+.enlargement {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8); }
+  .enlargement h2 {
+    color: #FFF;
+    text-transform: uppercase;
+    margin: 50px auto 10px auto;
+    width: 800px; }
+  .enlargement div {
+    width: 840px;
+    margin: 0px auto 30px auto;
+    background-color: #FFF;
+    padding: 1px;
+    padding-bottom: 30px;
+    -moz-box-shadow: 0px 0px 10px #000;
+    -webkit-box-shadow: 0px 0px 10px #000;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px; }
+    .enlargement div img {
+      display: block;
+      margin: 30px auto; }
+  .enlargement .close {
+    background-color: #9E9E9E;
+    color: #FFF;
+    text-transform: uppercase;
+    float: right;
+    margin-right: 5px;
+    font-weight: bold;
+    padding: 5px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px; }

@@ -1,5 +1,10 @@
 @import modules.sass
 @import base.sass
+.wrapper
+  :margin 0
+  :padding 0
+  :padding-top 1px
+  :background-color #FFF
 
 body
   :background-color #F5F5F5
@@ -45,7 +50,9 @@ body
       :font-family Arial
       :font-size 12px
       :padding 0 18px
-  &.index_action li.home_tab, &.websites_action li.projects_tab, &.new_action li.contact_us_tab
+  &.index_action li.home_tab, &.websites_action li.projects_tab, &.new_action li.contact_us_tab,
+  &.clients_action li.clients_tab, &.company_action li.company_tab, &.case_study_action li.case_study_tab,
+  &.blogs_action li.blogs_tab, &.post_action li.blogs_tab, &.services_action li.services_tab
 
     :background-image url(/images/arrow-nav-bar.jpg)
     :background-repeat no-repeat
@@ -440,3 +447,4 @@ body
 @import company.sass
 @import case_study.sass
 @import blogs.sass
+@import enlargement.sass

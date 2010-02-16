@@ -1,0 +1,9 @@
+.breadcrumbs
+  %ul
+    %li= link_to 'Home', root_path
+    %li= @page.name
+
+%h2= @page.name
+%p= @page.introduction
+- @services.each do |service|
+  = service.inspect
