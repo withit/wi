@@ -21,4 +21,5 @@ $(document).ready(function(){
     $('.case_study_main img').first().attr('src', $(this).attr('data-enlargement'));
     $('.case_study_main p').first().html($(this).attr('title'));
   });
+  $('#tweets').tweetable({username: 'withimagination', limit: 5, time: true});
 })

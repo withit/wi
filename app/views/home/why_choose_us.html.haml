@@ -1,0 +1,26 @@
+.banner
+.main
+  .breadcrumbs
+    %ul
+      - @page.breadcrumbs.each do |crumb|
+        %li= link_to crumb, '#'
+      %li= @page.name
+  .sidebar
+    = image_tag @page.image.url
+    %ul
+      %li.first
+        = link_to "company", company_path
+      %li.current
+        = link_to "why choose us", '#'
+        %p= @page.description
+  .company_testimonials
+    %h2 Testimonials
+    - @testimonials.each do |testimonial| 
+      .testimonial
+        = image_tag testimonial.image.url 
+        %p= testimonial.content
+        %p.author= testimonial.author
+  .company
+    %h1= @page.name
+    = sanitize(@page.content.to_s)
+    .contact= link_to 'contact us', contact_us_path

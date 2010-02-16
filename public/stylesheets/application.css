@@ -192,6 +192,17 @@ body {
 .twitter {
   height: 200px;
   float: right; }
+  .twitter ul, .twitter li, .twitter ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+  .twitter ul {
+    clear: both; }
+    .twitter ul li {
+      margin-bottom: 8px; }
+    .twitter ul small {
+      display: block;
+      color: #4ACAF7; }
 
 .content {
   background-color: #FFF;
