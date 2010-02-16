@@ -937,25 +937,25 @@ div.main {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8); }
+  background-image: url(/images/black-bg.png); }
   .enlargement h2 {
     color: #FFF;
     text-transform: uppercase;
     margin: 50px auto 10px auto;
     width: 800px; }
   .enlargement div {
-    width: 840px;
+    width: 800px;
     margin: 0px auto 30px auto;
     background-color: #FFF;
-    padding: 1px;
     padding-bottom: 30px;
+    padding-top: 20px;
     -moz-box-shadow: 0px 0px 10px #000;
     -webkit-box-shadow: 0px 0px 10px #000;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px; }
     .enlargement div img {
       display: block;
-      margin: 30px auto; }
+      margin: 0px auto; }
   .enlargement .close {
     background-color: #9E9E9E;
     color: #FFF;
@@ -966,3 +966,23 @@ div.main {
     padding: 5px;
     -moz-border-radius: 40px;
     -webkit-border-radius: 40px; }
+
+.services_page {
+  margin-left: 230px; }
+
+.service {
+  float: left;
+  background-color: white;
+  width: 375px;
+  height: 160px;
+  padding: 1px; }
+  .service h3 {
+    color: #0e66ae;
+    text-transform: uppercase;
+    font-weight: normal; }
+  .service img {
+    float: left; }
+  .service h3, .service p {
+    margin-left: 100px;
+    margin-bottom: 0px;
+    margin-top: 0px; }

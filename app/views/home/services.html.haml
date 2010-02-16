@@ -2,8 +2,17 @@
   %ul
     %li= link_to 'Home', root_path
     %li= @page.name
-
-%h2= @page.name
-%p= @page.introduction
-- @services.each do |service|
-  = service.inspect
+.sidebar
+  =# image_tag @page.image.url
+  %ul
+    %li.current.first
+      = link_to @page.name
+      %p= @page.description
+.services_page
+  %h2= @page.name
+  %p= @page.introduction
+  - @services.each do |service|
+    .service
+      = image_tag service.image.url
+      %h3= service.name
+      %p= service.description
