@@ -50,6 +50,6 @@ class HomeController < ApplicationController
   
   def services
     @page = Page.find(:services)
-    @services = Service.all - Page.find(:home).services
+    @services = Service.all[3..-1]
   end
 end

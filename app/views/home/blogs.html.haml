@@ -19,10 +19,7 @@
     .twitter
       %h2 Twitter
       = link_to 'follow on twitter', '#', :class => 'follow' 
-      - @tweets.each do |tweet| 
-        .tweet
-          %p= tweet.content
-          %p.info #{ time_ago_in_words tweet.date} ago from #{tweet.source}
+      #tweets
     .comments
       %h2 Recent Comments
       - @comments.each do |comment|

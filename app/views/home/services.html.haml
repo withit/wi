@@ -9,9 +9,9 @@
       = link_to @page.name
       %p= @page.description
 .services_page
-  %h2= @page.name
+  %h1= @page.name
   %p= @page.introduction
-  %h3 Our Services include:
+  %h2 Our Services include:
   - @services.each do |service|
     .service
       = image_tag service.image.url

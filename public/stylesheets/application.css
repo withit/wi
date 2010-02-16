@@ -983,10 +983,27 @@ div.main {
 
 .services_page {
   margin-left: 230px; }
+  .services_page h1 {
+    color: #0e66ae;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 20px; }
+  .services_page h2 {
+    color: #BA1827;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 20px; }
+  .services_page p {
+    margin-bottom: 0; }
   .services_page .service {
     float: left;
     background-color: white;
-    width: 375px;
+    width: 355px;
     height: 160px;
     padding: 1px; }
     .services_page .service h3 {
@@ -994,8 +1011,10 @@ div.main {
       text-transform: uppercase;
       font-weight: normal; }
     .services_page .service img {
-      float: left; }
+      float: left;
+      width: 110px; }
     .services_page .service h3, .services_page .service p {
-      margin-left: 100px;
+      margin-left: 120px;
+      margin-right: 10px;
       margin-bottom: 0px;
       margin-top: 0px; }
