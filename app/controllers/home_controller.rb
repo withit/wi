@@ -19,6 +19,11 @@ class HomeController < ApplicationController
     @testimonials = Testimonial.all
   end
   
+  def why_choose_us
+    @page = Page.find(:why_choose_us)
+    @testimonials = Testimonial.all
+  end
+  
   def clients
     @page = Page.find(:clients)
     @testimonials = Testimonial.all

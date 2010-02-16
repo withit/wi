@@ -13,7 +13,10 @@ a {
   margin: 0;
   padding: 0;
   padding-top: 1px;
-  background-color: #FFF; }
+  background-color: #FFF;
+  float: left;
+  width: 100%;
+  padding-bottom: 1px; }
 
 body {
   background-color: #F5F5F5;
@@ -969,20 +972,19 @@ div.main {
 
 .services_page {
   margin-left: 230px; }
-
-.service {
-  float: left;
-  background-color: white;
-  width: 375px;
-  height: 160px;
-  padding: 1px; }
-  .service h3 {
-    color: #0e66ae;
-    text-transform: uppercase;
-    font-weight: normal; }
-  .service img {
-    float: left; }
-  .service h3, .service p {
-    margin-left: 100px;
-    margin-bottom: 0px;
-    margin-top: 0px; }
+  .services_page .service {
+    float: left;
+    background-color: white;
+    width: 375px;
+    height: 160px;
+    padding: 1px; }
+    .services_page .service h3 {
+      color: #0e66ae;
+      text-transform: uppercase;
+      font-weight: normal; }
+    .services_page .service img {
+      float: left; }
+    .services_page .service h3, .services_page .service p {
+      margin-left: 100px;
+      margin-bottom: 0px;
+      margin-top: 0px; }
