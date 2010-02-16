@@ -35,4 +35,11 @@ class HomeController < ApplicationController
     @page = Page.find(:case_study)
     @case_study = CaseStudy.all.last
   end
+  
+  def post
+    @post = Post.all[0]
+    @page = Page.find(:blogs)
+    @tweets = Tweet.all
+    @comments = Comment.all
+  end
 end

@@ -11,6 +11,7 @@ R3wi::Application.routes.draw do |map|
   get '/clients' => 'home#clients', :as => 'clients'
   get '/blogs' => 'home#blogs', :as => 'blogs'
   get '/case-study' => 'home#case_study', :as => 'case_study'
+  get '/posts/1-web-trends-to-watch-in-2010' => 'home#post', :as => "post"
   resources :services
   
   # The priority is based upon order of creation:

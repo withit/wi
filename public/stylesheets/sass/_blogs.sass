@@ -57,6 +57,47 @@
   .twitter
     :float none
     :height auto
+.post
+  :margin-left 15px
+  .post_content
+    :margin-left 60px
+    :width 570px
+    p
+      :margin-left 0px
+      :margin-top 0px
+    h2
+      :margin-bottom 0px
+      :color #333
+  .tweets
+    :float left
+    :width 50px
+    :background-image url(/images/retweet-bg.jpg)
+    :height 50px
+    :background-repeat no-repeat
+    :background-position top left
+    :text-align center
+    :line-height 10px
+    :font-size 10px
+    .count
+      :font-size 20px
+      :display block
+      :margin-top 5px
+      :line-height 20px
+    a
+      +replace(/images/retweet-button.jpg)
+      :width 50px
+      :height 17px
+      :margin-top 10px
+      :display block
+.tagged
+  :background-color #EFEFED
+  :width 620px
+  :margin 20px 30px
+  :padding 4px
+  a
+    :color= !blue
+.comments
+    
 .posts
   :margin-right 300px
   .post
@@ -70,21 +111,6 @@
       :color= !blue
     p.information
       :margin-bottom 10px
-    .tweets
-      :float left
-      :width 50px
-      :background-image url(/images/retweet-bg.jpg)
-      :height 50px
-      :background-repeat no-repeat
-      :background-position top left
-      :text-align center
-      :line-height 10px
-      :font-size 10px
-      .count
-        :font-size 20px
-        :display block
-        :margin-top 5px
-        :line-height 20px
       a
         +replace(/images/retweet-button.jpg)
         :width 50px

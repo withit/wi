@@ -824,6 +824,54 @@ div.main {
     float: none;
     height: auto; }
 
+.post {
+  margin-left: 15px; }
+  .post .post_content {
+    margin-left: 60px;
+    width: 570px; }
+    .post .post_content p {
+      margin-left: 0px;
+      margin-top: 0px; }
+    .post .post_content h2 {
+      margin-bottom: 0px;
+      color: #333; }
+  .post .tweets {
+    float: left;
+    width: 50px;
+    background-image: url(/images/retweet-bg.jpg);
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    text-align: center;
+    line-height: 10px;
+    font-size: 10px; }
+    .post .tweets .count {
+      font-size: 20px;
+      display: block;
+      margin-top: 5px;
+      line-height: 20px; }
+    .post .tweets a {
+      background-image: url(/images/retweet-button.jpg);
+      background-repeat: no-repeat;
+      background-position: top left;
+      text-indent: -9999em;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      width: 50px;
+      height: 17px;
+      margin-top: 10px;
+      display: block; }
+
+.tagged {
+  background-color: #EFEFED;
+  width: 620px;
+  margin: 20px 30px;
+  padding: 4px; }
+  .tagged a {
+    color: #0e66ae; }
+
+
 .posts {
   margin-right: 300px; }
   .posts .post {
@@ -837,22 +885,7 @@ div.main {
       color: #0e66ae; }
     .posts .post p.information {
       margin-bottom: 10px; }
-    .posts .post .tweets {
-      float: left;
-      width: 50px;
-      background-image: url(/images/retweet-bg.jpg);
-      height: 50px;
-      background-repeat: no-repeat;
-      background-position: top left;
-      text-align: center;
-      line-height: 10px;
-      font-size: 10px; }
-      .posts .post .tweets .count {
-        font-size: 20px;
-        display: block;
-        margin-top: 5px;
-        line-height: 20px; }
-      .posts .post .tweets a {
+      .posts .post p.information a {
         background-image: url(/images/retweet-button.jpg);
         background-repeat: no-repeat;
         background-position: top left;
