@@ -1,0 +1,21 @@
+
+
+.breadcrumbs
+  %ul
+    %li= link_to 'Home', root_path
+    %li= @page.title
+.sidebar
+  =# image_tag @page.image.url
+  %ul
+    %li.current.first
+      = link_to @page.title
+      %p= @page.description
+.services_page
+  %h1= @page.title
+  %p Through our creative and technology services we translate our knowledge of the internet into real value for our customers. We use the best internet technology to drive the best results for your business
+  %h2 Our Services include:
+  - @services.each do |service|
+    .service
+      = image_tag service.image.url
+      %h3= service.name
+      %p= service.description

@@ -1,42 +1,20 @@
 - content_for :head do 
   \
 
-.breadcrumb
-  = link_to 'home', '/'
-  - @page.ancestors.reverse.each do |ancestor| 
-    &gt;
-    = link_to ancestor.title, unwrapped_page_path(ancestor)
-  &gt; 
-  = @page.title  
+.breadcrumbs
+  %ul
+    %li= link_to 'home', '/'
+    - @page.ancestors.reverse.each do |ancestor| 
+      %li= link_to ancestor.title, unwrapped_page_path(ancestor)
+    %li= @page.title  
 
-.left
-  .side_menu
-    = image_tag @page.root.menu_heading.url
-    %ul
-      - ([@page.root] + @page.root.children).each do |page| 
-        %li{:class => page == @page ? "current" : nil}= link_to_if page != @page, page.title, unwrapped_page_path(page)
-.right
-  .side_menu
-    - if controller.controller_name == 'enquiries'
-      #inspiration
-        %h3 Inspiration
-        = image_tag 'projects.jpg'
-        = link_to 'Projects', projects_path, :class => 'projects'
-    - else
-      #contact_information
-        %h3 Contact Us
-        %p
-          Email: 
-          = mail_to 'info@wi.com.au','info@wi.com.au', :encode => "javascript"
-        %p Phone: + 61 2 9929 9229
-        %p Fax: + 61 2 9460 4770
-    .twitter= link_to 'Follow', twitter_path
-    /.subscribe= link_to 'Subscribe Latest News', news_path(:action => :index, :format => 'rss')
-    .subscribe= link_to 'Subscribe Latest News', '/news.rss'
-
-.center
-  #page_content
-    .banner{:style => "margin: auto; width: 501px"}= image_tag @page.banner.url
-    .clear
-    = yield
+.sidebar
+  = image_tag @page.root.menu_heading.url
+  %ul
+    - ([@page.root] + @page.root.children).each do |page| 
+      %li{:class => page == @page ? "current" : nil}
+        = link_to page.title, unwrapped_page_path(page)
+.content
+  %h1= @page.title
+  = yield
 .clear

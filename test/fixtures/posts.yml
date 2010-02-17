@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  author_name: MyString
+  content: MyText
+  tweets_count: 1
+  comments_count: 1
+  source: MyString
+
+two:
+  title: MyString
+  author_name: MyString
+  content: MyText
+  tweets_count: 1
+  comments_count: 1
+  source: MyString

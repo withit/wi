@@ -1,0 +1,54 @@
+.main
+  .breadcrumbs
+    %ul
+      %li= link_to 'home', root_path
+      %li= @page.name
+  .sidebar-right
+    .links
+      %ul
+        %li.rss= link_to 'Subscribe to our RSS REED','#'
+        %li.linked_in= link_to 'Find us on linkedin','#'
+        %li.twitter_link= link_to "Follow us on twitter",'#'
+      .categories
+        %h2 Posts
+        %ul
+          %li= link_to 'Web Marketing', '#'
+          %li= link_to 'Web Design','#'
+          %li= link_to 'Web Applications','#'
+      
+    .twitter
+      %h2 Twitter
+      = link_to 'follow on twitter', '#', :class => 'follow' 
+      #tweets
+    .comments
+      %h2 Recent Comments
+      - @comments.each do |comment|
+        .comment
+          %span.author= link_to comment.author_name, post_path(comment.post, :anchor => dom_id(comment))
+          = comment.message
+  .post
+    = image_tag "@post.image.url"
+    %h2= @post.title
+    %p.information Posted on #{@post.created_at.strftime('%d. %b, %Y')} | #{@post.source}
+    .tweets
+      %span.count= @post.tweets_count
+      tweets
+      = link_to 'retweet','#'
+    .post_content= sanitize textilize(@post.content)
+  .tagged
+    Tagged as:
+    - @post.tags.each do |tag|
+      = link_to tag, '#TODO'
+  .comments
+    %h2 Comments
+    - @post.comments.each do |comment|
+      %div[comment]
+        .author= comment.author_name
+        .created= comment.created_at.strftime('%M %d')
+        .comment_content= comment.message
+  - form_for [@post, Comment.new] do |form|
+    %h2 Add Yours
+    = form.text_area :message, :placeholder => 'your message...'
+    = form.text_field :author_name, :placeholder => 'Name'
+    = form.text_field :author_email, :placeholder => 'Email Address'
+    = form.submit 'Add Comment'

@@ -1,0 +1,33 @@
+Client: Healthworks – myhealthworks.com.au
+
+Project: Website strategy and development with supporting email campaign. 
+
+h2. Background
+
+Established in 1983, Healthworks is an established leader in the provision of corporate health services. Healthworks® services some of Australia's leading organisations within the corporate, industrial, and government sectors. They have won several state and federal government awards in recognition of their innovative approach to health and wellness.  Healthworks corporate health products and services have been mostly delivered via traditional methods and channels.          
+
+h2. Market overview
+
+Over the past few years the corporate health industry has rapidly grown as companies seek to improve the overall health and wellbeing of their employees. This increase has also meant increased competition entering into the market. Competitors have been offering similar products and services but have been choosing to deliver there products via contemporary websites. 
+
+h2. Issue
+
+The provision of Health services and advice is one of the fast growing categories online and competitor activity has directly affected Healthworks.      
+
+h2. Next Steps
+
+We followed our proven process for success;
+
+research   >   strategy  >    scope   >    design    >   functionality   >   test   >   launch   >   review
+
+h2. Solution
+
+Front end - Provide a competitive advantage for Healthworks by developing a b2b website with increased functionality that would also act as a health portal and at the same time offer support and be integrated with Healthworks offline activities. Develop a back end maintenance section that allows Healthworks to easily update and administer the entire site.     
+
+h2. Result
+
+This led to the creation and launch of the b2b subscription based myhealthwortks website. The site has restricted access but once a client logs in the site provides a wealth of information. In addition the site has the additional functionality of having: video presentation capabilities, health quizzes, health questionnaires and benchmark results, booking system, health risk appraisal, personalization and customization of the website by company, personalization with user preferences, calendar of events, e-mail marketing capabilities direct and cross sell advertising capabilities.
+ 
+The site was also launched to clients and prospects via an email marketing campaign.
+
+ 

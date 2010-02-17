@@ -1,10 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :posts, :has_many => :comments
+
   # The priority is based upon order of creation: first created -> highest priority.
   #map.home '/', :controller => 'home', :action => 'index'
 
   map.login 'login', :controller => 'sessions', :action => 'new'  
   map.resource :session, :only => [:create, :destroy]
   map.resources :twitter_users
+  map.resources :services
 
   map.root :controller  => 'home', :action => 'index'
   map.home '/', :controller => 'home', :action => 'index'  
@@ -50,6 +53,11 @@ ActionController::Routing::Routes.draw do |map|
 
   map.dashboard '/dashboard', :controller => 'dashboard'
   map.connect '/javascripts/:action.js', :controller => 'javascripts'
+  map.clients '/clients', :action => 'index', :controller => 'pages'
+  map.company '/company', :action => 'index', :controller => 'pages'
+  map.case_study '/case-study', :action => 'show', :controller => 'case_studies'
+  map.blogs '/blogs', :action => 'index', :controller => 'posts'
+  
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
   # Keep in mind you can assign values other than :controller and :action

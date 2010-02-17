@@ -8,55 +8,57 @@
       %meta{"name" => "keywords", "content" => @page.keywords}
     - unless @page.try(:description).blank?
       %meta{"name" => "description", "content" => @page.description}
-    = stylesheet_link_tag 'wi', :media => 'all'
+    = stylesheet_link_tag 'application', :media => 'all'
     /[if lte IE 7]
       = stylesheet_link_tag 'ie', :media => 'all'
       
-    = javascript_include_tag :defaults, 'lowpro', :cache => true
+    =# javascript_include_tag :defaults, 'lowpro', :cache => true
+    = javascript_include_tag 'jquery', 'rails','supersleight','jquery.tweetable', 'application'
+    
     %link{:rel => "icon", :type => "image/vnd.microsoft.icon", :href=>"/favicon.ico"}
     %link{:rel => "SHORTCUT ICON", :href=>"/favicon.ico"}
     = yield :head 
-  %body.background{:class => "#{controller_name}  #{@body_class}"}
+  %body{:class => controller.controller_name}
     - if iphone_user_agent? && request.subdomains.first != 'i'
       .iphone_message
         %p Using an iPhone? #{link_to "Use the optimised version", {:subdomain => 'i'}}.
-    .main
-      - if admin? 
-        .admin_toolbar
-          = link_to 'Overview', dashboard_path 
-          |
-          = link_to 'News', news_path
-          |
-          = link_to 'Projects', projects_path
-          |
-          = link_to 'Pages', pages_path
-          |
-          = link_to 'Banners', banners_path
-          |
-          = link_to 'Log out', session_path, :method => :delete
-      .top_banner
-        %ul.top_menu
-          - Page.roots.each do |page|
-            %li= link_to(image_tag(((@page && @page.root) == page) ? page.hover_tab.url : page.tab.url , :alt =>  page.title), unwrapped_page_path(page))
-      .content
-        = (yield :nested) || yield
-    .main_footer
-      .footer
-        %table.clients
-          %tr
-            /= image_tag "footer/our_clients.jpg", :alt => "our clients",  :width => "84", :height => "20", :style => 'margin-right: 20px'
-            %td
-            - @footer_projects.each do |p|
-              %td= image_tag p.logo.url, :alt => p.name, :border => 0
-        .reflection
-          &reg; Copyright
-          = Date.today.year
-          Powered by
-          %strong #{link_to "Ruby on Rails", 'http://www.rubyonrails.org'} 
-
-          |
-          = link_to "Contact Us", contact_us_path
-          |
-          = link_to 'Company', '/company'
-          |
-          = link_to 'Projects', projects_path
+    .outer
+      .container
+        - if admin? 
+          .admin_toolbar
+            = link_to 'Overview', dashboard_path 
+            |
+            = link_to 'News', news_path
+            |
+            = link_to 'Projects', projects_path
+            |
+            = link_to 'Pages', pages_path
+            |
+            = link_to 'Banners', banners_path
+            |
+            = link_to 'Log out', session_path, :method => :delete
+        .header
+          %h1 With Imagination
+          %h2 Strategic Web Solutions
+        .nav{:class => "#{controller.action_name}_action"}
+          %ul
+            %li.home_tab= link_to 'Home',root_path
+            %li.clients_tab= link_to 'Clients',clients_path
+            %li.company_tab= link_to 'Company', company_path
+            %li.services_tab= link_to 'Services',services_path
+            %li.projects_tab= link_to 'Projects','#'
+            %li.case_study_tab= link_to 'Case Study',case_study_path
+            %li.blogs_tab= link_to 'Blogs',blogs_path
+            %li.contact_us_tab= link_to 'Contact Us', contact_us_path
+        .wrapper
+          = (yield :nested) || yield
+        .footer
+          .subscribe
+            - form_for :subscription do |subscription_form| 
+              %h2 Subscribe to newsletter
+              = subscription_form.text_field :email, :type => 'email', :placeholder => 'email address'
+              = subscription_form.submit 'subscribe'
+          %p &copy; Copyright 2010  | WITH IMAGINATION | Powered by RUBY ON RAILS
+          .external
+            = link_to image_tag('linkedin.png'),'#'
+            = link_to image_tag('twitter-icon.png'),'#'

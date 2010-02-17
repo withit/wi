@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091210225721) do
+ActiveRecord::Schema.define(:version => 20100217044640) do
 
   create_table "assets", :force => true do |t|
     t.datetime "created_at"
@@ -42,6 +42,15 @@ ActiveRecord::Schema.define(:version => 20091210225721) do
     t.string   "thumbnail_file_name"
     t.string   "thumbnail_content_type"
     t.integer  "thumbnail_file_size"
+  end
+
+  create_table "comments", :force => true do |t|
+    t.integer  "post_id"
+    t.string   "message"
+    t.string   "author_name"
+    t.string   "author_email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "enquiries", :force => true do |t|
@@ -107,6 +116,17 @@ ActiveRecord::Schema.define(:version => 20091210225721) do
     t.integer  "menu_heading_file_size"
     t.string   "browser_title"
     t.integer  "position"
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.string   "author_name"
+    t.text     "content"
+    t.integer  "tweets_count"
+    t.integer  "comments_count"
+    t.string   "source"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "projects", :force => true do |t|

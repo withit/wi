@@ -25,4 +25,8 @@ class Page < ActiveRecord::Base
   
   before_save :remember_parent_ids_to_resync
   after_save :resync_lists
+  
+  def name
+    title
+  end
 end
