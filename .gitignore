@@ -2,6 +2,6 @@
 log/*
 tmp/*
 db/*.sqlite3
-system
-swf
+public/system
+public/swfs
 banners
