@@ -1448,6 +1448,43 @@ body.news_letters .content {
     font-family: Tahoma, Geneva, sans-serif;
     font-weight: normal;
     color: #0E66AE; }
+/* line 11, sass/_newsletters.sass */
+body.news_letters .content .news_letter {
+  margin-right: 15px;
+  float: left;
+  padding: 10px;
+  background-color: #EFEFED;
+  -moz-box-shadow: 3px 3px 3px #CCC;
+  -webkit-box-shadow: 3px 3px 3px #CCC; }
+  /* line 15, sass/_newsletters.sass */
+  body.news_letters .content .news_letter img {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    height: 250px; }
+  /* line 20, sass/_newsletters.sass */
+  body.news_letters .content .news_letter h2 {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: normal; }
+    /* line 24, sass/_newsletters.sass */
+    body.news_letters .content .news_letter h2 img {
+      margin-bottom: 6px;
+      margin-top: 0; }
+  /* line 32, sass/_newsletters.sass */
+  body.news_letters .content .news_letter a {
+    text-decoration: none;
+    color: #0E66AE;
+    text-transform: uppercase;
+    display: block;
+    background-image: url(/images/arrow-blue.png);
+    background-repeat: no-repeat;
+    background-position: center right; }
+    /* line 40, sass/_newsletters.sass */
+    body.news_letters .content .news_letter a:hover {
+      text-decoration: underline; }
 
 /* line 1, sass/_sidebar.sass */
 .sidebar {

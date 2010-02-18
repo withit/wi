@@ -14,15 +14,9 @@
     %li.current
       = link_to  'Email Campaigns', company_path
       %p We will provide you with the best email campaigns design options for your business
-      %ul
-        - @news_letters.each do |news_letter|
-          %ul= link_to news_letter.name, news_letter
 .content
   %h1 Email Campaigns
   - @news_letters.each do |news_letter|
     .news_letter{:class => cycle(nil, 'last')}
       = link_to image_tag(news_letter.logo.url), news_letter
-      %h2
-        New
-        = news_letter.name
-        = link_to image_tag("arrow-orange.jpg"), news_letter
+      %h2= link_to news_letter.name, news_letter

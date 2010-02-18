@@ -12,11 +12,11 @@
     %li= link_to 'Websites', websites_path
     %li= link_to 'Banners', banners_path
     %li.current
-      = link_to  'Email Campaigns', company_path
+      = link_to  'Email Campaigns', news_letters_path
       %p We will provide you with the best email campaigns design options for your business
       %ul
         - NewsLetter.all.each do |news_letter|
-          %ul= link_to news_letter.name, news_letter
+          %li{:class =>  news_letter == @news_letter ? "current" : nil}= link_to news_letter.name, news_letter
 .content
   %h1= @news_letter.name
   =image_tag @news_letter.image.url
