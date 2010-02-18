@@ -1,40 +1,53 @@
-- render :layout => 'pages/layout' do
-  %div.page_text_content
-    %p With millions of consumers and businesses searching online for products and services, how can any business afford not to have an effective web presence?
-    %p
-      If you are interested in talking to us then we would love to hear from you.
-      The best person to get in touch with is our General Manager
-      %strong Derek Nash
-    %p
-      %strong Phone: +61 2 9929 9229
-    %p
-      %strong Fax: +61 2 9490 4770
-    %p
-      Email:
-      = mail_to 'info@wi.com.au', 'info@wi.com.au', :encode => :javascript
-    %p
-      Address: Level 5, 44 Miller St North Sydney NSW 2060 Australia
-    :erb
-      <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=44+miller+st+north+sydney&amp;sll=37.649034,-95.712891&amp;sspn=46.855215,79.101563&amp;ie=UTF8&amp;z=14&amp;iwloc=A&amp;ll=-33.827646,151.210413&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=44+miller+st+north+sydney&amp;sll=37.649034,-95.712891&amp;sspn=46.855215,79.101563&amp;ie=UTF8&amp;z=14&amp;iwloc=A&amp;ll=-33.827646,151.210413" style="color:#0000FF;text-align:left">View Larger Map</a></small>
-    - form_for @enquiry, :url => enquiry_path do |f|
-      = f.error_messages :header_message => 'Your enquiry could not be submitted'
-      %div
-        = f.label :first_name, "First Name*"
-        = f.text_field :first_name, :size => nil
-      %div
-        = f.label :last_name, "Last Name*"
-        = f.text_field :last_name, :size => nil
-      %div
-        = f.label :email, "Email*"
-        = f.text_field :email, :size => nil
-      %div
-        = f.label :email_confirmation, "Confirm Email*"
-        = f.text_field :email_confirmation, :size => nil
-      %div
-        = f.label :phone, "Phone Number"
-        = f.text_field :phone, :size => nil
-      %div
-        = f.label :message, "Comments"
-        = f.text_area :message, :cols => 45, :rows => 5
-      %div
-        = image_submit_tag "/images/contact/submit.jpg"
+.breadcrumbs
+  %ul
+    %li= link_to 'Home', root_path
+    %li Contact Us
+.sidebar
+  %ul
+    %li.current.first
+      =link_to "Contact Us", enquiries_path
+      %p If you are interested in talking to us then we would love to hear from you.
+.contact_details
+  %h2 Contact Details
+  %p
+    If you are interested in talking to us then we would love to hear from you.
+    The best person to get in touch with is our General Manager <strong>Derek Nash</strong>.
+  %ul
+    %li.phone= @page.phone
+    %li.email= mail_to @page.email,@page.email, :encode => 'hex'
+  .map
+    :plain
+      <iframe width="290" height="320" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=44+miller+st+north+sydney&amp;sll=-33.839891,151.206325&amp;sspn=0.005881,0.009559&amp;ie=UTF8&amp;hq=&amp;hnear=44+Miller+St,+North+Sydney+New+South+Wales+2060,+Australia&amp;ll=-33.837235,151.207924&amp;spn=0.011407,0.012445&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=44+miller+st+north+sydney&amp;sll=-33.839891,151.206325&amp;sspn=0.005881,0.009559&amp;ie=UTF8&amp;hq=&amp;hnear=44+Miller+St,+North+Sydney+New+South+Wales+2060,+Australia&amp;ll=-33.837235,151.207924&amp;spn=0.011407,0.012445&amp;z=15&amp;iwloc=A" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+  .address
+    %h4 Address
+    Level 5, 44 Miller St<br />
+    North Sydney NSW 2060 Australia
+.contact_us
+  :textile
+    h1. Contact Us
+    
+    With millions of consumers and businesses searching online for products and services, how can any business afford not to have an effective web presence?
+
+    Please complete the form below and we will answer your general enquiry.
+
+  - form_for(@enquiry) do |f|
+    = f.error_messages
+
+    .field
+      = f.label :name
+      = f.text_field :name
+
+    .field
+      = f.label :email
+      = f.text_field :email, :type => 'email'
+
+    .field
+      = f.label :phone
+      = f.text_field :phone
+
+    .field
+      = f.label :message 
+      = f.text_area :message, :rows => 4, :cols => 50
+
+    .actions
+      = f.submit 'Submit'

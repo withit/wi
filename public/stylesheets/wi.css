@@ -1,25 +1,22 @@
 /*
-Sass::SyntaxError: Undefined variable: "!blue".
-on line 4 of /Users/lachlansylvester/apps/wi/public/stylesheets/sass/./_services.sass
+Sass::SyntaxError: Undefined mixin 'list_reset'.
+on line 3 of /Users/lachlansylvester/apps/wi/public/stylesheets/sass/./_projects.sass
 
-1: body.services .content
-2:   :margin-left 230px
-3:   h1
-4:     :color= !blue
-5:     :font-family Tahoma, Geneva, sans-serif 
-6:     :font-weight normal
-7:     :margin 0
-8:     :text-transform uppercase
-9:     :font-size 20px
-10:   h2
+1: body.projects
+2:   .content
+3:     +list_reset
+4:     li
+5:       a
+6:         :color= !blue
+7:         :text-transform uppercase
+8:         :padding-right 20px
+9:         +arrow(/images/arrow-lhs-menu.jpg)
 
 
 Backtrace:
-/Users/lachlansylvester/apps/wi/public/stylesheets/sass/./_services.sass:4
-/Users/lachlansylvester/apps/wi/public/stylesheets/sass/./_services.sass:4
-/Library/Ruby/Gems/1.8/gems/haml-2.2.17/lib/sass/script/variable.rb:27:in `perform'
-/Library/Ruby/Gems/1.8/gems/haml-2.2.17/lib/sass/tree/prop_node.rb:99:in `perform!'
-/Library/Ruby/Gems/1.8/gems/haml-2.2.17/lib/sass/tree/node.rb:181:in `_perform'
+/Users/lachlansylvester/apps/wi/public/stylesheets/sass/./_projects.sass:3
+/Users/lachlansylvester/apps/wi/public/stylesheets/sass/./_projects.sass:3
+/Library/Ruby/Gems/1.8/gems/haml-2.2.17/lib/sass/tree/mixin_node.rb:27:in `_perform'
 /Library/Ruby/Gems/1.8/gems/haml-2.2.17/lib/sass/tree/node.rb:158:in `perform'
 /Library/Ruby/Gems/1.8/gems/haml-2.2.17/lib/sass/tree/node.rb:202:in `perform_children'
 /Library/Ruby/Gems/1.8/gems/haml-2.2.17/lib/sass/tree/node.rb:202:in `map'
@@ -108,4 +105,4 @@ script/server:3
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined variable: \"!blue\".\A on line 4 of /Users/lachlansylvester/apps/wi/public/stylesheets/sass/./_services.sass\A \A 1: body.services .content\A 2:   :margin-left 230px\A 3:   h1\A 4:     :color= !blue\A 5:     :font-family Tahoma, Geneva, sans-serif \A 6:     :font-weight normal\A 7:     :margin 0\A 8:     :text-transform uppercase\A 9:     :font-size 20px\A 10:   h2\A "; }
+  content: "Sass::SyntaxError: Undefined mixin 'list_reset'.\A on line 3 of /Users/lachlansylvester/apps/wi/public/stylesheets/sass/./_projects.sass\A \A 1: body.projects\A 2:   .content\A 3:     +list_reset\A 4:     li\A 5:       a\A 6:         :color= !blue\A 7:         :text-transform uppercase\A 8:         :padding-right 20px\A 9:         +arrow(/images/arrow-lhs-menu.jpg)\A "; }

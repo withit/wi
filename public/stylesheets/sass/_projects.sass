@@ -1,26 +1,13 @@
 body.projects
   .content
-    :padding 10px 0
-    :margin auto
-    :width 501px
-    .project,
-    .thumbnail
-      :float left
-      :width 50%
-      :color #595959
-      :font-size 11px
-      :font-weight normal
-      :line-height 15px
-
-    .thumbnail,
-    .page_info_container
-      :clear both
-      .page_info
-      .pagination
-        :padding-left 5px
-
-    .thumbnail
-      :width 250px
-    .project
-      :width 240px
-      :padding-left 10px
+    +list_reset
+    li
+      a
+        :color= !blue
+        :text-transform uppercase
+        :padding-right 20px
+        +arrow(/images/arrow-lhs-menu.jpg)
+        :width auto
+        :display inline
+      :margin-bottom 10px
+    
