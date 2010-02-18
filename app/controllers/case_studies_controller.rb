@@ -1,6 +1,6 @@
 class CaseStudiesController < ApplicationController
   def show
-    @page = Page.new(:title => 'Case Study')
+    @page = Page.find(:case_study)
     @case_study = CaseStudy.all.first
   end
 

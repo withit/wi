@@ -9,7 +9,6 @@
     %li= @page.title  
 
 .sidebar
-  = image_tag @page.image.url
   %ul
     - [@page].each do |page| 
       %li{:class => page == @page ? "current" : nil}

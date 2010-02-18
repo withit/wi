@@ -10,7 +10,6 @@
 
 .left
   .side_menu
-    = image_tag @page.root.menu_heading.url
     %ul
       - (@page.root.children).each do |page|
         %li{:class => page == @page ? "current" : nil}= link_to_if page != @page, page.title, unwrapped_page_path(page)

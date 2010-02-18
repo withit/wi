@@ -1,0 +1,66 @@
+.sidebar
+  :float left
+  :background-color #F2F2F2
+  :border 1px solid #D5D5D3
+  :display inline
+  :margin-left 10px
+  :padding 10px
+  :padding-bottom 0px
+  img
+    :border 9px solid white
+    :-moz-box-shadow 3px 3px 3px #CCC
+    :-webkit-box-shadow 3px 3px 3px #CCC
+  
+  ul
+    :list-style-type none
+    :width 185px
+    :padding 0
+    :margin 0
+    li
+      :height 35px
+      :border-top 1px solid #BBB
+      :padding 10px 0px
+      a
+        :line-height 35px
+      &.current
+        :height auto
+        a
+          :line-height 14px
+      &.first
+        :border-top none
+    p
+      :margin 0px
+      :font-size 12px
+    a
+      :text-decoration none
+      :color #0E66AE
+      :text-transform uppercase
+      :font-size 12px
+      :display block
+      :background-image url(/images/arrow-lhs-menu.jpg)
+      :background-repeat no-repeat
+      :background-position center right
+      &:hover
+        :text-decoration underline
+    :padding-top 94px
+    :background-image url(/images/project-lhs.jpg)
+    :background-repeat no-repeat
+    :background-position top center
+
+    body.services &
+      :background-image url(/images/services-lhs.jpg)
+    body.projects &
+      :background-image url(/images/project-lhs.jpg)
+    body.company &
+      :background-image url(/images/about-lhs.jpg)
+    body.banners &
+      :background-image url(/images/banners-lhs.jpg)
+    body.news_letters &
+      :background-image url(/images/newsletter-lhs.jpg)
+    body.case_studies &
+      :background-image url(/images/casestudy-lhs.jpg)
+    body.enquiries &
+      :background-image url(/images/contact-lhs.jpg)
+    ul
+      :background-image none
+    

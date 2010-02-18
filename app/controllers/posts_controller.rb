@@ -49,7 +49,7 @@ class PostsController < ApplicationController
   protected
   
   def load_page
-    @page = Page.new(:title => "Blogs")
+    @page = Page.find(:blogs)
   end
   
   def load_comments

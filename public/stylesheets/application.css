@@ -602,74 +602,19 @@ div.main {
   float: left;
   padding-top: 1px; }
 
-/* line 46, sass/_websites.sass */
-.sidebar {
-  float: left;
-  background-color: #F2F2F2;
-  border: 1px solid #D5D5D3;
-  display: inline;
-  margin-left: 10px;
-  padding: 10px;
-  padding-bottom: 0px; }
-  /* line 54, sass/_websites.sass */
-  .sidebar img {
-    border: 9px solid white;
-    -moz-box-shadow: 3px 3px 3px #CCC;
-    -webkit-box-shadow: 3px 3px 3px #CCC; }
-  /* line 59, sass/_websites.sass */
-  .sidebar ul {
-    list-style-type: none;
-    width: 185px;
-    padding: 0;
-    margin: 0; }
-    /* line 64, sass/_websites.sass */
-    .sidebar ul li {
-      height: 35px;
-      border-top: 1px solid #BBB;
-      padding: 10px 0px; }
-      /* line 68, sass/_websites.sass */
-      .sidebar ul li a {
-        line-height: 35px; }
-      /* line 70, sass/_websites.sass */
-      .sidebar ul li.current {
-        height: auto; }
-        /* line 72, sass/_websites.sass */
-        .sidebar ul li.current a {
-          line-height: 14px; }
-      /* line 74, sass/_websites.sass */
-      .sidebar ul li.first {
-        border-top: none; }
-    /* line 76, sass/_websites.sass */
-    .sidebar ul p {
-      margin: 0px;
-      font-size: 12px; }
-    /* line 79, sass/_websites.sass */
-    .sidebar ul a {
-      text-decoration: none;
-      color: #0E66AE;
-      text-transform: uppercase;
-      font-size: 12px;
-      display: block;
-      background-image: url(/images/arrow-lhs-menu.jpg);
-      background-repeat: no-repeat;
-      background-position: center right; }
-      /* line 88, sass/_websites.sass */
-      .sidebar ul a:hover {
-        text-decoration: underline; }
-
-/* line 90, sass/_websites.sass */
-body.websites .content, div.websites {
+/* line 47, sass/_websites.sass */
+body.websites .content, div.websites, body.banners .content {
   margin-left: 235px; }
-  /* line 92, sass/_websites.sass */
-  body.websites .content h1, div.websites h1 {
+  /* line 49, sass/_websites.sass */
+  body.websites .content h1, div.websites h1, body.banners .content h1 {
     margin: 0px 0px 10px 0px;
     font-size: 20px;
     text-transform: uppercase;
     font-family: Tahoma, Geneva, sans-serif;
     font-weight: normal;
     color: #0E66AE; }
-  /* line 99, sass/_websites.sass */
-  body.websites .content .website, div.websites .website {
+  /* line 56, sass/_websites.sass */
+  body.websites .content .website, body.websites .content .banner, div.websites .website, div.websites .banner, body.banners .content .website, body.banners .content .banner {
     width: 355px;
     margin-right: 15px;
     height: 184px;
@@ -680,13 +625,13 @@ body.websites .content, div.websites {
     background-color: #EFEFED;
     -moz-box-shadow: 3px 3px 3px #CCC;
     -webkit-box-shadow: 3px 3px 3px #CCC; }
-    /* line 110, sass/_websites.sass */
-    body.websites .content .website h2, div.websites .website h2 {
+    /* line 67, sass/_websites.sass */
+    body.websites .content .website h2, body.websites .content .banner h2, div.websites .website h2, div.websites .banner h2, body.banners .content .website h2, body.banners .content .banner h2 {
       margin: 4px;
       font-size: 14px;
       font-weight: normal; }
-    /* line 114, sass/_websites.sass */
-    body.websites .content .website a, div.websites .website a {
+    /* line 71, sass/_websites.sass */
+    body.websites .content .website a, body.websites .content .banner a, div.websites .website a, div.websites .banner a, body.banners .content .website a, body.banners .content .banner a {
       text-decoration: none;
       color: #0E66AE;
       text-transform: uppercase;
@@ -695,11 +640,11 @@ body.websites .content, div.websites {
       background-repeat: no-repeat;
       background-position: center right;
       margin-right: 6px; }
-      /* line 123, sass/_websites.sass */
-      body.websites .content .website a:hover, div.websites .website a:hover {
+      /* line 80, sass/_websites.sass */
+      body.websites .content .website a:hover, body.websites .content .banner a:hover, div.websites .website a:hover, div.websites .banner a:hover, body.banners .content .website a:hover, body.banners .content .banner a:hover {
         text-decoration: underline; }
-    /* line 125, sass/_websites.sass */
-    body.websites .content .website p, div.websites .website p {
+    /* line 82, sass/_websites.sass */
+    body.websites .content .website p, body.websites .content .banner p, div.websites .website p, div.websites .banner p, body.banners .content .website p, body.banners .content .banner p {
       font-size: 12px; }
 
 /* line 1, sass/_contact_us.sass */
@@ -1390,39 +1335,42 @@ body.pages .company_testimonials {
 /* line 4, sass/_banners.sass */
 body.banners .content {
   margin-left: 220px; }
+  /* line 7, sass/_banners.sass */
+  body.banners .content .banner img {
+    width: auto; }
 
-/* line 6, sass/_banners.sass */
+/* line 9, sass/_banners.sass */
 #banners {
   width: 501px;
   margin: auto; }
-  /* line 7, sass/_banners.sass */
+  /* line 10, sass/_banners.sass */
   #banners a {
     border: none; }
-    /* line 9, sass/_banners.sass */
+    /* line 12, sass/_banners.sass */
     #banners a img {
       border: none; }
-  /* line 13, sass/_banners.sass */
+  /* line 16, sass/_banners.sass */
   #banners .campaign {
     width: 247px;
     float: left;
     margin-right: 7px; }
-    /* line 17, sass/_banners.sass */
+    /* line 20, sass/_banners.sass */
     #banners .campaign.last {
       margin-right: 0px; }
-    /* line 19, sass/_banners.sass */
+    /* line 22, sass/_banners.sass */
     #banners .campaign h2 {
       text-transform: uppercase;
       vertical-align: middle;
       margin: 0;
       margin-top: 5px;
       padding: 0; }
-      /* line 22, sass/_banners.sass */
+      /* line 25, sass/_banners.sass */
       #banners .campaign h2 img {
         vertical-align: middle; }
-    /* line 27, sass/_banners.sass */
+    /* line 30, sass/_banners.sass */
     #banners .campaign ul {
       padding: 0; }
-      /* line 29, sass/_banners.sass */
+      /* line 32, sass/_banners.sass */
       #banners .campaign ul li {
         background-image: url("../images/blue-arrow.jpg");
         background-repeat: no-repeat;
@@ -1442,3 +1390,86 @@ body.news_letters .content {
     font-family: Tahoma, Geneva, sans-serif;
     font-weight: normal;
     color: #0E66AE; }
+
+/* line 1, sass/_sidebar.sass */
+.sidebar {
+  float: left;
+  background-color: #F2F2F2;
+  border: 1px solid #D5D5D3;
+  display: inline;
+  margin-left: 10px;
+  padding: 10px;
+  padding-bottom: 0px; }
+  /* line 9, sass/_sidebar.sass */
+  .sidebar img {
+    border: 9px solid white;
+    -moz-box-shadow: 3px 3px 3px #CCC;
+    -webkit-box-shadow: 3px 3px 3px #CCC; }
+  /* line 14, sass/_sidebar.sass */
+  .sidebar ul {
+    list-style-type: none;
+    width: 185px;
+    padding: 0;
+    margin: 0;
+    padding-top: 94px;
+    background-image: url(/images/project-lhs.jpg);
+    background-repeat: no-repeat;
+    background-position: top center; }
+    /* line 19, sass/_sidebar.sass */
+    .sidebar ul li {
+      height: 35px;
+      border-top: 1px solid #BBB;
+      padding: 10px 0px; }
+      /* line 23, sass/_sidebar.sass */
+      .sidebar ul li a {
+        line-height: 35px; }
+      /* line 25, sass/_sidebar.sass */
+      .sidebar ul li.current {
+        height: auto; }
+        /* line 27, sass/_sidebar.sass */
+        .sidebar ul li.current a {
+          line-height: 14px; }
+      /* line 29, sass/_sidebar.sass */
+      .sidebar ul li.first {
+        border-top: none; }
+    /* line 31, sass/_sidebar.sass */
+    .sidebar ul p {
+      margin: 0px;
+      font-size: 12px; }
+    /* line 34, sass/_sidebar.sass */
+    .sidebar ul a {
+      text-decoration: none;
+      color: #0E66AE;
+      text-transform: uppercase;
+      font-size: 12px;
+      display: block;
+      background-image: url(/images/arrow-lhs-menu.jpg);
+      background-repeat: no-repeat;
+      background-position: center right; }
+      /* line 43, sass/_sidebar.sass */
+      .sidebar ul a:hover {
+        text-decoration: underline; }
+    /* line 50, sass/_sidebar.sass */
+    body.services .sidebar ul {
+      background-image: url(/images/services-lhs.jpg); }
+    /* line 52, sass/_sidebar.sass */
+    body.projects .sidebar ul {
+      background-image: url(/images/project-lhs.jpg); }
+    /* line 54, sass/_sidebar.sass */
+    body.company .sidebar ul {
+      background-image: url(/images/about-lhs.jpg); }
+    /* line 56, sass/_sidebar.sass */
+    body.banners .sidebar ul {
+      background-image: url(/images/banners-lhs.jpg); }
+    /* line 58, sass/_sidebar.sass */
+    body.news_letters .sidebar ul {
+      background-image: url(/images/newsletter-lhs.jpg); }
+    /* line 60, sass/_sidebar.sass */
+    body.case_studies .sidebar ul {
+      background-image: url(/images/casestudy-lhs.jpg); }
+    /* line 62, sass/_sidebar.sass */
+    body.enquiries .sidebar ul {
+      background-image: url(/images/contact-lhs.jpg); }
+    /* line 64, sass/_sidebar.sass */
+    .sidebar ul ul {
+      background-image: none; }
