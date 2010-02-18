@@ -55,7 +55,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :newsletters, :path_prefix => 'projects'
   map.dashboard '/dashboard', :controller => 'dashboard'
   map.connect '/javascripts/:action.js', :controller => 'javascripts'
-  map.clients '/clients', :action => 'index', :controller => 'pages'
+  map.clients '/who-weve-helped', :action => 'index', :controller => 'clients'
   map.company '/company', :action => 'index', :controller => 'pages'
   map.case_study '/case-study', :action => 'show', :controller => 'case_studies'
   map.blogs '/blogs', :action => 'index', :controller => 'posts'

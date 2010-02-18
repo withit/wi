@@ -77,13 +77,13 @@ body {
 
 /* line 56, sass/application.sass */
 body.home #home_tab, bosy.websites #projects_tab, body.projects #projects_tab, body.banners #projects_tab,
-body.enquires #contact_us_tab, body.case_studies #case_study_tab, body.services #services_tab, body.newsletters #projects.tab, body.posts #blogs_tab, body.company #company_tab, body.why_choose_us #company_tab {
+body.enquires #contact_us_tab, body.case_studies #case_study_tab, body.services #services_tab, body.newsletters #projects.tab, body.posts #blogs_tab, body.company #company_tab, body.why_choose_us #company_tab, body.clients #clients_tab, body.websites #projects_tab, body.news_letters #projects_tab {
   background-image: url(/images/arrow-nav-bar.jpg);
   background-repeat: no-repeat;
   background-position: 50% 100%; }
   /* line 63, sass/application.sass */
   body.home #home_tab a, bosy.websites #projects_tab a, body.projects #projects_tab a, body.banners #projects_tab a,
-  body.enquires #contact_us_tab a, body.case_studies #case_study_tab a, body.services #services_tab a, body.newsletters #projects.tab a, body.posts #blogs_tab a, body.company #company_tab a, body.why_choose_us #company_tab a {
+  body.enquires #contact_us_tab a, body.case_studies #case_study_tab a, body.services #services_tab a, body.newsletters #projects.tab a, body.posts #blogs_tab a, body.company #company_tab a, body.why_choose_us #company_tab a, body.clients #clients_tab a, body.websites #projects_tab a, body.news_letters #projects_tab a {
     font-weight: bold;
     color: #FFF; }
 
@@ -1542,3 +1542,33 @@ body.news_letters .content {
   /* line 76, sass/_sidebar.sass */
   body.enquiries .sidebar {
     background-image: url(/images/contact-lhs-shadow.jpg); }
+  /* line 78, sass/_sidebar.sass */
+  body.clients .sidebar {
+    background-image: url(/images/clients-lhs-shadow.jpg); }
+
+/* line 2, sass/_clients.sass */
+body.clients .content {
+  margin-right: 300px; }
+/* line 4, sass/_clients.sass */
+body.clients .client {
+  width: 135px;
+  height: 82px;
+  float: left;
+  margin-right: 10px;
+  background-color: #F2F2F2;
+  border: 1px solid #DEDEDE;
+  margin-bottom: 10px;
+  text-align: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; }
+/* line 15, sass/_clients.sass */
+body.clients .client div {
+  vertical-align: middle;
+  display: table-cell;
+  margin: 0px auto;
+  height: 82px;
+  width: 135px;
+  text-align: center; }
+/* line 22, sass/_clients.sass */
+body.clients .client img, body.clients span {
+  vertical-align: middle; }

@@ -1,0 +1,20 @@
+- content_for :head do 
+  \
+
+.breadcrumbs
+  %ul
+    %li= link_to 'home', root_path
+    %li Who we've helped
+.sidebar
+  %ul
+    %li.current
+      = link_to "Who we've helped", clients_path
+      %p We care about the web and our mission is to try and make the web experience even better by delivering the best possible solution
+
+.content
+  %h1 Who We've helped
+  - @clients.each do |client|
+    .client
+      %div
+        %span
+        = image_tag client.url
