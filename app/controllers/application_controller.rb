@@ -48,4 +48,10 @@ class ApplicationController < ActionController::Base
 
   
   before_filter :redirect_to_iphone
+  
+  before_filter :load_testimonials
+  
+  def load_testimonials
+    @testimonials = Testimonial.all
+  end
 end

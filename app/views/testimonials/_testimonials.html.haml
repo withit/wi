@@ -1,0 +1,6 @@
+.testimonials
+  %h2 Testimonials
+  - @testimonials.each do |testimonial|
+    = image_tag testimonial.image.url
+    %p= testimonial.content
+    %p.author= testimonial.author

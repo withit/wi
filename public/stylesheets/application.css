@@ -93,7 +93,7 @@ body.enquiries #contact_us_tab, body.case_studies #case_study_tab, body.services
   margin: 0 auto; }
 
 /* line 69, sass/application.sass */
-.testimonials {
+body.home .testimonials {
   background-color: #FAFAFA;
   border-top: 1px solid #CCC;
   height: 54px;
@@ -101,7 +101,7 @@ body.enquiries #contact_us_tab, body.case_studies #case_study_tab, body.services
   font-size: 12px;
   line-height: 14px; }
   /* line 70, sass/application.sass */
-  .testimonials h2 {
+  body.home .testimonials h2 {
     background-image: url(/images/testimonials.png);
     height: 31px;
     width: 96px;
@@ -111,22 +111,22 @@ body.enquiries #contact_us_tab, body.case_studies #case_study_tab, body.services
     margin: 12px 46px;
     float: left; }
   /* line 85, sass/application.sass */
-  .testimonials .testimonial {
+  body.home .testimonials .testimonial {
     float: left; }
     /* line 87, sass/application.sass */
-    .testimonials .testimonial img {
+    body.home .testimonials .testimonial img {
       float: left;
       margin-top: 4px;
       margin-right: 20px; }
     /* line 91, sass/application.sass */
-    .testimonials .testimonial p {
+    body.home .testimonials .testimonial p {
       margin: 0;
       margin-top: 13px;
       line-height: 14px;
       width: 660px;
       color: #54616E; }
       /* line 97, sass/application.sass */
-      .testimonials .testimonial p.author {
+      body.home .testimonials .testimonial p.author {
         color: #F3A144;
         margin-top: 0; }
 
@@ -777,7 +777,7 @@ body.company .content, body.clients .content, body.why_choose_us .content, body.
       margin-left: 0; }
 
 /* line 25, sass/_company.sass */
-.company_testimonials {
+body.company .testimonials, body.clients .testimonials, body.why_choose_us .testimonials {
   float: right;
   width: 285px;
   background-color: #F2F2F2;
@@ -787,7 +787,7 @@ body.company .content, body.clients .content, body.why_choose_us .content, body.
   padding: 10px;
   padding-bottom: 10px; }
   /* line 34, sass/_company.sass */
-  .company_testimonials h2 {
+  body.company .testimonials h2, body.clients .testimonials h2, body.why_choose_us .testimonials h2 {
     color: #CA1A27;
     margin-top: 0;
     font-weight: normal;
@@ -795,15 +795,15 @@ body.company .content, body.clients .content, body.why_choose_us .content, body.
     text-transform: uppercase;
     font-size: 20px; }
   /* line 41, sass/_company.sass */
-  .company_testimonials img {
+  body.company .testimonials img, body.clients .testimonials img, body.why_choose_us .testimonials img {
     float: left; }
   /* line 43, sass/_company.sass */
-  .company_testimonials p {
+  body.company .testimonials p, body.clients .testimonials p, body.why_choose_us .testimonials p {
     margin-left: 60px;
     font-size: 12px;
     margin-bottom: 0px; }
     /* line 47, sass/_company.sass */
-    .company_testimonials p.author {
+    body.company .testimonials p.author, body.clients .testimonials p.author, body.why_choose_us .testimonials p.author {
       color: #F3A144;
       margin-top: 0; }
 
@@ -1453,27 +1453,28 @@ body.news_letters .content .news_letter {
   margin-right: 15px;
   float: left;
   padding: 10px;
+  margin-bottom: 10px;
   background-color: #EFEFED;
   -moz-box-shadow: 3px 3px 3px #CCC;
   -webkit-box-shadow: 3px 3px 3px #CCC; }
-  /* line 15, sass/_newsletters.sass */
+  /* line 16, sass/_newsletters.sass */
   body.news_letters .content .news_letter img {
     margin: 0;
     padding: 0;
     width: 300px;
     height: 250px; }
-  /* line 20, sass/_newsletters.sass */
+  /* line 21, sass/_newsletters.sass */
   body.news_letters .content .news_letter h2 {
     margin: 0px;
     padding: 0px;
     margin-top: 10px;
     font-size: 14px;
     font-weight: normal; }
-    /* line 24, sass/_newsletters.sass */
+    /* line 25, sass/_newsletters.sass */
     body.news_letters .content .news_letter h2 img {
       margin-bottom: 6px;
       margin-top: 0; }
-  /* line 32, sass/_newsletters.sass */
+  /* line 33, sass/_newsletters.sass */
   body.news_letters .content .news_letter a {
     text-decoration: none;
     color: #0E66AE;
@@ -1482,7 +1483,7 @@ body.news_letters .content .news_letter {
     background-image: url(/images/arrow-blue.png);
     background-repeat: no-repeat;
     background-position: center right; }
-    /* line 40, sass/_newsletters.sass */
+    /* line 41, sass/_newsletters.sass */
     body.news_letters .content .news_letter a:hover {
       text-decoration: underline; }
 
