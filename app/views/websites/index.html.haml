@@ -1,0 +1,23 @@
+- content_for :head do 
+  \
+
+.breadcrumbs
+  %ul
+    %li= link_to 'home', root_path
+    %li= link_to 'Projects', projects_path
+    %li Websites
+.sidebar
+  =# image_tag @page.image.url
+  %ul
+    %li.current.first
+      = link_to "Websites", websites_path
+      %p We will provide you with the best website design options for your business
+    %li= link_to 'Banners', banners_path
+    %li= link_to 'Email Campaigns', news_letters_path
+.websites
+  %h1 Websites
+  - @websites.each do |website|
+    .website
+      = image_tag website.thumbnail.url
+      %h2= link_to_if website.enlargement, website.name,  website.enlargement && website.enlargement.url, :target => '_blank'
+      %p= website.description

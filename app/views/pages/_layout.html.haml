@@ -5,15 +5,15 @@
   %ul
     %li= link_to 'home', '/'
     - @page.ancestors.reverse.each do |ancestor| 
-      %li= link_to ancestor.title, unwrapped_page_path(ancestor)
+      %li= link_to ancestor.title, '#'
     %li= @page.title  
 
 .sidebar
-  = image_tag @page.root.menu_heading.url
+  = image_tag @page.image.url
   %ul
-    - ([@page.root] + @page.root.children).each do |page| 
+    - [@page].each do |page| 
       %li{:class => page == @page ? "current" : nil}
-        = link_to page.title, unwrapped_page_path(page)
+        = link_to page.name, unwrapped_page_path(page)
 .content
   %h1= @page.title
   = yield

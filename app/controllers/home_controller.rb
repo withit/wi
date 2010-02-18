@@ -3,7 +3,11 @@ class HomeController < ApplicationController
   
   def index
     @page = Page.find_by_permalink('home') || Page.new
-    @projects = Project.find(:all, :conditions => 'slide_file_name is not null', :order => 'position')
+    @projects = Project.all
+    @testimonials = Testimonial.all
+    @services = Service.all[0..2]
+    @post = Post.last
+    @case_study = CaseStudy.all[0]
   end
 
 end

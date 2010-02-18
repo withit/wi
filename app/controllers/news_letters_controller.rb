@@ -1,7 +1,6 @@
 class NewsLettersController < ApplicationController
   # GET /news_letters
   # GET /news_letters.xml
-  before_filter :load_page
   def index
     @news_letters = NewsLetter.find(:all)
 

@@ -8,7 +8,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :session, :only => [:create, :destroy]
   map.resources :twitter_users
   map.resources :services
-
+  map.projects '/projects', :controller => "pages", :action => "projects"
+  map.why_choose_us '/company/why-choose-us', :controller => 'pages', :action => 'why_choose_us'
   map.root :controller  => 'home', :action => 'index'
   map.home '/', :controller => 'home', :action => 'index'  
   map.services '/services', :controller => 'pages', :action => 'show', :id => 'services'
@@ -38,7 +39,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :projects, :as => 'websites'
   map.portfolio '/portfolio', :controller => 'projects', :action => 'index'  
   map.resources :news_letters, :as => 'email-campaigns'
-  map.resources :banners
+  map.resources :banners, :path_prefix => 'projects'
                       
   map.resources :news, :singular => 'news_item'
   map.news_by_month 'news/:year/:month', :controller => 'news', :action => 'index'
@@ -50,7 +51,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :assets
   map.resources :previews
-
+  map.resources :websites, :path_prefix => 'projects'
+  map.resources :newsletters, :path_prefix => 'projects'
   map.dashboard '/dashboard', :controller => 'dashboard'
   map.connect '/javascripts/:action.js', :controller => 'javascripts'
   map.clients '/clients', :action => 'index', :controller => 'pages'

@@ -18,7 +18,7 @@
     %link{:rel => "icon", :type => "image/vnd.microsoft.icon", :href=>"/favicon.ico"}
     %link{:rel => "SHORTCUT ICON", :href=>"/favicon.ico"}
     = yield :head 
-  %body{:class => controller.controller_name}
+  %body{:class => controller.controller_name == 'pages' ? controller.action_name : controller.controller_name}
     - if iphone_user_agent? && request.subdomains.first != 'i'
       .iphone_message
         %p Using an iPhone? #{link_to "Use the optimised version", {:subdomain => 'i'}}.
@@ -40,16 +40,16 @@
         .header
           %h1 With Imagination
           %h2 Strategic Web Solutions
-        .nav{:class => "#{controller.action_name}_action"}
+        .nav
           %ul
-            %li.home_tab= link_to 'Home',root_path
-            %li.clients_tab= link_to 'Clients',clients_path
-            %li.company_tab= link_to 'Company', company_path
-            %li.services_tab= link_to 'Services',services_path
-            %li.projects_tab= link_to 'Projects','#'
-            %li.case_study_tab= link_to 'Case Study',case_study_path
-            %li.blogs_tab= link_to 'Blogs',blogs_path
-            %li.contact_us_tab= link_to 'Contact Us', contact_us_path
+            %li#home_tab= link_to 'Home',root_path
+            %li#clients_tab= link_to 'Clients',clients_path
+            %li#company_tab= link_to 'Company', company_path
+            %li#services_tab= link_to 'Services',services_path
+            %li#projects_tab= link_to 'Projects', projects_path
+            %li#case_study_tab= link_to 'Case Study',case_study_path
+            %li#blogs_tab= link_to 'Blogs',blogs_path
+            %li#contact_us_tab= link_to 'Contact Us', contact_us_path
         .wrapper
           = (yield :nested) || yield
         .footer

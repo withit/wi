@@ -1,78 +1,72 @@
-- content_for :head do 
-  = auto_discovery_link_tag(:rss, "/news.rss") 
-.hero
-  #previous
-    = link_to "Previous Project", '#'
-  #slide_show_container
-    #markers
-      - Project.find(:all, :conditions => {:in_slideshow => true},  :order => 'position').each do |p| 
-        %div &nbsp;
-      %span Recent Projects
-    #slide_show
-      - Project.find(:all, :conditions => {:in_slideshow => true},  :order => 'position').each_with_index do |p, i| 
-        = image_tag p.slide.url, :style => i == 0 ? nil : 'display: none;'
-  #next
-    = link_to 'Next Project',"#"
-.line{:style => 'float: left;'}
-  = image_tag "line.jpg",  :alt => "line",  :width => "7",  :height => "280"
-.text_container{:style => 'float: left;'}
-  #share= share_link
-  #page_content.home_page
-    = RedCloth.new(@page.content.to_s).to_html
-%div{:style => "clear: both; overflow: visible;"}
-  = link_to 'Follow on twitter', twitter_path,:class => "twitter"
-  #latest_tweet{:style => 'display: none;'}
-#news_outer
-  #news
-    = link_to image_tag('rss_icon.jpg', :style => 'float: right; margin-right: 10px; margin-top: 10px;'), news_path(:format => :rss)
-    %h3= link_to "Latest news", news_path
-    %ul
-      - News.find(:all, :limit => 1, :order => "created_at desc").each do |news|
-        %li
-          %h4= news.title 
-          %p= truncate_preserving_words(strip_tags(news.content), 200)
-          %p= link_to "more &gt;&gt;", news_item_path(news)
-#services_outer
-  #services
-    %h3 Services
-    %ul
-      %li
-        %h4 Web Design and Development
-        %p 
-          Our mission is always to provide cost-effective solutions that target your goals ...
-          on-time and within  budget.
-        %p= link_to "more &gt;&gt;","/services#design"
-      %li
-        %h4 Web Applications
-        %p 
-          We can develop custom web applications to suit your business needs.
-        %p= link_to "more &gt;&gt;","/services#applications"
-      %li
-        %h4 Online Marketing
-        %p 
-          Looking to run an online advertising campaign? We have designed many different forms of online media such as flash
-          banners and skyscrapers.
-        %p= link_to "more &gt;&gt;","/services#advertising"
-#express_contact_us_outer
-  #express_contact_us
-    %h3 Contact us
-    - form_for @enquiry || Enquiry.build_express, :url => enquiry_path do |f|
-      %p
-        Email:
-        = mail_to "info@wi.com.au","info@wi.com.au", :encode => :javascript
-      %p Phone: + 61 2 9929 9229
-      %p Fax: + 61 2 9460 4770
-      = '<p><span class="errorExplanation">Your enquiry could not be submitted</span></p>' unless f.object.errors.empty? 
-      = f.hidden_field :express 
-      %p
-        = f.text_field :name, :class => 'field', :size => 11, :maxlength => 100 
-        = error_message_on f.object, :name
-      %p
-        = f.text_field :email, :class => 'field', :size => 11, :maxlength => 100 
-        = error_message_on f.object, :email
-      %p
-        = f.text_field :phone, :class => 'field', :size => 11, :maxlength => 100
-        = error_message_on f.object, :phone
-      %p= image_submit_tag "submit.jpg"
-.clear{:style => 'clear: both'}
-= javascript_include_tag 'twitter'
+.projects
+  %ul
+    - @projects.each do |project|
+      %li.project{:class =>  project.url.blank? ? nil : "selected"}
+        .panel
+          = image_tag project.thumbnail.url
+          %h3= project.name
+          = link_to project.url, project.url unless project.url.blank?
+        = image_tag project.main_image.url, :class => 'main'
+
+.testimonials
+  %h2 Testimonials
+  - @testimonials.each do |testimonial| 
+    .testimonial
+      = image_tag testimonial.image.url 
+      %p= testimonial.content
+      %p.author= testimonial.author
+
+.content
+  .blog
+    %h2 Blog
+    .blog_links
+      = link_to 'subscribe blog','#', :class => 'rss'
+      = link_to 'browse all','#'
+    - if @post
+      .post
+        .calendar
+          %span.day= @post.created_at.day
+          %span.month= @post.created_at.strftime('%B')
+      
+        %h3= link_to @post.title, @post
+        %p.author
+          %label Author:
+          = @post.author_name
+        =# image_tag @post.image.url
+        = truncate(strip_tags(textilize(@post.content)),900)
+        = link_to 'more ..', @post
+        .actions
+          (#{@post.comments_count}) #{@post.comments_count == 1 ? 'Comment' : 'Comments'} | #{link_to '[+] Share', '#'}
+
+  %h1 Today the web is where your customers are heading but are you ready for them?
+  :textile 
+    With over 16 years experience in providing web based solutions we are confident that we can assist you. In fact every service we offer represents a cost effective way of helping to build your brand online.
+
+    We specialise in website design and website development, web applications and e-marketing services. We blend our creative, technology and marketing experience to deliver real solutions.
+
+    The web is constantly changing the way the world operates. The web has now become a large part of our lives as it’s entered our offices, homes and even our pockets. With the increasing importance of the web are your current web activities creating a positive brand experience?
+  .contact
+    == Interested in learning more? #{link_to 'contact us', "#"}
+  
+  .services
+    %h2 Services
+    
+    -  @services.each do |service|
+      .service{:class => service == @services[-1] ? 'last' : nil, :style => "background-image: url(#{service.image.url});"}
+        %h3= service.name 
+        %p= service.description
+        %p= link_to 'more ..', '#'
+ 
+  .case_study
+    %h2 Case Study
+    = image_tag @case_study.thumbnail.url
+    
+    %h3= @case_study.name 
+    = sanitize @case_study.summary.to_s 
+    = link_to 'more..', @case_study.url 
+
+  .twitter
+    %h2 Twitter
+    = link_to 'follow on twitter', '#', :class => 'follow' 
+    #tweets
+

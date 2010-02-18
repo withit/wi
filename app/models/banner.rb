@@ -45,4 +45,8 @@ class Banner < ActiveRecord::Base
     dest = File.join(dir, basename)
     FileUtils.cp(file.path, dest)
   end
+  
+  def to_param
+    "#{id}-#{description.parameterize}-#{campaign_name.parameterize}"
+  end
 end

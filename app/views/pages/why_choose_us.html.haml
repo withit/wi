@@ -1,0 +1,29 @@
+- content_for :head do 
+  \
+
+.breadcrumbs
+  %ul
+    %li= link_to 'home', root_path
+    %li= link_to 'company', company_path
+    %li why choose us
+.sidebar
+  = image_tag @page.image.url
+  %ul
+    %li= link_to  'Company', company_path
+    %li.current
+      = link_to 'Why Choose Us', why_choose_us_path
+      %p We care about the web and our mission is to try and make the web experience even better by delivering the best possible solution
+
+.content
+  :textile
+    h1. Why Choose Us
+
+    h2. We are passionate about helping businesses to grow online by:
+
+    * Delivering a quality product at a realistic price
+    * Offering high levels of customer service
+    * Using tested procedures to deliver projects on time
+    * Knowledgeable and experienced in creating web based solutions
+    * Providing additional online marketing services to maximize your investment
+    * Being a trusted partner to medium sized enterprises and corporations
+    * Easy to do business with and always flexible

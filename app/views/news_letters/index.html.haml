@@ -1,4 +1,23 @@
-#news_letters
+- content_for :head do 
+  \
+
+.breadcrumbs
+  %ul
+    %li= link_to 'home', root_path
+    %li= link_to 'projects', projects_path
+    %li Email Campaigns
+
+.sidebar
+  %ul
+    %li= link_to 'Websites', websites_path
+    %li= link_to 'Banners', banners_path
+    %li.current
+      = link_to  'Email Campaigns', company_path
+      %p We will provide you with the best email campaigns design options for your business
+      %ul
+        - @news_letters.each do |news_letter|
+          %ul= link_to news_letter.name, news_letter
+.content
   - @news_letters.each do |news_letter|
     .news_letter{:class => cycle(nil, 'last')}
       = link_to image_tag(news_letter.logo.url), news_letter
@@ -6,5 +25,3 @@
         New
         = news_letter.name
         = link_to image_tag("arrow-orange.jpg"), news_letter
-- if admin?
-  .admin= link_to 'Add a new news letter', new_news_letter_path

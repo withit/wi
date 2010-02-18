@@ -74,19 +74,18 @@ body {
       font-family: Arial;
       font-size: 12px;
       padding: 0 18px; }
-  /* line 56, sass/application.sass */
-  .nav.index_action li.home_tab, .nav.websites_action li.projects_tab, .nav.new_action li.contact_us_tab,
-  .nav.clients_action li.clients_tab, .nav.company_action li.company_tab, .nav.case_study_action li.case_study_tab,
-  .nav.blogs_action li.blogs_tab, .nav.post_action li.blogs_tab, .nav.services_action li.services_tab {
-    background-image: url(/images/arrow-nav-bar.jpg);
-    background-repeat: no-repeat;
-    background-position: 50% 100%; }
-    /* line 63, sass/application.sass */
-    .nav.index_action li.home_tab a, .nav.websites_action li.projects_tab a, .nav.new_action li.contact_us_tab a,
-    .nav.clients_action li.clients_tab a, .nav.company_action li.company_tab a, .nav.case_study_action li.case_study_tab a,
-    .nav.blogs_action li.blogs_tab a, .nav.post_action li.blogs_tab a, .nav.services_action li.services_tab a {
-      font-weight: bold;
-      color: #FFF; }
+
+/* line 56, sass/application.sass */
+body.home #home_tab, bosy.websites #projects_tab, body.projects #projects_tab, body.banners #projects_tab,
+body.enquires #contact_us_tab, body.case_studies #case_study_tab, body.services #services_tab, body.newsletters #projects.tab, body.posts #blogs_tab, body.company #company_tab, body.why_choose_us #company_tab {
+  background-image: url(/images/arrow-nav-bar.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 100%; }
+  /* line 63, sass/application.sass */
+  body.home #home_tab a, bosy.websites #projects_tab a, body.projects #projects_tab a, body.banners #projects_tab a,
+  body.enquires #contact_us_tab a, body.case_studies #case_study_tab a, body.services #services_tab a, body.newsletters #projects.tab a, body.posts #blogs_tab a, body.company #company_tab a, body.why_choose_us #company_tab a {
+    font-weight: bold;
+    color: #FFF; }
 
 /* line 66, sass/application.sass */
 .container {
@@ -348,9 +347,8 @@ body.home .services {
     body.home .services .service.last {
       border-bottom: none;
       margin-bottom: 0; }
-
 /* line 289, sass/application.sass */
-.case_study {
+body.home .case_study {
   float: left;
   width: 320px;
   background-color: #EFEFEF;
@@ -361,11 +359,11 @@ body.home .services {
   margin-right: 0;
   height: 373px; }
   /* line 290, sass/application.sass */
-  .case_study p {
+  body.home .case_study p {
     font-size: 12px;
     line-height: 14px; }
   /* line 302, sass/application.sass */
-  .case_study h2 {
+  body.home .case_study h2 {
     background-image: url(/images/case-study.png);
     height: 43px;
     width: 133px;
@@ -374,24 +372,24 @@ body.home .services {
     text-indent: -9999px;
     margin: 12px 12px 0px 8px; }
   /* line 310, sass/application.sass */
-  .case_study h3 {
+  body.home .case_study h3 {
     margin: 0;
     color: #0E66AE;
     text-transform: uppercase;
     font-weight: normal;
     font-size: 14px; }
   /* line 316, sass/application.sass */
-  .case_study img {
+  body.home .case_study img {
     display: block;
     margin: 5px auto; }
   /* line 319, sass/application.sass */
-  .case_study h3, .case_study p {
+  body.home .case_study h3, body.home .case_study p {
     margin-left: 10px; }
   /* line 321, sass/application.sass */
-  .case_study p {
+  body.home .case_study p {
     margin-bottom: 0px; }
   /* line 323, sass/application.sass */
-  .case_study a {
+  body.home .case_study a {
     margin-left: 10px;
     color: #0E66AE;
     text-decoration: none;
@@ -444,74 +442,73 @@ body.home .services {
     .twitter p.info {
       font-size: 11px;
       color: #4ACAF7; }
-
-/* line 369, sass/application.sass */
-.projects {
-  position: relative;
-  background-color: #FFF;
-  padding-top: 1px;
-  padding-bottom: 1px; }
-  /* line 374, sass/application.sass */
-  .projects .main {
-    position: absolute;
-    left: 17px;
-    top: 21px;
-    z-index: 10;
-    clear: both; }
-  /* line 381, sass/application.sass */
-  .projects ul {
-    background-color: #CCC;
-    border: 1px solid #D9D9D9;
-    border-bottom: none;
-    padding-bottom: 1px;
-    margin: 10px;
-    list-style-type: none;
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-image: url(/images/gradient-main-image.jpg);
-    background-repeat: repeat-x;
-    background-bottom: none;
-    zoom: 1; }
-    /* line 394, sass/application.sass */
-    .projects ul li {
-      height: 87px;
-      overflow: hidden;
-      margin: 10px 10px 0px auto;
-      width: 318px; }
-      /* line 399, sass/application.sass */
-      .projects ul li .panel {
-        z-index: 20;
-        width: 291px;
+  /* line 369, sass/application.sass */
+  .twitter .projects {
+    position: relative;
+    background-color: #FFF;
+    padding-top: 1px;
+    padding-bottom: 1px; }
+    /* line 374, sass/application.sass */
+    .twitter .projects .main {
+      position: absolute;
+      left: 17px;
+      top: 21px;
+      z-index: 10;
+      clear: both; }
+    /* line 381, sass/application.sass */
+    .twitter .projects ul {
+      background-color: #CCC;
+      border: 1px solid #D9D9D9;
+      border-bottom: none;
+      padding-bottom: 1px;
+      margin: 10px;
+      list-style-type: none;
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-image: url(/images/gradient-main-image.jpg);
+      background-repeat: repeat-x;
+      background-bottom: none;
+      zoom: 1; }
+      /* line 394, sass/application.sass */
+      .twitter .projects ul li {
+        height: 87px;
         overflow: hidden;
-        position: relative;
-        background-image: url(/images/grey-main.png);
-        background-repeat: no-repeat;
-        background-position: top right;
-        padding: 7px;
-        padding-left: 24px;
-        color: #0960AD; }
-      /* line 410, sass/application.sass */
-      .projects ul li .main {
+        margin: 10px 10px 0px auto;
+        width: 318px; }
+        /* line 399, sass/application.sass */
+        .twitter .projects ul li .panel {
+          z-index: 20;
+          width: 291px;
+          overflow: hidden;
+          position: relative;
+          background-image: url(/images/grey-main.png);
+          background-repeat: no-repeat;
+          background-position: top right;
+          padding: 7px;
+          padding-left: 24px;
+          color: #0960AD; }
+        /* line 410, sass/application.sass */
+        .twitter .projects ul li .main {
+          display: none; }
+        /* line 413, sass/application.sass */
+        .twitter .projects ul li.selected .panel {
+          background-image: url(/images/blue-main.png);
+          color: #FFF; }
+        /* line 416, sass/application.sass */
+        .twitter .projects ul li.selected .main {
+          display: block; }
+        /* line 418, sass/application.sass */
+        .twitter .projects ul li img {
+          float: left;
+          margin-right: 6px; }
+      /* line 421, sass/application.sass */
+      .twitter .projects ul h3 {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: normal; }
+      /* line 425, sass/application.sass */
+      .twitter .projects ul a {
         display: none; }
-      /* line 413, sass/application.sass */
-      .projects ul li.selected .panel {
-        background-image: url(/images/blue-main.png);
-        color: #FFF; }
-      /* line 416, sass/application.sass */
-      .projects ul li.selected .main {
-        display: block; }
-      /* line 418, sass/application.sass */
-      .projects ul li img {
-        float: left;
-        margin-right: 6px; }
-    /* line 421, sass/application.sass */
-    .projects ul h3 {
-      text-transform: uppercase;
-      font-size: 14px;
-      font-weight: normal; }
-    /* line 425, sass/application.sass */
-    .projects ul a {
-      display: none; }
 
 /* line 427, sass/application.sass */
 .footer {
@@ -661,10 +658,10 @@ div.main {
         text-decoration: underline; }
 
 /* line 90, sass/_websites.sass */
-.websites {
+body.websites .content, div.websites {
   margin-left: 235px; }
   /* line 92, sass/_websites.sass */
-  .websites h1 {
+  body.websites .content h1, div.websites h1 {
     margin: 0px 0px 10px 0px;
     font-size: 20px;
     text-transform: uppercase;
@@ -672,7 +669,7 @@ div.main {
     font-weight: normal;
     color: #0E66AE; }
   /* line 99, sass/_websites.sass */
-  .websites .website {
+  body.websites .content .website, div.websites .website {
     width: 355px;
     margin-right: 15px;
     height: 184px;
@@ -684,12 +681,12 @@ div.main {
     -moz-box-shadow: 3px 3px 3px #CCC;
     -webkit-box-shadow: 3px 3px 3px #CCC; }
     /* line 110, sass/_websites.sass */
-    .websites .website h2 {
+    body.websites .content .website h2, div.websites .website h2 {
       margin: 4px;
       font-size: 14px;
       font-weight: normal; }
     /* line 114, sass/_websites.sass */
-    .websites .website a {
+    body.websites .content .website a, div.websites .website a {
       text-decoration: none;
       color: #0E66AE;
       text-transform: uppercase;
@@ -699,10 +696,10 @@ div.main {
       background-position: center right;
       margin-right: 6px; }
       /* line 123, sass/_websites.sass */
-      .websites .website a:hover {
+      body.websites .content .website a:hover, div.websites .website a:hover {
         text-decoration: underline; }
     /* line 125, sass/_websites.sass */
-    .websites .website p {
+    body.websites .content .website p, div.websites .website p {
       font-size: 12px; }
 
 /* line 1, sass/_contact_us.sass */
@@ -802,11 +799,11 @@ div.main {
       font-size: 14px; }
 
 /* line 1, sass/_company.sass */
-.company, .clients {
+body.company .content, body.clients .content, body.why_choose_us .content, body.projects .content {
   margin-left: 235px;
   margin-right: 350px; }
   /* line 4, sass/_company.sass */
-  .company h1, .clients h1 {
+  body.company .content h1, body.clients .content h1, body.why_choose_us .content h1, body.projects .content h1 {
     margin: 0px 0px 10px 0px;
     font-size: 20px;
     text-transform: uppercase;
@@ -814,23 +811,23 @@ div.main {
     font-weight: normal;
     color: #0E66AE; }
   /* line 11, sass/_company.sass */
-  .company p, .clients p {
+  body.company .content p, body.clients .content p, body.why_choose_us .content p, body.projects .content p {
     font-size: 12px; }
     /* line 13, sass/_company.sass */
-    .company p a, .clients p a {
+    body.company .content p a, body.clients .content p a, body.why_choose_us .content p a, body.projects .content p a {
       font-weight: bold;
       text-decoration: none;
       color: rgb(14, 102, 174); }
       /* line 17, sass/_company.sass */
-      .company p a:hover, .clients p a:hover {
+      body.company .content p a:hover, body.clients .content p a:hover, body.why_choose_us .content p a:hover, body.projects .content p a:hover {
         text-decoration: underline; }
   /* line 19, sass/_company.sass */
-  .company .contact, .clients .contact {
+  body.company .content .contact, body.clients .content .contact, body.why_choose_us .content .contact, body.projects .content .contact {
     margin-bottom: 100px;
     margin-left: 0;
     margin-top: 20px; }
     /* line 23, sass/_company.sass */
-    .company .contact a, .clients .contact a {
+    body.company .content .contact a, body.clients .content .contact a, body.why_choose_us .content .contact a, body.projects .content .contact a {
       margin-left: 0; }
 
 /* line 25, sass/_company.sass */
@@ -1188,10 +1185,10 @@ div.posts {
     -webkit-border-radius: 40px; }
 
 /* line 1, sass/_services.sass */
-.services_page {
+body.services .content {
   margin-left: 230px; }
   /* line 3, sass/_services.sass */
-  .services_page h1 {
+  body.services .content h1 {
     color: #0e66ae;
     font-family: Tahoma, Geneva, sans-serif;
     font-weight: normal;
@@ -1199,7 +1196,7 @@ div.posts {
     text-transform: uppercase;
     font-size: 20px; }
   /* line 10, sass/_services.sass */
-  .services_page h2 {
+  body.services .content h2 {
     color: #BA1827;
     font-family: Tahoma, Geneva, sans-serif;
     font-weight: normal;
@@ -1208,26 +1205,26 @@ div.posts {
     font-size: 14px;
     margin-bottom: 20px; }
   /* line 18, sass/_services.sass */
-  .services_page p {
+  body.services .content p {
     margin-bottom: 0; }
   /* line 20, sass/_services.sass */
-  .services_page .service {
+  body.services .content .service {
     float: left;
     background-color: white;
     width: 355px;
     height: 160px;
     padding: 1px; }
     /* line 26, sass/_services.sass */
-    .services_page .service h3 {
+    body.services .content .service h3 {
       color: #0e66ae;
       text-transform: uppercase;
       font-weight: normal; }
     /* line 30, sass/_services.sass */
-    .services_page .service img {
+    body.services .content .service img {
       float: left;
       width: 110px; }
     /* line 33, sass/_services.sass */
-    .services_page .service h3, .services_page .service p {
+    body.services .content .service h3, body.services .content .service p {
       margin-left: 120px;
       margin-right: 10px;
       margin-bottom: 0px;
@@ -1294,3 +1291,154 @@ body.pages .company_testimonials {
     body.pages .company_testimonials p.author {
       color: #F3A144;
       margin-top: 0; }
+
+/* line 6, sass/_sample.sass */
+.sample_page {
+  width: 728px;
+  height: 1000px;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: #c5c5c5; }
+  /* line 7, sass/_sample.sass */
+  .sample_page a {
+    color: #83a1a9;
+    font-weight: bold; }
+  /* line 15, sass/_sample.sass */
+  .sample_page h3 {
+    font-size: 120%; }
+  /* line 17, sass/_sample.sass */
+  .sample_page h4 {
+    font-size: 120%; }
+  /* line 20, sass/_sample.sass */
+  .sample_page .feature h3 {
+    font-size: 100%;
+    height: 15px; }
+  /* line 23, sass/_sample.sass */
+  .sample_page .feature p {
+    margin: 0;
+    padding: 20px 0; }
+  /* line 26, sass/_sample.sass */
+  .sample_page #banner728x90 {
+    height: 90px;
+    width: 728px;
+    background-color: #c5c5c5; }
+  /* line 30, sass/_sample.sass */
+  .sample_page .left {
+    width: 398px; }
+    /* line 32, sass/_sample.sass */
+    .sample_page .left .feature {
+      width: 179px;
+      margin: 10px;
+      float: left; }
+    /* line 36, sass/_sample.sass */
+    .sample_page .left h3 {
+      color: #83a1a9; }
+  /* line 39, sass/_sample.sass */
+  .sample_page .right h3 {
+    background-color: #c5c5c5;
+    height: 20px;
+    width: 60px; }
+  /* line 43, sass/_sample.sass */
+  .sample_page .right h4 {
+    color: #83a1a9; }
+  /* line 45, sass/_sample.sass */
+  .sample_page .left, .sample_page .right {
+    border: none;
+    background-image: none;
+    margin-top: 0.5em;
+    float: left; }
+    /* line 50, sass/_sample.sass */
+    .sample_page .left ul, .sample_page .right ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      /* line 54, sass/_sample.sass */
+      .sample_page .left ul li, .sample_page .right ul li {
+        position: relative;
+        list-style-type: none;
+        list-style-image: none;
+        border-bottom: 1px dashed #c5c5c5;
+        padding-left: 60px;
+        padding-top: 5px;
+        padding-bottom: 15px; }
+      /* line 62, sass/_sample.sass */
+      .sample_page .left ul .picture, .sample_page .right ul .picture {
+        background-color: #c5c5c5;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 5px;
+        left: 5px; }
+      /* line 69, sass/_sample.sass */
+      .sample_page .left ul h3, .sample_page .left ul p, .sample_page .left ul h4, .sample_page .right ul h3, .sample_page .right ul p, .sample_page .right ul h4 {
+        margin: 0;
+        padding: 0; }
+  /* line 73, sass/_sample.sass */
+  .sample_page .feature .picture {
+    background-color: #c5c5c5;
+    width: 100%;
+    height: 200px; }
+  /* line 78, sass/_sample.sass */
+  .sample_page .right {
+    width: 300px; }
+  /* line 80, sass/_sample.sass */
+  .sample_page #banner300x250 {
+    height: 250px;
+    width: 300px;
+    background-color: #c5c5c5; }
+
+/* line 4, sass/_banners.sass */
+body.banners .content {
+  margin-left: 220px; }
+
+/* line 6, sass/_banners.sass */
+#banners {
+  width: 501px;
+  margin: auto; }
+  /* line 7, sass/_banners.sass */
+  #banners a {
+    border: none; }
+    /* line 9, sass/_banners.sass */
+    #banners a img {
+      border: none; }
+  /* line 13, sass/_banners.sass */
+  #banners .campaign {
+    width: 247px;
+    float: left;
+    margin-right: 7px; }
+    /* line 17, sass/_banners.sass */
+    #banners .campaign.last {
+      margin-right: 0px; }
+    /* line 19, sass/_banners.sass */
+    #banners .campaign h2 {
+      text-transform: uppercase;
+      vertical-align: middle;
+      margin: 0;
+      margin-top: 5px;
+      padding: 0; }
+      /* line 22, sass/_banners.sass */
+      #banners .campaign h2 img {
+        vertical-align: middle; }
+    /* line 27, sass/_banners.sass */
+    #banners .campaign ul {
+      padding: 0; }
+      /* line 29, sass/_banners.sass */
+      #banners .campaign ul li {
+        background-image: url("../images/blue-arrow.jpg");
+        background-repeat: no-repeat;
+        background-position: 0px;
+        list-style-image: none;
+        list-style: none;
+        padding-left: 1em; }
+
+/* line 2, sass/_newsletters.sass */
+body.news_letters .content {
+  margin-left: 235px; }
+  /* line 4, sass/_newsletters.sass */
+  body.news_letters .content h1 {
+    margin: 0px 0px 10px 0px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+    color: #0E66AE; }
