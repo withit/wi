@@ -1399,7 +1399,11 @@ body.news_letters .content {
   display: inline;
   margin-left: 10px;
   padding: 10px;
-  padding-bottom: 0px; }
+  padding-bottom: 0px;
+  padding-top: 124px;
+  background-image: url(/images/project-lhs.jpg);
+  background-repeat: no-repeat;
+  background-position: 8px 8px; }
   /* line 9, sass/_sidebar.sass */
   .sidebar img {
     border: 9px solid white;
@@ -1410,11 +1414,7 @@ body.news_letters .content {
     list-style-type: none;
     width: 185px;
     padding: 0;
-    margin: 0;
-    padding-top: 94px;
-    background-image: url(/images/project-lhs.jpg);
-    background-repeat: no-repeat;
-    background-position: top center; }
+    margin: 0; }
     /* line 19, sass/_sidebar.sass */
     .sidebar ul li {
       height: 35px;
@@ -1449,27 +1449,24 @@ body.news_letters .content {
       /* line 43, sass/_sidebar.sass */
       .sidebar ul a:hover {
         text-decoration: underline; }
-    /* line 50, sass/_sidebar.sass */
-    body.services .sidebar ul {
-      background-image: url(/images/services-lhs.jpg); }
-    /* line 52, sass/_sidebar.sass */
-    body.projects .sidebar ul {
-      background-image: url(/images/project-lhs.jpg); }
-    /* line 54, sass/_sidebar.sass */
-    body.company .sidebar ul {
-      background-image: url(/images/about-lhs.jpg); }
-    /* line 56, sass/_sidebar.sass */
-    body.banners .sidebar ul {
-      background-image: url(/images/banners-lhs.jpg); }
-    /* line 58, sass/_sidebar.sass */
-    body.news_letters .sidebar ul {
-      background-image: url(/images/newsletter-lhs.jpg); }
-    /* line 60, sass/_sidebar.sass */
-    body.case_studies .sidebar ul {
-      background-image: url(/images/casestudy-lhs.jpg); }
-    /* line 62, sass/_sidebar.sass */
-    body.enquiries .sidebar ul {
-      background-image: url(/images/contact-lhs.jpg); }
-    /* line 64, sass/_sidebar.sass */
-    .sidebar ul ul {
-      background-image: none; }
+  /* line 50, sass/_sidebar.sass */
+  body.services .sidebar {
+    background-image: url(/images/services-lhs-shadow.jpg); }
+  /* line 52, sass/_sidebar.sass */
+  body.projects .sidebar {
+    background-image: url(/images/project-lhs-shadow.jpg); }
+  /* line 54, sass/_sidebar.sass */
+  body.company .sidebar {
+    background-image: url(/images/about-lhs-shadow.jpg); }
+  /* line 56, sass/_sidebar.sass */
+  body.banners .sidebar {
+    background-image: url(/images/banners-lhs-shadow.jpg); }
+  /* line 58, sass/_sidebar.sass */
+  body.news_letters .sidebar {
+    background-image: url(/images/newsletter-lhs-shadow.jpg); }
+  /* line 60, sass/_sidebar.sass */
+  body.case_studies .sidebar {
+    background-image: url(/images/casestudy-lhs-shadow.jpg); }
+  /* line 62, sass/_sidebar.sass */
+  body.enquiries .sidebar {
+    background-image: url(/images/contact-lhs-shadow.jpg); }
