@@ -20,7 +20,7 @@
   .blog
     %h2 Blog
     .blog_links
-      = link_to 'subscribe blog','#', :class => 'rss'
+      = link_to 'subscribe blog', posts_path(:format => :rss), :class => 'rss'
       = link_to 'browse all','#'
     - if @post
       .post
