@@ -616,35 +616,37 @@ body.websites .content, div.websites, body.banners .content {
     color: #0E66AE; }
   /* line 56, sass/_websites.sass */
   body.websites .content .website, div.websites .website, body.banners .content .website {
-    width: 355px;
-    margin-right: 15px;
-    height: 184px;
-    margin-bottom: 115px;
+    width: 361px;
+    margin-right: 10px;
+    height: 289px;
+    margin-bottom: 10px;
     padding: 5px;
-    overflow: visible;
-    float: left;
-    background-color: #EFEFED;
-    -moz-box-shadow: 3px 3px 3px #CCC;
-    -webkit-box-shadow: 3px 3px 3px #CCC; }
-    /* line 67, sass/_websites.sass */
+    float: left; }
+    /* line 63, sass/_websites.sass */
     body.websites .content .website h2, div.websites .website h2, body.banners .content .website h2 {
-      margin: 4px;
+      padding: 4px;
       font-size: 14px;
-      font-weight: normal; }
-    /* line 71, sass/_websites.sass */
-    body.websites .content .website a, div.websites .website a, body.banners .content .website a {
-      text-decoration: none;
-      color: #0E66AE;
-      text-transform: uppercase;
-      display: block;
-      background-image: url(/images/arrow-blue.png);
-      background-repeat: no-repeat;
-      background-position: center right;
-      margin-right: 6px; }
-      /* line 80, sass/_websites.sass */
-      body.websites .content .website a:hover, div.websites .website a:hover, body.banners .content .website a:hover {
-        text-decoration: underline; }
-    /* line 82, sass/_websites.sass */
+      font-weight: normal;
+      background-color: #EFEFED;
+      -moz-box-shadow: 3px 3px 3px #CCC;
+      -webkit-box-shadow: 3px 3px 3px #CCC; }
+      /* line 70, sass/_websites.sass */
+      body.websites .content .website h2 img, div.websites .website h2 img, body.banners .content .website h2 img {
+        margin-bottom: 4px; }
+      /* line 72, sass/_websites.sass */
+      body.websites .content .website h2 a, div.websites .website h2 a, body.banners .content .website h2 a {
+        text-decoration: none;
+        color: #0E66AE;
+        text-transform: uppercase;
+        display: block;
+        background-image: url(/images/arrow-blue.png);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        margin-right: 6px; }
+        /* line 81, sass/_websites.sass */
+        body.websites .content .website h2 a:hover, div.websites .website h2 a:hover, body.banners .content .website h2 a:hover {
+          text-decoration: none; }
+    /* line 83, sass/_websites.sass */
     body.websites .content .website p, div.websites .website p, body.banners .content .website p {
       font-size: 12px; }
 
