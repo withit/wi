@@ -32,16 +32,30 @@
       :margin 0px
       :font-size 12px
     a
-      :text-decoration none
       :color #0E66AE
       :text-transform uppercase
       :font-size 12px
       :display block
-      :background-image url(/images/arrow-lhs-menu.jpg)
       :background-repeat no-repeat
       :background-position center right
-      &:hover
-        :text-decoration underline
+      :background-image url(/images/arrow-lhs-menu.jpg)
+      
+    ul
+      a
+        :background-position center left
+        :padding-left 20px
+        :color #C9162C
+        :height auto
+        :background-image none
+      li
+        :padding-top 3px
+        :padding-bottom 3px
+        :height auto
+        :border none
+        &.current a
+          :color #0E66AE
+          :background-image url(/images/arrow-lhs-menu.jpg)
+        
   :padding-top 124px
   :background-image url(/images/project-lhs.jpg)
   :background-repeat no-repeat
@@ -51,7 +65,7 @@
     :background-image url(/images/services-lhs-shadow.jpg)
   body.projects &
     :background-image url(/images/project-lhs-shadow.jpg)
-  body.company &
+  body.company &, body.why_choose_us &
     :background-image url(/images/about-lhs-shadow.jpg)
   body.banners &
     :background-image url(/images/banners-lhs-shadow.jpg)
@@ -61,5 +75,6 @@
     :background-image url(/images/casestudy-lhs-shadow.jpg)
   body.enquiries &
     :background-image url(/images/contact-lhs-shadow.jpg)
+  :margin-bottom 10px
 
     

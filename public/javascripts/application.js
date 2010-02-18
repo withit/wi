@@ -23,6 +23,6 @@ $(document).ready(function(){
   });
   $('#tweets').tweetable({username: 'withimagination', limit: 5, time: true});
   $('.sizes select').live('change', function(){
-     document.location = '/banners/' + this.value;
+     document.location = '/projects/banners/' + this.value;
   });
 })

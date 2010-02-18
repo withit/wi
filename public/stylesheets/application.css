@@ -442,96 +442,97 @@ body.home .case_study {
     .twitter p.info {
       font-size: 11px;
       color: #4ACAF7; }
-  /* line 369, sass/application.sass */
-  .twitter .projects {
-    position: relative;
-    background-color: #FFF;
-    padding-top: 1px;
-    padding-bottom: 1px; }
-    /* line 374, sass/application.sass */
-    .twitter .projects .main {
-      position: absolute;
-      left: 17px;
-      top: 21px;
-      z-index: 10;
-      clear: both; }
-    /* line 381, sass/application.sass */
-    .twitter .projects ul {
-      background-color: #CCC;
-      border: 1px solid #D9D9D9;
-      border-bottom: none;
-      padding-bottom: 1px;
-      margin: 10px;
-      list-style-type: none;
-      background-repeat: no-repeat;
-      background-position: top left;
-      background-image: url(/images/gradient-main-image.jpg);
-      background-repeat: repeat-x;
-      background-bottom: none;
-      zoom: 1; }
-      /* line 394, sass/application.sass */
-      .twitter .projects ul li {
-        height: 87px;
-        overflow: hidden;
-        margin: 10px 10px 0px auto;
-        width: 318px; }
-        /* line 399, sass/application.sass */
-        .twitter .projects ul li .panel {
-          z-index: 20;
-          width: 291px;
-          overflow: hidden;
-          position: relative;
-          background-image: url(/images/grey-main.png);
-          background-repeat: no-repeat;
-          background-position: top right;
-          padding: 7px;
-          padding-left: 24px;
-          color: #0960AD; }
-        /* line 410, sass/application.sass */
-        .twitter .projects ul li .main {
-          display: none; }
-        /* line 413, sass/application.sass */
-        .twitter .projects ul li.selected .panel {
-          background-image: url(/images/blue-main.png);
-          color: #FFF; }
-        /* line 416, sass/application.sass */
-        .twitter .projects ul li.selected .main {
-          display: block; }
-        /* line 418, sass/application.sass */
-        .twitter .projects ul li img {
-          float: left;
-          margin-right: 6px; }
-      /* line 421, sass/application.sass */
-      .twitter .projects ul h3 {
-        text-transform: uppercase;
-        font-size: 14px;
-        font-weight: normal; }
-      /* line 425, sass/application.sass */
-      .twitter .projects ul a {
-        display: none; }
 
-/* line 427, sass/application.sass */
+/* line 370, sass/application.sass */
+body.home .projects {
+  position: relative;
+  background-color: #FFF;
+  padding-top: 1px;
+  padding-bottom: 1px; }
+  /* line 375, sass/application.sass */
+  body.home .projects .main {
+    position: absolute;
+    left: 17px;
+    top: 21px;
+    z-index: 10;
+    clear: both; }
+  /* line 382, sass/application.sass */
+  body.home .projects ul {
+    background-color: #CCC;
+    border: 1px solid #D9D9D9;
+    border-bottom: none;
+    padding-bottom: 1px;
+    margin: 10px;
+    list-style-type: none;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-image: url(/images/gradient-main-image.jpg);
+    background-repeat: repeat-x;
+    background-bottom: none;
+    zoom: 1; }
+    /* line 395, sass/application.sass */
+    body.home .projects ul li {
+      height: 87px;
+      overflow: hidden;
+      margin: 10px 10px 0px auto;
+      width: 318px; }
+      /* line 400, sass/application.sass */
+      body.home .projects ul li .panel {
+        z-index: 20;
+        width: 291px;
+        overflow: hidden;
+        position: relative;
+        background-image: url(/images/grey-main.png);
+        background-repeat: no-repeat;
+        background-position: top right;
+        padding: 7px;
+        padding-left: 24px;
+        color: #0960AD; }
+      /* line 411, sass/application.sass */
+      body.home .projects ul li .main {
+        display: none; }
+      /* line 414, sass/application.sass */
+      body.home .projects ul li.selected .panel {
+        background-image: url(/images/blue-main.png);
+        color: #FFF; }
+      /* line 417, sass/application.sass */
+      body.home .projects ul li.selected .main {
+        display: block; }
+      /* line 419, sass/application.sass */
+      body.home .projects ul li img {
+        float: left;
+        margin-right: 6px; }
+    /* line 422, sass/application.sass */
+    body.home .projects ul h3 {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: normal; }
+    /* line 426, sass/application.sass */
+    body.home .projects ul a {
+      display: none; }
+
+/* line 428, sass/application.sass */
 .footer {
   float: left;
   width: 100%; }
-  /* line 430, sass/application.sass */
+  /* line 431, sass/application.sass */
   .footer .subscribe {
     margin-top: 10px;
     margin-bottom: 50px;
     float: left; }
-    /* line 434, sass/application.sass */
+    /* line 435, sass/application.sass */
     .footer .subscribe h2 {
       text-indent: -9999px;
       background-image: url(/images/subscribe.png);
       height: 36px;
       width: 196px;
       margin: 0; }
-    /* line 440, sass/application.sass */
+    /* line 441, sass/application.sass */
     .footer .subscribe input[type='email'] {
       border: 1px solid #A5C0DB;
       line-height: 16px;
       padding: 4px; }
-    /* line 444, sass/application.sass */
+    /* line 445, sass/application.sass */
     .footer .subscribe input[type='submit'] {
       color: #FFF;
       background-color: #A3101A;
@@ -540,7 +541,7 @@ body.home .case_study {
       border: none;
       padding: 4px 6px;
       font-size: 12px; }
-  /* line 452, sass/application.sass */
+  /* line 453, sass/application.sass */
   .footer .external, .footer p {
     text-align: right;
     font-size: 12px;
@@ -614,7 +615,7 @@ body.websites .content, div.websites, body.banners .content {
     font-weight: normal;
     color: #0E66AE; }
   /* line 56, sass/_websites.sass */
-  body.websites .content .website, body.websites .content .banner, div.websites .website, div.websites .banner, body.banners .content .website, body.banners .content .banner {
+  body.websites .content .website, div.websites .website, body.banners .content .website {
     width: 355px;
     margin-right: 15px;
     height: 184px;
@@ -626,12 +627,12 @@ body.websites .content, div.websites, body.banners .content {
     -moz-box-shadow: 3px 3px 3px #CCC;
     -webkit-box-shadow: 3px 3px 3px #CCC; }
     /* line 67, sass/_websites.sass */
-    body.websites .content .website h2, body.websites .content .banner h2, div.websites .website h2, div.websites .banner h2, body.banners .content .website h2, body.banners .content .banner h2 {
+    body.websites .content .website h2, div.websites .website h2, body.banners .content .website h2 {
       margin: 4px;
       font-size: 14px;
       font-weight: normal; }
     /* line 71, sass/_websites.sass */
-    body.websites .content .website a, body.websites .content .banner a, div.websites .website a, div.websites .banner a, body.banners .content .website a, body.banners .content .banner a {
+    body.websites .content .website a, div.websites .website a, body.banners .content .website a {
       text-decoration: none;
       color: #0E66AE;
       text-transform: uppercase;
@@ -641,10 +642,10 @@ body.websites .content, div.websites, body.banners .content {
       background-position: center right;
       margin-right: 6px; }
       /* line 80, sass/_websites.sass */
-      body.websites .content .website a:hover, body.websites .content .banner a:hover, div.websites .website a:hover, div.websites .banner a:hover, body.banners .content .website a:hover, body.banners .content .banner a:hover {
+      body.websites .content .website a:hover, div.websites .website a:hover, body.banners .content .website a:hover {
         text-decoration: underline; }
     /* line 82, sass/_websites.sass */
-    body.websites .content .website p, body.websites .content .banner p, div.websites .website p, div.websites .banner p, body.banners .content .website p, body.banners .content .banner p {
+    body.websites .content .website p, div.websites .website p, body.banners .content .website p {
       font-size: 12px; }
 
 /* line 1, sass/_contact_us.sass */
@@ -1332,45 +1333,102 @@ body.pages .company_testimonials {
     width: 300px;
     background-color: #c5c5c5; }
 
-/* line 4, sass/_banners.sass */
-body.banners .content {
-  margin-left: 220px; }
-  /* line 7, sass/_banners.sass */
+/* line 5, sass/_banners.sass */
+body.banners .content .banner {
+  height: 375px;
+  margin-bottom: 10px;
+  width: auto; }
+  /* line 6, sass/_banners.sass */
   body.banners .content .banner img {
-    width: auto; }
+    width: 300px;
+    height: 250px; }
+/* line 38, sass/_modules.sass */
+body.banners .content {
+  margin-left: 235px; }
+/* line 40, sass/_modules.sass */
+body.banners .sidebar {
+  float: left; }
+/* line 13, sass/_banners.sass */
+body.banners .content .banner {
+  margin-right: 15px;
+  float: left; }
+  /* line 15, sass/_banners.sass */
+  body.banners .content .banner ul {
+    padding-left: 10px; }
+    /* line 26, sass/_modules.sass */
+    body.banners .content .banner ul ul, body.banners .content .banner ul li, body.banners .content .banner ul ol {
+      margin: 0;
+      padding: 0;
+      list-style-type: none; }
+    /* line 18, sass/_banners.sass */
+    body.banners .content .banner ul li {
+      margin-bottom: 3px; }
+    /* line 20, sass/_banners.sass */
+    body.banners .content .banner ul a {
+      padding-left: 20px;
+      background-position: top left; }
+  /* line 26, sass/_banners.sass */
+  body.banners .content .banner h2 {
+    margin: 0px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: normal;
+    background-color: #EFEFED;
+    -moz-box-shadow: 3px 3px 3px #CCC;
+    -webkit-box-shadow: 3px 3px 3px #CCC; }
+    /* line 29, sass/_banners.sass */
+    body.banners .content .banner h2 img {
+      margin-bottom: 6px;
+      margin-top: 0; }
+  /* line 37, sass/_banners.sass */
+  body.banners .content .banner a {
+    text-decoration: none;
+    color: #0E66AE;
+    text-transform: uppercase;
+    display: block;
+    background-image: url(/images/arrow-blue.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    margin-right: 6px; }
+    /* line 46, sass/_banners.sass */
+    body.banners .content .banner a:hover {
+      text-decoration: underline; }
+  /* line 48, sass/_banners.sass */
+  body.banners .content .banner p {
+    font-size: 12px; }
 
-/* line 9, sass/_banners.sass */
+/* line 50, sass/_banners.sass */
 #banners {
   width: 501px;
   margin: auto; }
-  /* line 10, sass/_banners.sass */
+  /* line 51, sass/_banners.sass */
   #banners a {
     border: none; }
-    /* line 12, sass/_banners.sass */
+    /* line 53, sass/_banners.sass */
     #banners a img {
       border: none; }
-  /* line 16, sass/_banners.sass */
+  /* line 57, sass/_banners.sass */
   #banners .campaign {
     width: 247px;
     float: left;
     margin-right: 7px; }
-    /* line 20, sass/_banners.sass */
+    /* line 61, sass/_banners.sass */
     #banners .campaign.last {
       margin-right: 0px; }
-    /* line 22, sass/_banners.sass */
+    /* line 63, sass/_banners.sass */
     #banners .campaign h2 {
       text-transform: uppercase;
       vertical-align: middle;
       margin: 0;
       margin-top: 5px;
       padding: 0; }
-      /* line 25, sass/_banners.sass */
+      /* line 66, sass/_banners.sass */
       #banners .campaign h2 img {
         vertical-align: middle; }
-    /* line 30, sass/_banners.sass */
+    /* line 71, sass/_banners.sass */
     #banners .campaign ul {
       padding: 0; }
-      /* line 32, sass/_banners.sass */
+      /* line 73, sass/_banners.sass */
       #banners .campaign ul li {
         background-image: url("../images/blue-arrow.jpg");
         background-repeat: no-repeat;
@@ -1403,7 +1461,8 @@ body.news_letters .content {
   padding-top: 124px;
   background-image: url(/images/project-lhs.jpg);
   background-repeat: no-repeat;
-  background-position: 8px 8px; }
+  background-position: 8px 8px;
+  margin-bottom: 10px; }
   /* line 9, sass/_sidebar.sass */
   .sidebar img {
     border: 9px solid white;
@@ -1438,35 +1497,48 @@ body.news_letters .content {
       font-size: 12px; }
     /* line 34, sass/_sidebar.sass */
     .sidebar ul a {
-      text-decoration: none;
       color: #0E66AE;
       text-transform: uppercase;
       font-size: 12px;
       display: block;
-      background-image: url(/images/arrow-lhs-menu.jpg);
       background-repeat: no-repeat;
-      background-position: center right; }
-      /* line 43, sass/_sidebar.sass */
-      .sidebar ul a:hover {
-        text-decoration: underline; }
-  /* line 50, sass/_sidebar.sass */
+      background-position: center right;
+      background-image: url(/images/arrow-lhs-menu.jpg); }
+    /* line 44, sass/_sidebar.sass */
+    .sidebar ul ul a {
+      background-position: center left;
+      padding-left: 20px;
+      color: #C9162C;
+      height: auto;
+      background-image: none; }
+    /* line 50, sass/_sidebar.sass */
+    .sidebar ul ul li {
+      padding-top: 3px;
+      padding-bottom: 3px;
+      height: auto;
+      border: none; }
+      /* line 55, sass/_sidebar.sass */
+      .sidebar ul ul li.current a {
+        color: #0E66AE;
+        background-image: url(/images/arrow-lhs-menu.jpg); }
+  /* line 64, sass/_sidebar.sass */
   body.services .sidebar {
     background-image: url(/images/services-lhs-shadow.jpg); }
-  /* line 52, sass/_sidebar.sass */
+  /* line 66, sass/_sidebar.sass */
   body.projects .sidebar {
     background-image: url(/images/project-lhs-shadow.jpg); }
-  /* line 54, sass/_sidebar.sass */
-  body.company .sidebar {
+  /* line 68, sass/_sidebar.sass */
+  body.company .sidebar, body.why_choose_us .sidebar {
     background-image: url(/images/about-lhs-shadow.jpg); }
-  /* line 56, sass/_sidebar.sass */
+  /* line 70, sass/_sidebar.sass */
   body.banners .sidebar {
     background-image: url(/images/banners-lhs-shadow.jpg); }
-  /* line 58, sass/_sidebar.sass */
+  /* line 72, sass/_sidebar.sass */
   body.news_letters .sidebar {
     background-image: url(/images/newsletter-lhs-shadow.jpg); }
-  /* line 60, sass/_sidebar.sass */
+  /* line 74, sass/_sidebar.sass */
   body.case_studies .sidebar {
     background-image: url(/images/casestudy-lhs-shadow.jpg); }
-  /* line 62, sass/_sidebar.sass */
+  /* line 76, sass/_sidebar.sass */
   body.enquiries .sidebar {
     background-image: url(/images/contact-lhs-shadow.jpg); }

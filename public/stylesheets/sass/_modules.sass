@@ -33,3 +33,9 @@
   :background-position center right
   :background-repeat no-repeat
   :display block
+
+=has_left_side_bar(!width=235px)
+  .content
+    :margin-left= !width
+  .sidebar
+    :float left

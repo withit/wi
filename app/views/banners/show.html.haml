@@ -10,18 +10,18 @@
     %li= link_to 'banners', banners_path
     %li #{@banner.description} #{@banner.campaign.name}
 .sidebar
-  = image_tag 'projects-lhs.png', :alt => 'projects'
   %ul
-    %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}= link_to 'Websites', projects_path, :style => 'text-transform: uppercase;'
-    %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'} 
+    %li= link_to 'Websites', websites_path
+    %li.current
       = link_to 'Banners', banners_path 
-      %ul{:style => "margin: 0; padding: 0; padding-left: 1em;"}
+      %p We will provide you with the best website design options for your business
+      %ul
         - Campaign.all.each do |campaign|
-          %li{:style => "border: medium none ; margin: 0pt; padding: 0pt; text-transform: none; padding-top : 1em; line-height: 12px; height: 16px;"}= link_to_unless campaign == @banner.campaign, campaign.name, campaign.banners.first
-    %li{:style => 'height: auto; line-height: 12px; padding-top: 12px; padding-bottom: 12px; text-transform: upcase;'}= link_to 'Email Campaigns', news_letters_path, :style => 'text-transform: uppercase;'
+          %li{:class => campaign == @banner.campaign ? "current" : nil}= link_to campaign.name, campaign.banners.first
+    %li= link_to 'Email Campaigns', news_letters_path
       
 .content
-  .sizes= select_tag(:size, options_for_select(@banner.campaign.banners.collect{|b| [b.description,b.to_param]}, @banner.id))
+  .sizes= select_tag(:size, options_for_select(@banner.campaign.banners.collect{|b| [b.description,b.to_param]}, @banner.to_param))
   .sample_page
     #banner728x90
     .left
