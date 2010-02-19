@@ -1,3 +1,3 @@
-set :vhost,  "staging.wi.com.au"
-set :user, 'withit'
-set :deploy_to, "/var/www/vhosts/#{vhost}/httpdocs/apps/#{application}"
+role :app, "wi.webby.wi.com.au"
+role :web, "wi.webby.wi.com.au"
+role :db,  "wi.webby.wi.com.au", :primary => true

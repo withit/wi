@@ -1,3 +1,3 @@
-set :vhost,  "wi.com.au"
-set :user, 'withit_prod'
-set :deploy_to, "/var/www/vhosts/#{vhost}/httpdocs/apps/#{application}"
+role :app, "67.23.79.33"
+role :web, "67.23.79.33"
+role :db,  "67.23.79.33", :primary => true

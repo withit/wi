@@ -1,6 +1,6 @@
-# set :stages, %w(staging production)
-# set :default_stage, 'staging'
-# require 'capistrano/ext/multistage'
+set :stages, %w(staging production)
+set :default_stage, 'staging'
+require 'capistrano/ext/multistage'
 
 set :application, "wi"
 role :app, "67.23.79.33"

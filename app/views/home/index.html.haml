@@ -21,7 +21,7 @@
     %h2 Blog
     .blog_links
       = link_to 'subscribe blog', posts_path(:format => :rss), :class => 'rss'
-      = link_to 'browse all','#'
+      = link_to 'browse all', posts_path
     - if @post
       .post
         .calendar
@@ -46,7 +46,7 @@
 
     The web is constantly changing the way the world operates. The web has now become a large part of our lives as it’s entered our offices, homes and even our pockets. With the increasing importance of the web are your current web activities creating a positive brand experience?
   .contact
-    == Interested in learning more? #{link_to 'contact us', "#"}
+    == Interested in learning more? #{link_to 'contact us', enquiries_path}
   
   .services
     %h2 Services
@@ -55,7 +55,7 @@
       .service{:class => service == @services[-1] ? 'last' : nil, :style => "background-image: url(#{service.image.url});"}
         %h3= service.name 
         %p= service.description
-        %p= link_to 'more ..', '#'
+    = link_to 'more', services_path
  
   .case_study
     %h2 Case Study
@@ -67,6 +67,6 @@
 
   .twitter
     %h2 Twitter
-    = link_to 'follow on twitter', '#', :class => 'follow' 
+    = link_to 'follow on twitter', 'http://twitter.com/withimagination', :class => 'follow' 
     #tweets
 

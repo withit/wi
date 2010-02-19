@@ -15,6 +15,12 @@ test:
   pool: 5
   timeout: 5000
 
+staging:
+  adapter: mysql
+  database: wi
+  username: wi
+  password: netgpa2010
+
 production:
   adapter: mysql
   database: wi
