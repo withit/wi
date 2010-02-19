@@ -25,4 +25,38 @@ $(document).ready(function(){
   $('.sizes select').live('change', function(){
      document.location = '/projects/banners/' + this.value;
   });
-})
+  
+  $('.testimonials .testimonial').hide();
+  $('.testimonials .testimonial').first().show();
+  
+});
+
+$.periodic({}, function() {
+  $('.testimonials .testimonial:visible').first().fadeOut(1000, function(){
+    if($(this).next().text()){
+      $(this).next().fadeIn(1000);
+    } else {
+      $('.testimonials .testimonial').first().fadeIn(1000);
+    }
+  });
+});
+
+$.periodic({}, function() {
+  var p = $('.projects .project.selected').first();
+  p.children('.main').show();
+  p.children('.main').fadeOut(1000, function(){
+    $(p).removeClass('selected');
+    var next = p.next();
+    if(next.length == 0){
+      next = $('.projects .project').first()
+    }
+    next.children('.main').hide();
+    next.addClass('selected');
+    next.children('.main').fadeIn(1000);
+  });
+});
+
+
+
+
+
