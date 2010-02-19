@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100217044640) do
+ActiveRecord::Schema.define(:version => 20100219030238) do
 
   create_table "assets", :force => true do |t|
     t.datetime "created_at"
@@ -68,13 +68,6 @@ ActiveRecord::Schema.define(:version => 20100217044640) do
     t.boolean  "subscribed"
   end
 
-  create_table "news", :force => true do |t|
-    t.string   "title"
-    t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "news_letters", :force => true do |t|
     t.string   "name"
     t.string   "keywords"
@@ -120,6 +113,17 @@ ActiveRecord::Schema.define(:version => 20100217044640) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "author_name"
+    t.integer  "tweets_count",   :default => 0
+    t.integer  "comments_count", :default => 0
+    t.string   "source"
+  end
+
+  create_table "posts_bak", :force => true do |t|
+    t.string   "title"
     t.string   "author_name"
     t.text     "content"
     t.integer  "tweets_count"
@@ -156,6 +160,20 @@ ActiveRecord::Schema.define(:version => 20100217044640) do
     t.integer  "banner_height"
     t.integer  "banner_width"
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "taggings", :force => true do |t|
+    t.integer  "tag_id"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tags", :force => true do |t|
+    t.string   "name"
+    t.integer  "tagging_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
