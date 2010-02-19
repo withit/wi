@@ -19,10 +19,13 @@ staging:
   adapter: mysql
   database: wi
   username: wi
-  password: netgpa2010
+  password: qazwsxedc
+  encoding: utf8
+    
 
 production:
   adapter: mysql
   database: wi
   username: wi
   password: netgpa2010
+  encoding: utf8

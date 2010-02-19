@@ -14,7 +14,7 @@ set :repository,  "git@github.com:withit/#{application}.git"
 set :deploy_to, "/var/rails/#{application}"
 
 set :scm, :git
-set :branch, :master
+set :branch, :rebuild
 
 namespace :deploy do
   desc "Restart the application by touching tmp/restart.txt."
