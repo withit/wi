@@ -20,7 +20,6 @@ staging:
   database: wi
   username: wi
   password: qazwsxedc
-  encoding: utf8
     
 
 production:
