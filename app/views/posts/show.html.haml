@@ -12,9 +12,10 @@
       .categories
         %h2 Posts
         %ul
-          %li= link_to 'Web Marketing', '#'
-          %li= link_to 'Web Design','#'
-          %li= link_to 'Web Applications','#'
+          %li= link_to 'Web Marketing', tag_path("web marketing")
+          %li= link_to 'Web Design',tag_path("web design")
+          %li= link_to 'Web Applications',tag_path("web applications")
+
       
     .twitter
       %h2 Twitter
@@ -38,7 +39,7 @@
   .tagged
     Tagged as:
     - @post.tags.each do |tag|
-      = link_to tag, '#TODO'
+      = link_to tag.name, tag
   .comments
     %h2 Comments
     - @post.comments.each do |comment|

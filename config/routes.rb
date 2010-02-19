@@ -2,7 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :posts, :has_many => :comments
   map.enquiries 'contact-us', :controller => 'enquiries', :action => 'new', :conditions => {:method => :get}
   map.enquiries 'contact-us', :controller => 'enquiries', :action => 'create', :conditions => {:method => :post}
-  
+  map.resources :tags
   # The priority is based upon order of creation: first created -> highest priority.
   #map.home '/', :controller => 'home', :action => 'index'
 

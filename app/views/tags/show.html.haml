@@ -2,7 +2,7 @@
   .breadcrumbs
     %ul
       %li= link_to 'home', root_path
-      %li= @page.name
+      %li blogs
   .sidebar-right
     .links
       %ul
@@ -15,6 +15,7 @@
           %li= link_to 'Web Marketing', tag_path("web marketing")
           %li= link_to 'Web Design',tag_path("web design")
           %li= link_to 'Web Applications',tag_path("web applications")
+
       
     .twitter
       %h2 Twitter
@@ -22,12 +23,13 @@
       #tweets
     .comments
       %h2 Recent Comments
-      - @comments.each do |comment|
+      - Comment.all.each do |comment|
         .comment
           %span.author= link_to comment.author_name.to_s, post_path(comment.post, :anchor => dom_id(comment))
           = comment.message
   .posts
-    - @posts.each do |post|
+    %h1 Post Archives: #{@tag.name}
+    - @tag.posts.each do |post|
       .post
         = image_tag 'post.image.url'
         %h2= post.title
