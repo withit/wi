@@ -1,6 +1,11 @@
 - content_for :head do 
   \
 
+.banner
+  - link_to enquiries_path do
+    %h2 The web is constantly changing the way the world operates.
+    %p The web has now become a large part of our lives as it's entered our offices, homes and even our pockets.
+    %p.contact_us Interested is learning more? contact us
 .breadcrumbs
   %ul
     %li= link_to 'home', root_path

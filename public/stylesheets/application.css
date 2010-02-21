@@ -811,11 +811,28 @@ body.company .testimonials, body.clients .testimonials, body.why_choose_us .test
       color: #F3A144;
       margin-top: 0; }
 
-/* line 1, sass/_case_study.sass */
+/* line 51, sass/_company.sass */
+body.company .banner, body.why_choose_us .banner {
+  margin: 10px auto;
+  background-repeat: no-repeat;
+  height: 193px;
+  width: 981px;
+  background-image: url(/images/view-services.jpg); }
+  /* line 46, sass/_modules.sass */
+  body.company .banner a, body.why_choose_us .banner a {
+    display: block;
+    height: 100%;
+    width: 100%; }
+    /* line 50, sass/_modules.sass */
+    body.company .banner a h1, body.company .banner a h2, body.company .banner a p, body.why_choose_us .banner a h1, body.why_choose_us .banner a h2, body.why_choose_us .banner a p {
+      text-indent: -9999em;
+      overflow: hidden; }
+
+/* line 2, sass/_case_study.sass */
 .case_study_main {
   margin-left: 235px;
   font-size: 12px; }
-  /* line 4, sass/_case_study.sass */
+  /* line 5, sass/_case_study.sass */
   .case_study_main h1 {
     margin: 0px 0px 10px 0px;
     font-size: 20px;
@@ -823,7 +840,7 @@ body.company .testimonials, body.clients .testimonials, body.why_choose_us .test
     font-family: Tahoma, Geneva, sans-serif;
     font-weight: normal;
     color: #0E66AE; }
-  /* line 11, sass/_case_study.sass */
+  /* line 12, sass/_case_study.sass */
   .case_study_main h2 {
     margin: 0px 0px 10px 0px;
     font-size: 16px;
@@ -831,11 +848,11 @@ body.company .testimonials, body.clients .testimonials, body.why_choose_us .test
     font-family: Tahoma, Geneva, sans-serif;
     font-weight: normal;
     color: #0E66AE; }
-  /* line 18, sass/_case_study.sass */
+  /* line 19, sass/_case_study.sass */
   .case_study_main .images {
     float: right;
     margin: 10px; }
-    /* line 21, sass/_case_study.sass */
+    /* line 22, sass/_case_study.sass */
     .case_study_main .images p {
       text-transform: uppercase;
       overflow: visible;
@@ -845,6 +862,23 @@ body.company .testimonials, body.clients .testimonials, body.why_choose_us .test
       left: 20px;
       font-size: 14px;
       position: relative; }
+
+/* line 32, sass/_case_study.sass */
+body.case_studies .banner {
+  background-image: url(/images/read-blog.jpg);
+  width: 980px;
+  height: 192px;
+  margin: 10px auto;
+  background-repeat: no-repeat; }
+  /* line 33, sass/_case_study.sass */
+  body.case_studies .banner a {
+    display: block;
+    height: 100%;
+    width: 100%; }
+    /* line 37, sass/_case_study.sass */
+    body.case_studies .banner a h1, body.case_studies .banner a h2, body.case_studies .banner a p {
+      text-indent: -9999em;
+      overflow: hidden; }
 
 /* line 1, sass/_blogs.sass */
 .sidebar-right {
@@ -1179,6 +1213,23 @@ body.services .content {
       margin-right: 10px;
       margin-bottom: 0px;
       margin-top: 0px; }
+
+/* line 39, sass/_services.sass */
+body.services .banner {
+  margin: 10px auto;
+  background-repeat: no-repeat;
+  background-image: url(/images/view-projects.jpg);
+  height: 193px;
+  width: 981px; }
+  /* line 46, sass/_modules.sass */
+  body.services .banner a {
+    display: block;
+    height: 100%;
+    width: 100%; }
+    /* line 50, sass/_modules.sass */
+    body.services .banner a h1, body.services .banner a h2, body.services .banner a p {
+      text-indent: -9999em;
+      overflow: hidden; }
 
 /* line 2, sass/_page.sass */
 body.pages .company, body.pages .clients, body.pages .content {
@@ -1614,6 +1665,22 @@ body.clients .client div {
 /* line 22, sass/_clients.sass */
 body.clients .client img, body.clients span {
   vertical-align: middle; }
+/* line 24, sass/_clients.sass */
+body.clients .banner {
+  background-image: url(/images/contact.jpg);
+  width: 980px;
+  height: 192px;
+  margin: 10px auto;
+  background-repeat: no-repeat; }
+  /* line 25, sass/_clients.sass */
+  body.clients .banner a {
+    display: block;
+    height: 100%;
+    width: 100%; }
+    /* line 29, sass/_clients.sass */
+    body.clients .banner a h2, body.clients .banner a p {
+      text-indent: -9999em;
+      overflow: hidden; }
 
 /* line 26, sass/_modules.sass */
 body.projects .content ul, body.projects .content li, body.projects .content ol {
@@ -1634,6 +1701,23 @@ body.projects .content li {
     display: block;
     width: auto;
     display: inline; }
+
+/* line 14, sass/_projects.sass */
+body.projects .banner, body.websites .banner, body.news_letters .banner, body.banners .banner {
+  margin: 10px auto;
+  background-repeat: no-repeat;
+  background-image: url(/images/view-casestudy.jpg);
+  width: 981px;
+  height: 190px; }
+  /* line 46, sass/_modules.sass */
+  body.projects .banner a, body.websites .banner a, body.news_letters .banner a, body.banners .banner a {
+    display: block;
+    height: 100%;
+    width: 100%; }
+    /* line 50, sass/_modules.sass */
+    body.projects .banner a h1, body.projects .banner a h2, body.projects .banner a p, body.websites .banner a h1, body.websites .banner a h2, body.websites .banner a p, body.news_letters .banner a h1, body.news_letters .banner a h2, body.news_letters .banner a p, body.banners .banner a h1, body.banners .banner a h2, body.banners .banner a p {
+      text-indent: -9999em;
+      overflow: hidden; }
 
 /* line 2, sass/_tags.sass */
 body.tags h1 {

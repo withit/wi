@@ -3,6 +3,6 @@ class Tag < ActiveRecord::Base
   has_many :posts, :through => :taggings
   
   def to_param
-    name
+    "#{id}-#{name.parameterize}"
   end
 end

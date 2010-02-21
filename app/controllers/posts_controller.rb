@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_filter :load_page, :load_comments
+  before_filter :load_page, :load_comments, :load_tags
   
   def index
     @posts = Post.all
@@ -54,5 +54,9 @@ class PostsController < ApplicationController
   
   def load_comments
     @comments = Comment.all
+  end
+  
+  def load_tags
+    @tags = Tag.all
   end
 end

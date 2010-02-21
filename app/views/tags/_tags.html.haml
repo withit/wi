@@ -1,0 +1,5 @@
+.categories
+  %h2 Posts
+  %ul
+    - @tags.each do |tag|
+      %li= link_to tag.name, tag

@@ -1,6 +1,12 @@
 class TagsController < ApplicationController
+  before_filter :load_tags
   def show
-    @tag = Tag.find_or_initialize_by_name(params[:id])
+    @tag = Tag.find(params[:id])
   end
 
+  protected
+  
+  def load_tags
+    @tags = Tag.all
+  end
 end
