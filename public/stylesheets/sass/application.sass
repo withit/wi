@@ -262,11 +262,16 @@ body.home
     .service
       :background-position 4px 0px
       :background-repeat no-repeat
-      :padding-left 85px
+      :width 100%
+      :float left
+      h2, p
+        :margin-left 95px
       :padding-bottom 12px
       :margin-bottom 12px
       :border-bottom 1px dashed #D3D3D3
-    
+      img
+        :float left
+        :margin-left 10px
       h3
         :margin 0
         :color #0E66AE
@@ -277,15 +282,18 @@ body.home
       p
         :margin 0
         :margin-right 10px
-
-      a
-        :color  #0E66AE
-        :text-decoration none
-        :font-size 13px
-      
       &.last
         :border-bottom none
         :margin-bottom 0
+    a
+      :color  #0E66AE
+      :font-size 13px
+      :display block
+      :text-align right
+      :margin 10px
+      :margin-top 0  
+      
+
 
   .case_study
     p
@@ -322,10 +330,12 @@ body.home
     p
       :margin-bottom 0px
     a
-      :margin-left 10px
       :color  #0E66AE
-      :text-decoration none
       :font-size 13px
+      :display block
+      :text-align right
+      :margin 10px
+      :margin-top 0
 .twitter
   :width 314px
   :background-color #EFEFEF

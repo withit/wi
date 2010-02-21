@@ -52,10 +52,11 @@
     %h2 Services
     
     -  @services.each do |service|
-      .service{:class => service == @services[-1] ? 'last' : nil, :style => "background-image: url(#{service.image.url});"}
+      .service{:class => service == @services[-1] ? 'last' : nil}
+        = image_tag service.image.url
         %h3= service.name 
         %p= service.description
-    = link_to 'more', services_path
+    = link_to 'more&#8230;', services_path
  
   .case_study
     %h2 Case Study
@@ -63,7 +64,7 @@
     
     %h3= @case_study.name 
     = sanitize @case_study.summary.to_s 
-    = link_to 'more..', @case_study.url 
+    = link_to 'more&#8230;', case_study_path
 
   .twitter
     %h2 Twitter
