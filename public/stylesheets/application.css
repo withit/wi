@@ -690,6 +690,9 @@ body.websites .content, div.websites, body.banners .content {
     line-height: 16px;
     padding: 4px; }
   /* line 20, sass/_contact_us.sass */
+  .contact_us form textarea {
+    width: 80%; }
+  /* line 22, sass/_contact_us.sass */
   .contact_us form input[type='submit'] {
     color: #FFF;
     background-color: #A3101A;
@@ -698,7 +701,7 @@ body.websites .content, div.websites, body.banners .content {
     border: none;
     padding: 4px 6px;
     font-size: 12px; }
-  /* line 28, sass/_contact_us.sass */
+  /* line 30, sass/_contact_us.sass */
   .contact_us label {
     text-transform: uppercase;
     color: #333;
@@ -706,7 +709,7 @@ body.websites .content, div.websites, body.banners .content {
     font-size: 14px;
     margin-top: 10px; }
 
-/* line 34, sass/_contact_us.sass */
+/* line 36, sass/_contact_us.sass */
 .contact_details {
   float: right;
   margin-right: 10px;
@@ -714,7 +717,7 @@ body.websites .content, div.websites, body.banners .content {
   width: 330px;
   background-color: #F2F2F2;
   border: 1px solid #D5D5D3; }
-  /* line 41, sass/_contact_us.sass */
+  /* line 43, sass/_contact_us.sass */
   .contact_details h2 {
     margin: 0;
     text-indent: -9999px;
@@ -722,15 +725,15 @@ body.websites .content, div.websites, body.banners .content {
     background-image: url(/images/contact_details.png);
     height: 100px;
     width: 100px; }
-  /* line 48, sass/_contact_us.sass */
+  /* line 50, sass/_contact_us.sass */
   .contact_details p {
     font-size: 12px;
     margin: 10px; }
-    /* line 51, sass/_contact_us.sass */
+    /* line 53, sass/_contact_us.sass */
     .contact_details p strong {
       color: #B30002;
       font-size: 14px; }
-  /* line 54, sass/_contact_us.sass */
+  /* line 56, sass/_contact_us.sass */
   .contact_details ul {
     border-top: 1px dashed #CCC;
     border-bottom: 1px dashed #CCC;
@@ -738,25 +741,25 @@ body.websites .content, div.websites, body.banners .content {
     color: #333;
     list-style-type: none;
     line-height: 40px; }
-    /* line 60, sass/_contact_us.sass */
+    /* line 62, sass/_contact_us.sass */
     .contact_details ul a {
       color: #333;
       text-decoration: none; }
-      /* line 63, sass/_contact_us.sass */
+      /* line 65, sass/_contact_us.sass */
       .contact_details ul a:hover {
         text-decoration: underline; }
-    /* line 66, sass/_contact_us.sass */
+    /* line 68, sass/_contact_us.sass */
     .contact_details ul li {
       margin: 20px; }
-  /* line 69, sass/_contact_us.sass */
+  /* line 71, sass/_contact_us.sass */
   .contact_details .map {
     width: 290px;
     margin: 10px auto; }
-  /* line 72, sass/_contact_us.sass */
+  /* line 74, sass/_contact_us.sass */
   .contact_details .address {
     margin: 10px;
     font-size: 12px; }
-    /* line 74, sass/_contact_us.sass */
+    /* line 76, sass/_contact_us.sass */
     .contact_details .address h4 {
       margin: 0;
       font-size: 14px; }
