@@ -20,8 +20,4 @@
     
     h2. Our services include
     
-  - @services.each do |service|
-    .service
-      = image_tag service.image.url
-      %h3= service.name
-      %p= service.description
+  = render @services
