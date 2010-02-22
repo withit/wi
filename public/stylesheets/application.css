@@ -1657,7 +1657,7 @@ body.news_letters .content .news_letter {
   body.services .sidebar {
     background-image: url(/images/services-lhs-shadow.jpg); }
   /* line 66, sass/_sidebar.sass */
-  body.projects .sidebar {
+  body.projects .sidebar, body.websites .sidebar {
     background-image: url(/images/project-lhs-shadow.jpg); }
   /* line 68, sass/_sidebar.sass */
   body.company .sidebar, body.why_choose_us .sidebar {
