@@ -3,12 +3,7 @@
   = javascript_include_tag 'swfobject'
   = javascript_tag("swfobject.embedSWF('#{@banner.swf.url}', 'banner#{@banner.width}x#{@banner.height}', #{@banner.width}, #{@banner.height}, '9.0.0','expressInstall.swf', {}, {wmode : 'transparent'})")
 = render 'projects/banner'
-.breadcrumbs
-  %ul
-    %li= link_to 'home', '/'
-    %li= link_to 'projects', projects_path
-    %li= link_to 'banners', banners_path
-    %li #{@banner.description} #{@banner.campaign.name}
+= breadcrumbs_for @banner
 .sidebar
   %ul
     %li= link_to 'Websites', websites_path

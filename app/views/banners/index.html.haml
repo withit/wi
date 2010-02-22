@@ -1,10 +1,6 @@
 = render 'projects/banner'
 
-.breadcrumbs
-  %ul
-    %li= link_to 'home', '/'
-    %li= link_to 'projects', projects_path
-    %li   banners
+= breadcrumbs_for :banners
 
 .sidebar
   %ul
