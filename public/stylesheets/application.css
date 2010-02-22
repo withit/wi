@@ -1750,8 +1750,8 @@ body.projects .banner, body.websites .banner, body.news_letters .banner, body.ba
       text-indent: -9999em;
       overflow: hidden; }
 
-/* line 2, sass/_tags.sass */
-body.tags h1 {
+/* line 3, sass/_tags.sass */
+body.tags .wrapper h1 {
   text-transform: uppercase;
   border-bottom: 1px solid black;
   margin: 10px;

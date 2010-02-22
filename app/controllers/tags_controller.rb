@@ -8,5 +8,6 @@ class TagsController < ApplicationController
   
   def load_tags
     @tags = Tag.all
+    @comments = Comment.all
   end
 end

@@ -3,24 +3,7 @@
     %ul
       %li= link_to 'home', root_path
       %li= @page.name
-  .sidebar-right
-    .links
-      %ul
-        %li.rss= link_to 'Subscribe to our RSS REED',posts_path(:format => :rss)
-        %li.linked_in= link_to 'Find us on linkedin','#'
-        %li.twitter_link= link_to "Follow us on twitter",'http://twitter.com/withimagination'
-      = render 'tags/tags'
-      
-    .twitter
-      %h2 Twitter
-      = link_to 'follow on twitter', 'http://twitter.com/withimagination', :class => 'follow' 
-      #tweets
-    .comments
-      %h2 Recent Comments
-      - @comments.each do |comment|
-        .comment
-          %span.author= link_to comment.author_name.to_s, post_path(comment.post, :anchor => dom_id(comment))
-          = comment.message
+  = render 'posts/sidebar'
   .posts
     - @posts.each do |post|
       .post

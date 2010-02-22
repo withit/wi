@@ -3,25 +3,7 @@
     %ul
       %li= link_to 'home', root_path
       %li= @page.name
-  .sidebar-right
-    .links
-      %ul
-        %li.rss= link_to 'Subscribe to our RSS REED','#'
-        %li.linked_in= link_to 'Find us on linkedin','#'
-        %li.twitter_link= link_to "Follow us on twitter",'#'
-      = render 'tags/tags'
-
-      
-    .twitter
-      %h2 Twitter
-      = link_to 'follow on twitter', '#', :class => 'follow' 
-      #tweets
-    .comments
-      %h2 Recent Comments
-      - @comments.each do |comment|
-        .comment
-          %span.author= link_to comment.author_name, post_path(comment.post, :anchor => dom_id(comment))
-          = comment.message
+  =  render 'posts/sidebar'
   .post
     = image_tag @post.image.url
     %h2= @post.title
