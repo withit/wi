@@ -35,5 +35,5 @@
         .links
           = link_to 'continue reading', post, :class => 'continue_reading'
           %span
-            = link_to "(#{post.comments_count}) #{post.comments_count == 1 ? 'comment' : 'comment'.pluralize}" 
+            = link_to "(#{post.comments_count}) #{post.comments_count == 1 ? 'comment' : 'comment'.pluralize}", post_path(post, :anchor => "comments")
             | [+] Share
