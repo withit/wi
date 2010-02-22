@@ -4,16 +4,7 @@
   = javascript_tag("swfobject.embedSWF('#{@banner.swf.url}', 'banner#{@banner.width}x#{@banner.height}', #{@banner.width}, #{@banner.height}, '9.0.0','expressInstall.swf', {}, {wmode : 'transparent'})")
 = render 'projects/banner'
 = breadcrumbs_for @banner
-.sidebar
-  %ul
-    %li= link_to 'Websites', websites_path
-    %li.current
-      = link_to 'Banners', banners_path 
-      %p We will provide you with the best website design options for your business
-      %ul
-        - Campaign.all.each do |campaign|
-          %li{:class => campaign == @banner.campaign ? "current" : nil}= link_to campaign.name, campaign.banners.first
-    %li= link_to 'Email Campaigns', news_letters_path
+= render 'projects/sidebar'
       
 .content
   .sizes= select_tag(:size, options_for_select(@banner.campaign.banners.collect{|b| [b.description,b.to_param]}, @banner.to_param))

@@ -3,13 +3,7 @@
 = render 'projects/banner'
 = breadcrumbs_for :news_letters
 
-.sidebar
-  %ul
-    %li= link_to 'Websites', websites_path
-    %li= link_to 'Banners', banners_path
-    %li.current
-      = link_to  'Email Campaigns', company_path
-      %p We will provide you with the best email campaigns design options for your business
+= render 'projects/sidebar'
 .content
   %h1 Email Campaigns
   - @news_letters.each do |news_letter|

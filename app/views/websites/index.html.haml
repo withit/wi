@@ -2,13 +2,7 @@
   \
 = render 'projects/banner'
 = breadcrumbs_for :websites
-.sidebar
-  %ul
-    %li.current.first
-      = link_to "Websites", websites_path
-      %p We will provide you with the best website design options for your business
-    %li= link_to 'Banners', banners_path
-    %li= link_to 'Email Campaigns', news_letters_path
+= render 'projects/sidebar'
 .websites
   %h1 Websites
   - @websites.each do |website|

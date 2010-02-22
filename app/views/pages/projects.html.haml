@@ -3,11 +3,7 @@
 = render 'projects/banner'
 = breadcrumbs_for :projects
 
-.sidebar
-  %ul
-    %li= link_to 'Websites', websites_path
-    %li= link_to 'Banners', banners_path
-    %li= link_to 'Email Campaigns', news_letters_path
+= render 'projects/sidebar'
 .content
   :textile
     h1. Projects

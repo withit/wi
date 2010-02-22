@@ -1,0 +1,22 @@
+.sidebar
+  %ul
+    %li.first{:class => controller.controller_name == 'websites' ? 'current' : nil}
+      = link_to 'Websites', websites_path
+      -if controller.controller_name == 'websites'
+        %p We will provide you with the best website design options for your business
+    %li{:class => controller.controller_name == 'banners' ? 'current' : nil}
+      = link_to 'Banners', banners_path
+      - if controller.controller_name == 'banners'
+        %p We will provide you with the best website design options for your business
+      - if @banner
+        %ul
+          - Campaign.all.each do |campaign|
+            %li{:class => campaign == @banner.campaign ? "current" : nil}= link_to campaign.name, campaign.banners.first
+    %li{:class => controller.controller_name == 'news_letters' ? 'current' : nil}
+      = link_to 'Email Campaigns', news_letters_path 
+      - if controller.controller_name == 'news_letters' 
+        %p We will provide you with the best email campaigns design options for your business
+      - if @news_letter
+        %ul
+          - NewsLetter.all.each do |news_letter|
+            %li{:class =>  news_letter == @news_letter ? "current" : nil}= link_to news_letter.name, news_letter
