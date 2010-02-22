@@ -6,9 +6,10 @@
     %h1= @post.title
     %p.information Posted on #{@post.created_at.strftime('%d. %b, %Y')} | #{@post.source}
     .tweets
-      %span.count= @post.tweets_count
-      tweets
-      = link_to 'retweet','#'
+      :javascript
+        tweetmeme_service = 'bit.ly';
+        tweetmeme_url = '#{post_url(@post)}';
+      <script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>
     .post_content= sanitize textilize(@post.content)
   .tagged
     Tagged as:

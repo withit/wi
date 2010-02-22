@@ -26,7 +26,7 @@ module ApplicationHelper
   def breadcrumb_parent crumb
     case crumb
     when ActiveRecord::Base
-      page.class.class_name.pluralize.underscore.to_sym
+      crumb.class.class_name.pluralize.underscore.to_sym
     when :news_letters, :websites, :banners
       :projects
     when :why_choose_us
