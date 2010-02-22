@@ -77,13 +77,13 @@ body {
 
 /* line 56, sass/application.sass */
 body.home #home_tab, bosy.websites #projects_tab, body.projects #projects_tab, body.banners #projects_tab,
-body.enquiries #contact_us_tab, body.case_studies #case_study_tab, body.services #services_tab, body.newsletters #projects.tab, body.posts #blogs_tab, body.company #company_tab, body.why_choose_us #company_tab, body.clients #clients_tab, body.websites #projects_tab, body.news_letters #projects_tab {
+body.enquiries #contact_us_tab, body.case_studies #case_study_tab, body.services #services_tab, body.newsletters #projects.tab, body.posts #blogs_tab, body.company #company_tab, body.why_choose_us #company_tab, body.clients #clients_tab, body.websites #projects_tab, body.news_letters #projects_tab, body.tags #blogs_tab {
   background-image: url(/images/arrow-nav-bar.jpg);
   background-repeat: no-repeat;
   background-position: 50% 100%; }
   /* line 62, sass/application.sass */
   body.home #home_tab a, bosy.websites #projects_tab a, body.projects #projects_tab a, body.banners #projects_tab a,
-  body.enquiries #contact_us_tab a, body.case_studies #case_study_tab a, body.services #services_tab a, body.newsletters #projects.tab a, body.posts #blogs_tab a, body.company #company_tab a, body.why_choose_us #company_tab a, body.clients #clients_tab a, body.websites #projects_tab a, body.news_letters #projects_tab a {
+  body.enquiries #contact_us_tab a, body.case_studies #case_study_tab a, body.services #services_tab a, body.newsletters #projects.tab a, body.posts #blogs_tab a, body.company #company_tab a, body.why_choose_us #company_tab a, body.clients #clients_tab a, body.websites #projects_tab a, body.news_letters #projects_tab a, body.tags #blogs_tab a {
     font-weight: bold;
     color: #FFF; }
 
