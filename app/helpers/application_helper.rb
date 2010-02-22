@@ -9,4 +9,10 @@ module ApplicationHelper
   def twitter_path
     "http://twitter.com/withimagination"
   end
+  
+  def breadcrumbs
+    s = [ link_to("home", root_path) ]
+    #=>???
+  end
+  
 end

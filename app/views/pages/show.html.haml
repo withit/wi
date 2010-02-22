@@ -1,5 +1,0 @@
-- render :layout => 'layout' do 
-  %div.page_text_content= RedCloth.new(@page.content.to_s).to_html
-- if admin?
-  #page_admin_quick_links
-    #{link_to 'edit page', [:edit, @page]} | #{link_to 'all pages', pages_path}
