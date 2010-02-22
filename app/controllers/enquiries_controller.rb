@@ -7,16 +7,11 @@ class EnquiriesController < ApplicationController
   
   def create
     @enquiry = Enquiry.new(params[:enquiry])
-    @enquiry.save!
-    redirect_to enquiry_path
-    session[:enquiry_id] = @enquiry.id
-    Notifier.deliver_enquiry @enquiry
-    Notifier.deliver_confirmation @enquiry
-  rescue ActiveRecord::RecordInvalid
-    if @enquiry.express
-      @body_class = 'home'
-      @page = Page.find_by_permalink('home') || Page.new
-      render :file => 'home/index', :layout => true
+    if @enquiry.save
+      redirect_to contact_us_path
+      flash[:notice] = "Thank you for your enquiry. We will be in touch shortly."
+      Notifier.deliver_enquiry @enquiry
+      Notifier.deliver_confirmation @enquiry
     else
       render :action => 'new'
     end

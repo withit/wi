@@ -764,6 +764,26 @@ body.websites .content, div.websites, body.banners .content {
       margin: 0;
       font-size: 14px; }
 
+/* line 80, sass/_contact_us.sass */
+.errorExplanation {
+  color: #8A1F11;
+  background-color: #FBE3E4;
+  border: 1px solid #FBC2C4;
+  margin: 0;
+  padding: 1em; }
+  /* line 86, sass/_contact_us.sass */
+  .errorExplanation ul {
+    margin: 0;
+    list-style-type: none; }
+
+/* line 90, sass/_contact_us.sass */
+.errorExplanation h2 {
+  font-size: 14px; }
+/* line 93, sass/_contact_us.sass */
+.errorExplanation ul li {
+  list-style-type: square;
+  list-style-image: none; }
+
 /* line 1, sass/_company.sass */
 body.company .content, body.clients .content, body.why_choose_us .content, body.projects .content {
   margin-left: 235px;
@@ -1767,3 +1787,16 @@ body.tags .wrapper h1 {
   padding-bottom: 10px;
   font-weight: normal;
   font-size: 18px; }
+
+/* line 1, sass/_flash.sass */
+.notice {
+  padding: .8em;
+  border: 2px solid #dddddd;
+  background: #fff6bf;
+  color: #514721;
+  border-color: #ffd324;
+  margin-bottom: 10px; }
+
+/* line 8, sass/_flash.sass */
+.notice a {
+  color: #514721; }

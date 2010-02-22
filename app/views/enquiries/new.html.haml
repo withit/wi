@@ -20,6 +20,9 @@
     Level 5, 44 Miller St<br />
     North Sydney NSW 2060 Australia
 .contact_us
+  - if flash[:notice]
+    .flash.notice= flash[:notice]
+  
   :textile
     h1. Contact Us
     
@@ -28,7 +31,7 @@
     Please complete the form below and we will answer your general enquiry.
 
   - form_for(@enquiry) do |f|
-    = f.error_messages
+    = f.error_messages :header_message => "Sorry, your enquiry could not be submitted"
 
     .field
       = f.label :name
