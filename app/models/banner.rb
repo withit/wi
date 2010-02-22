@@ -49,4 +49,10 @@ class Banner < ActiveRecord::Base
   def to_param
     "#{id}-#{description.parameterize}-#{campaign_name.parameterize}"
   end
+  
+  def i18n_interpolations
+    {
+      :description => description, :campaign_name => campaign_name
+    }
+  end
 end

@@ -50,7 +50,6 @@
   
   .services
     %h2 Services
-    
     -  @services.each do |service|
       .service{:class => service == @services[-1] ? 'last' : nil}
         = image_tag service.image.url

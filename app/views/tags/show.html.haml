@@ -1,9 +1,5 @@
 .main
-  .breadcrumbs
-    %ul
-      %li= link_to 'home', root_path
-      %li blogs
-      
+  = breadcrumbs_for :posts
   = render 'posts/sidebar'
   .posts
     %h1 Post Archives: #{@tag.name}

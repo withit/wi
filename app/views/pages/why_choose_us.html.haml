@@ -4,11 +4,7 @@
   - link_to services_path do
     %p We blend out creative technology experience to deliver real solutions to our clients
     %p View our services
-.breadcrumbs
-  %ul
-    %li= link_to 'home', root_path
-    %li= link_to 'company', company_path
-    %li why choose us
+= breadcrumbs_for :why_choose_us
 .sidebar
   %ul
     %li= link_to  'Company', company_path

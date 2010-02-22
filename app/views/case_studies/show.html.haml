@@ -3,10 +3,7 @@
     - link_to posts_path do
       %h2 Blog
       %p read blog
-  .breadcrumbs
-    %ul
-      %li= link_to 'Home', root_path
-      %li Case Study
+  = breadcrumbs_for :case_study
   .sidebar
     %ul
       %li.current.first

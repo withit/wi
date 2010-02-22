@@ -1,7 +1,4 @@
 .main
-  .breadcrumbs
-    %ul
-      %li= link_to 'home', root_path
-      %li= @page.name
+  = breadcrumbs_for :posts
   = render 'posts/sidebar'
   .posts= render @posts

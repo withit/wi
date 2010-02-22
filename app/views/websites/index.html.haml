@@ -1,11 +1,7 @@
 - content_for :head do 
   \
 = render 'projects/banner'
-.breadcrumbs
-  %ul
-    %li= link_to 'home', root_path
-    %li= link_to 'Projects', projects_path
-    %li Websites
+= breadcrumbs_for :websites
 .sidebar
   %ul
     %li.current.first

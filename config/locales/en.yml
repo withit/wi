@@ -26,4 +26,20 @@ en:
     new: 
       submit: Create this project
       heading: Create a new project
-      
+  breadcrumbs:
+    home: home
+    clients: clients
+    company: company
+    services: services
+    projects: projects
+    news_letters: email campaigns
+    banners: banners
+    banner: '{{description}} {{campaign_name}}'
+    websites: websites
+    why_choose_us: why choose us
+    case_study: case study
+    posts: blogs
+    post: '{{title}}'
+    contact_us: contact us
+    
+    

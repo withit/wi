@@ -1,9 +1,5 @@
 .main
-  .breadcrumbs
-    %ul
-      %li= link_to 'home', root_path
-      %li= link_to 'blogs', post_path
-      %li= @post.title
+  = breadcrumbs_for @post
   =  render 'posts/sidebar'
   .post
     = image_tag @post.image.url
