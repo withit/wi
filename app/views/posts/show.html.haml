@@ -2,7 +2,8 @@
   .breadcrumbs
     %ul
       %li= link_to 'home', root_path
-      %li= @page.name
+      %li= link_to 'blogs', post_path
+      %li= @post.title
   =  render 'posts/sidebar'
   .post
     = image_tag @post.image.url
