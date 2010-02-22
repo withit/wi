@@ -21,4 +21,14 @@ class Post < ActiveRecord::Base
   end
   
   before_save :save_tags
+  
+  def image
+    Image.new(self)
+  end
+  
+  class Image < Struct.new(:post)
+    def url
+      "/images/blog/img#{"%02d" % (post.id % 12)}.jpg"
+    end
+  end
 end

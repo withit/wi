@@ -23,7 +23,7 @@
           %span.author= link_to comment.author_name, post_path(comment.post, :anchor => dom_id(comment))
           = comment.message
   .post
-    = image_tag "@post.image.url"
+    = image_tag @post.image.url
     %h2= @post.title
     %p.information Posted on #{@post.created_at.strftime('%d. %b, %Y')} | #{@post.source}
     .tweets

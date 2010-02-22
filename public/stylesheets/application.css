@@ -896,23 +896,28 @@ body.case_studies .banner {
 /* line 1, sass/_blogs.sass */
 .sidebar-right {
   float: right;
-  width: 350px; }
-  /* line 4, sass/_blogs.sass */
+  width: 315px;
+  margin-top: 0; }
+  /* line 5, sass/_blogs.sass */
+  .sidebar-right .twitter {
+    width: auto; }
+  /* line 7, sass/_blogs.sass */
   .sidebar-right .links {
     background-color: #EFEFEF;
     margin: 10px;
     padding: 12px;
     border: 1px solid #D3D3D3;
-    padding: 0; }
+    padding: 0;
+    margin-top: 0; }
     /* line 26, sass/_modules.sass */
     .sidebar-right .links ul, .sidebar-right .links li, .sidebar-right .links ol {
       margin: 0;
       padding: 0;
       list-style-type: none; }
-    /* line 8, sass/_blogs.sass */
+    /* line 12, sass/_blogs.sass */
     .sidebar-right .links ul, .sidebar-right .links .categories {
       padding: 12px; }
-    /* line 10, sass/_blogs.sass */
+    /* line 14, sass/_blogs.sass */
     .sidebar-right .links h2 {
       background-image: url('/images/posts.png');
       background-repeat: no-repeat;
@@ -923,31 +928,31 @@ body.case_studies .banner {
       padding: 0;
       width: 70px;
       height: 46px; }
-    /* line 15, sass/_blogs.sass */
+    /* line 19, sass/_blogs.sass */
     .sidebar-right .links li a {
       color: #333;
       font-weight: bold;
       font-size: 16px; }
-    /* line 19, sass/_blogs.sass */
+    /* line 23, sass/_blogs.sass */
     .sidebar-right .links li.twitter_link a {
       background-image: url(/images/twitter-icon.png); }
-    /* line 21, sass/_blogs.sass */
+    /* line 25, sass/_blogs.sass */
     .sidebar-right .links li.rss a {
       background-image: url(/images/rss.png); }
-    /* line 23, sass/_blogs.sass */
+    /* line 27, sass/_blogs.sass */
     .sidebar-right .links li.linked_in a {
       background-image: url(/images/linkedin.png); }
-    /* line 25, sass/_blogs.sass */
+    /* line 29, sass/_blogs.sass */
     .sidebar-right .links li.twitter_link, .sidebar-right .links li.rss, .sidebar-right .links li.linked_in {
       margin-top: 10px; }
-      /* line 27, sass/_blogs.sass */
+      /* line 31, sass/_blogs.sass */
       .sidebar-right .links li.twitter_link a, .sidebar-right .links li.rss a, .sidebar-right .links li.linked_in a {
         display: block;
         padding-left: 50px;
         line-height: 35px;
         background-position: top left;
         background-repeat: no-repeat; }
-    /* line 33, sass/_blogs.sass */
+    /* line 37, sass/_blogs.sass */
     .sidebar-right .links .categories {
       border-top: 1px dashed #CCC; }
       /* line 26, sass/_modules.sass */
@@ -955,7 +960,7 @@ body.case_studies .banner {
         margin: 0;
         padding: 0;
         list-style-type: none; }
-      /* line 36, sass/_blogs.sass */
+      /* line 40, sass/_blogs.sass */
       .sidebar-right .links .categories li {
         padding-bottom: 12px;
         margin-bottom: 12px;
@@ -965,14 +970,14 @@ body.case_studies .banner {
           border-bottom: none;
           margin-bottom: 0;
           padding-bottom: 0; }
-        /* line 38, sass/_blogs.sass */
+        /* line 42, sass/_blogs.sass */
         .sidebar-right .links .categories li a {
           background-image: url('/images/arrow-lhs-menu.jpg');
           background-position: center right;
           background-repeat: no-repeat;
           display: block;
           width: 155px; }
-  /* line 41, sass/_blogs.sass */
+  /* line 45, sass/_blogs.sass */
   .sidebar-right .comments {
     background-color: #EFEFEF;
     margin: 10px;
@@ -982,7 +987,7 @@ body.case_studies .banner {
     background-image: url(/images/WI-icon.png);
     background-position: bottom right;
     background-repeat: no-repeat; }
-    /* line 47, sass/_blogs.sass */
+    /* line 51, sass/_blogs.sass */
     .sidebar-right .comments h2 {
       background-image: url('/images/recent-comments.png');
       background-repeat: no-repeat;
@@ -993,7 +998,7 @@ body.case_studies .banner {
       padding: 0;
       height: 44px;
       width: 217px; }
-    /* line 51, sass/_blogs.sass */
+    /* line 55, sass/_blogs.sass */
     .sidebar-right .comments .comment {
       padding-bottom: 12px;
       margin-bottom: 12px;
@@ -1003,33 +1008,33 @@ body.case_studies .banner {
         border-bottom: none;
         margin-bottom: 0;
         padding-bottom: 0; }
-      /* line 53, sass/_blogs.sass */
+      /* line 57, sass/_blogs.sass */
       .sidebar-right .comments .comment .author {
         color: #0e66ae; }
-        /* line 55, sass/_blogs.sass */
+        /* line 59, sass/_blogs.sass */
         .sidebar-right .comments .comment .author:after {
           content: ":"; }
-  /* line 57, sass/_blogs.sass */
+  /* line 61, sass/_blogs.sass */
   .sidebar-right .twitter {
     float: none;
     height: auto; }
 
-/* line 60, sass/_blogs.sass */
+/* line 64, sass/_blogs.sass */
 .main .post {
   margin-left: 15px; }
-  /* line 62, sass/_blogs.sass */
+  /* line 66, sass/_blogs.sass */
   .main .post .post_content {
     margin-left: 60px;
     width: 570px; }
-    /* line 65, sass/_blogs.sass */
+    /* line 69, sass/_blogs.sass */
     .main .post .post_content p {
       margin-left: 0px;
       margin-top: 0px; }
-    /* line 68, sass/_blogs.sass */
+    /* line 72, sass/_blogs.sass */
     .main .post .post_content h2 {
       margin-bottom: 0px;
       color: #333; }
-  /* line 71, sass/_blogs.sass */
+  /* line 75, sass/_blogs.sass */
   .main .post .tweets {
     float: left;
     width: 50px;
@@ -1039,14 +1044,15 @@ body.case_studies .banner {
     background-position: top left;
     text-align: center;
     line-height: 10px;
-    font-size: 10px; }
-    /* line 81, sass/_blogs.sass */
+    font-size: 10px;
+    margin-bottom: 20px; }
+    /* line 86, sass/_blogs.sass */
     .main .post .tweets .count {
       font-size: 20px;
       display: block;
       margin-top: 5px;
       line-height: 20px; }
-    /* line 86, sass/_blogs.sass */
+    /* line 91, sass/_blogs.sass */
     .main .post .tweets a {
       background-image: url('/images/retweet-button.jpg');
       background-repeat: no-repeat;
@@ -1060,36 +1066,37 @@ body.case_studies .banner {
       margin-top: 10px;
       display: block; }
 
-/* line 92, sass/_blogs.sass */
+/* line 97, sass/_blogs.sass */
 .tagged {
   background-color: #EFEFED;
   width: 620px;
   margin: 20px 30px;
-  padding: 4px; }
-  /* line 97, sass/_blogs.sass */
+  padding: 4px;
+  clear: left; }
+  /* line 103, sass/_blogs.sass */
   .tagged a {
     color: #0e66ae; }
 
 
-/* line 101, sass/_blogs.sass */
+/* line 107, sass/_blogs.sass */
 div.posts {
   margin-right: 300px; }
-  /* line 103, sass/_blogs.sass */
+  /* line 109, sass/_blogs.sass */
   div.posts .post {
     margin-left: 15px;
     height: 370px;
     float: left;
     margin-bottom: 15px; }
-    /* line 108, sass/_blogs.sass */
+    /* line 114, sass/_blogs.sass */
     div.posts .post h2, div.posts .post p.information {
       margin: 0; }
-    /* line 110, sass/_blogs.sass */
+    /* line 116, sass/_blogs.sass */
     div.posts .post h2 {
       color: #0e66ae; }
-    /* line 112, sass/_blogs.sass */
+    /* line 118, sass/_blogs.sass */
     div.posts .post p.information {
       margin-bottom: 10px; }
-      /* line 114, sass/_blogs.sass */
+      /* line 120, sass/_blogs.sass */
       div.posts .post p.information a {
         background-image: url('/images/retweet-button.jpg');
         background-repeat: no-repeat;
@@ -1102,23 +1109,23 @@ div.posts {
         height: 17px;
         margin-top: 10px;
         display: block; }
-    /* line 120, sass/_blogs.sass */
+    /* line 126, sass/_blogs.sass */
     div.posts .post p, div.posts .post .links {
       margin-left: 60px;
       width: 230px; }
-    /* line 123, sass/_blogs.sass */
+    /* line 129, sass/_blogs.sass */
     div.posts .post .links {
       color: #0e66ae; }
-      /* line 125, sass/_blogs.sass */
+      /* line 131, sass/_blogs.sass */
       div.posts .post .links span {
         background-color: #EFEFED;
         padding: 5px;
         display: block;
         float: left; }
-      /* line 130, sass/_blogs.sass */
+      /* line 136, sass/_blogs.sass */
       div.posts .post .links a {
         color: #0e66ae; }
-      /* line 132, sass/_blogs.sass */
+      /* line 138, sass/_blogs.sass */
       div.posts .post .links .continue_reading {
         background-color: #C31725;
         color: #FFF;
@@ -1126,17 +1133,24 @@ div.posts {
         padding: 5px;
         text-transform: uppercase;
         float: left; }
-    /* line 140, sass/_blogs.sass */
+    /* line 145, sass/_blogs.sass */
+    div.posts .post img {
+      width: 295px;
+      padding: 10px;
+      background-color: #EBEBE9;
+      border: 1px solid #DDD;
+      margin-bottom: 15px; }
+    /* line 152, sass/_blogs.sass */
     div.posts .post:first-child p, div.posts .post:first-child .links {
       width: 570px; }
-    /* line 142, sass/_blogs.sass */
+    /* line 154, sass/_blogs.sass */
     div.posts .post:first-child img {
-      width: 100%; }
+      width: auto; }
 
-/* line 145, sass/_blogs.sass */
+/* line 157, sass/_blogs.sass */
 .new_comment textarea {
   border: 1px solid #FFF; }
-  /* line 147, sass/_blogs.sass */
+  /* line 159, sass/_blogs.sass */
   .new_comment textarea:focus, .new_comment textarea:active {
     outline: none; }
 
