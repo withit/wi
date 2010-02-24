@@ -182,7 +182,12 @@ body.home .testimonials
     img
       :margin 6px 0
 
-
+body.home .blog .post
+  img
+    :display block
+    :margin 6px auto
+    :margin-top 20px
+  
 .twitter
   :height 200px
   :float right
@@ -239,6 +244,7 @@ body.home
     :-moz-border-radius 12px
 body.home
   .services
+    :position relative
     :float left
     :display inline
     :width 308px
@@ -292,10 +298,13 @@ body.home
       :text-align right
       :margin 10px
       :margin-top 0  
-      
+      :position absolute
+      :bottom 0px
+      :right 0px
 
 
   .case_study
+    :position relative
     p
       :font-size 12px
       :line-height 14px
@@ -336,6 +345,9 @@ body.home
       :text-align right
       :margin 10px
       :margin-top 0
+      :position absolute
+      :bottom 0px
+      :right 0px
 .twitter
   :width 314px
   :background-color #EFEFEF

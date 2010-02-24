@@ -32,7 +32,7 @@ class Post < ActiveRecord::Base
     
   
   class Image < Struct.new(:post)
-    def url
+    def url *args
       "/images/blog/img#{"%02d" % ((post.id % 11) + 1)}.jpg"
     end
   end

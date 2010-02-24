@@ -32,7 +32,7 @@
         %p.author
           %label Author:
           = @post.author_name
-        =# image_tag @post.image.url
+        = image_tag @post.image.url(:thumb), :size => '295x80'
         = truncate(strip_tags(textilize(@post.content)),900)
         = link_to 'more ..', @post
         .actions
