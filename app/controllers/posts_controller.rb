@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_filter :load_page, :load_comments, :load_tags
+  before_filter :load_images, :only => [:new, :edit, :create, :update]
   
   def index
     @posts = Post.all
@@ -44,5 +45,12 @@ class PostsController < ApplicationController
     @post.destroy
 
     redirect_to(posts_url)
+  end
+  
+  protected
+  
+  def load_images
+    PostImage.create_from_folder if PostImage.count.zero?
+    @images = PostImage.all
   end
 end

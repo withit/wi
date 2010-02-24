@@ -3,7 +3,7 @@ class Post < ActiveRecord::Base
 
   has_many :taggings
   has_many :tags, :through => :taggings
-  
+  belongs_to :post_image
   def tag_names
     @tag_names ||= tags.collect(&:name) * ', '
   end
@@ -23,8 +23,13 @@ class Post < ActiveRecord::Base
   before_save :save_tags
   
   def image
-    Image.new(self)
+    post_image ? post_image.attachment : Image.new(self)
   end
+  
+  def image= image_file
+    build_post_image(:attachment => image_file)
+  end
+    
   
   class Image < Struct.new(:post)
     def url

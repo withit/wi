@@ -28,8 +28,16 @@ $(document).ready(function(){
   
   $('.testimonials .testimonial').hide();
   $('.testimonials .testimonial').first().show();
-  
+  if(!support_input_placeholder())
+  {
+    $('input[type=text]').placeholder();
+  }
 });
+
+function support_input_placeholder(){
+  var i = document.createElement('input');
+  return 'placeholder' in i;
+}
 
 $.periodic({}, function() {
   $('.testimonials .testimonial:visible').first().fadeOut(1000, function(){

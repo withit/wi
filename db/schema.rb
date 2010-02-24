@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100224020911) do
+ActiveRecord::Schema.define(:version => 20100224053811) do
 
   create_table "assets", :force => true do |t|
     t.datetime "created_at"
@@ -112,6 +112,15 @@ ActiveRecord::Schema.define(:version => 20100224020911) do
     t.integer  "position"
   end
 
+  create_table "post_images", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
+  end
+
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.text     "content"
@@ -121,6 +130,7 @@ ActiveRecord::Schema.define(:version => 20100224020911) do
     t.integer  "tweets_count",   :default => 0
     t.integer  "comments_count", :default => 0
     t.string   "source"
+    t.integer  "post_image_id"
   end
 
   create_table "posts_bak", :force => true do |t|
