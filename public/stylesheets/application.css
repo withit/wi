@@ -1179,13 +1179,6 @@ div.posts {
       div.posts .post:first-child img {
         width: auto; }
 
-/* line 162, sass/_blogs.sass */
-.new_comment textarea {
-  border: 1px solid #FFF; }
-  /* line 164, sass/_blogs.sass */
-  .new_comment textarea:focus, .new_comment textarea:active {
-    outline: none; }
-
 /* line 1, sass/_enlargement.sass */
 .enlargement {
   position: fixed;
@@ -1800,3 +1793,55 @@ body.tags .wrapper h1 {
 /* line 8, sass/_flash.sass */
 .notice a {
   color: #514721; }
+
+/* line 2, sass/_comments.sass */
+body.posts #comments, body.posts .new_comment {
+  margin-left: 10px; }
+  /* line 4, sass/_comments.sass */
+  body.posts #comments .comment, body.posts .new_comment .comment {
+    margin-top: 10px;
+    padding: 1px; }
+  /* line 7, sass/_comments.sass */
+  body.posts #comments .comment_content, body.posts #comments #comment_message, body.posts .new_comment .comment_content, body.posts .new_comment #comment_message {
+    background-color: #EFEFED;
+    width: 386px;
+    margin-left: 125px;
+    padding: 25px;
+    border: none;
+    outline: none;
+    font-size: 12px; }
+  /* line 15, sass/_comments.sass */
+  body.posts #comments input[type=text], body.posts .new_comment input[type=text] {
+    padding: 15px;
+    width: 406px;
+    display: block;
+    margin-left: 125px;
+    font-size: 12px;
+    margin-top: 10px;
+    border: 1px solid #DBDBDB; }
+  /* line 23, sass/_comments.sass */
+  body.posts #comments input[type=submit], body.posts .new_comment input[type=submit] {
+    margin-left: 125px;
+    margin-top: 15px;
+    margin-bottom: 60px;
+    color: #FFF;
+    background-color: #A3101A;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border: none;
+    padding: 4px 6px;
+    font-size: 12px;
+    text-transform: uppercase; }
+  /* line 35, sass/_comments.sass */
+  body.posts #comments #comment_message, body.posts .new_comment #comment_message {
+    height: 125px; }
+  /* line 37, sass/_comments.sass */
+  body.posts #comments .author, body.posts #comments .created, body.posts .new_comment .author, body.posts .new_comment .created {
+    float: left;
+    clear: left; }
+  /* line 40, sass/_comments.sass */
+  body.posts #comments #fake_email, body.posts .new_comment #fake_email {
+    display: none; }
+  /* line 42, sass/_comments.sass */
+  body.posts #comments h2, body.posts .new_comment h2 {
+    color: #0e66ae; }

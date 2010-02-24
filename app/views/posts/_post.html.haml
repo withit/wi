@@ -11,5 +11,5 @@
   .links
     = link_to 'continue reading', post, :class => 'continue_reading'
     %span
-      = link_to "(#{post.comments_count}) #{post.comments_count == 1 ? 'comment' : 'comment'.pluralize}", post_path(post, :anchor => "comments")
+      = link_to "(#{post.comments.approved_or_authored(session[:comment_ids]).count}) #{post.comments.approved_or_authored(session[:comment_ids]) == 1 ? 'comment' : 'comment'.pluralize}", post_path(post, :anchor => "comments")
       | [+] Share

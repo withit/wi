@@ -15,10 +15,12 @@
     Tagged as:
     - @post.tags.each do |tag|
       = link_to tag.name, tag
-  .comments
+  #comments
     %h2 Comments
-    - @post.comments.each do |comment|
-      %div[comment]
+    - @post.comments.approved_or_authored(session[:comment_ids]).each do |comment|
+      %div[comment]{:class => comment.state}
+        - if comment.pending?
+          %p Your comment is waiting approval 
         .author= comment.author_name
         .created= comment.created_at.strftime('%M %d')
         .comment_content= comment.message

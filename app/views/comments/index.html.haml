@@ -1,0 +1,9 @@
+%h1 #{h params[:state].humanize} Comments
+- @comments.each do |comment|
+  .comment{:class => comment.state}
+    :textile
+      *#{h comment.author_name}*: #{h comment.message}
+    = link_to 'Approve', comment_path(comment, :comment => {:state => 'approved'}, :state => params[:state]), :method => :put
+    = link_to 'Reject', comment_path(comment, :comment => {:state => 'rejected'}, :state => params[:state]), :method => :put
+- Comment::STATES.reject{|s| s == params[:state]}.each do |state|
+  = link_to "#{state.humanize} comments (#{Comment.count(:conditions => {:state => state})})", comments_path(:state => state)

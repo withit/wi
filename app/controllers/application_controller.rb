@@ -62,7 +62,7 @@ class ApplicationController < ActionController::Base
   end
   
   def load_comments
-    @comments = Comment.all
+    @comments = Comment.approved_or_authored(session[:comment_ids])
   end
   
   def load_tags

@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :posts, :has_many => :comments
+  map.resources :comments
   map.enquiries 'contact-us', :controller => 'enquiries', :action => 'new', :conditions => {:method => :get}
   map.enquiries 'contact-us', :controller => 'enquiries', :action => 'create', :conditions => {:method => :post}
   map.resources :tags
