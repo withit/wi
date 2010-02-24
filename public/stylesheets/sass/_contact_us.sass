@@ -59,6 +59,10 @@
     :font-size 24px
     :color #333
     :list-style-type none
+    :margin 0
+    :margin-top 10px
+    :padding-top 10px
+    :padding-left 0
     a
       :color #333
       :text-decoration none
@@ -66,8 +70,21 @@
         :text-decoration underline
     :line-height 40px
     li
-      :margin 20px
-  
+      :height 50px
+      :margin-left 20px
+      
+      span
+        :width 35px
+        :height 48px
+        :display block
+        :float left
+        :margin-right 20px
+        :background-repeat no-repeat
+        :text-indent -9999px
+      &.phone span
+        :background-image url(/images/phone-icon.jpg)
+      &.email span
+        :background-image url(/images/email-icon.jpg)
   .map
     :width 290px
     :margin 10px auto

@@ -762,46 +762,66 @@ body.websites .content, div.websites, body.banners .content {
     font-size: 24px;
     color: #333;
     list-style-type: none;
+    margin: 0;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-left: 0;
     line-height: 40px; }
-    /* line 62, sass/_contact_us.sass */
+    /* line 66, sass/_contact_us.sass */
     .contact_details ul a {
       color: #333;
       text-decoration: none; }
-      /* line 65, sass/_contact_us.sass */
+      /* line 69, sass/_contact_us.sass */
       .contact_details ul a:hover {
         text-decoration: underline; }
-    /* line 68, sass/_contact_us.sass */
+    /* line 72, sass/_contact_us.sass */
     .contact_details ul li {
-      margin: 20px; }
-  /* line 71, sass/_contact_us.sass */
+      height: 50px;
+      margin-left: 20px; }
+      /* line 76, sass/_contact_us.sass */
+      .contact_details ul li span {
+        width: 35px;
+        height: 48px;
+        display: block;
+        float: left;
+        margin-right: 20px;
+        background-repeat: no-repeat;
+        text-indent: -9999px; }
+      /* line 84, sass/_contact_us.sass */
+      .contact_details ul li.phone span {
+        background-image: url(/images/phone-icon.jpg); }
+      /* line 86, sass/_contact_us.sass */
+      .contact_details ul li.email span {
+        background-image: url(/images/email-icon.jpg); }
+  /* line 88, sass/_contact_us.sass */
   .contact_details .map {
     width: 290px;
     margin: 10px auto; }
-  /* line 74, sass/_contact_us.sass */
+  /* line 91, sass/_contact_us.sass */
   .contact_details .address {
     margin: 10px;
     font-size: 12px; }
-    /* line 76, sass/_contact_us.sass */
+    /* line 93, sass/_contact_us.sass */
     .contact_details .address h4 {
       margin: 0;
       font-size: 14px; }
 
-/* line 80, sass/_contact_us.sass */
+/* line 97, sass/_contact_us.sass */
 .errorExplanation {
   color: #8A1F11;
   background-color: #FBE3E4;
   border: 1px solid #FBC2C4;
   margin: 0;
   padding: 1em; }
-  /* line 86, sass/_contact_us.sass */
+  /* line 103, sass/_contact_us.sass */
   .errorExplanation ul {
     margin: 0;
     list-style-type: none; }
 
-/* line 90, sass/_contact_us.sass */
+/* line 107, sass/_contact_us.sass */
 .errorExplanation h2 {
   font-size: 14px; }
-/* line 93, sass/_contact_us.sass */
+/* line 110, sass/_contact_us.sass */
 .errorExplanation ul li {
   list-style-type: square;
   list-style-image: none; }
