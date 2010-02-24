@@ -6,7 +6,7 @@
           = image_tag project.thumbnail.url
           %h3= project.name
           = link_to project.url, project.url unless project.url.blank?
-        = image_tag project.main_image.url, :class => 'main'
+        = link_to(image_tag(project.main_image.url, :class => 'main'), projects_path, :class => 'main')
 
 .testimonials
   %h2 Testimonials
