@@ -24,6 +24,7 @@
         .comment_content= comment.message
   - form_for [@post, Comment.new] do |form|
     %h2 Add Yours
+    = anti_spam_fields
     = form.text_area :message, :placeholder => 'your message...'
     = form.text_field :author_name, :placeholder => 'Name'
     = form.text_field :author_email, :placeholder => 'Email Address'

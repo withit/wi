@@ -54,4 +54,18 @@ class ApplicationController < ActionController::Base
   def load_testimonials
     @testimonials = Testimonial.all
   end
+  
+  protected
+  
+  def load_page
+    @page = Page.find(:blogs)
+  end
+  
+  def load_comments
+    @comments = Comment.all
+  end
+  
+  def load_tags
+    @tags = Tag.all
+  end
 end

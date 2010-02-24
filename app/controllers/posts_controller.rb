@@ -45,18 +45,4 @@ class PostsController < ApplicationController
 
     redirect_to(posts_url)
   end
-  
-  protected
-  
-  def load_page
-    @page = Page.find(:blogs)
-  end
-  
-  def load_comments
-    @comments = Comment.all
-  end
-  
-  def load_tags
-    @tags = Tag.all
-  end
 end
