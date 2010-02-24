@@ -741,12 +741,12 @@ body.websites .content, div.websites, body.banners .content {
   border: 1px solid #D5D5D3; }
   /* line 43, sass/_contact_us.sass */
   .contact_details h2 {
-    margin: 0;
+    margin: 10px;
     text-indent: -9999px;
     overflow: hidden;
-    background-image: url(/images/contact_details.png);
-    height: 100px;
-    width: 100px; }
+    background-image: url(/images/contact.png);
+    height: 43px;
+    width: 183px; }
   /* line 50, sass/_contact_us.sass */
   .contact_details p {
     font-size: 12px;
