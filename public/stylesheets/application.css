@@ -507,8 +507,8 @@ body.home .projects {
     body.home .projects ul li {
       height: 87px;
       overflow: hidden;
-      margin: 10px 10px 0px auto;
-      width: 318px; }
+      margin: 10px 5px 0px auto;
+      width: 323px; }
       /* line 423, sass/application.sass */
       body.home .projects ul li .panel {
         z-index: 20;
