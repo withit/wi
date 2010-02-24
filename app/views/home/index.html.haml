@@ -5,7 +5,8 @@
         .panel
           = image_tag project.thumbnail.url
           %h3= project.name
-          = link_to project.url, project.url unless project.url.blank?
+          =# link_to project.url, project.url unless project.url.blank?
+          = link_to 'View Case Study', case_study_path if project.case_study
         = link_to(image_tag(project.main_image.url, :class => 'main'), projects_path, :class => 'main')
 
 .testimonials
