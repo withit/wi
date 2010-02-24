@@ -803,11 +803,11 @@ body.websites .content, div.websites, body.banners .content {
   list-style-image: none; }
 
 /* line 1, sass/_company.sass */
-body.company .content, body.clients .content, body.why_choose_us .content, body.projects .content {
+body.company .content, body.clients .content, body.why_choose_us .content, body.projects .content, body.subscribe .content {
   margin-left: 235px;
   margin-right: 350px; }
   /* line 4, sass/_company.sass */
-  body.company .content h1, body.clients .content h1, body.why_choose_us .content h1, body.projects .content h1 {
+  body.company .content h1, body.clients .content h1, body.why_choose_us .content h1, body.projects .content h1, body.subscribe .content h1 {
     margin: 0px 0px 10px 0px;
     font-size: 20px;
     text-transform: uppercase;
@@ -815,23 +815,23 @@ body.company .content, body.clients .content, body.why_choose_us .content, body.
     font-weight: normal;
     color: #0E66AE; }
   /* line 11, sass/_company.sass */
-  body.company .content p, body.clients .content p, body.why_choose_us .content p, body.projects .content p {
+  body.company .content p, body.clients .content p, body.why_choose_us .content p, body.projects .content p, body.subscribe .content p {
     font-size: 12px; }
     /* line 13, sass/_company.sass */
-    body.company .content p a, body.clients .content p a, body.why_choose_us .content p a, body.projects .content p a {
+    body.company .content p a, body.clients .content p a, body.why_choose_us .content p a, body.projects .content p a, body.subscribe .content p a {
       font-weight: bold;
       text-decoration: none;
       color: rgb(14, 102, 174); }
       /* line 17, sass/_company.sass */
-      body.company .content p a:hover, body.clients .content p a:hover, body.why_choose_us .content p a:hover, body.projects .content p a:hover {
+      body.company .content p a:hover, body.clients .content p a:hover, body.why_choose_us .content p a:hover, body.projects .content p a:hover, body.subscribe .content p a:hover {
         text-decoration: underline; }
   /* line 19, sass/_company.sass */
-  body.company .content .contact, body.clients .content .contact, body.why_choose_us .content .contact, body.projects .content .contact {
+  body.company .content .contact, body.clients .content .contact, body.why_choose_us .content .contact, body.projects .content .contact, body.subscribe .content .contact {
     margin-bottom: 100px;
     margin-left: 0;
     margin-top: 20px; }
     /* line 23, sass/_company.sass */
-    body.company .content .contact a, body.clients .content .contact a, body.why_choose_us .content .contact a, body.projects .content .contact a {
+    body.company .content .contact a, body.clients .content .contact a, body.why_choose_us .content .contact a, body.projects .content .contact a, body.subscribe .content .contact a {
       margin-left: 0; }
 
 /* line 25, sass/_company.sass */
@@ -1863,3 +1863,11 @@ body.posts #comments, body.posts .new_comment {
   /* line 42, sass/_comments.sass */
   body.posts #comments h2, body.posts .new_comment h2 {
     color: #0e66ae; }
+
+/* line 1, sass/_subscribe.sass */
+body.subscribe .content {
+  margin-left: 10px; }
+  /* line 3, sass/_subscribe.sass */
+  body.subscribe .content strong {
+    font-weight: normal;
+    text-transform: uppercase; }

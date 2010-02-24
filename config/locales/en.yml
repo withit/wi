@@ -41,5 +41,6 @@ en:
     posts: blogs
     post: '{{title}}'
     contact_us: contact us
+    subscribe: subscribe
     
     

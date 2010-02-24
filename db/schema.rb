@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100224053811) do
+ActiveRecord::Schema.define(:version => 20100224223915) do
 
   create_table "assets", :force => true do |t|
     t.datetime "created_at"
@@ -171,6 +171,12 @@ ActiveRecord::Schema.define(:version => 20100224053811) do
     t.integer  "banner_height"
     t.integer  "banner_width"
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "subscriptions", :force => true do |t|
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

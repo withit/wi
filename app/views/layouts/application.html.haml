@@ -54,7 +54,7 @@
           = (yield :nested) || yield
         .footer
           .subscribe
-            - form_for :subscription do |subscription_form| 
+            - form_for Subscription.new do |subscription_form| 
               %h2 Subscribe to newsletter
               = subscription_form.text_field :email, :type => 'email', :placeholder => 'email address'
               = subscription_form.submit 'subscribe'

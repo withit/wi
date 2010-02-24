@@ -10,4 +10,7 @@ class PagesController < ApplicationController
   
   def projects
   end
+  
+  def subscribe
+  end
 end

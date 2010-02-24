@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :posts, :has_many => :comments
   map.resources :comments
+  map.resources :subscriptions
   map.enquiries 'contact-us', :controller => 'enquiries', :action => 'new', :conditions => {:method => :get}
   map.enquiries 'contact-us', :controller => 'enquiries', :action => 'create', :conditions => {:method => :post}
   map.resources :tags
@@ -17,7 +18,7 @@ ActionController::Routing::Routes.draw do |map|
   map.home '/', :controller => 'home', :action => 'index'  
   map.services '/services', :controller => 'pages', :action => 'show', :id => 'services'
   map.connect '/services.html', :controller => 'pages', :action => 'show', :id => 'services'
-
+  map.subscribe '/subscribe', :controller => 'pages', :action => 'subscribe'
   map.about '/about', :controller => 'pages', :action => 'show', :id => 'about'
   map.connect '/about.html', :controller => 'pages', :action => 'show', :id => 'about'
 
