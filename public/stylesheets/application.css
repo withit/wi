@@ -1252,15 +1252,16 @@ div.posts {
       margin: 0px auto; }
   /* line 28, sass/_enlargement.sass */
   .enlargement .close {
-    background-color: #9E9E9E;
+    background-image: url(/images/close-button.jpg);
     color: #FFF;
     text-transform: uppercase;
     float: right;
     margin-right: 5px;
+    width: 75px;
+    height: 22px;
     font-weight: bold;
-    padding: 5px;
-    -moz-border-radius: 40px;
-    -webkit-border-radius: 40px; }
+    text-indent: 6px;
+    line-height: 22px; }
 
 /* line 1, sass/_services.sass */
 body.services .content {
