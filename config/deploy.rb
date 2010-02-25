@@ -26,3 +26,5 @@ task :after_update_code, :roles => :app do
     run "ln -s #{shared_path}/system/#{dir} #{release_path}/public/#{dir}"
   end
 end
+
+after "deploy", "deploy:cleanup"
