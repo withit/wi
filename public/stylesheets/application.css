@@ -890,6 +890,10 @@ body.company .testimonials, body.clients .testimonials, body.why_choose_us .test
       margin-top: 0; }
 
 /* line 51, sass/_company.sass */
+body.company h2, body.why_choose_us h2 {
+  font-size: 14px;
+  font-weight: bold; }
+/* line 54, sass/_company.sass */
 body.company .banner, body.why_choose_us .banner {
   margin: 10px auto;
   background-repeat: no-repeat;
