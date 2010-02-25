@@ -34,7 +34,7 @@
           %label Author:
           = @post.author_name
         = image_tag @post.image.url(:thumb), :size => '295x80'
-        = truncate(strip_tags(textilize(@post.content)),700)
+        = truncate(strip_tags(textilize(@post.content)),500)
         = link_to 'more ..', @post
         .actions
           (#{@post.comments_count}) #{@post.comments_count == 1 ? 'Comment' : 'Comments'} | #{link_to '[+] Share', '#'}
