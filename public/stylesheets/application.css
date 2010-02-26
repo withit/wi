@@ -1526,7 +1526,8 @@ body.banners .sidebar {
 /* line 13, sass/_banners.sass */
 body.banners .content .banner {
   margin-right: 15px;
-  float: left; }
+  float: left;
+  background-image: none; }
   /* line 15, sass/_banners.sass */
   body.banners .content .banner ul {
     padding-left: 10px; }
@@ -1555,7 +1556,7 @@ body.banners .content .banner {
     body.banners .content .banner h2 img {
       margin-bottom: 6px;
       margin-top: 0; }
-  /* line 37, sass/_banners.sass */
+  /* line 38, sass/_banners.sass */
   body.banners .content .banner a {
     text-decoration: none;
     color: #0E66AE;
@@ -1565,45 +1566,45 @@ body.banners .content .banner {
     background-repeat: no-repeat;
     background-position: center right;
     margin-right: 6px; }
-    /* line 46, sass/_banners.sass */
+    /* line 47, sass/_banners.sass */
     body.banners .content .banner a:hover {
       text-decoration: underline; }
-  /* line 48, sass/_banners.sass */
+  /* line 49, sass/_banners.sass */
   body.banners .content .banner p {
     font-size: 12px; }
 
-/* line 50, sass/_banners.sass */
+/* line 51, sass/_banners.sass */
 #banners {
   width: 501px;
   margin: auto; }
-  /* line 51, sass/_banners.sass */
+  /* line 52, sass/_banners.sass */
   #banners a {
     border: none; }
-    /* line 53, sass/_banners.sass */
+    /* line 54, sass/_banners.sass */
     #banners a img {
       border: none; }
-  /* line 57, sass/_banners.sass */
+  /* line 58, sass/_banners.sass */
   #banners .campaign {
     width: 247px;
     float: left;
     margin-right: 7px; }
-    /* line 61, sass/_banners.sass */
+    /* line 62, sass/_banners.sass */
     #banners .campaign.last {
       margin-right: 0px; }
-    /* line 63, sass/_banners.sass */
+    /* line 64, sass/_banners.sass */
     #banners .campaign h2 {
       text-transform: uppercase;
       vertical-align: middle;
       margin: 0;
       margin-top: 5px;
       padding: 0; }
-      /* line 66, sass/_banners.sass */
+      /* line 67, sass/_banners.sass */
       #banners .campaign h2 img {
         vertical-align: middle; }
-    /* line 71, sass/_banners.sass */
+    /* line 72, sass/_banners.sass */
     #banners .campaign ul {
       padding: 0; }
-      /* line 73, sass/_banners.sass */
+      /* line 74, sass/_banners.sass */
       #banners .campaign ul li {
         background-image: url("../images/blue-arrow.jpg");
         background-repeat: no-repeat;
