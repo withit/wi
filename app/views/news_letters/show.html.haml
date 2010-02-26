@@ -4,7 +4,7 @@
 = breadcrumbs_for @news_letter
 = render 'projects/sidebar'
 .content
-  %h1= @news_letter.name
+  = title(@news_letter.name)
   =image_tag @news_letter.image.url
 
   -if admin?

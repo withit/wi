@@ -2,5 +2,5 @@
   = breadcrumbs_for :posts
   = render 'posts/sidebar'
   .posts
-    %h1 Post Archives: #{@tag.name}
+    = title "Post Archives: #{@tag.name}"
     = render @tag.posts

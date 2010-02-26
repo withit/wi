@@ -55,4 +55,9 @@ module ApplicationHelper
     </div>
     EOF
   end
+  
+  def title title
+    content_tag(:h1, @page_title = title)
+  end
+    
 end

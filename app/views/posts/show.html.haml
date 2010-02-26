@@ -3,7 +3,7 @@
   =  render 'posts/sidebar'
   .post
     = image_tag @post.image.url
-    %h1= @post.title
+    = title @post.title
     %p.information Posted on #{@post.created_at.strftime('%d. %b, %Y')} | #{@post.source}
     .tweets
       :javascript

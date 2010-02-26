@@ -5,7 +5,7 @@
 
 = render 'projects/sidebar'
 .content
-  %h1 Email Campaigns
+  = title "Email Campaigns"
   - @news_letters.each do |news_letter|
     .news_letter{:class => cycle(nil, 'last')}
       = link_to image_tag(news_letter.logo.url), news_letter
