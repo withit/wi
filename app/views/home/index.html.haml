@@ -12,7 +12,7 @@
 .testimonials
   %h2 Testimonials
   - @testimonials.each do |testimonial| 
-    .testimonial
+    .testimonial{:style => testimonial == @testimonials.first ? nil : "display: none;"}
       = image_tag testimonial.image.url 
       %p= testimonial.content
       %p.author= testimonial.author
@@ -37,7 +37,9 @@
         = truncate(strip_tags(textilize(@post.content)),500)
         = link_to 'more ..', @post
         .actions
-          (#{@post.comments_count}) #{@post.comments_count == 1 ? 'Comment' : 'Comments'} | #{link_to '[+] Share', '#'}
+          = link_to "(#{@post.comments_count}) #{@post.comments_count == 1 ? 'Comment' : 'Comments'}", post_path(@post, :anchor => :comments)
+          
+          = add_this_toolbox @post
 
   %h1 Today the web is where your customers are heading but are you ready for them?
   :textile 

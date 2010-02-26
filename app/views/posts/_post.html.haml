@@ -10,6 +10,6 @@
   %p= truncate(strip_tags(textilize(post.content)),300)
   .links
     = link_to 'continue reading', post, :class => 'continue_reading'
-    %span
+    .div{:style => "float: left; width: 205px"}
       = link_to "(#{post.comments.approved_or_authored(session[:comment_ids]).count}) #{post.comments.approved_or_authored(session[:comment_ids]) == 1 ? 'comment' : 'comment'.pluralize}", post_path(post, :anchor => "comments")
-      | [+] Share
+      = add_this_toolbox post

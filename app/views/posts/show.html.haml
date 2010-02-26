@@ -24,10 +24,10 @@
         .author= comment.author_name
         .created= comment.created_at.strftime('%M %d')
         .comment_content= comment.message
-  - form_for [@post, Comment.new] do |form|
+  - form_for [@post, Comment.new(:message => 'Your  message..')] do |form|
     %h2 Add Yours
     = anti_spam_fields
-    = form.text_area :message, :placeholder => 'your message...'
+    = form.text_area :message
     = form.text_field :author_name, :placeholder => 'Name'
     = form.text_field :author_email, :placeholder => 'Email Address'
     = form.submit 'Add Comment'

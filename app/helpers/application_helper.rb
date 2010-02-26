@@ -46,4 +46,13 @@ module ApplicationHelper
     else t(crumbable, :scope => 'breadcrumbs')
     end  
   end
+  
+  def add_this_toolbox post
+    @add_this_used ||= true
+    <<-EOF
+    <div class="addthis_toolbox addthis_default_style">
+    <a href="http://www.addthis.com/bookmark.php?v=250&amp;username=xa-4b85df855f79819c" class="addthis_button_compact" addthis:url="#{post_url(post)}" addthis:title="#{post.title}">Share</a>
+    </div>
+    EOF
+  end
 end
