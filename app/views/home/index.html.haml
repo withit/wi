@@ -31,8 +31,10 @@
       
         %h3= link_to @post.title, @post
         %p.author
-          %label Author:
-          = @post.author_name
+          &nbsp;
+          - unless @post.author_name.blank?
+            %label Author:
+            = @post.author_name
         = image_tag @post.image.url(:thumb), :size => '295x80'
         = truncate(strip_tags(textilize(@post.content)),500)
         = link_to 'more ..', @post
