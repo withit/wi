@@ -65,7 +65,10 @@
     = image_tag @case_study.thumbnail.url
     
     %h3= @case_study.name 
-    = sanitize @case_study.summary.to_s 
+    :textile
+      Healthworks is an established leader in the provision of corporate health services and have won several state and federal government awards in recognition of their innovative approach to health and wellness.
+
+      Our challenge was to help Healthworks grow its market leadership by implementing an innovative web presence with increased user functionality plus supporting the launch with e-marketing activities.
     = link_to 'more&#8230;', case_study_path
 
   .twitter
