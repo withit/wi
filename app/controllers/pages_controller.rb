@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   before_filter :authorize, :only => [:edit, :update, :index]
-  before_filter :adjust_format_for_iphone, :only => :show
+  # before_filter :adjust_format_for_iphone, :only => :show
 
   def company
   end

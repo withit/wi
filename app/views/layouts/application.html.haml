@@ -19,7 +19,7 @@
     %link{:rel => "SHORTCUT ICON", :href=>"/favicon.ico"}
     = yield :head 
   %body{:class => controller.controller_name == 'pages' ? controller.action_name : controller.controller_name}
-    - if iphone_user_agent? && request.subdomains.first != 'i'
+    - if false # iphone_user_agent? && request.subdomains.first != 'i'
       .iphone_message
         %p Using an iPhone? #{link_to "Use the optimised version", {:subdomain => 'i'}}.
     .outer

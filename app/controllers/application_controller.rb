@@ -27,27 +27,27 @@ class ApplicationController < ActionController::Base
   end
   
   # Set iPhone format if request to i subdomain
-  def adjust_format_for_iphone
-    request.format = :iphone if iphone_request?
-  end
+  # def adjust_format_for_iphone
+  #   request.format = :iphone if iphone_request?
+  # end
 
   # Return true for requests to i subdomain
-  def iphone_request?
-    return (request.subdomains.first == "i" || params[:format] == "iphone")
-  end
+  # def iphone_request?
+  #   return (request.subdomains.first == "i" || params[:format] == "iphone")
+  # end
   
-  def redirect_to_iphone
-    redirect_to :subdomain => 'i' if iphone_user_agent? && request.subdomains.first != 'i'
-  end
+  # def redirect_to_iphone
+  #   redirect_to :subdomain => 'i' if iphone_user_agent? && request.subdomains.first != 'i'
+  # end
   
-  def iphone_user_agent?
-    request.env["HTTP_USER_AGENT"] && request.env["HTTP_USER_AGENT"][/(Mobile\/.+Safari)/]
-  end
+  # def iphone_user_agent?
+  #   false #request.env["HTTP_USER_AGENT"] && request.env["HTTP_USER_AGENT"][/(Mobile\/.+Safari)/]
+  # end
   
-  helper_method :iphone_user_agent?
+  # helper_method :iphone_user_agent?
 
   
-  before_filter :redirect_to_iphone
+  # before_filter :redirect_to_iphone
   
   before_filter :load_testimonials
   
