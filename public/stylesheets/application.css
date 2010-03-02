@@ -927,6 +927,10 @@ body.company .banner, body.why_choose_us .banner {
       text-indent: -9999em;
       overflow: hidden; }
 
+/* line 60, sass/_company.sass */
+body.why_choose_us .content li {
+  margin-bottom: 0.5em; }
+
 /* line 2, sass/_case_study.sass */
 .case_study_main {
   margin-left: 235px;
