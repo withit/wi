@@ -9,9 +9,9 @@
 .sidebar
   %ul
     %li.current.first
-      = link_to  'Company', company_path
+      = link_to_unless_current  'Company', company_path
       %p We care about the web and our mission is to try and make the web experience even better by delivering the best possible solution
-    %li= link_to 'Why Choose Us', why_choose_us_path
+    %li= link_to_unless_current 'Why Choose Us', why_choose_us_path
 = render 'testimonials/testimonials'
 .content
   = title "Company"

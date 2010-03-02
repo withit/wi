@@ -1696,24 +1696,29 @@ body.news_letters .content .news_letter {
     .sidebar ul li {
       height: 35px;
       border-top: 1px solid #BBB;
-      padding: 10px 0px; }
-      /* line 23, sass/_sidebar.sass */
+      padding: 10px 0px;
+      color: #0E66AE;
+      text-transform: uppercase;
+      font-size: 12px; }
+      /* line 26, sass/_sidebar.sass */
       .sidebar ul li a {
         line-height: 35px; }
-      /* line 25, sass/_sidebar.sass */
+      /* line 28, sass/_sidebar.sass */
       .sidebar ul li.current {
         height: auto; }
-        /* line 27, sass/_sidebar.sass */
+        /* line 30, sass/_sidebar.sass */
         .sidebar ul li.current a {
           line-height: 14px; }
-      /* line 29, sass/_sidebar.sass */
+      /* line 32, sass/_sidebar.sass */
       .sidebar ul li.first {
         border-top: none; }
-    /* line 31, sass/_sidebar.sass */
-    .sidebar ul p {
-      margin: 0px;
-      font-size: 12px; }
-    /* line 34, sass/_sidebar.sass */
+      /* line 34, sass/_sidebar.sass */
+      .sidebar ul li p {
+        margin: 0px;
+        font-size: 12px;
+        color: #000;
+        text-transform: none; }
+    /* line 39, sass/_sidebar.sass */
     .sidebar ul a {
       color: #0E66AE;
       text-transform: uppercase;
@@ -1722,45 +1727,45 @@ body.news_letters .content .news_letter {
       background-repeat: no-repeat;
       background-position: center right;
       background-image: url(/images/arrow-lhs-menu.jpg); }
-    /* line 44, sass/_sidebar.sass */
+    /* line 49, sass/_sidebar.sass */
     .sidebar ul ul a {
       background-position: center left;
       padding-left: 20px;
       color: #C9162C;
       height: auto;
       background-image: none; }
-    /* line 50, sass/_sidebar.sass */
+    /* line 55, sass/_sidebar.sass */
     .sidebar ul ul li {
       padding-top: 3px;
       padding-bottom: 3px;
       height: auto;
       border: none; }
-      /* line 55, sass/_sidebar.sass */
+      /* line 60, sass/_sidebar.sass */
       .sidebar ul ul li.current a {
         color: #0E66AE;
         background-image: url(/images/arrow-lhs-menu.jpg); }
-  /* line 64, sass/_sidebar.sass */
+  /* line 69, sass/_sidebar.sass */
   body.services .sidebar {
     background-image: url(/images/services-lhs-shadow.jpg); }
-  /* line 66, sass/_sidebar.sass */
+  /* line 71, sass/_sidebar.sass */
   body.projects .sidebar, body.websites .sidebar {
     background-image: url(/images/project-lhs-shadow.jpg); }
-  /* line 68, sass/_sidebar.sass */
+  /* line 73, sass/_sidebar.sass */
   body.company .sidebar, body.why_choose_us .sidebar {
     background-image: url(/images/about-lhs-shadow.jpg); }
-  /* line 70, sass/_sidebar.sass */
+  /* line 75, sass/_sidebar.sass */
   body.banners .sidebar {
     background-image: url(/images/banners-lhs-shadow.jpg); }
-  /* line 72, sass/_sidebar.sass */
+  /* line 77, sass/_sidebar.sass */
   body.news_letters .sidebar {
     background-image: url(/images/newsletter-lhs-shadow.jpg); }
-  /* line 74, sass/_sidebar.sass */
+  /* line 79, sass/_sidebar.sass */
   body.case_studies .sidebar {
     background-image: url(/images/casestudy-lhs-shadow.jpg); }
-  /* line 76, sass/_sidebar.sass */
+  /* line 81, sass/_sidebar.sass */
   body.enquiries .sidebar {
     background-image: url(/images/contact-lhs-shadow.jpg); }
-  /* line 78, sass/_sidebar.sass */
+  /* line 83, sass/_sidebar.sass */
   body.clients .sidebar {
     background-image: url(/images/clients-lhs-shadow.jpg); }
 

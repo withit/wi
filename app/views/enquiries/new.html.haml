@@ -2,7 +2,7 @@
 .sidebar
   %ul
     %li.current.first
-      =link_to "Contact Us", enquiries_path
+      =link_to_unless_current "Contact Us", enquiries_path
       %p If you are interested in talking to us then we would love to hear from you.
 = render 'enquiries/sidebar'
 .contact_us

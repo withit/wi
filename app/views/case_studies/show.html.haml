@@ -7,7 +7,7 @@
   .sidebar
     %ul
       %li.current.first
-        = link_to "Case study"
+        = link_to_unless_current "Case study"
         %p= @page.description
   .case_study_main
     .images
