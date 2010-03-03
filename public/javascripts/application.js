@@ -21,7 +21,7 @@ $(document).ready(function(){
     $('.case_study_main img').first().attr('src', $(this).attr('data-enlargement'));
     $('.case_study_main p').first().html($(this).attr('title'));
   });
-  $('#tweets').tweetable({username: 'withimagination', limit: 5, time: true});
+  $('#tweets').tweetable({username: 'withimagination', limit: 30, time: true}); //get 30 but only display first 3 so that it isn't empty when there are retweets
   $('.sizes select').live('change', function(){
      document.location = '/projects/banners/' + this.value;
   });
