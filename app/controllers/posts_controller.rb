@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_filter :authorize, :except => [:show, :index]
   before_filter :load_page, :load_comments, :load_tags
   before_filter :load_images, :only => [:new, :edit, :create, :update]
   
