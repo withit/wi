@@ -541,41 +541,44 @@ body.home .projects {
       body.home .projects ul li.selected .main {
         display: block; }
       /* line 449, sass/application.sass */
+      body.home .projects ul li.selected a {
+        color: #FFF; }
+      /* line 451, sass/application.sass */
       body.home .projects ul li img {
         float: left;
         margin-right: 6px; }
-    /* line 452, sass/application.sass */
+    /* line 454, sass/application.sass */
     body.home .projects ul h3 {
       text-transform: uppercase;
       font-size: 14px;
       font-weight: normal;
       margin-bottom: 0px; }
-    /* line 457, sass/application.sass */
+    /* line 459, sass/application.sass */
     body.home .projects ul a {
       color: #0e66ae; }
 
-/* line 460, sass/application.sass */
+/* line 462, sass/application.sass */
 .footer {
   float: left;
   width: 100%; }
-  /* line 463, sass/application.sass */
+  /* line 465, sass/application.sass */
   .footer .subscribe {
     margin-top: 10px;
     margin-bottom: 50px;
     float: left; }
-    /* line 467, sass/application.sass */
+    /* line 469, sass/application.sass */
     .footer .subscribe h2 {
       text-indent: -9999px;
       background-image: url(/images/subscribe.png);
       height: 36px;
       width: 196px;
       margin: 0; }
-    /* line 473, sass/application.sass */
+    /* line 475, sass/application.sass */
     .footer .subscribe input[type='email'] {
       border: 1px solid #A5C0DB;
       line-height: 16px;
       padding: 4px; }
-    /* line 477, sass/application.sass */
+    /* line 479, sass/application.sass */
     .footer .subscribe input[type='submit'] {
       color: #FFF;
       background-color: #A3101A;
@@ -584,28 +587,33 @@ body.home .projects {
       border: none;
       padding: 4px 6px;
       font-size: 12px; }
-  /* line 485, sass/application.sass */
+  /* line 487, sass/application.sass */
   .footer .external, .footer p {
     text-align: right;
     font-size: 12px;
     color: #30393E; }
 
-/* line 489, sass/application.sass */
+/* line 491, sass/application.sass */
 body.home .addthis_toolbox {
   float: left; }
 
-/* line 491, sass/application.sass */
+/* line 493, sass/application.sass */
 body.home .actions {
   float: left;
   line-height: 16px;
   padding-right: 20px; }
-  /* line 495, sass/application.sass */
+  /* line 497, sass/application.sass */
   body.home .actions span {
     margin-top: 6px;
     margin-left: 10px; }
-  /* line 498, sass/application.sass */
+  /* line 500, sass/application.sass */
   body.home .actions a {
     float: left; }
+
+/* line 503, sass/application.sass */
+body.home .at300bs.at15t_compact {
+  background-image: none;
+  padding-left: 10px; }
 
 /* line 1, sass/_websites.sass */
 .banner {
