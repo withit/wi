@@ -1,7 +1,0 @@
-- render :layout => 'pages/layout' do
-  .who_we_helped
-    %table
-      - @projects.each_slice 3 do |projects|
-        %tr
-          - projects.each do |project|
-            %td.project{:valign => 'center'}= link_to_if(admin?, image_tag(project.logo.url), [:edit, project])
