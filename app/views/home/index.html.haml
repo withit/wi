@@ -13,8 +13,8 @@
   %h2 Testimonials
   - @testimonials.each do |testimonial| 
     .testimonial{:style => testimonial == @testimonials.first ? nil : "display: none;"}
-      = image_tag testimonial.image.url 
-      %p= testimonial.content
+      = image_tag testimonial.image.url, :class => testimonial.long_logo ? 'long' : nil
+      %p{:class => testimonial.long_logo ? 'long' : nil}= testimonial.content
       %p.author= testimonial.author
 
 .content
