@@ -1,1 +1,6 @@
 %h1 Dashboard
+%h2 Posts
+= link_to "new Post",new_post_path
+%ul
+  - @posts.each do |post|
+    %li= link_to "#{post.title}", edit_post_path(post)

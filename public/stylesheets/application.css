@@ -1260,6 +1260,14 @@ div.posts {
       div.posts .post:first-child img {
         width: auto; }
 
+/* line 165, sass/_blogs.sass */
+span.weak {
+  color: #888; }
+
+/* line 167, sass/_blogs.sass */
+.new_post, .edit_post {
+  margin: 1em; }
+
 /* line 1, sass/_enlargement.sass */
 .enlargement {
   position: fixed;
