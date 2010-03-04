@@ -11,14 +11,14 @@
 </head>
 
 <body bgcolor="#F5F5F5">
-  <table width=621 align="center" style="background-image: url(http://wi.webby.wi.com.au/images/bg-image.jpg); background-repeat: no-repeat"><tr><td>
+  <table width=621 align="center" style="background-image: url(http://<%= ActionMailer::Base.default_url_options[:host] %>/images/bg-image.jpg); background-repeat: no-repeat"><tr><td>
   <table width="590" align="center" border=0 cellspacing=0 style="font-size: 14px; font-family: Arial">
     <tr>
-      <td><img src="http://wi.webby.wi.com.au/images/WI-logo.png" ></td>
+      <td><img src="http://<%= ActionMailer::Base.default_url_options[:host] %>/images/WI-logo.png" ></td>
     </tr>
     <tr>
-      <td style="background-color: #FAFAFA; text-transform: uppercase; color: #397BAF;">
-        <h1 style="font-weight: normal; font-size: 22px; margin-left: 1em;">Thank you for your enquiry</h1>
+      <td style="background-color: #FAFAFA; text-transform: uppercase; color: #397BAF; padding-top: 1px;">
+        <h1 style="font-weight: normal; font-size: 22px; margin: 1em;">Thank you for your enquiry</h1>
       </td>
     </tr>
     <tr style="background-color: #FFF; height: 400px;">
@@ -27,7 +27,7 @@
         <p style="margin: 1em; color: #373C40">Kind regards.</p>
         <p style="margin: 1em; color: #373C40">
           <strong>Derek Nash</strong><br>
-          <a href='http://www.wi.com.au' style="color: #397BAF; text-decoration: none">With Imagination</a><br>
+          <a href='http://<%= ActionMailer::Base.default_url_options[:host] %>' style="color: #397BAF; text-decoration: none">With Imagination</a><br>
           websites web applications web marketing
         </p>
         <p style="margin: 1em; color: #373C40">
@@ -45,8 +45,8 @@
     </tr>
     <tr align='right'>
       <td>
-        <a href='http://www.linkedin.com/companies/with-imagination'><img src='http://wi.webby.wi.com.au/images/linkedin.png' style="border: none;"></a>
-        <a href='http://twitter.com/withimagination'><img src='http://wi.webby.wi.com.au/images/twitter-icon.png' style="border: none;"></a>
+        <a href='http://www.linkedin.com/companies/with-imagination'><img src='http://<%= ActionMailer::Base.default_url_options[:host] %>/images/linkedin.png' style="border: none;"></a>
+        <a href='http://twitter.com/withimagination'><img src='http://<%= ActionMailer::Base.default_url_options[:host] %>/images/twitter-icon.png' style="border: none;"></a>
       </td>
     </tr>
   </table></td></tr></table>

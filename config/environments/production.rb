@@ -30,3 +30,4 @@ ActionMailer::Base.smtp_settings = {
   :authentication  => :plain,
   :password => 'imagination2010'
 }
+config.action_mailer.default_url_options = { :host => "www.wi.com.au" }
