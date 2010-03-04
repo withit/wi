@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
   has_many :taggings
   has_many :tags, :through => :taggings
   belongs_to :post_image
-  default_scope :order => "created_at desc"
+  default_scope :order => "posts.created_at desc"
   
   
   def tag_names
