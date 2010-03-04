@@ -18,8 +18,9 @@ class EnquiriesController < ApplicationController
   end
   
   def show
-    @enquiry = Enquiry.find(session[:enquiry_id])
-    session[:enquiry_id] = nil
+    @enquiry = Enquiry.first
+    # session[:enquiry_id] = nil
+    render 'notifier/confirmation', :layout => false
   rescue
     redirect_to contact_us_path
   end
