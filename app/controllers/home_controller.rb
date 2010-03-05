@@ -6,7 +6,7 @@ class HomeController < ApplicationController
     @projects = Project.all
     @testimonials = Testimonial.all
     @services = Service.all[0..2]
-    @post = Post.last
+    @post = Post.first
     @case_study = CaseStudy.all[0]
   end
 
