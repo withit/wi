@@ -371,17 +371,21 @@ body.home .services {
       border-bottom: none;
       margin-bottom: 0; }
   /* line 300, sass/application.sass */
+  body.home .services p.more {
+    background-color: #D1D1D1;
+    margin: 0;
+    padding: 2px 0px;
+    text-align: right;
+    position: absolute;
+    bottom: 0px;
+    width: 100%; }
+  /* line 308, sass/application.sass */
   body.home .services a {
     color: #0E66AE;
     font-size: 13px;
-    display: block;
-    text-align: right;
-    margin: 10px;
     margin-top: 0;
-    position: absolute;
-    bottom: 0px;
-    right: 0px; }
-/* line 312, sass/application.sass */
+    margin-right: 10px; }
+/* line 316, sass/application.sass */
 body.home .case_study {
   position: relative;
   float: left;
@@ -393,11 +397,12 @@ body.home .case_study {
   margin-top: 20px;
   margin-right: 0;
   height: 373px; }
-  /* line 314, sass/application.sass */
+  /* line 318, sass/application.sass */
   body.home .case_study p {
     font-size: 12px;
-    line-height: 14px; }
-  /* line 326, sass/application.sass */
+    line-height: 14px;
+    margin-top: 6px; }
+  /* line 331, sass/application.sass */
   body.home .case_study h2 {
     background-image: url(/images/case-study.png);
     height: 43px;
@@ -406,36 +411,40 @@ body.home .case_study {
     overflow: hidden;
     text-indent: -9999px;
     margin: 12px 12px 0px 8px; }
-  /* line 334, sass/application.sass */
+  /* line 339, sass/application.sass */
   body.home .case_study h3 {
     margin: 0;
     color: #0E66AE;
     text-transform: uppercase;
     font-weight: normal;
     font-size: 14px; }
-  /* line 340, sass/application.sass */
+  /* line 345, sass/application.sass */
   body.home .case_study img {
     display: block;
     margin: 5px auto; }
-  /* line 343, sass/application.sass */
+  /* line 348, sass/application.sass */
   body.home .case_study h3, body.home .case_study p {
     margin-left: 10px; }
-  /* line 345, sass/application.sass */
+  /* line 350, sass/application.sass */
   body.home .case_study p {
     margin-bottom: 0px; }
-  /* line 347, sass/application.sass */
+  /* line 352, sass/application.sass */
+  body.home .case_study p.more {
+    background-color: #D1D1D1;
+    margin: 0;
+    padding: 2px 0px;
+    text-align: right;
+    position: absolute;
+    bottom: 0px;
+    width: 100%; }
+  /* line 360, sass/application.sass */
   body.home .case_study a {
     color: #0E66AE;
     font-size: 13px;
-    display: block;
-    text-align: right;
-    margin: 10px;
     margin-top: 0;
-    position: absolute;
-    bottom: 0px;
-    right: 0px; }
+    margin-right: 10px; }
 
-/* line 357, sass/application.sass */
+/* line 365, sass/application.sass */
 .twitter {
   width: 314px;
   background-color: #EFEFEF;
@@ -447,7 +456,7 @@ body.home .case_study {
   margin-top: 0;
   height: 173px;
   margin-bottom: 0px; }
-  /* line 368, sass/application.sass */
+  /* line 376, sass/application.sass */
   .twitter h2 {
     margin: 0;
     float: left;
@@ -458,7 +467,7 @@ body.home .case_study {
     text-indent: -9999px;
     overflow: hidden;
     margin-bottom: 12px; }
-  /* line 378, sass/application.sass */
+  /* line 386, sass/application.sass */
   .twitter .follow {
     float: right;
     background-color: #363227;
@@ -471,35 +480,35 @@ body.home .case_study {
     background-image: url('/images/twitter-small.png');
     background-repeat: no-repeat;
     background-position: 4px 50%; }
-  /* line 390, sass/application.sass */
+  /* line 398, sass/application.sass */
   .twitter .tweet {
     clear: both;
     margin-bottom: 10px; }
-  /* line 393, sass/application.sass */
+  /* line 401, sass/application.sass */
   .twitter p {
     margin: 0px; }
-    /* line 395, sass/application.sass */
+    /* line 403, sass/application.sass */
     .twitter p.info {
       font-size: 11px;
       color: #4ACAF7; }
 
-/* line 399, sass/application.sass */
+/* line 407, sass/application.sass */
 body.home .projects {
   position: relative;
   background-color: #FFF;
   padding-top: 1px;
   padding-bottom: 1px; }
-  /* line 404, sass/application.sass */
+  /* line 412, sass/application.sass */
   body.home .projects .main {
     position: absolute;
     left: 17px;
     top: 21px;
     z-index: 10;
     clear: both; }
-    /* line 410, sass/application.sass */
+    /* line 418, sass/application.sass */
     body.home .projects .main .main {
       position: static; }
-  /* line 413, sass/application.sass */
+  /* line 421, sass/application.sass */
   body.home .projects ul {
     background-color: #CCC;
     border: 1px solid #D9D9D9;
@@ -513,13 +522,13 @@ body.home .projects {
     background-repeat: repeat-x;
     background-bottom: none;
     zoom: 1; }
-    /* line 426, sass/application.sass */
+    /* line 434, sass/application.sass */
     body.home .projects ul li {
       height: 87px;
       overflow: hidden;
       margin: 10px 5px 0px auto;
       width: 323px; }
-      /* line 431, sass/application.sass */
+      /* line 439, sass/application.sass */
       body.home .projects ul li .panel {
         z-index: 20;
         width: 291px;
@@ -531,55 +540,55 @@ body.home .projects {
         padding: 7px;
         padding-left: 24px;
         color: #0960AD; }
-      /* line 442, sass/application.sass */
+      /* line 450, sass/application.sass */
       body.home .projects ul li .main {
         display: none; }
-      /* line 445, sass/application.sass */
+      /* line 453, sass/application.sass */
       body.home .projects ul li.selected .panel {
         background-image: url(/images/blue-main.png);
         color: #FFF; }
-      /* line 448, sass/application.sass */
+      /* line 456, sass/application.sass */
       body.home .projects ul li.selected .main {
         display: block; }
-      /* line 450, sass/application.sass */
+      /* line 458, sass/application.sass */
       body.home .projects ul li.selected a {
         color: #FFF; }
-      /* line 452, sass/application.sass */
+      /* line 460, sass/application.sass */
       body.home .projects ul li img {
         float: left;
         margin-right: 6px; }
-    /* line 455, sass/application.sass */
+    /* line 463, sass/application.sass */
     body.home .projects ul h3 {
       text-transform: uppercase;
       font-size: 14px;
       font-weight: normal;
       margin-bottom: 0px; }
-    /* line 460, sass/application.sass */
+    /* line 468, sass/application.sass */
     body.home .projects ul a {
       color: #0e66ae; }
 
-/* line 463, sass/application.sass */
+/* line 471, sass/application.sass */
 .footer {
   float: left;
   width: 100%; }
-  /* line 466, sass/application.sass */
+  /* line 474, sass/application.sass */
   .footer .subscribe {
     margin-top: 10px;
     margin-bottom: 50px;
     float: left; }
-    /* line 470, sass/application.sass */
+    /* line 478, sass/application.sass */
     .footer .subscribe h2 {
       text-indent: -9999px;
       background-image: url(/images/subscribe.png);
       height: 36px;
       width: 196px;
       margin: 0; }
-    /* line 476, sass/application.sass */
+    /* line 484, sass/application.sass */
     .footer .subscribe input[type='email'] {
       border: 1px solid #A5C0DB;
       line-height: 16px;
       padding: 4px; }
-    /* line 480, sass/application.sass */
+    /* line 488, sass/application.sass */
     .footer .subscribe input[type='submit'] {
       color: #FFF;
       background-color: #A3101A;
@@ -588,34 +597,34 @@ body.home .projects {
       border: none;
       padding: 4px 6px;
       font-size: 12px; }
-  /* line 488, sass/application.sass */
+  /* line 496, sass/application.sass */
   .footer .external, .footer p {
     text-align: right;
     font-size: 12px;
     color: #30393E; }
 
-/* line 492, sass/application.sass */
+/* line 500, sass/application.sass */
 body.home .addthis_toolbox {
   float: left; }
 
-/* line 494, sass/application.sass */
+/* line 502, sass/application.sass */
 body.home .actions {
   float: left;
   line-height: 16px;
   padding-right: 20px; }
-  /* line 498, sass/application.sass */
+  /* line 506, sass/application.sass */
   body.home .actions span {
     margin-top: 6px;
     margin-left: 10px; }
-  /* line 501, sass/application.sass */
+  /* line 509, sass/application.sass */
   body.home .actions a {
     float: left; }
 
-/* line 504, sass/application.sass */
+/* line 512, sass/application.sass */
 body.home .at300bs.at15t_compact {
   background-image: none;
   padding-left: 10px; }
-/* line 507, sass/application.sass */
+/* line 515, sass/application.sass */
 body.home .copy {
   height: 250px; }
 

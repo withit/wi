@@ -63,7 +63,7 @@
         = image_tag service.image.url
         %h3= service.name 
         %p= service.description
-    = link_to 'more&#8230;', services_path
+    %p.more= link_to 'more&#8230;', services_path
  
   .case_study
     %h2 Case Study
@@ -74,7 +74,7 @@
       Healthworks is an established leader in the provision of corporate health services and have won several state and federal government awards in recognition of their innovative approach to health and wellness.
 
       Our challenge was to help Healthworks grow its market leadership by implementing an innovative web presence with increased user functionality plus supporting the launch with e-marketing activities.
-    = link_to 'more&#8230;', case_study_path
+    %p.more= link_to 'more&#8230;', case_study_path
 
   .twitter
     %h2 Twitter
