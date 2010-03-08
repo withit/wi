@@ -248,10 +248,14 @@ body.home
     :background-position 90% 50%
     :-webkit-border-radius 12px
     :-moz-border-radius 12px
+    
 body.home
-  .services
+  .wrapper
     :position relative
-    :float left
+  .services
+    :position absolute
+    :bottom 10px
+    :left 0px
     :display inline
     :width 308px
     :background-color #EFEFEF
@@ -314,7 +318,9 @@ body.home
 
 
   .case_study
-    :position relative
+    :position absolute
+    :bottom 10px
+    :left 323px
     p
       :font-size 12px
       :line-height 14px
@@ -362,6 +368,8 @@ body.home
       :font-size 13px
       :margin-top 0
       :margin-right 10px
+body.home .twitter
+  :min-height 150px
 .twitter
   :width 314px
   :background-color #EFEFEF
@@ -369,9 +377,10 @@ body.home
   :padding 12px
   :padding-right 0px
   :float right
+  :clear right
   :border 1px solid #D3D3D3
   :margin-top 0
-  :height 173px
+  :height auto
   :margin-bottom 0px
   h2
     :margin 0
