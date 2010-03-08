@@ -1,6 +1,6 @@
 class Client
   def self.all
-    Dir.glob("#{Rails.root}/public/content/clients/*.jpg").collect do |path|
+    Dir.glob("#{Rails.root}/public/content/clients/*.jpg").sort.collect do |path|
       new(File.basename(path))
     end
   end
