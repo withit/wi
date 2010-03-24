@@ -66,6 +66,6 @@ class ApplicationController < ActionController::Base
   end
   
   def load_tags
-    @tags = Tag.all
+    @tags = Tag.all(:order => "name", :joins => :posts, :select => "distinct tags.*")
   end
 end
