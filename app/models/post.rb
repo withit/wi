@@ -14,7 +14,7 @@ class Post < ActiveRecord::Base
   attr_writer :tag_names
   
   def save_tags
-    self.tags = tag_names.split(/,\s+/).collect do |tag_name|
+    self.tags = tag_names.split(/\s*,\s*/).collect do |tag_name|
       Tag.find_or_initialize_by_name(tag_name)
     end
   end
