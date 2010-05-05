@@ -37,6 +37,11 @@ ActionController::Routing::Routes.draw do |map|
   map.company '/company', :action => 'index', :controller => 'pages'
   map.case_study '/case-study', :action => 'show', :controller => 'case_studies'
   map.blogs '/blogs', :action => 'index', :controller => 'posts'
+
+  map.redirect '/redirect', :action => 'index', :controller => 'redirect'
+  
+  # map.redirect ':controller'
+  
   
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
